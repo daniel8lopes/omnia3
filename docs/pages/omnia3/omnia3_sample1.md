@@ -2,8 +2,8 @@
 title: OMNIA Platform 3.0 - An Introduction
 keywords: omnia3
 summary: "OMNIA Platform 3.0 - An Introduction"
-sidebar: o3_sidebar
-permalink: o3_sample1.html
+sidebar: omnia3_sidebar
+permalink: omnia3_sample1.html
 folder: omnia3
 ---
 

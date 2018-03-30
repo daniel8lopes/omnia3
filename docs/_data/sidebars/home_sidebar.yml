@@ -12,5 +12,5 @@ entries:
       url: /news.html
       output: web
     - title: OMNIA 3
-      url: /o3_landing_page.html
+      url: /omnia3_landing_page.html
       output: web
