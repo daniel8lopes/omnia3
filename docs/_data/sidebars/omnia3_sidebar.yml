@@ -3,7 +3,7 @@
 
 entries:
 - title: Sidebar
-  product: OMNIA3
+  product: OMNIA 3
   version: 1.0
   folders:
 
@@ -24,9 +24,9 @@ entries:
     output: web, pdf
     folderitems:
     - title: OMNIA 3 Landing Page
-      url: /o3_landing_page.html
+      url: /omnia3_landing_page.html
       output: web
 
     - title: Tutorial 1
-      url: /o3_sample1.html
+      url: /omnia3_sample1.html
       output: web, pdf
