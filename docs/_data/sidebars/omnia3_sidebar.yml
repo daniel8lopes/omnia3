@@ -28,5 +28,9 @@ entries:
       output: web
 
     - title: Tutorial 1
-      url: /omnia3_sample1.html
+      url: /omnia3_tutorial1.html
+      output: web, pdf
+
+    - title: Tutorial 2
+      url: /omnia3_tutorial2.html
       output: web, pdf
