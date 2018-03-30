@@ -102,9 +102,7 @@ defaults:
 
 sidebars:
 - home_sidebar
-- mydoc_sidebar
-- product1_sidebar
-- product2_sidebar
+- omnia3_sidebar
 - other
 
 description: "The place for documentation of the OMNIA Platform, a low-code platform to develop business applications."
