@@ -9,7 +9,10 @@ tagline:             'OMNIA Platform Documentation'
 description:         'The place for documentation of the OMNIA Platform, a low-code platform to develop business applications.'
 url:                 https://numbersbelieve.github.io
 baseurl:             'omnia3/'
-paginate:            5
+
+gems: [jekyll-paginate]
+paginate: 5
+paginate_path: "page:num"
 
 # About/contact
 author:
@@ -19,3 +22,4 @@ author:
 
 # Custom vars
 version:             1.0.0
+
