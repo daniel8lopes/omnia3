@@ -7,7 +7,7 @@ permalink:           pretty
 title:               OMNIA Platform Documentation
 tagline:             'OMNIA Platform Documentation'
 description:         'The place for documentation of the OMNIA Platform, a low-code platform to develop business applications.'
-url:                 http://www.numbersbelieve.com
+url:                 https://numbersbelieve.github.io
 baseurl:             'omnia3/'
 paginate:            5
 
