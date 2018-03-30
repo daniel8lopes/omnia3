@@ -1,4 +1,3 @@
-
 # 2. OMNIA Modeling Environment
 
 ## 1. First Steps on the OMNIA Modeler
