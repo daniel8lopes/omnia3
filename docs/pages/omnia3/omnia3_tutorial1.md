@@ -43,7 +43,7 @@ This tutorial assumes that you have created a OMNIA tenant, and are logged in as
 
 9. Add a new attribute by clicking on button **Add new**. Set its *Code* as **UnitPrice**, *Type* as **Primitive > Decimal**, and as required by checking option *Is required?*.
 
-10. Add a new behaviour by selecting the tab **Behaviours** and clicking on button **Add new > Formula**. Set its *Code* as **CalculateAmount**, attribute as **_amount** and set as code to execute *return UnitPrice * _quantity;*;
+10. Add a new behaviour by selecting the tab **Behaviours** and clicking on button **Add new > Formula**. Set its *Code* as **CalculateAmount**, attribute as **_amount** and set as code to execute ```return UnitPrice * _quantity;```;
 
 11. Add a new document (by accessing the option **Documents** on side menu and clicking on **Add new** button). Set **PurchaseOrder** as the document's *Code*;
 
