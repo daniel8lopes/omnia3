@@ -1,4 +1,3 @@
-
 ---
 title: OMNIA Beginner Tutorial
 keywords: omnia3
