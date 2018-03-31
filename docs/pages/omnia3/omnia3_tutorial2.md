@@ -60,7 +60,7 @@ SupplierName = supplier["_name"].ToString();
 var client = new System.Net.Http.HttpClient() {DefaultRequestHeaders = {}};
 client.DefaultRequestHeaders.Add("User-Agent", "OMNIA");
 
-string apiEndpoint = $"https://api.discogs.com/masters/{Code}";
+string apiEndpoint = $"https://api.discogs.com/masters/{_code}";
 var requestResult = client.GetAsync(apiEndpoint).GetAwaiter().GetResult();
 
 string responseBody = requestResult.Content.ReadAsStringAsync().Result;
@@ -70,7 +70,7 @@ Dictionary<string, object> responseDictionary = JsonConvert.DeserializeObject<Di
 if (!requestResult.IsSuccessStatusCode)
     throw new Exception("Error on retrieving data from Discogs API: " + responseDictionary["message"].ToString() + " " + apiEndpoint);
 
-Name = responseDictionary["title"].ToString();
+_name = responseDictionary["title"].ToString();
 
 if (responseDictionary.ContainsKey("artists")) {
     Linq.JArray artists = (Linq.JArray)responseDictionary["artists"];
