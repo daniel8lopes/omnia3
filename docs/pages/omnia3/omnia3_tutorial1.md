@@ -25,8 +25,6 @@ This tutorial assumes that you have created a OMNIA tenant, and are logged in as
 
 1. Start by selecting the tenant where you are going to model, and you will be redirected to the modeling area.
 
-  [![](http://funkyimg.com/i/2DVGv.png)](http://funkyimg.com/i/2DVGv.png)
-  
 2. Through the left side menu, access the option **Agents**. Create a new **Agent** by clicking the button **Add new**  on the top right side, and setting its **Code** to **Company**.
 
 3. Return to the **Agents** list and add a new agent by clicking on button **Add new** and setting its *Code* as **Supplier**.
