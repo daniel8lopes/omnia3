@@ -1,12 +1,4 @@
----
-title: OMNIA 3
-keywords: omnia3
-sidebar: omnia3_sidebar
-toc: false
-permalink: omnia3_tutorial1.html
-folder: omnia3
----
-
+## 1. Introduction
 
 OMNIA Platform 3.0, a truly **Agile Development** and operation of **Management Information Systems**' **platform**, welcomes you aboard to its continuous development process: the User Experience.
 
@@ -16,11 +8,11 @@ It's now time to judge our premises. To that end, we've just created a simple an
 
 ## Start your 20-minute exercise on OMNIA Platform V.3.0!
 
-## 1. Prerequisites
+## 2. Prerequisites
 
 This tutorial assumes that you have created a OMNIA tenant, and are logged in as a user with modeling privileges to this tenant.
 
-## 2. First Steps on the OMNIA Modeler
+## 3. Modeling an application
 
 1. Start by selecting the tenant where you are going to model, and you will be redirected to the modeling area.
 
