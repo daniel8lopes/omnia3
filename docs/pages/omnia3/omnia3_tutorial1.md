@@ -1,5 +1,5 @@
 ---
-title: OMNIA Modeling Environment 1
+title: OMNIA Modeling Environment
 keywords: omnia3
 summary: "OMNIA Modeling Environment"
 sidebar: omnia3_sidebar
