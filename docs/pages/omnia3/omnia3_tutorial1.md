@@ -69,10 +69,10 @@ This tutorial assumes that you have created a OMNIA tenant, and are logged in as
 
 17. Add a new Finalize Behaviour to fill **_provider** and **_receiver** attributes by accessing the tab **Behaviours** and clicking the button **Add new > Finalizer**. Set **SetCommitmentAgents** as Code and paste the following code:
 
-   ````
+    ````
         OrderLines.ForEach(a => a._receiver = Company);
         OrderLines.ForEach(a => a._provider = Supplier);
-   ````
+    ````
 
 18. Go to your ***PurchaseOrder*** **Document** User Interface by accessing the respective tab, and reorganize them to simplify the interface. Remove attribute **Provider**, **Receiver**  and **Code** from **OrderLines** element. At last, remove **Code** attribute from Document.
 
