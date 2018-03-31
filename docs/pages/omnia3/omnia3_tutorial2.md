@@ -95,13 +95,19 @@ if (responseDictionary.ContainsKey("artists")) {
 
 1. On **Modeler**, go to **Data Analytics > Queries** and click on button **Add New** to create a new query. Set **ProductsArtists_Query** as Code and **Resource > Product** as Type.
 
-2. Click on button **Add New** to add columns to Query. Add a column with Alias **Code** and Path **_code**.
+    ![Modeler_Create_Query](https://github.com/numbersbelieve/omnia3/raw/master/docs/tutorialPics/modelingTutorial/Modeler-Create-Query.PNG)
 
+2. Click on button **Add New** to add columns to Query. Add a column with Alias **Code** and Path **_code**.
+    
 3. Repeat previous step to add columns with alias **Name** and **Artist**, whose Path is **_name** and **artist**, respectively.
 
 4. Go to **Data Analytics > Lists** and click on button **Add New** to create a new list. Set **ProductsArtists_List** as Code, the query created on first step (**ProductsArtists_Query**) as the source of the list and **Products** as Label.
 
+    ![Modeler_Create_List](https://github.com/numbersbelieve/omnia3/raw/master/docs/tutorialPics/modelingTutorial/Modeler-Create-List.PNG)
+    
 5. Click on button **Add New** to add columns to List. Add a column for Query Property **Code** with Label **Album Code**, and format as **Text**
+
+    ![Modeler_Create_List_Attribute](https://github.com/numbersbelieve/omnia3/raw/master/docs/tutorialPics/modelingTutorial/Modeler-Create-List-Attribute.PNG)
 
 6. Repeat previous step to add columns for Query Properties **Name** and **Artist**.
 
