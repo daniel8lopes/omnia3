@@ -1,7 +1,7 @@
 ---
-title: OMNIA Modeling Environment
+title: OMNIA Beginner Tutorial
 keywords: omnia3
-summary: "OMNIA Modeling Environment"
+summary: "Beginner Tutorial"
 sidebar: omnia3_sidebar
 permalink: omnia3_tutorial1.html
 folder: omnia3
