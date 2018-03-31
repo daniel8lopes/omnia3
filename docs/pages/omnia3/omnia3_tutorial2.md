@@ -116,6 +116,10 @@ if (responseDictionary.ContainsKey("artists")) {
 
 1. On **Modeler**, go to **Data Analytics > Dashboards** and click on button **Add New** to create a new dashboard. Set **Home** as Code, so that the dashboard is visible on application's homepage.
 
+    ![Modeler_Create_Dashboard](https://github.com/numbersbelieve/omnia3/raw/master/docs/tutorialPics/modelingTutorial/Modeler-Create-Dashboard.PNG)
+
 2. Click on button **Add New** to add lists to Dashboard. Set **ProductsList** as Code, select **ProductsArtists_List** (created previously) and position it in the first **Row** and **Column**, with **Size** six.
+
+    ![Modeler_Add_List_Dashboard](https://github.com/numbersbelieve/omnia3/raw/master/docs/tutorialPics/modelingTutorial/Modeler-Add-List-Dashboard.PNG)
 
 3. Go to application and check the homepage dashboard.
