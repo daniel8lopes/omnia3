@@ -1,3 +1,12 @@
+---
+title: OMNIA Modeling Environment 1
+keywords: omnia3
+summary: "OMNIA Modeling Environment"
+sidebar: omnia3_sidebar
+permalink: omnia3_tutorial1.html
+folder: omnia3
+---
+
 ## 1. Introduction
 
 OMNIA Platform 3.0, a truly **Agile Development** and operation of **Management Information Systems**' **platform**, welcomes you aboard to its continuous development process: the User Experience.
