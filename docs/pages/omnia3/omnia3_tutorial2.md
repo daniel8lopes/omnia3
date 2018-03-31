@@ -1,7 +1,7 @@
 ---
-title: OMNIA Modeling Environment 2
+title: OMNIA Advanced Tutorial
 keywords: omnia3
-summary: "OMNIA Advanced Tutorial"
+summary: "Advanced Tutorial"
 sidebar: omnia3_sidebar
 permalink: omnia3_tutorial2.html
 folder: omnia3
@@ -87,7 +87,7 @@ if (responseDictionary.ContainsKey("artists")) {
 
 ## 4. Data Analysis
 
-###Queries and Lists
+### Queries and Lists
 
 1. On **Modeler**, go to **Data Analytics > Queries** and click on button **Add New** to create a new query. Set **ProductsArtists_Query** as Code and **Resource > Product** as Type.
 
@@ -102,7 +102,7 @@ if (responseDictionary.ContainsKey("artists")) {
 6. Repeat previous step to add columns for Query Properties **Name** and **Artist**.
 
 
-###Dashboards
+### Dashboards
 
 1. On **Modeler**, go to **Data Analytics > Dashboards** and click on button **Add New** to create a new dashboard. Set **Home** as Code, so that the dashboard is visible on application's homepage.
 
