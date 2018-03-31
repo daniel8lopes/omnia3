@@ -1,3 +1,11 @@
+---
+title: OMNIA 3
+keywords: omnia3
+sidebar: omnia3_sidebar
+toc: false
+permalink: omnia3_tutorial1.html
+folder: omnia3
+---
 
 OMNIA Platform 3.0, a truly **Agile Development** and operation of **Management Information Systems**' **platform**, welcomes you aboard to its continuous development process: the User Experience.
 
