@@ -39,17 +39,25 @@ This tutorial assumes that you have created a OMNIA tenant, and are logged in as
 
 6. On the left side menu, select option **Go to > Application**, and create a new **Company** by selecting the option **Configurations > Company**  and defining its *Code* and *Name*.
 
+![Application_Create_Agent](https://github.com/numbersbelieve/omnia3/raw/master/docs/tutorialPics/modelingTutorial/Application-Create-Agent.PNG)
+
 7.  Follow the same process of the previous step to create a new **Supplier** and **Product**.
 
 8. Go back to modeling area (by accessing the option **Go to > Modeler**) and create a new **Commitment** with *Code* set as ***GoodsPurchaseRequest***, **Product** as the resource to be exchanged, **Supplier** as provider agent and **Company** as receiver agent.
 
+![Modeler_Create_Commitment](https://github.com/numbersbelieve/omnia3/raw/master/docs/tutorialPics/modelingTutorial/Modeler-Create-Commitment.PNG)
+
 9. Add a new attribute by clicking on button **Add new**. Set its *Code* as **UnitPrice**, *Type* as **Primitive > Decimal**, and as required by checking option *Is required?*.
+
+![Modeler_Create_Attribute](https://github.com/numbersbelieve/omnia3/raw/master/docs/tutorialPics/modelingTutorial/Modeler-Create-Attribute.PNG)
 
 10. Add a new behaviour by selecting the tab **Behaviours** and clicking on button **Add new > Formula**. Set its *Code* as **CalculateAmount**, attribute as **_amount** and set as code to execute `return UnitPrice * _quantity;`.
 
 11. Add a new document (by accessing the option **Documents** on side menu and clicking on **Add new** button). Set **PurchaseOrder** as the document's *Code*;
 
 12. Click on button **Add new** to add an **Attribute** to your **Document**. Set its *Code* as *OrderLines*, *Type* as **Commitment > GoodsPurchaseRequest**.
+
+![Modeler_Create_Composite_Attribute](https://github.com/numbersbelieve/omnia3/raw/master/docs/tutorialPics/modelingTutorial/Modeler-Create-CompositeAttribute.PNG)
 
 13. Perform a new Build (by accessing the option **Versioning > Builds** and clicking on button **Create new**).
 
