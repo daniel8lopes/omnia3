@@ -7,6 +7,7 @@ permalink: omnia3_tutorial1.html
 folder: omnia3
 ---
 
+
 OMNIA Platform 3.0, a truly **Agile Development** and operation of **Management Information Systems**' **platform**, welcomes you aboard to its continuous development process: the User Experience.
 
 We do understand all your difficulties on how to build a **business management application** from ground zero. That's why **OMNIA** takes the pledge to **leverage and accelerate** the entire development process, providing a **simple**, **fast** and **responsive-by-default** platform.
@@ -23,8 +24,8 @@ This tutorial assumes that you have created a OMNIA tenant, and are logged in as
 
 1. Start by selecting the tenant where you are going to model, and you will be redirected to the modeling area.
 
-![enter image description here]([http://funkyimg.com/i/2DVGv.png](http://funkyimg.com/i/2DVGv.png)
-)
+![OMNIA_Modeling_Dashboard](http://funkyimg.com/i/2DVGv.png)
+
 2. Through the left side menu, access the option **Agents** and click the button **Add new**  on the top right side. Set its **Code** to **Company**.
 
 3. Return to the **Agents** list and add a new agent by clicking on button **Add new** and setting its *Code* as **Supplier**.
