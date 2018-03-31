@@ -27,11 +27,11 @@ This tutorial assumes that you have created a OMNIA tenant, and are logged in as
 
   [![](http://funkyimg.com/i/2DVGv.png)](http://funkyimg.com/i/2DVGv.png)
   
-2. Through the left side menu, access the option **Agents** and click the button **Add new**  on the top right side. Set its **Code** to **Company**.
+2. Through the left side menu, access the option **Agents**. Create a new **Agent** by clicking the button **Add new**  on the top right side, and setting its **Code** to **Company**.
 
 3. Return to the **Agents** list and add a new agent by clicking on button **Add new** and setting its *Code* as **Supplier**.
 
-4. Through the left side menu, access the option **Resources** and click the button **Add new**  on the top right side. Set its **Code** to **Product**.
+4. Through the left side menu, access the option **Resources**. Create a new **Resource** by clicking the button **Add new**  on the top right side, and setting its **Code** to **Product**.
 
 5. Access the option **Versioning > Builds** and build the tenant by clicking the button **Create new**.
 
