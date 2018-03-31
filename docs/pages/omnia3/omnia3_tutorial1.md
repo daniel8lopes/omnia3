@@ -15,7 +15,7 @@ We do understand all your difficulties on how to build a **business management a
 
 It's now time to judge our premises. To that end, we've just created a simple and intuitive tutorial based on an Order Management's example, guiding you throughout the **short-time period** of deploying all your inputs into a **business application**.
 
-## Start your 20-minute exercise on OMNIA Platform V.3.0!
+**Start your 20-minute exercise on OMNIA Platform V.3.0!**
 
 ## 2. Prerequisites
 
