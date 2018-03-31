@@ -26,6 +26,8 @@ It is necessary to have completed the steps in the  [Modeling tutorial](http://d
  
 1. Go to the **Modeler** and edit the previously modeled document PurchaseOrder. Create a new  **Attribute**  by clicking the button  **Add new**  on the top right side, and setting its  **Code** and **Type**  to  **SupplierName** and **Primitive > Text**, respectively. Set the attribute as **Read Only**.
 
+    ![Modeler_Create_Document_Attribute](https://github.com/numbersbelieve/omnia3/raw/master/docs/tutorialPics/modelingTutorial/Modeler-Create-Attribute-SupplierName.PNG)
+
 2. Create a new **Action Behaviour**  to fill the new attribute (on the PurchaseOrder document, go to tab **Behaviours** and click on **Add new > Action**). Set **GetSupplierName** as **Code**, **Supplier** as the attribute that triggers the behaviour, and paste the following code:
 
 ````
@@ -84,6 +86,8 @@ if (responseDictionary.ContainsKey("artists")) {
 3. Build the model.
 
 4. Go to **Application** area, and create a new **Product** resource. Observe that, when **Code** is identified (e.g. try with value 8540), the **Name** and **Artist** is automatically retrieved.
+
+    ![Application_Create_Resource](https://github.com/numbersbelieve/omnia3/raw/master/docs/tutorialPics/modelingTutorial/Application-Create-Product.PNG)
 
 ## 4. Data Analysis
 
