@@ -1,4 +1,3 @@
-
 ---
 title: OMNIA Modeling Environment
 keywords: omnia3
@@ -25,8 +24,6 @@ This tutorial assumes that you have created a OMNIA tenant, and are logged in as
 ## 3. Modeling an application
 
 1. Start by selecting the tenant where you are going to model, and you will be redirected to the modeling area.
-
-![OMNIA_Modeling_Dashboard](http://funkyimg.com/i/2DVGv.png)
 
 2. Through the left side menu, access the option **Agents** and click the button **Add new**  on the top right side. Set its **Code** to **Company**.
 
