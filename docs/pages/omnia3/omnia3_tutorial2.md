@@ -84,3 +84,28 @@ if (responseDictionary.ContainsKey("artists")) {
 3. Build the model.
 
 4. Go to **Application** area, and create a new **Product** resource. Observe that, when **Code** is identified (e.g. try with value 8540), the **Name** and **Artist** is automatically retrieved.
+
+## 4. Data Analysis
+
+###Queries and Lists
+
+1. On **Modeler**, go to **Data Analytics > Queries** and click on button **Add New** to create a new query. Set **ProductsArtists_Query** as Code and **Resource > Product** as Type.
+
+2. Click on button **Add New** to add columns to Query. Add a column with Alias **Code** and Path **_code**.
+
+3. Repeat previous step to add columns with alias **Name** and **Artist**, whose Path is **_name** and **artist**, respectively.
+
+4. Go to **Data Analytics > Lists** and click on button **Add New** to create a new list. Set **ProductsArtists_List** as Code, the query created on first step (**ProductsArtists_Query**) as the source of the list and **Products** as Label.
+
+5. Click on button **Add New** to add columns to List. Add a column for Query Property **Code** with Label **Album Code**, and format as **Text**
+
+6. Repeat previous step to add columns for Query Properties **Name** and **Artist**.
+
+
+###Dashboards
+
+1. On **Modeler**, go to **Data Analytics > Dashboards** and click on button **Add New** to create a new dashboard. Set **Home** as Code, so that the dashboard is visible on application's homepage.
+
+2. Click on button **Add New** to add lists to Dashboard. Set **ProductsList** as Code, select **ProductsArtists_List** (created previously) and position it in the first **Row** and **Column**, with **Size** six.
+
+3. Go to application and check the homepage dashboard.
