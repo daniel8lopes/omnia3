@@ -71,4 +71,4 @@ This tutorial assumes that you have created a OMNIA tenant, and are logged in as
 
 18. Go to your ***PurchaseOrder*** **Document** User Interface by accessing the respective tab, and reorganize them to simplify the interface. Remove attribute **Provider**, **Receiver**  and **Code** from **OrderLines** element. At last, remove **Code** attribute from Document.
 
-20. Reorganize Rows and Columns, re-establishing the **size** and **position** of their fields [(***Serie***: Row 1, Column 1 and Size 4, respectively); (***Number***: Row 1, Column 5 and Size 4, respectively); (***Date***: Row 1, Column 9 and Size 4, respectively); (***Company***: Row 2, Column 1 and Size 4, respectively); (***Supplier***: Row 2, Column 5 and Size 4, respectively)].
+19. Reorganize Rows and Columns, re-establishing the **size** and **position** of their fields [(***Serie***: Row 1, Column 1 and Size 4, respectively); (***Number***: Row 1, Column 5 and Size 4, respectively); (***Date***: Row 1, Column 9 and Size 4, respectively); (***Company***: Row 2, Column 1 and Size 4, respectively); (***Supplier***: Row 2, Column 5 and Size 4, respectively)].
