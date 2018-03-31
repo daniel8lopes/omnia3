@@ -1,7 +1,7 @@
 ---
 title: OMNIA Modeling Environment 2
 keywords: omnia3
-summary: "OMNIA Modeling Environment"
+summary: "OMNIA Advanced Tutorial"
 sidebar: omnia3_sidebar
 permalink: omnia3_tutorial2.html
 folder: omnia3
