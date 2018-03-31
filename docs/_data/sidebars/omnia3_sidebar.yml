@@ -27,7 +27,7 @@ entries:
       url: /omnia3_landing_page.html
       output: web
 
-    - title: Tutorial 1
+    - title: Beginner Tutorial
       url: /omnia3_tutorial1.html
       output: web, pdf
 
