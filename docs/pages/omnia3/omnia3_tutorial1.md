@@ -1,3 +1,4 @@
+
 ---
 title: OMNIA Beginner Tutorial
 keywords: omnia3
@@ -62,3 +63,13 @@ This tutorial assumes that you have created a OMNIA tenant, and are logged in as
 13. Perform a new Build (by accessing the option **Versioning > Builds** and clicking on button **Create new**).
 
 14. Select option **Go to > Application**, and create a new **PurchaseOrder** by selecting the option **Documents > PurchaseOrder**.
+
+15. Go back to modeling area (by accessing the option **Go to > Modeler**) and edit the **PurchaseOrder** document to simplify its interface. Add a new attribute by clicking on button **Add new**. Set its *Code* as **Company**, *Type* as **Agent > Company**, and as required by checking option *Is required?*.
+
+16. Add a new attribute by clicking on button **Add new**. Set its *Code* as **Supplier**, *Type* as **Agent > Supplier**, and as required by checking option *Is required?*. 
+
+17. Add Finalize Behaviour
+
+18. Go to your ***PurchaseOrder*** **Document** User Interface by accessing the respective tab, and reorganize them to simplify the interface. Remove attribute **Provider**, **Receiver**  and **Code** from **OrderLines** element. At last, remove **Code** attribute from Document.
+
+20. Reorganize Rows and Columns, re-establishing the **size** and **position** of their fields [(***Serie***: Row 1, Column 1 and Size 4, respectively); (***Number***: Row 1, Column 5 and Size 4, respectively); (***Date***: Row 1, Column 9 and Size 4, respectively); (***Company***: Row 2, Column 1 and Size 4, respectively); (***Supplier***: Row 2, Column 5 and Size 4, respectively)].
