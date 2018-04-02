@@ -31,6 +31,4 @@ This tutorial assumes that you have been granted access to an OMNIA account.
 
     ![OMNIA Tenant Code](https://raw.githubusercontent.com/numbersbelieve/omnia3/master/docs/tutorialPics/modelingTutorial/OMNIA-Tenant-Code.PNG )
 
- 4. Update the modeling privileges of your **Tenant**, by searching for its **Code** and checking option *Is a Production account?*, filling it also with a valid *VAT Number*.
- 
-    ![enter image description here](https://raw.githubusercontent.com/numbersbelieve/omnia3/master/docs/tutorialPics/modelingTutorial/OMNIA-Update-Tenant.PNG)
+
