@@ -10,7 +10,7 @@ folder: omnia3
 
 ## 1. Prerequisites
 
-1.1. Create a Linux server (Ubuntu 16.04 LTS recommended), with a user **omnia**, who will be responsible for running the application.
+1.1. Create a Linux server (Ubuntu 16.04 LTS recommended), with an **omnia** user, who will be responsible for running the application.
 
 1.2. Install .NET Core 2.0.3 SDK, by following the official Microsoft [instructions](https://docs.microsoft.com/en-us/dotnet/core/linux-prerequisites?tabs=netcore2x).
 
