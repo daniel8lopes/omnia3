@@ -5,6 +5,11 @@ entries:
   levels: one
   folders:
 
+  - title: Home
+    output: web
+    url: /index.hml
+    type: homepage
+    
   - title: Products
     output: web
     folderitems:
