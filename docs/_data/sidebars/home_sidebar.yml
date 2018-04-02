@@ -11,7 +11,7 @@ entries:
     
     - title: Get Started
       output: web
-      url: /index.hml
+      url: /index.html
       type: homepage
     
   - title: Products
