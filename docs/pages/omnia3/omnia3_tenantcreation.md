@@ -1,3 +1,12 @@
+---
+title: OMNIA Tenant Creation
+keywords: omnia3
+summary: "How to create a new OMNIA Tenant"
+sidebar: omnia3_tenantcreation
+permalink: omnia3_tenantcreation.html
+folder: omnia3
+---
+
 ## Tenant Creation
 
 Tenant is the designation of an isolated development environment, where you'll be able to model and create your business aplications. 
