@@ -21,16 +21,16 @@ This tutorial assumes that you have been granted access to an OMNIA account.
 
 1. Start by going to omniatest.numbersbelieve.com and sign in to your account with your registration email and password, respectively.
 
-![OMNIA Sign in](https://raw.githubusercontent.com/numbersbelieve/omnia3/master/docs/tutorialPics/modelingTutorial/OMNIA%20-%20Sign%20In%20Account.PNG)
+    ![OMNIA Sign in](https://raw.githubusercontent.com/numbersbelieve/omnia3/master/docs/tutorialPics/modelingTutorial/OMNIA%20-%20Sign%20In%20Account.PNG)
 
 2. Select the option **Go to Tenants Management** on the inferior section of the menu.
 
-![Go To Tenants Management](https://raw.githubusercontent.com/numbersbelieve/omnia3/master/docs/tutorialPics/modelingTutorial/OMNIA-Select-Tenant.PNG) 
+    ![Go To Tenants Management](https://raw.githubusercontent.com/numbersbelieve/omnia3/master/docs/tutorialPics/modelingTutorial/OMNIA-Select-Tenant.PNG) 
  
  3. Create a new **Tenant**, by clicking the button **Add new** on the top right side, and setting its **Code**
 
-![OMNIA Tenant Code](https://raw.githubusercontent.com/numbersbelieve/omnia3/master/docs/tutorialPics/modelingTutorial/OMNIA-Tenant-Code.PNG )
+    ![OMNIA Tenant Code](https://raw.githubusercontent.com/numbersbelieve/omnia3/master/docs/tutorialPics/modelingTutorial/OMNIA-Tenant-Code.PNG )
 
  4. Update the modeling privileges of your tenant, by searching for its **Code** and checking option *Is a Production account?*, filling it also with a valid *VAT Number*.
  
- ![enter image description here](https://raw.githubusercontent.com/numbersbelieve/omnia3/master/docs/tutorialPics/modelingTutorial/OMNIA-Update-Tenant.PNG)
+    ![enter image description here](https://raw.githubusercontent.com/numbersbelieve/omnia3/master/docs/tutorialPics/modelingTutorial/OMNIA-Update-Tenant.PNG)
