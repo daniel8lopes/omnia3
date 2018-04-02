@@ -26,6 +26,10 @@ entries:
     - title: OMNIA 3 Landing Page
       url: /omnia3_landing_page.html
       output: web
+      
+    - title: Tenant Creation
+      url: /omnia3_tenantcreation.html
+      output: web, pdf
 
     - title: Beginner Tutorial
       url: /omnia3_tutorial1.html
