@@ -19,7 +19,7 @@ This tutorial assumes that you have been granted access to an OMNIA account.
 
 ## 3. Creating a Tenant
 
-1. Start by going to omniatest.numbersbelieve.com and sign in to your account with your registration email and password, respectively.
+1. Start by going to omniatest.numbersbelieve.com and sign in to your account, with your registration email and password, respectively.
 
     ![OMNIA Sign in](https://raw.githubusercontent.com/numbersbelieve/omnia3/master/docs/tutorialPics/modelingTutorial/OMNIA%20-%20Sign%20In%20Account.PNG)
 
@@ -31,6 +31,6 @@ This tutorial assumes that you have been granted access to an OMNIA account.
 
     ![OMNIA Tenant Code](https://raw.githubusercontent.com/numbersbelieve/omnia3/master/docs/tutorialPics/modelingTutorial/OMNIA-Tenant-Code.PNG )
 
- 4. Update the modeling privileges of your tenant, by searching for its **Code** and checking option *Is a Production account?*, filling it also with a valid *VAT Number*.
+ 4. Update the modeling privileges of your **Tenant**, by searching for its **Code** and checking option *Is a Production account?*, filling it also with a valid *VAT Number*.
  
     ![enter image description here](https://raw.githubusercontent.com/numbersbelieve/omnia3/master/docs/tutorialPics/modelingTutorial/OMNIA-Update-Tenant.PNG)
