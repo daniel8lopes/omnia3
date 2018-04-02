@@ -7,17 +7,17 @@ permalink: omnia3_tenantcreation.html
 folder: omnia3
 ---
 
-## Tenant Creation
+## 1. OMNIA Tenant Creation
 
 Tenant is the designation of an isolated development environment, where you'll be able to model and create your business aplications. 
 
 OMNIA features a Multi-Tenant component, offering you infinite development and integration interfaces. 
 
-## Prerequisites
+## 2. Prerequisites
 
 This tutorial assumes that you have been granted access to an OMNIA account.
 
-## Creating a Tenant
+## 3. Creating a Tenant
 
 1. Start by going to omniatest.numbersbelieve.com and sign in to your account with your registration email and password, respectively.
 
