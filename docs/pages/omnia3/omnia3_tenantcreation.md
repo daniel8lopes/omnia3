@@ -2,7 +2,7 @@
 title: OMNIA Tenant Creation
 keywords: omnia3
 summary: "How to create a new OMNIA Tenant"
-sidebar: omnia3_tenantcreation
+sidebar: omnia3_sidebar
 permalink: omnia3_tenantcreation.html
 folder: omnia3
 ---
