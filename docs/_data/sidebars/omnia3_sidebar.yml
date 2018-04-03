@@ -24,11 +24,11 @@ entries:
     output: web, pdf
     folderitems:
     - title: OMNIA 3 Landing Page
-      url: /omnia3_landing_page.html
+      url: /omnia3_welcometoOMNIA.html
       output: web
       
     - title: OMNIA Deployment
-      url: /omnia3_omniadeployment.html
+      url: /omnia3_deploymenttutorial.html
       output: web
       
     - title: Tenant Creation
@@ -36,9 +36,9 @@ entries:
       output: web, pdf
 
     - title: Beginner Tutorial
-      url: /omnia3_tutorial1.html
+      url: /omnia3_beginnertutorial.html
       output: web, pdf
 
     - title: Advanced Tutorial
-      url: /omnia3_tutorial2.html
+      url: /omnia3_advancedtutorial.html
       output: web, pdf
