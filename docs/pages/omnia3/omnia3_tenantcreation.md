@@ -25,7 +25,7 @@ This tutorial assumes that you have been granted access to an OMNIA account.
 
 2. Select the option **Go to Tenants Management** on the inferior section of the menu.
 
-    ![Go To Tenants Management](https://raw.githubusercontent.com/numbersbelieve/omnia3/master/docs/tutorialPics/modelingTutorial/OMNIA-Select-Tenant.PNG) 
+    ![Go To Tenants Management](https://raw.githubusercontent.com/numbersbelieve/omnia3/master/docs/tutorialPics/modelingTutorial/OMNIA%20-%20Select%20-%20Tenant.PNG) 
  
  3. Create a new **Tenant**, by clicking the button **Add new** on the top right side, and setting its **Code**
 
