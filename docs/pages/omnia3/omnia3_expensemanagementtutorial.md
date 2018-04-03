@@ -1,3 +1,12 @@
+---
+title: OMNIA Expense Management Tutorial
+keywords: omnia3
+summary: "Expense Management Tutorial"
+sidebar: omnia3_sidebar
+permalink: omnia3_expensemanagementtutorial.html
+folder: omnia3
+---
+
 ## 1. Introduction
 
 Based on a practical example of Expenses reporting, this Management Tutorial demonstrates the versatility and usability of OMNIA Platform on the daily cycle of businesses and organizations.
