@@ -86,3 +86,5 @@ This tutorial assumes that you have created a OMNIA tenant, and are logged in as
 20. Go to application and validate interface changes by creating a new **PurchaseOrder** document. The interface should be equal to the one below:
 
     ![Application_Final_Interface](https://github.com/numbersbelieve/omnia3/raw/master/docs/tutorialPics/modelingTutorial/Application-Final-Interface.PNG)
+
+21. Congratulations on your very first insight into OMNIA Platform's true development agility! Now it's time to move to our next challenge: OMNIA's Platform Advanced Tutorial. 
