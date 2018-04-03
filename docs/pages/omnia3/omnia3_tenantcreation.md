@@ -30,5 +30,7 @@ This tutorial assumes that you have been granted access to an OMNIA account.
  3. Create a new **Tenant**, by clicking the button **Add new** on the top right side, and setting its **Code**
 
     ![OMNIA Tenant Code](https://raw.githubusercontent.com/numbersbelieve/omnia3/master/docs/tutorialPics/modelingTutorial/OMNIA-Tenant-Code.PNG )
+    
+    Everything's ready to proceed to your first touch with OMNIA Technology! Step into [OMNIA's Beginner Tutorial](http://docs.numbersbelieve.com/omnia3_beginnertutorial.html)
 
 
