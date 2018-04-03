@@ -20,17 +20,20 @@ entries:
       output: pdf
       type: frontmatter
 
-  - title: Tutorials
+  - title: Information
     output: web, pdf
     folderitems:
     - title: Welcome to OMNIA V3
       url: /omnia3_welcometoomnia.html
       output: web
       
-    - title: Deployment Tutorial
+    - title: Deploying the Platform
       url: /omnia3_deploymenttutorial.html
       output: web
       
+  - title: Tutorials
+    output: web, pdf
+    folderitems:      
     - title: Tenant Creation
       url: /omnia3_tenantcreation.html
       output: web, pdf
