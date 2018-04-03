@@ -23,11 +23,11 @@ entries:
   - title: Tutorials
     output: web, pdf
     folderitems:
-    - title: OMNIA 3 Landing Page
+    - title: OMNIA 3 Welcome to OMNIA
       url: /omnia3_welcometoomnia.html
       output: web
       
-    - title: OMNIA Deployment
+    - title: Deployment Tutorial
       url: /omnia3_deploymenttutorial.html
       output: web
       
