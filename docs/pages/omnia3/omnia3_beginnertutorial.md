@@ -87,4 +87,5 @@ This tutorial assumes that you have created a OMNIA tenant, and are logged in as
 
     ![Application_Final_Interface](https://github.com/numbersbelieve/omnia3/raw/master/docs/tutorialPics/modelingTutorial/Application-Final-Interface.PNG)
 
+
     **Congratulations** on your very **first insight** into OMNIA Platform's true **development agility**! Now, it's time to **move** to our next challenge: [OMNIA's Platform Advanced Tutorial](http://docs.numbersbelieve.com/omnia3_advancedtutorial.html). 
