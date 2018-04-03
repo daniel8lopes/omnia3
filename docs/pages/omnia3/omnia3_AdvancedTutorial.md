@@ -3,7 +3,7 @@ title: OMNIA Advanced Tutorial
 keywords: omnia3
 summary: "Advanced Tutorial"
 sidebar: omnia3_sidebar
-permalink: omnia3_tutorial2.html
+permalink: omnia3_AdvancedTutorial.html
 folder: omnia3
 ---
 
