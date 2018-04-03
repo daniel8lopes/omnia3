@@ -9,7 +9,7 @@ folder: omnia3
 
 ## 1. Introduction
 
-OMNIA Platform 3.0, a truly **Agile Development** platform, welcomes you aboard to its continuous development process: the User Experience.
+OMNIA 3.0, a truly **Agile Development** platform, welcomes you aboard to its continuous development process: the User Experience.
 
 We do understand all your difficulties on how to build a **business management application** from ground zero. That's why **OMNIA** takes the pledge to **leverage and accelerate** the entire development process, providing a **simple**, **fast** and **responsive-by-default** platform.
 
