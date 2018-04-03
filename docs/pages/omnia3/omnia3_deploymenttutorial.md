@@ -2,7 +2,7 @@
 title: OMNIA Deployment Tutorial
 keywords: omnia3
 summary: "Deploying OMNIA Platform"
-sidebar: omnia3_omniadeployment
+sidebar: omnia3_sidebar
 permalink: omnia3_deploymenttutorial.html
 folder: omnia3
 ---
