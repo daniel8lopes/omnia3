@@ -24,7 +24,7 @@ entries:
     output: web, pdf
     folderitems:
     - title: OMNIA 3 Landing Page
-      url: /omnia3_welcometoOMNIA.html
+      url: /omnia3_welcometoomnia.html
       output: web
       
     - title: OMNIA Deployment
