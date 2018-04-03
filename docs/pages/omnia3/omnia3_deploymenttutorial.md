@@ -1,9 +1,9 @@
 ---
-title: OMNIA Platform Deployment
+title: OMNIA Deployment Tutorial
 keywords: omnia3
 summary: "Deploying OMNIA Platform"
 sidebar: omnia3_omniadeployment
-permalink: omnia3_omniadeployment.html
+permalink: omnia3_deploymenttutorial.html
 folder: omnia3
 ---
 
