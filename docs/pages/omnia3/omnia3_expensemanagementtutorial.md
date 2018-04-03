@@ -51,4 +51,4 @@ This tutorial assumes that you have created a OMNIA tenant, and are logged in as
  
 11.  Go back to application area (by accessing the option **Go to > Application** and configure the option  **_Currency**. Set its *Code* as **EUR** and *name* as **Euro**
 
-    ![Modeler_Create_Agent](https://raw.githubusercontent.com/numbersbelieve/omnia3/master/docs/tutorialPics/modelingTutorial/Application-Configurations-Currency.PNG)
+   ![Modeler_Create_Agent](https://raw.githubusercontent.com/numbersbelieve/omnia3/master/docs/tutorialPics/modelingTutorial/Application-Configurations-Currency.PNG)
