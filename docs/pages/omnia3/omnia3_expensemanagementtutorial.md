@@ -24,9 +24,10 @@ This tutorial assumes that you have created a OMNIA tenant, and are logged in as
     
 2.  Through the left side menu, access the option  **Agents**. Create a new  **Agent**  by clicking the button  **Add new**  on the top right side, and setting its  **Code**  to  **Company**.
     
-    ![Modeler_Create_Agent](https://github.com/numbersbelieve/omnia3/raw/master/docs/tutorialPics/modelingTutorial/Modeler-Create-Agent.PNG)
-    
+   
 3.  Return to the  **Agents**  list and add a new agent by clicking on button  **Add new**  and setting its  _Code_  as  **Employee**.
+
+ ![Modeler_Create_Agent](https://raw.githubusercontent.com/numbersbelieve/omnia3/master/docs/tutorialPics/modelingTutorial/Modeler-Agent-Employee.PNG)
     
 4.  Through the left side menu, access the option  **Resources**. Create a new  **Resource**  by clicking the button  **Add new**  on the top right side, and setting its  **Code**  to  **Expenses**.
     
