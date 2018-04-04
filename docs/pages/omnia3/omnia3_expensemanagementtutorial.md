@@ -86,7 +86,7 @@ This tutorial assumes that you have created a OMNIA tenant, and are logged in as
 
 16. Perform a new Build (by accessing the option **Versioning > Builds** and clicking on button **Create new**)
 
-17. Add a new **Action Behaviour** in order to return your *Exchange Rate*,    . Set *GetRateData* as Code and paste the following code:
+17. Add a new **Action Behaviour**, in order to return automatically your updated *Exchange Rate*, based on an external API (consider it as an optional step, though). Set *GetRateData* as Code and paste the following code:
 
             var client = new System.Net.Http.HttpClient() { };
 
@@ -103,7 +103,7 @@ This tutorial assumes that you have created a OMNIA tenant, and are logged in as
 
             ExchangeRate = Convert.ToDecimal(value["USD"].ToString());
 
-18. Add a new Finalize Behaviour to fill _provider and _receiver attributes by accessing the tab Behaviours and clicking the button Add new > Finalizer. Set FinalizeBehaviours as Code and paste the following code:
+18. Add a new **Finalize Behaviour** to fill _provider and _receiver attributes by accessing the tab Behaviours and clicking the button Add new > Finalizer. Set FinalizeBehaviours as Code and paste the following code:
 
             ExpenseDetails.ForEach(a => a._receiver = Company);
             ExpenseDetails.ForEach(a => a._provider = Employee);
