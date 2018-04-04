@@ -55,6 +55,8 @@ This tutorial assumes that you have created a OMNIA tenant, and are logged in as
         
 12. Access the option **Series** and a new Serie, by clicking on button **Add new**. Set its *Code* as **ExpensesReportSerie** and *name* as **Expenses Report Serie**.
 
+    ![Application_Create_Agent](https://raw.githubusercontent.com/numbersbelieve/omnia3/master/docs/tutorialPics/modelingTutorial/Application-Serie-ExpensesReportSerie.PNG)
+
 13. Add a new document (by accessing the option **Documents** on side menu and clicking on **Add new** button). Set **ExpenseReport** as the document’s *Code*.
 
     ![Application_Create_Agent](https://raw.githubusercontent.com/numbersbelieve/omnia3/master/docs/tutorialPics/modelingTutorial/Application-Document-ExpensesReport.PNG)
