@@ -67,9 +67,9 @@ This tutorial assumes that you have created a OMNIA tenant, and are logged in as
 
     ![Application_Create_Agent](https://raw.githubusercontent.com/numbersbelieve/omnia3/master/docs/tutorialPics/modelingTutorial/Modeler-Document-Attribute.PNG)
 
-    - Add a new Attribute** to your **Document**. Set its _Code_ as _Currency, _Type_ as **Generic Entity > _Currency**, and as required by checking option Is required?.
+    - Add a new Attribute** to your **Document**. Set its _Code_ as _Currency, _Type_ as **Generic Entity > _Currency**, and as required by checking option *Is required?*.
 
-    - Add a new Attribute** to your **Document**. Set its _Code_ as _Employee, _Type_ as **Agent > Employee**.
+    - Add a new Attribute** to your **Document**. Set its _Code_ as _Employee, _Type_ as **Agent > Employee**, and as required by checking option *Is required?*.
 
     - Add a new Attribute** to your **Document**. Set its _Code_ as _DocumentDate, _Type_ as **Primitive > Date**.
 
