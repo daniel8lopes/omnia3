@@ -71,6 +71,7 @@ This tutorial assumes that you have created a OMNIA tenant, and are logged in as
 
 - 13.7. Add a new Attribute** to your **Document**. Set its _Code_ as _Number, _Type_ as **Commitment > ExpensesRequest*
 
+
 14. Perform a new Build (by accessing the option **Versioning > Builds** and clicking on button **Create new**)
 
 15. Select option **Go to > Application**, and create a new **ExpenseReport** by selecting the option **Documents > ExpenseReport**.
