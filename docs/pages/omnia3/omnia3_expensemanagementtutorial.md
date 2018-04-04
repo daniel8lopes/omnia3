@@ -63,9 +63,7 @@ This tutorial assumes that you have created a OMNIA tenant, and are logged in as
 
 14. Go back to modeling area (by accessing the option  **Go to > Modeler**) and edit the  **ExpenseReport**  document to simplify its interface. Add a new attribute by clicking on button  **Add new**. Set its  _Code_  as  **Company**,  _Type_  as  **Agent > Company**, and as required by checking option  _Is required?_.
 
-15. Add a new attribute by clicking on button  **Add new**. Set its  _Code_  as  **Employee**,  _Type_  as  **Agent > Employee**, and as required by checking option  _Is required?_.
-
-16. Click on button **Add new** to add an **Attribute** to your **Document**. Set its _Code_ as _ExpenseLines_, _Type_ as **Commitment > ExpensesRequest**.
+15. Click on button **Add new** to add an **Attribute** to your **Document**. Set its _Code_ as _ExpenseLines_, _Type_ as **Commitment > ExpensesRequest**.
 
 - Add a new Attribute** to your **Document**. Set its _Code_ as _Currency, _Type_ as **Commitment > ExpensesRequest**.
 
@@ -81,7 +79,7 @@ This tutorial assumes that you have created a OMNIA tenant, and are logged in as
 
 - Add a new Attribute** to your **Document**. Set its _Code_ as _Number, _Type_ as **Commitment > ExpensesRequest**
 
-17. Perform a new Build (by accessing the option **Versioning > Builds** and clicking on button **Create new**)
+16. Perform a new Build (by accessing the option **Versioning > Builds** and clicking on button **Create new**)
 
 
 
