@@ -79,9 +79,50 @@ This tutorial assumes that you have created a OMNIA tenant, and are logged in as
 
 - Add a new Attribute** to your **Document**. Set its _Code_ as _BaseCurrency, _Type_ as **Primitive > Text**
 
+- Add a new Attribute** to your **Document**. Set its _Code_ as _TotalAmount, _Type_ as **Primitive > Decimal**, and as required by checking option *Is required?*
+
 
 16. Perform a new Build (by accessing the option **Versioning > Builds** and clicking on button **Create new**)
 
+17. Add a new **Action Behaviour** in order to return your *Exchange Rate*,    . Set *GetRateData* as Code and paste the following code:
+
+            var client = new System.Net.Http.HttpClient() { };
+
+            string apiEndpoint = $"http://data.fixer.io/api/latest?access_key=13854a5cc70cff0901740c1a7ac3c5b3&symbols={Currency}";
+            var requestResult = client.GetAsync(apiEndpoint).GetAwaiter().GetResult();
+
+            var responseBody = requestResult.Content.ReadAsStringAsync().Result;
+            var rateData = JsonConvert.DeserializeObject<Dictionary<string, object>>(responseBody);
+
+            if (!requestResult.IsSuccessStatusCode)
+                throw new Exception("Error on retrieving rate: " + responseBody);
+
+            var value = JsonConvert.DeserializeObject<Dictionary<string, object>>(rateData["rates"].ToString());
+
+            ExchangeRate = Convert.ToDecimal(value["USD"].ToString());
+
+18. Add a new Finalize Behaviour to fill _provider and _receiver attributes by accessing the tab Behaviours and clicking the button Add new > Finalizer. Set FinalizeBehaviours as Code and paste the following code:
+
+            ExpenseDetails.ForEach(a => a._receiver = Company);
+            ExpenseDetails.ForEach(a => a._provider = Employee);
+            TotalAmount = ExpenseDetails.Sum(a => a._amount);    
+    
+19. Go to your **ExpenseReport** Document User Interface by accessing the respective tab, and reorganize them to simplify the interface. Remove attribute Provider, Receiver and Quantity from **ExpenseDetails** element. At last, remove Code attribute from Document.
+
+20. Reorganize Rows and Columns, re-establishing the size and position of their attributes:
+- Serie: Row 1, Column 1 and Size 4;
+- Number: Row 1, Column 2 and Size 4;
+- Date: Row 1, Column 3 and Size 4;
+- Company: Row 2, Column 1 and Size 4;
+- Employee: Row 2, Column 2 and Size 4;
+- Currency: Row 2, Column 3 and Size 4;
+- Exchange Rate: Row 3, Column 1 and Size 2;
+- Expense Details: Row 5, Column 1 and Size 12;
+- Resource: Row 1, Column 1 and Size 2;
+- Amount: Row 1, Column 11 and Size 2;
+- Total Amount: Row 8, Column 11 and Size 2.
+
+21. Go to application and validate interface changes by creating a new **ExpenseReport** document. The interface should be equal to the one below:
 
 
 
