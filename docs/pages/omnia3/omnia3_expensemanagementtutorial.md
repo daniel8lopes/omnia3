@@ -75,7 +75,7 @@ This tutorial assumes that you have created a OMNIA tenant, and are logged in as
 
 - Add a new Attribute** to your **Document**. Set its _Code_ as _ExpenseDetails, _Type_ as **Commitment > ExpensesRequest**.
 
-- Add a new Attribute** to your **Document**. Set its _Code_ as _ExchangeRate, _Type_ as **Commitment > ExpensesRequest** 
+- Add a new Attribute** to your **Document**. Set its _Code_ as _ExchangeRate, Type as **Primitive > Decimal**, and as required by checking option Is required?
 
 - Add a new Attribute** to your **Document**. Set its _Code_ as _BaseCurrency, _Type_ as **Commitment > ExpensesRequest**
 
