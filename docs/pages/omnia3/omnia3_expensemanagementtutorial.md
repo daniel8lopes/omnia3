@@ -73,4 +73,4 @@ This tutorial assumes that you have created a OMNIA tenant, and are logged in as
 
 14. Perform a new Build (by accessing the option **Versioning > Builds** and clicking on button **Create new**)
 
-15.  Select option **Go to > Application**, and create a new **ExpenseReport** by selecting the option **Documents > ExpenseReport**.
+15. Select option **Go to > Application**, and create a new **ExpenseReport** by selecting the option **Documents > ExpenseReport**.
