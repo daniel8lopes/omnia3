@@ -54,3 +54,23 @@ This tutorial assumes that you have created a OMNIA tenant, and are logged in as
    ![Application_Create_Agent](https://raw.githubusercontent.com/numbersbelieve/omnia3/master/docs/tutorialPics/modelingTutorial/Application-Configurations-Currency.PNG)
 
 12. Add a new document (by accessing the option **Documents** on side menu and clicking on **Add new** button). Set **ExpenseReport** as the document’s *Code*.
+
+13. Click on button **Add new** to add an **Attribute** to your **Document**. Set its _Code_ as _ExpenseLines_, _Type_ as **Commitment > ExpensesRequest**.
+
+13.1. Add a new Attribute** to your **Document**. Set its _Code_ as _Currency, _Type_ as **Commitment > ExpensesRequest**.
+
+13.2. Add a new Attribute** to your **Document**. Set its _Code_ as _Employee, _Type_ as **Commitment > ExpensesRequest**.
+
+13.3. Add a new Attribute** to your **Document**. Set its _Code_ as _DocumentDate, _Type_ as **Commitment > ExpensesRequest**.
+
+13.4. Add a new Attribute** to your **Document**. Set its _Code_ as _ExpenseDetails, _Type_ as **Commitment > ExpensesRequest**.
+
+13.5. Add a new Attribute** to your **Document**. Set its _Code_ as _ExchangeRate, _Type_ as **Commitment > ExpensesRequest** 
+
+13.6. Add a new Attribute** to your **Document**. Set its _Code_ as _BaseCurrency, _Type_ as **Commitment > ExpensesRequest**
+
+13.7. Add a new Attribute** to your **Document**. Set its _Code_ as _Number, _Type_ as **Commitment > ExpensesRequest**
+
+14. Perform a new Build (by accessing the option **Versioning > Builds** and clicking on button **Create new**)
+
+15.  Select option **Go to > Application**, and create a new **ExpenseReport** by selecting the option **Documents > ExpenseReport**.
