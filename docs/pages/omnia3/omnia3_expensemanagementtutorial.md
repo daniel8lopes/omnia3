@@ -45,19 +45,21 @@ This tutorial assumes that you have created a OMNIA tenant, and are logged in as
 
 9. On the left side menu, select the option **Generic Entity**. Create a new **Entity**, by clicking the button  **Add new**  on the top right side, and setting its  **Code**  to  **_Currency**.
  
-10. Access the option **Agent > Company** and add a new attribute, by clicking on button **Add new**. Set its _Code_ as **Basecurrency**, _Type_ as **Generic Entity > _Currency**, and as required by checking option _Is required?_
+10. Access the option **Agent > Company** and add a new attribute, by clicking on button **Add new**. Set its _Code_ as **Basecurrency**, _Type_ as **Generic Entity > _Currency**, and as required by checking option _Is required?_.
 
     ![Modeler_Create_Agent](https://raw.githubusercontent.com/numbersbelieve/omnia3/master/docs/tutorialPics/modelingTutorial/Modeler-Company-Basecurrencyattribute.PNG)
  
-11.  Go back to application area (by accessing the option **Go to > Application** and configure the option  **_Currency**. Set its *Code* as **EUR** and *name* as **Euro**
+11. Go back to application area (by accessing the option **Go to > Application** and configure the option  **_Currency**. Set its *Code* as **EUR** and *name* as **Euro**.
 
      ![Application_Create_Agent](https://raw.githubusercontent.com/numbersbelieve/omnia3/master/docs/tutorialPics/modelingTutorial/Application-Configurations-Currency.PNG)
+        
+12. Access the option **Series** and a new Serie, by clicking on button **Add new**. Set its *Code* as **ExpensesReportSerie** and *name* as **Expenses Report Serie**.
 
-12. Add a new document (by accessing the option **Documents** on side menu and clicking on **Add new** button). Set **ExpenseReport** as the document’s *Code*.
+13. Add a new document (by accessing the option **Documents** on side menu and clicking on **Add new** button). Set **ExpenseReport** as the document’s *Code*.
 
     ![Application_Create_Agent](https://raw.githubusercontent.com/numbersbelieve/omnia3/master/docs/tutorialPics/modelingTutorial/Application-Document-ExpensesReport.PNG)
 
-13. Click on button **Add new** to add an **Attribute** to your **Document**. Set its _Code_ as _ExpenseLines_, _Type_ as **Commitment > ExpensesRequest**.
+14. Click on button **Add new** to add an **Attribute** to your **Document**. Set its _Code_ as _ExpenseLines_, _Type_ as **Commitment > ExpensesRequest**.
 
 - Add a new Attribute** to your **Document**. Set its _Code_ as _Currency, _Type_ as **Commitment > ExpensesRequest**.
 
@@ -73,10 +75,10 @@ This tutorial assumes that you have created a OMNIA tenant, and are logged in as
 
 - Add a new Attribute** to your **Document**. Set its _Code_ as _Number, _Type_ as **Commitment > ExpensesRequest**
 
-14. Perform a new Build (by accessing the option **Versioning > Builds** and clicking on button **Create new**)
+15. Perform a new Build (by accessing the option **Versioning > Builds** and clicking on button **Create new**)
 
-15. Select option **Go to > Application**, and create a new **ExpenseReport** by selecting the option **Documents > ExpenseReport**.
+16. Select option **Go to > Application**, and create a new **ExpenseReport** by selecting the option **Documents > ExpenseReport**.
 
-16. Go back to modeling area (by accessing the option  **Go to > Modeler**) and edit the  **ExpenseReport**  document to simplify its interface. Add a new attribute by clicking on button  **Add new**. Set its  _Code_  as  **Company**,  _Type_  as  **Agent > Company**, and as required by checking option  _Is required?_.
+17. Go back to modeling area (by accessing the option  **Go to > Modeler**) and edit the  **ExpenseReport**  document to simplify its interface. Add a new attribute by clicking on button  **Add new**. Set its  _Code_  as  **Company**,  _Type_  as  **Agent > Company**, and as required by checking option  _Is required?_.
 
-17. Add a new attribute by clicking on button  **Add new**. Set its  _Code_  as  **Employee**,  _Type_  as  **Agent > Employee**, and as required by checking option  _Is required?_.
+18. Add a new attribute by clicking on button  **Add new**. Set its  _Code_  as  **Employee**,  _Type_  as  **Agent > Employee**, and as required by checking option  _Is required?_.
