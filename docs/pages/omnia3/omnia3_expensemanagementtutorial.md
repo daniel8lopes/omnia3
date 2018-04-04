@@ -67,19 +67,21 @@ This tutorial assumes that you have created a OMNIA tenant, and are logged in as
 
     ![Application_Create_Agent](https://raw.githubusercontent.com/numbersbelieve/omnia3/master/docs/tutorialPics/modelingTutorial/Modeler-Document-Attribute.PNG)
 
-- Add a new Attribute** to your **Document**. Set its _Code_ as _Currency, _Type_ as **Generic Entity > _Currency**, and as required by checking option Is required?.
+    - Add a new Attribute** to your **Document**. Set its _Code_ as _Currency, _Type_ as **Generic Entity > _Currency**, and as required by checking option Is required?.
 
-- Add a new Attribute** to your **Document**. Set its _Code_ as _Employee, _Type_ as **Agent > Employee**.
+    - Add a new Attribute** to your **Document**. Set its _Code_ as _Employee, _Type_ as **Agent > Employee**.
 
-- Add a new Attribute** to your **Document**. Set its _Code_ as _DocumentDate, _Type_ as **Primitive > Date**.
+    - Add a new Attribute** to your **Document**. Set its _Code_ as _DocumentDate, _Type_ as **Primitive > Date**.
 
-- Add a new Attribute** to your **Document**. Set its _Code_ as _ExpenseDetails, _Type_ as **Commitment > ExpensesRequest1**.
+    - Add a new Attribute** to your **Document**. Set its _Code_ as _ExpenseDetails, _Type_ as **Commitment > ExpensesRequest1**.
 
-- Add a new Attribute** to your **Document**. Set its _Code_ as _ExchangeRate, Type as **Primitive > Decimal**, and as required by checking option Is required?
+    - Add a new Attribute** to your **Document**. Set its _Code_ as _ExchangeRate, Type as **Primitive > Decimal**, and as required by checking option Is required?
 
-- Add a new Attribute** to your **Document**. Set its _Code_ as _BaseCurrency, _Type_ as **Primitive > Text**
+    - Add a new Attribute** to your **Document**. Set its _Code_ as _BaseCurrency, _Type_ as **Primitive > Text**
 
-- Add a new Attribute** to your **Document**. Set its _Code_ as _TotalAmount, _Type_ as **Primitive > Decimal**, and as required by checking option *Is required?*
+    - Add a new Attribute** to your **Document**. Set its _Code_ as _TotalAmount, _Type_ as **Primitive > Decimal**, and as required by checking option *Is required?*
+    
+    - Add a new Attribute** to your **Document**. Set its _Code_ as _ExpenseDate, _Type_ as **Primitive > Date**, and as required by checking option *Is required?*
 
 
 16. Perform a new Build (by accessing the option **Versioning > Builds** and clicking on button **Create new**)
