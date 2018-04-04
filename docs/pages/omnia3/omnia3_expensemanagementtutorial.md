@@ -65,6 +65,8 @@ This tutorial assumes that you have created a OMNIA tenant, and are logged in as
 
 15. Click on button **Add new** to add an **Attribute** to your **Document**. Set its _Code_ as _ExpenseLines_, _Type_ as **Commitment > ExpensesRequest**.
 
+    ![Application_Create_Agent](https://raw.githubusercontent.com/numbersbelieve/omnia3/master/docs/tutorialPics/modelingTutorial/Modeler-Document-Attribute.PNG)
+
 - Add a new Attribute** to your **Document**. Set its _Code_ as _Currency, _Type_ as **Commitment > ExpensesRequest**.
 
 - Add a new Attribute** to your **Document**. Set its _Code_ as _Employee, _Type_ as **Commitment > ExpensesRequest**.
