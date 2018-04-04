@@ -127,5 +127,4 @@ This tutorial assumes that you have created a OMNIA tenant, and are logged in as
 
 21. Go to application and validate interface changes by creating a new **ExpenseReport** document. The interface should be equal to the one below:
 
-
-
+       ![Application_Create_Agent](https://raw.githubusercontent.com/numbersbelieve/omnia3/master/docs/tutorialPics/modelingTutorial/Application-Expense-Form.PNG)
