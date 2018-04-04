@@ -69,7 +69,7 @@ This tutorial assumes that you have created a OMNIA tenant, and are logged in as
 
 - Add a new Attribute** to your **Document**. Set its _Code_ as _BaseCurrency, _Type_ as **Commitment > ExpensesRequest**
 
-- Add a new Attribute** to your **Document**. Set its _Code_ as _Number, _Type_ as **Commitment > ExpensesRequest*
+- Add a new Attribute** to your **Document**. Set its _Code_ as _Number, _Type_ as **Commitment > ExpensesRequest**
 
 14. Perform a new Build (by accessing the option **Versioning > Builds** and clicking on button **Create new**)
 
