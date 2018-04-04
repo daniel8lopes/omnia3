@@ -109,7 +109,7 @@ This tutorial assumes that you have created a OMNIA tenant, and are logged in as
             ExpenseDetails.ForEach(a => a._provider = Employee);
             TotalAmount = ExpenseDetails.Sum(a => a._amount);    
     
-19. Go to your **ExpenseReport** Document User Interface by accessing the respective tab, and reorganize them to simplify the interface. Remove attribute Provider, Receiver and Quantity from **ExpenseDetails** element. At last, remove Code attribute from Document.
+19. Go to your **ExpenseReport** Document User Interface by accessing the respective tab, and reorganize them to simplify the interface. Remove attribute Provider, Receiver and Quantity from **ExpenseDetails** element. At last, remove Code (twice) attribute from Document.
 
 20. Reorganize Rows and Columns, re-establishing the size and position of their attributes:
     - ***Serie***: Row 1, Column 1 and Size 4;
@@ -119,6 +119,7 @@ This tutorial assumes that you have created a OMNIA tenant, and are logged in as
     - ***Employee***: Row 2, Column 2 and Size 4;
     - ***Currency***: Row 2, Column 3 and Size 4;
     - ***Exchange Rate***: Row 3, Column 1 and Size 2;
+    - ***ExpenseDate***: Row 3, Column 5 and Size 4;
     - ***Expense Details***: Row 5, Column 1 and Size 12;
     - ***Resource***: Row 1, Column 1 and Size 2;
     - ***Amount***: Row 1, Column 11 and Size 2;
