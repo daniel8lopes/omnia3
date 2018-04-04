@@ -61,7 +61,11 @@ This tutorial assumes that you have created a OMNIA tenant, and are logged in as
 
     ![Application_Create_Agent](https://raw.githubusercontent.com/numbersbelieve/omnia3/master/docs/tutorialPics/modelingTutorial/Application-Document-ExpensesReport.PNG)
 
-14. Click on button **Add new** to add an **Attribute** to your **Document**. Set its _Code_ as _ExpenseLines_, _Type_ as **Commitment > ExpensesRequest**.
+14. Go back to modeling area (by accessing the option  **Go to > Modeler**) and edit the  **ExpenseReport**  document to simplify its interface. Add a new attribute by clicking on button  **Add new**. Set its  _Code_  as  **Company**,  _Type_  as  **Agent > Company**, and as required by checking option  _Is required?_.
+
+15. Add a new attribute by clicking on button  **Add new**. Set its  _Code_  as  **Employee**,  _Type_  as  **Agent > Employee**, and as required by checking option  _Is required?_.
+
+16. Click on button **Add new** to add an **Attribute** to your **Document**. Set its _Code_ as _ExpenseLines_, _Type_ as **Commitment > ExpensesRequest**.
 
 - Add a new Attribute** to your **Document**. Set its _Code_ as _Currency, _Type_ as **Commitment > ExpensesRequest**.
 
@@ -77,10 +81,8 @@ This tutorial assumes that you have created a OMNIA tenant, and are logged in as
 
 - Add a new Attribute** to your **Document**. Set its _Code_ as _Number, _Type_ as **Commitment > ExpensesRequest**
 
-15. Perform a new Build (by accessing the option **Versioning > Builds** and clicking on button **Create new**)
+17. Perform a new Build (by accessing the option **Versioning > Builds** and clicking on button **Create new**)
 
-16. Select option **Go to > Application**, and create a new **ExpenseReport** by selecting the option **Documents > ExpenseReport**.
 
-17. Go back to modeling area (by accessing the option  **Go to > Modeler**) and edit the  **ExpenseReport**  document to simplify its interface. Add a new attribute by clicking on button  **Add new**. Set its  _Code_  as  **Company**,  _Type_  as  **Agent > Company**, and as required by checking option  _Is required?_.
 
-18. Add a new attribute by clicking on button  **Add new**. Set its  _Code_  as  **Employee**,  _Type_  as  **Agent > Employee**, and as required by checking option  _Is required?_.
+
