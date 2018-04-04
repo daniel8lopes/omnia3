@@ -55,8 +55,7 @@ This tutorial assumes that you have created a OMNIA tenant, and are logged in as
 
 12. Add a new document (by accessing the option **Documents** on side menu and clicking on **Add new** button). Set **ExpenseReport** as the document’s *Code*.
 
-    ![Application_Create_Agent]
-(https://raw.githubusercontent.com/numbersbelieve/omnia3/master/docs/tutorialPics/modelingTutorial/Application-Document-ExpensesReport.PNG)
+    ![Application_Create_Agent](https://raw.githubusercontent.com/numbersbelieve/omnia3/master/docs/tutorialPics/modelingTutorial/Application-Document-ExpensesReport.PNG)
 
 13. Click on button **Add new** to add an **Attribute** to your **Document**. Set its _Code_ as _ExpenseLines_, _Type_ as **Commitment > ExpensesRequest**.
 
