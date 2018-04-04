@@ -110,17 +110,17 @@ This tutorial assumes that you have created a OMNIA tenant, and are logged in as
 19. Go to your **ExpenseReport** Document User Interface by accessing the respective tab, and reorganize them to simplify the interface. Remove attribute Provider, Receiver and Quantity from **ExpenseDetails** element. At last, remove Code attribute from Document.
 
 20. Reorganize Rows and Columns, re-establishing the size and position of their attributes:
-- Serie: Row 1, Column 1 and Size 4;
-- Number: Row 1, Column 2 and Size 4;
-- Date: Row 1, Column 3 and Size 4;
-- Company: Row 2, Column 1 and Size 4;
-- Employee: Row 2, Column 2 and Size 4;
-- Currency: Row 2, Column 3 and Size 4;
-- Exchange Rate: Row 3, Column 1 and Size 2;
-- Expense Details: Row 5, Column 1 and Size 12;
-- Resource: Row 1, Column 1 and Size 2;
-- Amount: Row 1, Column 11 and Size 2;
-- Total Amount: Row 8, Column 11 and Size 2.
+    - ***Serie***: Row 1, Column 1 and Size 4;
+    - ***Number***: Row 1, Column 2 and Size 4;
+    - ***Date***: Row 1, Column 3 and Size 4;
+    - ***Company***: Row 2, Column 1 and Size 4;
+    - ***Employee***: Row 2, Column 2 and Size 4;
+    - ***Currency***: Row 2, Column 3 and Size 4;
+    - ***Exchange Rate***: Row 3, Column 1 and Size 2;
+    - ***Expense Details***: Row 5, Column 1 and Size 12;
+    - ***Resource***: Row 1, Column 1 and Size 2;
+    - ***Amount***: Row 1, Column 11 and Size 2;
+    - ***Total Amount***: Row 8, Column 11 and Size 2.
 
 21. Go to application and validate interface changes by creating a new **ExpenseReport** document. The interface should be equal to the one below:
 
