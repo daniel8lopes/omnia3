@@ -125,6 +125,8 @@ This tutorial assumes that you have created a OMNIA tenant, and are logged in as
     - ***Amount***: Row 1, Column 11 and Size 2;
     - ***Total Amount***: Row 8, Column 11 and Size 2.
 
-21. Go to application and validate interface changes by creating a new **ExpenseReport** document. The interface should be equal to the one below:
+21. Go to application and validate User Interface changes, by creating a new **ExpenseReport** document. The interface should be equal to the one below:
 
        ![Application_Create_Agent](https://raw.githubusercontent.com/numbersbelieve/omnia3/master/docs/tutorialPics/modelingTutorial/Application-Expense-Form.PNG)
+
+    So, you're you have it, a simple and descritive Expense Report, completely built on OMNIA Platform V.3!   
