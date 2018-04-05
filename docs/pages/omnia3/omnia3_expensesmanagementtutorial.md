@@ -9,7 +9,7 @@ folder: omnia3
 
 ## 1. Introduction
 
-Based on a practical example of Expenses reporting, this Management Tutorial demonstrates the versatility and usability of OMNIA Platform on the daily cycle of businesses and organizations.
+Based on a practical example of Expenses reporting, this Management Tutorial highlights the versatility and usability of OMNIA Platform on the daily cycle of businesses and organizations.
 
 
 ## 2. Prerequisites
