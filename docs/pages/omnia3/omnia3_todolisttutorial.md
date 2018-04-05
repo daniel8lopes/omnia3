@@ -16,10 +16,10 @@ This tutorial assumes that you have created a OMNIA tenant, and are logged in as
     ![Homepage_Dashboard](http://funkyimg.com/i/2DVGv.png)
  
 
-2.  Create a new  **Agent**, and set its  **Code**  to  **Company**.
+2.  Create a new  **Agent**, and set its  *Code*  to  **Company**.
     
    
-3.  Return to the  **Agents** list and add a new agent, setting its  _Code_  as  **Employee**.
+3.  Return to the  **Agents** list and add a new agent, setting its  *Code*  as  **Employee**.
 
     ![Modeler_Create_Agent](https://raw.githubusercontent.com/numbersbelieve/omnia3/master/docs/tutorialPics/modelingTutorial/Modeler-Agent-Employee.PNG)
 
