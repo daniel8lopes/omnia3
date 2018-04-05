@@ -23,7 +23,7 @@ This tutorial assumes that you have created a OMNIA tenant, and are logged in as
 
     ![Modeler_Create_Agent](https://raw.githubusercontent.com/numbersbelieve/omnia3/master/docs/tutorialPics/modelingTutorial/Modeler-Agent-Employee.PNG)
 
-4.  Create a new  **Resource**, and set its  **Code**  to  **Task**.
+4.  Create a new  **Resource**, and set its  *Code*  to  **Task**.
     
 5.  Access the option  **Versioning > Builds**  and build your tenant, by clicking the button  **Create new**.
 
