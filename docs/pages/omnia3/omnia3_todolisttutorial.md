@@ -2,7 +2,7 @@
 title: OMNIA To-Do List Tutorial
 keywords: omnia3
 summary: "To-Do List Tutorial"
-sidebar: omnia
+sidebar: omnia3
 ---
 
 ## 2. Prerequisites
