@@ -126,5 +126,5 @@ This tutorial assumes that you have created a OMNIA tenant, and are logged in as
 
     So, here you have it, a simple and descritive Expense Report, completely built on **OMNIA Platform 3.0**!
     
-    We have one more exercise for you. At this time, your OMNIA skills are getting sharped and you're feeling already confortable with       our technology. We want to show you how OMNIA can guide you through your daily workflow checklist: time to proceed to our           [**To-Do List Tutorial**](http://docs.numbersbelieve.com/omnia3_todolisttutorial.html). 
+    We have one more exercise for you. At this time, your **OMNIA skills** are getting sharped and you're feeling already confortable       with our technology. Now, we want to show you how OMNIA can guide you through your daily workflow checklist: time to proceed to our     [**To-Do List Tutorial**](http://docs.numbersbelieve.com/omnia3_todolisttutorial.html).
     
