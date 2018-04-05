@@ -49,3 +49,7 @@ entries:
     - title: Expense Management Tutorial
       url: /omnia3_expensemanagementtutorial.html
       output: web, pdf
+      
+    - title: To-Do List Tutorial
+      url: /omnia3_todolisttutorial.html
+      output: web, pdf
