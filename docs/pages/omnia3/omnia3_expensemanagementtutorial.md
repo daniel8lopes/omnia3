@@ -53,7 +53,7 @@ This tutorial assumes that you have created a OMNIA tenant, and are logged in as
         
 12. Access the option **Series** and a new Serie, by clicking on button **Add new**. Set its *Code* as **A** and *name* as **Expenses Report Serie**.
 
-13. Go back to modeling area (by accessing the option  **Go to > Modeler**) and edit the  **ExpenseReport**  document to simplify its interface. Add a new attribute by clicking on button  **Add new**. Set its  _Code_  as  **Company**,  _Type_  as  **Agent > Company**, and as required by checking option  _Is required?_.
+13. Go back to modeling area (by accessing the option  **Go to > Modeler**) and edit the  **ExpenseReport**  document to simplify its interface. Add a new attribute by clicking on button  **Add new**. Set its *Type*  as  **Agent > Company**, and as required by checking option  *Is required?*.
 
 14. Click on button **Add new** to add an **Attribute** to your **Document**. Set its _Code_ as _ExpenseLines_, _Type_ as **Commitment > ExpensesRequest**.
 
