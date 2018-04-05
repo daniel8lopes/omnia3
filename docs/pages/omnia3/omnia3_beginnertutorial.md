@@ -1,7 +1,7 @@
 ---
 title: OMNIA Beginner Tutorial
 keywords: omnia3
-summary: "Beginner Tutorial"
+summary: "First Steps on OMNIA Platform 3.0"
 sidebar: omnia3_sidebar
 permalink: omnia3_beginnertutorial.html
 folder: omnia3
