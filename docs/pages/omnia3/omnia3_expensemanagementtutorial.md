@@ -75,17 +75,17 @@ This tutorial assumes that you have created a OMNIA tenant, and are logged in as
 
     - Add a new Attribute to your **Document**. Set its _Code_ as _ExpenseDetails, _Type_ as **Commitment > ExpensesRequest1**.
 
-    - Add a new Attribute to your **Document**. Set its _Code_ as _ExchangeRate, Type as **Primitive > Decimal**, and as required by checking option Is required?
+    - Add a new Attribute to your **Document**. Set its _Code_ as _ExchangeRate, Type as **Primitive > Decimal**, and as required by checking option *Is required?*.
 
-    - Add a new Attribute to your **Document**. Set its _Code_ as _BaseCurrency, _Type_ as **Primitive > Text**
+    - Add a new Attribute to your **Document**. Set its _Code_ as _BaseCurrency, _Type_ as **Primitive > Text**.
 
-    - Add a new Attribute to your **Document**. Set its _Code_ as _TotalAmount, _Type_ as **Primitive > Decimal**, and as required by checking option *Is required?*
+    - Add a new Attribute to your **Document**. Set its _Code_ as _TotalAmount, _Type_ as **Primitive > Decimal**, and as required by checking option *Is required?*.
     
-    - Add a new Attribute to your **Document**. Set its _Code_ as _ExpenseDate, _Type_ as **Primitive > Date**, and as required by checking option *Is required?*
+    - Add a new Attribute to your **Document**. Set its _Code_ as _ExpenseDate, _Type_ as **Primitive > Date**, and as required by checking option *Is required?*.
 
 16. Go back to modeling area (by accessing the option  **Go to > Modeler**). On the left side menu, select the option **Commitments > ExpensesRequest1**. Create a new **Attribute**, by clicking the button  **Add new**  on the top right side, and setting its  **Code**  to  **ExpenseAmount**, _Type_ as **Primitive > Decimal**, and as required by checking option *Is required?*.
 
-17. Perform a new Build (by accessing the option **Versioning > Builds** and clicking on button **Create new**)
+17. Perform a new Build (by accessing the option **Versioning > Builds** and clicking on button **Create new**).
 
 18. Add a new **Action Behaviour**, in order to return automatically your updated *Exchange Rate*, based on an external API (consider it as an optional step, though). Set *GetRateData* as Code and paste the following code:
 
