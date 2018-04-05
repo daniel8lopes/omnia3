@@ -79,7 +79,7 @@ This tutorial assumes that you have created a OMNIA tenant, and are logged in as
 
 16. Perform a new Build (by accessing the option **Versioning > Builds** and clicking on button **Create new**).
 
-17. (**Optional**): Add a new **Action Behaviour**, in order to return automatically your updated *Exchange Rate*, based on an external API . Set *GetRateData* as Code and paste the following code:
+17. (**Optional**) Add a new **Action Behaviour**, in order to return automatically your updated *Exchange Rate*, based on an external API . Set *GetRateData* as Code and paste the following code:
 
             var client = new System.Net.Http.HttpClient() { };
 
