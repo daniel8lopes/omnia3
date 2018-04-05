@@ -124,4 +124,7 @@ This tutorial assumes that you have created a OMNIA tenant, and are logged in as
 
        ![Application_Create_Agent](https://raw.githubusercontent.com/numbersbelieve/omnia3/master/docs/tutorialPics/modelingTutorial/Application-ExpensesReport-Form.PNG)
 
-    So, here you have it, a simple and descritive Expense Report, completely built on **OMNIA Platform 3.0**!   
+    So, here you have it, a simple and descritive Expense Report, completely built on **OMNIA Platform 3.0**!
+    
+    We have one more exercise for you. At this time, your OMNIA skills are getting sharped and you're feeling already confortable with       our technology. Now, we want to show you how OMNIA can guide you through your daily workflow checklist: time to proceed to our           [**To- Do List Tutorial**](http://docs.numbersbelieve.com/omnia3_todolisttutorial.html) 
+    
