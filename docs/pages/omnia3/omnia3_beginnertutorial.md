@@ -37,7 +37,7 @@ This tutorial assumes that you have created a OMNIA tenant, and are logged in as
 
 5. Access the option **Versioning > Builds** and build the tenant by clicking the button **Create new**.
 
-6. On the left side menu, select option **Go to > Application**, and create a new **Company** by selecting the option **Configurations > Company**  and defining its *Code* and *Name*.
+6. On the left side menu, select option **Go to > Application** and create a new **Company**, by selecting the option **Configurations > Company**  and defining its *Code* and *Name*.
 
     ![Application_Create_Agent](https://github.com/numbersbelieve/omnia3/raw/master/docs/tutorialPics/modelingTutorial/Application-Create-Agent.PNG)
 
