@@ -23,7 +23,7 @@ entries:
   - title: Information
     output: web, pdf
     folderitems:
-    - title: Welcome to OMNIA V3
+    - title: Welcome to OMNIA 3.0
       url: /omnia3_welcometoomnia.html
       output: web
       
