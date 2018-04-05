@@ -30,12 +30,12 @@ It is necessary to have completed the steps in the  [Modeling tutorial](http://d
 
 2. Create a new **Action Behaviour**  to fill the new attribute (on the PurchaseOrder document, go to tab **Behaviours** and click on **Add new > Action**). Set **GetSupplierName** as **Code**, **Supplier** as the attribute that triggers the behaviour, and paste the following code:
 
-````
+    ````
     var authValue = new System.Net.Http.Headers.AuthenticationHeaderValue("Bearer", this._context.Authentication.AccessToken);
 
     var client = new System.Net.Http.HttpClient() { DefaultRequestHeaders = { Authorization = authValue } };
 
-    string apiEndpoint = $"{this.Context.Tenant.ApiEndpoint}          {this.Context.Tenant.Code}/{this.Context.Tenant.EnvironmentCode}/Application/Supplier/{Supplier}";
+    string apiEndpoint = $"{this.Context.Tenant.ApiEndpoint}               {this.Context.Tenant.Code}/{this.Context.Tenant.EnvironmentCode}/Application/Supplier/{Supplier}";
     var requestResult = client.GetAsync(apiEndpoint).GetAwaiter().GetResult();
 
     string responseBody = requestResult.Content.ReadAsStringAsync().Result;
@@ -46,7 +46,7 @@ It is necessary to have completed the steps in the  [Modeling tutorial](http://d
 
     SupplierName = supplier["_name"].ToString();
 
-````
+    ````
 
 3. Build the model.
 
@@ -58,7 +58,7 @@ It is necessary to have completed the steps in the  [Modeling tutorial](http://d
 
 2. Create a new **Action Behaviour**  to fill the new attribute (on the PurchaseOrder document, go to tab **Behaviours** and click on **Add new > Action**). Set **GetRecordData** as **Code**, **Code** as the attribute that triggers the behaviour, and paste the following code:
 
-````
+    ````
     var client = new System.Net.Http.HttpClient() {DefaultRequestHeaders = {}};
     client.DefaultRequestHeaders.Add("User-Agent", "OMNIA");
 
@@ -81,7 +81,7 @@ It is necessary to have completed the steps in the  [Modeling tutorial](http://d
         Artist = artists[0]["name"].ToString();
     }
     }
-````
+    ````
 
 3. Build the model.
 
