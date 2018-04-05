@@ -11,7 +11,7 @@ folder: omnia3
 
 After you have completed our first tutorial, whose result is a functional order management application, **OMNIA Advanced Tutorial** focus on advanced behaviour modeling and data analysis.
 
-In the area of *advanced behaviours*, we will explore how to comunicate with **OMNIA's native API** to improve the user experience, and an external API.
+In the area of *advanced behaviours*, we will explore how to comunicate with **OMNIA's native API**, in order to improve the user experience, and an external API.
 In *data analysis*, we will explore how to model new lists and how to create dashboards on OMNIA.
 
 ## 2. Prerequisites
