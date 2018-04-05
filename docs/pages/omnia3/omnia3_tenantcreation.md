@@ -31,6 +31,6 @@ This tutorial assumes that you have been granted access to an OMNIA account.
 
     ![OMNIA Tenant Code](https://raw.githubusercontent.com/numbersbelieve/omnia3/master/docs/tutorialPics/modelingTutorial/OMNIA-Tenant-Code.PNG )
     
-    **Everything's ready** to have to your **first glimpse** into **OMNIA Platform**, with [**OMNIA's Beginner Tutorial**](http://docs.numbersbelieve.com/omnia3_beginnertutorial.html).
+    **Everything's ready** for your **first glimpse** into **OMNIA Platform**, with [**OMNIA's Beginner Tutorial**](http://docs.numbersbelieve.com/omnia3_beginnertutorial.html).
 
 
