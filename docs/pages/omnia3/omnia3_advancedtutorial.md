@@ -31,20 +31,20 @@ It is necessary to have completed the steps in the  [Modeling tutorial](http://d
 2. Create a new **Action Behaviour**  to fill the new attribute (on the PurchaseOrder document, go to tab **Behaviours** and click on **Add new > Action**). Set **GetSupplierName** as **Code**, **Supplier** as the attribute that triggers the behaviour, and paste the following code:
 
 ````
-var authValue = new System.Net.Http.Headers.AuthenticationHeaderValue("Bearer", this._context.Authentication.AccessToken);
+    var authValue = new System.Net.Http.Headers.AuthenticationHeaderValue("Bearer", this._context.Authentication.AccessToken);
 
-var client = new System.Net.Http.HttpClient() { DefaultRequestHeaders = { Authorization = authValue } };
+    var client = new System.Net.Http.HttpClient() { DefaultRequestHeaders = { Authorization = authValue } };
 
-string apiEndpoint = $"{this.Context.Tenant.ApiEndpoint}{this.Context.Tenant.Code}/{this.Context.Tenant.EnvironmentCode}/Application/Supplier/{Supplier}";
-var requestResult = client.GetAsync(apiEndpoint).GetAwaiter().GetResult();
+    string apiEndpoint = $"{this.Context.Tenant.ApiEndpoint}          {this.Context.Tenant.Code}/{this.Context.Tenant.EnvironmentCode}/Application/Supplier/{Supplier}";
+    var requestResult = client.GetAsync(apiEndpoint).GetAwaiter().GetResult();
 
-string responseBody = requestResult.Content.ReadAsStringAsync().Result;
-var supplier = JsonConvert.DeserializeObject<Dictionary<string, object>>(responseBody);
+    string responseBody = requestResult.Content.ReadAsStringAsync().Result;
+    var supplier = JsonConvert.DeserializeObject<Dictionary<string, object>>(responseBody);
 
-if (!requestResult.IsSuccessStatusCode)
+    if (!requestResult.IsSuccessStatusCode)
     throw new Exception("Error on retrieving Supplier name: "+ responseBody);
 
-SupplierName = supplier["_name"].ToString();
+    SupplierName = supplier["_name"].ToString();
 
 ````
 
@@ -59,28 +59,28 @@ SupplierName = supplier["_name"].ToString();
 2. Create a new **Action Behaviour**  to fill the new attribute (on the PurchaseOrder document, go to tab **Behaviours** and click on **Add new > Action**). Set **GetRecordData** as **Code**, **Code** as the attribute that triggers the behaviour, and paste the following code:
 
 ````
-var client = new System.Net.Http.HttpClient() {DefaultRequestHeaders = {}};
-client.DefaultRequestHeaders.Add("User-Agent", "OMNIA");
+    var client = new System.Net.Http.HttpClient() {DefaultRequestHeaders = {}};
+    client.DefaultRequestHeaders.Add("User-Agent", "OMNIA");
 
-string apiEndpoint = $"https://api.discogs.com/masters/{_code}";
-var requestResult = client.GetAsync(apiEndpoint).GetAwaiter().GetResult();
+    string apiEndpoint = $"https://api.discogs.com/masters/{_code}";
+    var requestResult = client.GetAsync(apiEndpoint).GetAwaiter().GetResult();
 
-string responseBody = requestResult.Content.ReadAsStringAsync().Result;
+    string responseBody = requestResult.Content.ReadAsStringAsync().Result;
 
-Dictionary<string, object> responseDictionary = JsonConvert.DeserializeObject<Dictionary<string, object>>(responseBody);
+    Dictionary<string, object> responseDictionary = JsonConvert.DeserializeObject<Dictionary<string, object>>(responseBody);
 
-if (!requestResult.IsSuccessStatusCode)
+    if (!requestResult.IsSuccessStatusCode)
     throw new Exception("Error on retrieving data from Discogs API: " + responseDictionary["message"].ToString() + " " + apiEndpoint);
 
-_name = responseDictionary["title"].ToString();
+    _name = responseDictionary["title"].ToString();
 
-if (responseDictionary.ContainsKey("artists")) {
+    if (responseDictionary.ContainsKey("artists")) {
     Linq.JArray artists = (Linq.JArray)responseDictionary["artists"];
                 
     if (artists != null && artists.Count > 0) {
         Artist = artists[0]["name"].ToString();
     }
-}
+    }
 ````
 
 3. Build the model.
