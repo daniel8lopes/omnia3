@@ -43,7 +43,7 @@ This tutorial assumes that you have created a OMNIA tenant, and are logged in as
   
     ![Modeler_Create_Agent](https://raw.githubusercontent.com/numbersbelieve/omnia3/master/docs/tutorialPics/modelingTutorial/Modeler-Commitment-ExpenseRequest.PNG)
     
-9. Add a new document (by accessing the option **Documents** on side menu and clicking on **Add new** button).
+9. Add a new document (by accessing the option **Documents** on side menu and clicking on **Add new** button) and set its *Code* as **ExpenseReport**. 
    
 10. On the left side menu, select the option **Generic Entity**. Create a new **Entity**, by clicking the button  **Add new**  on the top right side, and setting its  **Code**  to  **_Currency**.
   
