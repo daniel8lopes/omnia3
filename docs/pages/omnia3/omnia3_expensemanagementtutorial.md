@@ -45,7 +45,7 @@ This tutorial assumes that you have created a OMNIA tenant, and are logged in as
 
 9. On the left side menu, select the option **Generic Entity**. Create a new **Entity**, by clicking the button  **Add new**  on the top right side, and setting its  **Code**  to  **_Currency**.
  
-10. Access the option **Agent > Company** and add a new attribute, by clicking on button **Add new**. Set its _Code_ as **Basecurrency**, _Type_ as **Generic Entity > _Currency**, and as required by checking option _Is required?_.
+10. Access the option **Agent > Company** and add a new attribute, by clicking on button **Add new**. Set its _Code_ as **Basecurrency**, _Type_ as **Generic Entity > _Currency**, and as required by checking option Is required?.
 
     ![Modeler_Create_Agent](https://raw.githubusercontent.com/numbersbelieve/omnia3/master/docs/tutorialPics/modelingTutorial/Modeler-Company-Basecurrencyattribute.PNG)
  
