@@ -1,7 +1,7 @@
 ---
-title: OMNIA Expense Management Tutorial
+title: OMNIA Expenses Management Tutorial
 keywords: omnia3
-summary: "Expense Management Tutorial"
+summary: "Expenses Management Tutorial"
 sidebar: omnia3_sidebar
 permalink: omnia3_expensemanagementtutorial.html
 folder: omnia3
@@ -16,7 +16,7 @@ Based on a practical example of Expenses reporting, this Management Tutorial dem
 
 This tutorial assumes that you have created a OMNIA tenant, and are logged in as a user with modeling privileges to this tenant.
 
-## 3. Modeling OMNIA Expense Management
+## 3. Modeling OMNIA Expenses Management
 
 1.  Start by selecting the tenant where you are going to model, and you will be redirected to the modeling area.
     
