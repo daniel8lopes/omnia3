@@ -46,7 +46,7 @@ entries:
       url: /omnia3_advancedtutorial.html
       output: web, pdf
       
-    - title: Expense Management Tutorial
+    - title: Expenses Management Tutorial
       url: /omnia3_expensemanagementtutorial.html
       output: web, pdf
       
