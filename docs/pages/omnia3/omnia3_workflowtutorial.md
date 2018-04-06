@@ -37,8 +37,6 @@ This tutorial assumes that you have created a OMNIA tenant, and are logged in as
 
 10. Add a new **Generic Entity**, and set the code as *Project*.
 
-## 4. Queries and Lists
-
 11. On Modeler, go to **Data Analytics > Queries** and check if *TaskList_Query* is already created.
 
     ![Task List Query](https://raw.githubusercontent.com/numbersbelieve/omnia3/master/docs/tutorialPics/modelingTutorial/Modeler-Queries-Tasklist.PNG)
@@ -47,12 +45,9 @@ This tutorial assumes that you have created a OMNIA tenant, and are logged in as
 
     ![Task List Query](https://raw.githubusercontent.com/numbersbelieve/omnia3/master/docs/tutorialPics/modelingTutorial/Modeler-Lists-Task_List.PNG)
     
-
 12. Add new columns to **List**. Add a column for Query Property *Code*, with Label *Task*, and format as *Text*
 
     ![Task List Query](https://raw.githubusercontent.com/numbersbelieve/omnia3/master/docs/tutorialPics/modelingTutorial/Code-QueryList.PNG)
-
-## 5. Dashboards
 
 13. Return to **Data Analytics > Dashboards** and create a new dashboard. Set *Home* as Code, so that the dashboard is visible on application’s homepage.
 
