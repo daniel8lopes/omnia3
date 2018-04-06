@@ -50,6 +50,6 @@ entries:
       url: /omnia3_expensemanagementtutorial.html
       output: web, pdf
       
-    - title: To-Do List Tutorial
-      url: /omnia3_todolisttutorial.html
+    - title: Workflow Tutorial
+      url: /omnia3_workflowtutorial.html
       output: web, pdf
