@@ -49,11 +49,13 @@ This tutorial assumes that you have created a OMNIA tenant, and are logged in as
 
     ![Task List Query](https://raw.githubusercontent.com/numbersbelieve/omnia3/master/docs/tutorialPics/modelingTutorial/Code-QueryList.PNG)
 
-13. Return to **Data Analytics > Dashboards** and create a new dashboard. Set *Home* as Code, so that the dashboard is visible on application’s homepage.
+13. On **Data Analytics > Dashboards**, create a new dashboard and set *Home* as Code, so the dashboard will be visible on application’s homepage.
 
     ![Modeler_Create_Dashboard](https://github.com/numbersbelieve/omnia3/raw/master/docs/tutorialPics/modelingTutorial/Modeler-Create-Dashboard.PNG)
     
+14. Add lists to **Dashboard**. Set *TaskList* as Code, Task_List (created previously) and position it in the first Row and Column, with Size six.
 
+15. Return to **Resources** and add a new Attribute, with Code *TaskDate* and Type as **Primitive > Date**. 
 
 
 
