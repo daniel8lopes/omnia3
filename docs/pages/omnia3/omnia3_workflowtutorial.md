@@ -29,7 +29,7 @@ This tutorial assumes that you have created a OMNIA tenant, and are logged in as
 
 6. Proceed to the Application area, and configure all figures previously defined: create a new **Company**, by selecting the option **Configurations > Company** and defining its *Code* and *Name*.
 
-6.1. Follow the same process of the previous step to create a new *Employee* and *Task*.
+  6.1. Follow the same process of the previous step to create a new *Employee* and *Task*.
 
 7. Go back to Modeling area and create a new **Commitment** with Code set as *TaskList*, *Task* as the resource to be exchanged, *Employee* as provider agent, and *Company* as receiver agent.
 
