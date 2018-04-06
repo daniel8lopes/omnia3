@@ -31,7 +31,7 @@ This tutorial assumes that you have created a OMNIA tenant, and are logged in as
 
 7. Follow the same process of the previous step to create a new *Employee* and *Task*.
 
-8. Go back to Modeling area and create a new **Commitment** with Code set as *TaskList*, *Task* as the resource to be exchanged, *Employee* as provider agent, and *Company* as receiver agent.
+8. Go back to Modeling area and create a new **Commitment** with Code set as *Tasklist*, *Task* as the resource to be exchanged, *Employee* as provider agent, and *Company* as receiver agent.
 
 9. Create a new **Document**, naming it as **TaskReport**.
 
