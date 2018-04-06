@@ -7,6 +7,10 @@ permalink: omnia3_workflowtutorial.html
 folder: omnia3
 ---
 
+## 1. Introduction
+
+OMNIA's Worflow Tutorial enhances your experience on OMNIA Platform 3.0, combining advanced elements and features from previous Tutorials with your daily workflow tools.
+
 ## 2. Prerequisites
 
 This tutorial assumes that you have created a OMNIA tenant, and are logged in as a user with modeling privileges to this tenant.
