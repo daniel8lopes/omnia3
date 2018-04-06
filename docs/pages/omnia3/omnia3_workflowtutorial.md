@@ -52,6 +52,13 @@ This tutorial assumes that you have created a OMNIA tenant, and are logged in as
 
     ![Task List Query](https://raw.githubusercontent.com/numbersbelieve/omnia3/master/docs/tutorialPics/modelingTutorial/Code-QueryList.PNG)
 
+## 5. Dashboards
+
+13. Return to **Data Analytics > Dashboards** and create a new dashboard. Set *Home* as Code, so that the dashboard is visible on application’s homepage.
+
+    ![Modeler_Create_Dashboard](https://github.com/numbersbelieve/omnia3/raw/master/docs/tutorialPics/modelingTutorial/Modeler-Create-Dashboard.PNG)
+    
+
 
 
 
