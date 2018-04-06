@@ -55,7 +55,7 @@ This tutorial assumes that you have created a OMNIA tenant, and are logged in as
     
 14. Add lists to **Dashboard**. Set *TaskList* as Code, Task_List (created previously) and position it in the first Row and Column, with Size six.
 
-15. Return to **Resources** and add a new Attribute, with Code *TaskDate* and Type as **Primitive > Date**. 
+
 
 
 
