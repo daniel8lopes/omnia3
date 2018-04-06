@@ -31,31 +31,34 @@ This tutorial assumes that you have created a OMNIA tenant, and are logged in as
 
 7. Follow the same process of the previous step to create a new *Employee* and *Task*.
 
-8. Go back to Modeling area and create a new **Commitment** with Code set as *Tasklist*, *Task* as the resource to be exchanged, *Employee* as provider agent, and *Company* as receiver agent.
+8. Go back to Modeling area and create a new **Event** with Code set as *Executedtask*, *Task* as the resource to be exchanged, *Employee* as provider agent, and *Company* as receiver agent.
 
 9. Create a new **Document**, naming it as **TaskReport**.
 
 10. Add a new **Generic Entity**, and set the code as *Project*.
 
-11. On Modeler, go to **Data Analytics > Queries** and check if *TaskList_Query* is already created.
+11. On Modeler, go to **Data Analytics > Queries** and verify if *Executedtask_Query* is already created.
 
-    ![Task List Query](https://raw.githubusercontent.com/numbersbelieve/omnia3/master/docs/tutorialPics/modelingTutorial/Modeler-Queries-Tasklist.PNG)
 
-12. Proceed to **Analytics > Dashboards** and create a new list. Set *Task_List* as Code, the query created on first step (TaskList_Query) as the source of the list and Task as Label.
+12. Proceed to **Analytics > Dashboards** and create a new list. Set *Executedtasklist* as Code, the query created on first step (ExecutedtaskQuery) as the source of the list and Task as Label.
 
-    ![Task List Query](https://raw.githubusercontent.com/numbersbelieve/omnia3/master/docs/tutorialPics/modelingTutorial/Modeler-Lists-Task_List.PNG)
+    ![Task List Query]( )
     
 12. Add new columns to **List**. Add a column for Query Property *Code*, with Label *Task*, and format as *Text*
 
-    ![Task List Query](https://raw.githubusercontent.com/numbersbelieve/omnia3/master/docs/tutorialPics/modelingTutorial/Code-QueryList.PNG)
+    ![Task List Query]( )
 
 13. On **Data Analytics > Dashboards**, create a new dashboard and set *Home* as Code, so the dashboard will be visible on application’s homepage.
 
     ![Modeler_Create_Dashboard](https://github.com/numbersbelieve/omnia3/raw/master/docs/tutorialPics/modelingTutorial/Modeler-Create-Dashboard.PNG)
     
-14. Add lists to **Dashboard**. Set *TaskList* as Code, Task_List (created previously) and position it in the first Row and Column, with Size six.
+14. Add lists to **Dashboard**. Set *Executedtask* as Code, Executedtask_List (created previously) and position it in the first Row and Column, with Size six.
 
+15. Add an new Attribute to your Document. Set its Code as *Project*, Type as **Generic Entity > Project**.
 
+16. Set its Code as *Employee*, Type as **Generic Entity > Project**.
+
+17.  Set its Code as *Company*, Type as **Generic Entity > Project**.
 
 
 
