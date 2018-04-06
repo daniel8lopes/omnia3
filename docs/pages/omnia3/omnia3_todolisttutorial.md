@@ -1,8 +1,10 @@
 ---
-title: OMNIA To-Do List Tutorial
+title: OMNIA 3.0 To-Do List Tutorial
 keywords: omnia3
-summary: "To-Do List Tutorial"
-sidebar: omnia3
+summary: "OMNIA To-Do List Tutorial"
+sidebar: omnia3_sidebar
+permalink: omnia3_todolisttutorial.html
+folder: omnia3
 ---
 
 ## 2. Prerequisites
