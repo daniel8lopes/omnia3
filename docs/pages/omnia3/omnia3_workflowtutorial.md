@@ -63,7 +63,10 @@ This tutorial assumes that you have created a OMNIA tenant, and are logged in as
     - Add a new Attribute to your Document. Set its Code as *Employee*, Type as **Generic Entity > Project**, and as required by checking option *Is required?*.
 
 
-16. Edit the previously modeled **Document** *TaskReport*. Create a new Attribute, setting its Code and Type to EmployeeName and Primitive > Text, respectively. Set the attribute as Read Only.
+16. Edit the previously modeled **Document** *TaskReport*. Create a new Attribute, setting its Code and Type to EmployeeName and **Primitive > Text**, respectively. Set the attribute as *Read Only*.
+
+    
+    ![Modeler_Create_Dashboard](https://raw.githubusercontent.com/numbersbelieve/omnia3/master/docs/tutorialPics/modelingTutorial/Attribute%20-%20EmployeeName.PNG)
 
 17. Create a new **Action Behaviour** to fill the new attribute (on the *TaskReport* document, go to tab *Behaviours* and click on **Add new > Action**). Set *GetRecordData* as Code, Code as the attribute that triggers the behaviour, and paste the following code:
 
