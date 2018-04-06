@@ -41,9 +41,9 @@ This tutorial assumes that you have created a OMNIA tenant, and are logged in as
 
 11. On Modeler, go to **Data Analytics > Queries** and check if *TaskList_Query* is already created.
 
-    ![TaskListQuery] (https://raw.githubusercontent.com/numbersbelieve/omnia3/master/docs/tutorialPics/modelingTutorial/Modeler-Queries-Tasklist.PNG)
+    ![Task List Query](https://raw.githubusercontent.com/numbersbelieve/omnia3/master/docs/tutorialPics/modelingTutorial/Modeler-Queries-Tasklist.PNG)
 
-12. Proceed to **Analytics > Lists** and create a new list. Set *Task_List* as Code, the query created on first step (TaskList_Query) as the source of the list and Task as Label.
+12. Proceed to **Analytics > Dashboards** and create a new list. Set *Task_List* as Code, the query created on first step (TaskList_Query) as the source of the list and Task as Label.
 
 
 
