@@ -58,9 +58,9 @@ This tutorial assumes that you have created a OMNIA tenant, and are logged in as
 
 15. Add an new Attribute to your Document. Set its Code as *Project*, Type as **Generic Entity > Project**.
 
-16. Set its Code as *Employee*, Type as **Generic Entity > Project**.
+    - Add a new Attribute to your Document. Set its Code as *Company*, Type as **Generic Entity > Project** , and as required by checking option *Is required?*.
 
-17.  Set its Code as *Company*, Type as **Generic Entity > Project**.
+    - Add a new Attribute to your Document. Set its Code as *Employee*, Type as **Generic Entity > Project**, and as required by checking option *Is required?*.
 
 
 
