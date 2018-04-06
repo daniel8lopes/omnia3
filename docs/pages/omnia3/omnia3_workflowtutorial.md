@@ -33,7 +33,7 @@ This tutorial assumes that you have created a OMNIA tenant, and are logged in as
 
 8. Go back to Modeling area and create a new **Event** with Code set as *Executedtask*, *Task* as the resource to be exchanged, *Employee* as provider agent, and *Company* as receiver agent.
 
-    ![Event_Executedtask](https://raw.githubusercontent.com/numbersbelieve/omnia3/master/docs/tutorialPics/modelingTutorial/Event-TaskList.PNG)
+    ![Event_Executed task](https://raw.githubusercontent.com/numbersbelieve/omnia3/master/docs/tutorialPics/modelingTutorial/Event-TaskList.PNG)
 
 9. Create a new **Document**, naming it as **TaskReport**.
 
@@ -44,11 +44,11 @@ This tutorial assumes that you have created a OMNIA tenant, and are logged in as
 
 12. Proceed to **Analytics > Dashboards** and create a new list. Set *Executedtasklist* as Code, the query created on first step (ExecutedtaskQuery) as the source of the list and Task as Label.
 
-    ![Task List Query](https://github.com/numbersbelieve/omnia3/blob/master/docs/tutorialPics/modelingTutorial/Queries-List-Executedtask.PNG)
+    ![Task List Query](https://raw.githubusercontent.com/numbersbelieve/omnia3/master/docs/tutorialPics/modelingTutorial/Queries-List-Executedtask.PNG)
     
 12. Add new columns to **List**. Add a column for Query Property *Code*, with Label *Task*, and format as *Text*
 
-    ![Task List Query](https://github.com/numbersbelieve/omnia3/blob/master/docs/tutorialPics/modelingTutorial/Code-QueryList.PNG)
+    ![Task List Query](https://raw.githubusercontent.com/numbersbelieve/omnia3/master/docs/tutorialPics/modelingTutorial/Code-QueryList.PNG)
 
 13. On **Data Analytics > Dashboards**, create a new dashboard and set *Home* as Code, so the dashboard will be visible on application’s homepage.
 
