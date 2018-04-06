@@ -45,6 +45,11 @@ This tutorial assumes that you have created a OMNIA tenant, and are logged in as
 
 12. Proceed to **Analytics > Dashboards** and create a new list. Set *Task_List* as Code, the query created on first step (TaskList_Query) as the source of the list and Task as Label.
 
+    ![Task List Query](https://raw.githubusercontent.com/numbersbelieve/omnia3/master/docs/tutorialPics/modelingTutorial/Modeler-Lists-Task_List.PNG)
+    
+
+12. Add new columns to **List**. Add a column for Query Property Code with Label Album Code, and format as Text
+
 
 
 
