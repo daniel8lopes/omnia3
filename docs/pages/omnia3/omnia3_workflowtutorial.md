@@ -50,29 +50,29 @@ This tutorial assumes that you have created a OMNIA tenant, and are logged in as
 
     ![Task List Query](https://raw.githubusercontent.com/numbersbelieve/omnia3/master/docs/tutorialPics/modelingTutorial/Queries-List-Executedtask.PNG)
     
-12. Add new columns to **List**. Add a column for Query Property *Code*, with Label *Task*, and format as *Text*
+13. Add new columns to **List**. Add a column for Query Property *Code*, with Label *Task*, and format as *Text*
 
     ![Task List Query](https://raw.githubusercontent.com/numbersbelieve/omnia3/master/docs/tutorialPics/modelingTutorial/Code-QueryList.PNG)
 
-13. On **Data Analytics > Dashboards**, create a new dashboard and set *Home* as Code, so the dashboard will be visible on application’s homepage.
+14. On **Data Analytics > Dashboards**, create a new dashboard and set *Home* as Code, so the dashboard will be visible on application’s homepage.
 
     ![Modeler_Create_Dashboard](https://github.com/numbersbelieve/omnia3/raw/master/docs/tutorialPics/modelingTutorial/Modeler-Create-Dashboard.PNG)
     
-14. Add lists to **Dashboard**. Set *Executedtask* as Code, Executedtask_List (created previously) and position it in the first Row and Column, with Size six.
+15. Add lists to **Dashboard**. Set *Executedtask* as Code, Executedtask_List (created previously) and position it in the first Row and Column, with Size six.
 
-15. Add an new Attribute to your Document. Set its Code as *Project*, Type as **Generic Entity > Project**.
+16. Add an new Attribute to your Document. Set its Code as *Project*, Type as **Generic Entity > Project**.
 
     - Add a new Attribute to your Document. Set its Code as *Company*, Type as **Generic Entity > Project** , and as required by checking option *Is required?*.
 
     - Add a new Attribute to your Document. Set its Code as *Employee*, Type as **Generic Entity > Project**, and as required by checking option *Is required?*.
 
 
-16. Edit the previously modeled **Document** *TaskReport*. Create a new Attribute, setting its Code and Type to *EmployeeName* and **Primitive > Text**, respectively. Set the attribute as *Read Only*.
+17. Edit the previously modeled **Document** *TaskReport*. Create a new Attribute, setting its Code and Type to *EmployeeName* and **Primitive > Text**, respectively. Set the attribute as *Read Only*.
 
     
     ![Modeler_Create_Dashboard](https://raw.githubusercontent.com/numbersbelieve/omnia3/master/docs/tutorialPics/modelingTutorial/Attribute%20-%20EmployeeName.PNG)
 
-17. Create a new **Action Behaviour** to fill the new attribute (on the *TaskReport* document, go to tab *Behaviours* and click on **Add new > Action**). Set *GetReportData* as Code, Code as the attribute that triggers the behaviour, and paste the following code:
+18. Create a new **Action Behaviour** to fill the new attribute (on the *TaskReport* document, go to tab *Behaviours* and click on **Add new > Action**). Set *GetReportData* as Code, Code as the attribute that triggers the behaviour, and paste the following code:
 
     ````
     var client = new System.Net.Http.HttpClient() { };
@@ -104,11 +104,17 @@ This tutorial assumes that you have created a OMNIA tenant, and are logged in as
                 
             } 
     ````
-18. Add a new **Attribute** to your *TaskReport* **Document**, and set its Code as *SheetID*, Type **> Document > TaskReport > Is ready only?**   
+19. Add a new **Attribute** to your *TaskReport* **Document**, and set its Code as *SheetID*, Type **> Document > TaskReport > Is ready only?**   
 
-19. Create a new build.
+20. Create a new build.
 
-20. 
+21. Go back to **Generic Entity**, and add a new **Attribute** to *Project*. Set its Code as *SheetID* > **Primitive > Text**.
+
+22. Go to **Events**, and add a new **Attribute** to *Executedtask*. Set its Code as *TaskDate* > **Primitive > Date**.
+
+23. Add another **Attribute** to *Executedtask*, setting its Code as *Description* > **Primitive > Date**.  
+
+24. Go to **Application > Configurations** area, and create a new **Project**. Please observe that, when Code is identified (e.g. try with value *SheetID*), the Name and  is automatically retrieved.
 
 
 
