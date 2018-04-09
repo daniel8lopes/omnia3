@@ -72,39 +72,43 @@ This tutorial assumes that you have created a OMNIA tenant, and are logged in as
     
     ![Modeler_Create_Dashboard](https://raw.githubusercontent.com/numbersbelieve/omnia3/master/docs/tutorialPics/modelingTutorial/Attribute%20-%20EmployeeName.PNG)
 
-18. Create a new **Action Behaviour** to fill the new attribute (on the *TaskReport* document, go to tab *Behaviours* and click on **Add new > Action**). Set *GetReportData* as Code, Code as the attribute that triggers the behaviour, and paste the following code:
+18. Add a new **Attribute** to your *TaskReport* **Document**, and set its Code as *SheetID*, Type **> Primitive > Text > Is ready only?**   
+
+19. Create a new **Action Behaviour** to fill the new attribute (on the *TaskReport* document, go to tab *Behaviours* and click on **Add new > Action**). Set *GetReportData* as Code, *SheetID* as the attribute that triggers the behaviour, and paste the following code:
 
     ````
+    if(!string.IsNullOrEmpty(SheetID)){
+    
     var client = new System.Net.Http.HttpClient() { };
 
 
-            string googleApiKey = "AIzaSyDizCqYCtaJd6qmNi9UN59lXv9IWoUYZi4";
-            string apiEndpoint = $"https://sheets.googleapis.com/v4/spreadsheets/{SheetID}/values/Sheet1?key={googleApiKey}";
-            var requestResult = client.GetAsync(apiEndpoint).GetAwaiter().GetResult();
+    string googleApiKey = "INSERT YOUR KEY HERE";
+    string apiEndpoint = $"https://sheets.googleapis.com/v4/spreadsheets/{SheetID}/values/Sheet1?key={googleApiKey}";
+    var requestResult = client.GetAsync(apiEndpoint).GetAwaiter().GetResult();
 
-            string responseBody = requestResult.Content.ReadAsStringAsync().Result;
+    string responseBody = requestResult.Content.ReadAsStringAsync().Result;
 
-            if (!requestResult.IsSuccessStatusCode)
-                throw new Exception("Error on retrieving Google sheet: " + responseBody);
+    if (!requestResult.IsSuccessStatusCode)
+        throw new Exception("Error on retrieving Google sheet: " + responseBody);
 
-            var sheet = JsonConvert.DeserializeObject<Dictionary<string, object>>(responseBody);
+    var sheet = JsonConvert.DeserializeObject<Dictionary<string, object>>(responseBody);
 
 
 
-            var values = JsonConvert.DeserializeObject<List<List<string>>>(sheet["values"].ToString());
+    var values = JsonConvert.DeserializeObject<List<List<string>>>(sheet["values"].ToString());
 
-            foreach (var sheetLine in values)
-            {
-                Executedtask taskLine = new Executedtask();
+    foreach (var sheetLine in values)
+    {
+        Executedtask taskLine = new Executedtask();
 
-                taskLine._resource = sheetLine.ElementAt(0);
-                taskLine._quantity = Convert.ToInt32(sheetLine.ElementAt(1));
+        taskLine._resource = sheetLine.ElementAt(0);
+        taskLine._quantity = Convert.ToInt32(sheetLine.ElementAt(1));
 
-                ReportLines.Add(taskLine);
+        ReportLines.Add(taskLine);
                 
-            } 
+    }
+} 
     ````
-19. Add a new **Attribute** to your *TaskReport* **Document**, and set its Code as *SheetID*, Type **> Document > TaskReport > Is ready only?**   
 
 20. Create a new build.
 
@@ -114,9 +118,11 @@ This tutorial assumes that you have created a OMNIA tenant, and are logged in as
 
 23. Add another **Attribute** to *Executedtask*, setting its Code as *Description* > **Primitive > Date**.  
 
-24. Go to **Application > Configurations** area, and create a new **Project**. Please observe that, when Code is identified (e.g. try with value *SheetID*), the Name and  is automatically retrieved.
+24. Go to **Application > Configurations** area, and create a new **Project**. Please observe that, when Code is identified (e.g. try with value *SheetID*), is automatically retrieved.
 
 25. Go to **Modeler** area, and add a new element to **TaskReport > User interface**, setting its code as *Description*.
+
+26. Return to **Application** area, and create a new *Taskreport* **Document**. If *Project* has an associated and valid **Google Sheet**, your *TaskReport* lines will be automatically deployed.
 
 
 
