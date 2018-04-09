@@ -102,8 +102,7 @@ This tutorial assumes that you have created a OMNIA tenant, and are logged in as
 
                 ReportLines.Add(taskLine);
                 
-            }
-            
+            } 
     ````
 
 
