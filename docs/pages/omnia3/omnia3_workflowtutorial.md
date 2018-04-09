@@ -74,6 +74,37 @@ This tutorial assumes that you have created a OMNIA tenant, and are logged in as
 
 17. Create a new **Action Behaviour** to fill the new attribute (on the *TaskReport* document, go to tab *Behaviours* and click on **Add new > Action**). Set *GetRecordData* as Code, Code as the attribute that triggers the behaviour, and paste the following code:
 
+    ´´´´
+    var client = new System.Net.Http.HttpClient() { };
+
+
+            string googleApiKey = "AIzaSyDizCqYCtaJd6qmNi9UN59lXv9IWoUYZi4";
+            string apiEndpoint = $"https://sheets.googleapis.com/v4/spreadsheets/{SheetID}/values/Sheet1?key={googleApiKey}";
+            var requestResult = client.GetAsync(apiEndpoint).GetAwaiter().GetResult();
+
+            string responseBody = requestResult.Content.ReadAsStringAsync().Result;
+
+            if (!requestResult.IsSuccessStatusCode)
+                throw new Exception("Error on retrieving Google sheet: " + responseBody);
+
+            var sheet = JsonConvert.DeserializeObject<Dictionary<string, object>>(responseBody);
+
+
+
+            var values = JsonConvert.DeserializeObject<List<List<string>>>(sheet["values"].ToString());
+
+            foreach (var sheetLine in values)
+            {
+                Executedtask taskLine = new Executedtask();
+
+                taskLine._resource = sheetLine.ElementAt(0);
+                taskLine._quantity = Convert.ToInt32(sheetLine.ElementAt(1));
+
+                ReportLines.Add(taskLine);
+                
+            }
+            
+    ´´´´
 
 
 
