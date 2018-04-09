@@ -74,7 +74,11 @@ This tutorial assumes that you have created a OMNIA tenant, and are logged in as
 
 18. Add a new **Attribute** to your *TaskReport* **Document**, and set its Code as *SheetID*, Type **> Primitive > Text > Is ready only?**   
 
-19. Create a new **Action Behaviour** to fill the new attribute (on the *TaskReport* document, go to tab *Behaviours* and click on **Add new > Action**). Set *GetReportData* as Code, *SheetID* as the attribute that triggers the behaviour, and paste the following code:
+19. Go to **Google Sheets** and create a new file, setting its code as *Task Project 01*. Then, export it as XLSX document.   
+
+![Modeler_Create_Dashboard](https://github.com/numbersbelieve/omnia3/raw/master/docs/tutorialPics/modelingTutorial/Task%20Project%2001.xlsx)
+
+20. Create a new **Action Behaviour** to fill the new attribute (on the *TaskReport* document, go to tab *Behaviours* and click on **Add new > Action**). Set *GetReportData* as Code, *SheetID* as the attribute that triggers the behaviour, and paste the following code:
 
     ````
     if(!string.IsNullOrEmpty(SheetID)){
@@ -110,19 +114,19 @@ This tutorial assumes that you have created a OMNIA tenant, and are logged in as
 } 
     ````
 
-20. Create a new build.
+21. Create a new build.
 
-21. Go back to **Generic Entity**, and add a new **Attribute** to *Project*. Set its Code as *SheetID* > **Primitive > Text**.
+22. Go back to **Generic Entity**, and add a new **Attribute** to *Project*. Set its Code as *SheetID* > **Primitive > Text**.
 
-22. Go to **Events**, and add a new **Attribute** to *Executedtask*. Set its Code as *TaskDate* > **Primitive > Date**.
+23. Go to **Events**, and add a new **Attribute** to *Executedtask*. Set its Code as *TaskDate* > **Primitive > Date**.
 
-23. Add another **Attribute** to *Executedtask*, setting its Code as *Description* > **Primitive > Date**.  
+24. Add another **Attribute** to *Executedtask*, setting its Code as *Description* > **Primitive > Date**.  
 
-24. Go to **Application > Configurations** area, and create a new **Project**. Please observe that, when Code is identified (e.g. try with value *SheetID*), is automatically retrieved.
+25. Go to **Application > Configurations** area, and create a new **Project**. Please observe that, when Code is identified (e.g. try with value *SheetID*), is automatically retrieved.
 
-25. Go to **Modeler** area, and add a new element to **TaskReport > User interface**, setting its code as *Description*.
+26. Go to **Modeler** area, and add a new element to **TaskReport > User interface**, setting its code as *Description*.
 
-26. Return to **Application** area, and create a new *Taskreport* **Document**. If *Project* has an associated and valid **Google Sheet**, your *TaskReport* lines will be automatically deployed.
+27. Return to **Application** area, and create a new *Taskreport* **Document**. If *Project* has an associated and valid **Google Sheet**, your *TaskReport* lines will be automatically deployed.
 
 
 
