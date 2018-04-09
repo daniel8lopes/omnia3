@@ -76,7 +76,7 @@ This tutorial assumes that you have created a OMNIA tenant, and are logged in as
 
 19. Go to **Google Sheets** and create a new file, setting its code as *Task Project 01*. Then, export it as XLSX document.   
 
-![Modeler_Create_Dashboard](https://github.com/numbersbelieve/omnia3/raw/master/docs/tutorialPics/modelingTutorial/Task%20Project%2001.xlsx)
+    ![Modeler_Create_Dashboard](https://github.com/numbersbelieve/omnia3/raw/master/docs/tutorialPics/modelingTutorial/Task%20Project%2001.xlsx)
 
 20. Create a new **Action Behaviour** to fill the new attribute (on the *TaskReport* document, go to tab *Behaviours* and click on **Add new > Action**). Set *GetReportData* as Code, *SheetID* as the attribute that triggers the behaviour, and paste the following code:
 
