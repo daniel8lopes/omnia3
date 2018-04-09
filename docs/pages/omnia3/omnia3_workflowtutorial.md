@@ -74,7 +74,7 @@ This tutorial assumes that you have created a OMNIA tenant, and are logged in as
 
 17. Create a new **Action Behaviour** to fill the new attribute (on the *TaskReport* document, go to tab *Behaviours* and click on **Add new > Action**). Set *GetRecordData* as Code, Code as the attribute that triggers the behaviour, and paste the following code:
 
-    ´´´´
+    ````
     var client = new System.Net.Http.HttpClient() { };
 
 
@@ -104,7 +104,7 @@ This tutorial assumes that you have created a OMNIA tenant, and are logged in as
                 
             }
             
-    ´´´´
+    ````
 
 
 
