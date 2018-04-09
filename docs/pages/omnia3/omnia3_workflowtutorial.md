@@ -116,6 +116,8 @@ This tutorial assumes that you have created a OMNIA tenant, and are logged in as
 
 24. Go to **Application > Configurations** area, and create a new **Project**. Please observe that, when Code is identified (e.g. try with value *SheetID*), the Name and  is automatically retrieved.
 
+25. Go to **Modeler** area, and add a new element to **TaskReport > User interface**, setting its code as *Description*.
+
 
 
 
