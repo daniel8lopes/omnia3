@@ -63,7 +63,11 @@ sudo systemctl enable omnia omnia-*
 
 ## 4. Configuring the services
 
-- Edit /home/omnia/app/config/omnia.json, and fill in the relevant parameters (site Hostname, database configurations).
+- Edit /home/omnia/app/config/omnia.json, and fill in the following parameters:
+    - ConnectionStrings > PostgreSQL: insert your database connection string;
+    - Hostname: Platform hostname;
+    - SMTP: A valid SMTP server configuration;
+    
 
 ### 4.1. Configuring NGINX
 ```
