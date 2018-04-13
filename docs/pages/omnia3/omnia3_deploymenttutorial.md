@@ -97,7 +97,7 @@ Running the platform without an SSL certificate in production is **not supported
 
 - Ensure that ports 80 and 443 (for https traffic) are opened on firewall. Without these ports available, the site will not be available.
 
-## 6. First login
+## 6. Initial Setup
 On a web browser, access the site with the defined url.
 
 You will be asked for a platform administrator email. Insert a valid email address and a message will be sent with the instructions for the first login.
