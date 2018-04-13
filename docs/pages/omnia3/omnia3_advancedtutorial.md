@@ -18,7 +18,7 @@ In *data analysis*, we will explore how to model new lists and how to create das
 
 This tutorial assumes that you have created a OMNIA tenant and are logged in as a user with modeling privileges to this tenant.
 
-It is necessary to have completed the steps in the  [Modeling tutorial](http://docs.numbersbelieve.com/omnia3_tutorial1.html), as this tutorial builds upon it.
+It is necessary to have completed the steps in the  [Modeling tutorial](http://docs.numbersbelieve.com/omnia3_beginnertutorial.html), as this tutorial builds upon it.
 
 ## 3. Advanced Behaviours
 
