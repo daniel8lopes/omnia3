@@ -21,7 +21,7 @@ It's now time to judge our premises. To that end, we've just created a simple an
 
 This tutorial assumes that you have created a OMNIA tenant, and are logged in as a user with modeling privileges to this tenant.
 
-If you do not have a tenant yet, please follow the steps on [Tenant Creation tutorial](http://docs.numbersbelieve.com/omnia3_tenantcreation.html)
+If you do not have a tenant yet, please follow the steps of the [Tenant Creation tutorial](http://docs.numbersbelieve.com/omnia3_tenantcreation.html).
 
 ## 3. Modeling an application
 
