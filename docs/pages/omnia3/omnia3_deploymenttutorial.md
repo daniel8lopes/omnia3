@@ -27,7 +27,11 @@ for version in '2.0.0' '2.0.3'; do \
     done
 ```
 
-- Install NGINX on the server.
+- Install NGINX on the server, by running the following commmand:
+
+```
+    sudo apt-get install nginx
+```
 
 ## 2. Configuring the database
 2.1. Create a database with name **omnia**, with any username & password you want, in a PostgreSQL database server (version 9.6 supported)
