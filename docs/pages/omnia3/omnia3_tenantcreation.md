@@ -15,7 +15,9 @@ OMNIA features a Multi-Tenant component, offering you infinite development and i
 
 ## 2. Prerequisites
 
-This tutorial assumes that you have been granted access to an OMNIA account.
+This tutorial assumes that you have been granted access to a deployment of OMNIA Platform.
+
+If you do not have a deployment yet, please view the instructions for [Deploying the platform](http://docs.numbersbelieve.com/omnia3_deploymenttutorial.html).
 
 ## 3. Creating a Tenant
 
