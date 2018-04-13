@@ -89,5 +89,11 @@ Running the platform without an SSL certificate in production is **not supported
 
 - Do `sudo service nginx reload` and verify if the platform is running when accessing the site, the swagger api (site/api/docs), and logging in.
 
+- Ensure that ports 80 and 443 (for https traffic) are opened on firewall. Without these ports available, the site will not be available.
+
 ## 6. First login
-Manually access <siteUrl>/identity/account/register and register a login accessible account.
+On a web browser, access the site with the defined url.
+
+You will be asked for a platform administrator email. Insert a valid email address and a message will be sent with the instructions for the first login.
+
+Site must contain a valid SMTP configuration, so that emails are sent correctly.
