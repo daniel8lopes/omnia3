@@ -10,4 +10,53 @@ folder: omnia3
 
 ## 1. Introduction
 
-This page is in construction.
+In the **OMNIA Platform**, the primary way to customize the way the application works is by using Behaviours. 
+
+Behaviours are code, written in C#, that allow you to **extend** the way the application processes user input. A behaviour is defined by (see [BML](omnia3_languages_bml.html) for detailed definition):
+- its **type**, or the moment in which it will execute;
+- (optionally) its **attribute**, or which attribute of the model it is dependent on;
+- its **expression**, the aforementioned C# code.
+
+## 2. Types of Behaviours
+
+There are currently five different execution moments for behaviours, which follow a logical flow:
+- **Initialize**: Executes when an entity is created;
+- **BeforeUpdate**: Executes immediately before an update is received for that entity;
+- **Formula**: Executes during updates, requires an attribute, and **calculates** the value of that attribute;
+- **Action**: Executes during updates, requires an attribute, and, given the new and old values of that attribute, performs an operation;
+- **AfterUpdate**: Executes immediately after the update with the user's changes is done;
+- **Finalize**: Executes when an entity is saved.
+
+![The behaviour execution lifecycle](images\modeler\BehaviourLifecycle.png)
+
+## 3. Usage
+### 3.1. Usage of the behaviours in the platform languages
+
+Internally, in the development of the platform, these behaviours are used with the same structure. For example, when you create an Agent, you will see that, even though you didn't specify any attributes, a set of default attributes are present. This creation is handled by an **Initialize** behaviour. They also can't be deleted; this is ensured by having a **Finalize** behaviour that ensures that an exception is thrown if the user attempts to remove any _system_ attribute.
+
+A similar **Initialize** logic is used to ensure default values in documents: for example, the initial date is set to today's date instead of 01/01/0001, the C# default for that date.
+
+### 3.2. Usage Scenarios
+
+Following from the scenarios described in 3.1., you may have realized some possible scenarios that behaviours can help in. Our [tutorials](omnia3_beginnertutorial.html) also have a series of different examples. 
+
+Here are some usage suggestions for each type of behaviour - though, of course, the only limit is your imagination!
+
+- **Initialize**: 
+    - Default values for fields;
+- **BeforeUpdate**: 
+    - Performing operations that depend on the previous state of the document; 
+- **Formula**: 
+    - Summary/total fields;
+    - Auxiliary fields (i.e. displaying an amount of days based on two dates);
+- **Action**: 
+    - Looking up data from an external API;
+    - Changing information in the lines of a grid based on a change in the header;
+    - Performing validations on an attribute;
+- **AfterUpdate**: 
+    - Performing calculations that require information from commitments/events in the header;
+    - Performing document-wide validations;
+    - Calculating summary lines;
+- **Finalize**:
+    - Performing final document-wide validations;
+    - Integrating with external APIs;
