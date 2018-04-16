@@ -53,10 +53,6 @@ entries:
     - title: Data Visualization
       url: /omnia3_modeler_datavisualization.html
       output: web, pdf
-    
-    - title: User Interface
-    url: /omnia3_modeler_userinterface.html
-    output: web, pdf
         
   - title: Application
     output: web, pdf
