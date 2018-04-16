@@ -29,13 +29,13 @@ If you do not have a tenant yet, please follow the steps of the [Tenant Creation
  
     ![Homepage_Dashboard](http://funkyimg.com/i/2DVGv.png)
  
-2. Through the left side menu, access the option **Agents**. Create a new **Agent** by clicking the button **Add new**  on the top right side, and setting its **Code** to **Company**.
+2. Through the left side menu, access the option ***Agents***. Create a new ***Agen*t** by clicking the button ***Add new***  on the top right side, and setting its **Code** to **Company**.
 
     ![Modeler_Create_Agent](https://github.com/numbersbelieve/omnia3/raw/master/docs/tutorialPics/modelingTutorial/Modeler-Create-Agent.PNG)
 
-3. Return to the **Agents** list and add a new agent by clicking on button **Add new** and setting its *Code* as **Supplier**.
+3. Return to the ***Agents*** list and add a new agent by clicking on button ***Add new*** and setting its *Code* as **Supplier**.
 
-4. Through the left side menu, access the option **Resources**. Create a new **Resource** by clicking the button **Add new**  on the top right side, and setting its **Code** to **Product**.
+4. Through the left side menu, access the option ***Resources / Create neW*** on the top right side, and setting its **Code** to **Product**.
 
 5. Access the option **Versioning > Builds** and build the tenant by clicking the button **Create new**.
 
@@ -53,7 +53,7 @@ If you do not have a tenant yet, please follow the steps of the [Tenant Creation
 
     ![Modeler_Create_Attribute](https://github.com/numbersbelieve/omnia3/raw/master/docs/tutorialPics/modelingTutorial/Modeler-Create-Attribute.PNG)
 
-10. Add a new behaviour by selecting the tab **Behaviours** and clicking on button **Add new > Formula**. Set its *Code* as **CalculateAmount**, attribute as **_amount** and set as code to execute `return UnitPrice * _quantity;`.
+10. Add ***Behaviours / Create new*** and clicking on button **Add new > Formula**. Set its *Code* as **CalculateAmount**, attribute as **_amount** and set as code to execute `return UnitPrice * _quantity;`.
 
 11. Add a new document (by accessing the option **Documents** on side menu and clicking on **Add new** button). Set **PurchaseOrder** as the document's *Code*;
 
@@ -61,15 +61,15 @@ If you do not have a tenant yet, please follow the steps of the [Tenant Creation
 
     ![Modeler_Create_Composite_Attribute](https://github.com/numbersbelieve/omnia3/raw/master/docs/tutorialPics/modelingTutorial/Modeler-Create-CompositeAttribute.PNG)
 
-13. Perform a new Build (by accessing the option **Versioning > Builds** and clicking on button **Create new**).
+13. Perform a new Build (by accessing the option ***Versioning > Builds** and clicking on button **Create new**).
 
 14. Select option **Go to > Application**, and create a new **PurchaseOrder** by selecting the option **Documents > PurchaseOrder**.
 
-15. Go back to modeling area (by accessing the option **Go to > Modeler**) and edit the **PurchaseOrder** document to simplify its interface. Add a new attribute by clicking on button **Add new**. Set its *Code* as **Company**, *Type* as **Agent > Company**, and as required by checking option *Is required?*.
+15. Go back to modeling area (by accessing the option ***Go to > Modeler***) and edit the **PurchaseOrder** document to simplify its interface. Add a new attribute by clicking on button **Add new**. Set its *Code* as **Company**, *Type* as **Agent > Company**, and as required by checking option *Is required?*.
 
-16. Add a new attribute by clicking on button **Add new**. Set its *Code* as **Supplier**, *Type* as **Agent > Supplier**, and as required by checking option *Is required?*. 
+16. Add ***Attribute / Add new***. Set its *Code* as **Supplier**, *Type* as **Agent > Supplier**, and as required by checking option *Is required?*. 
 
-17. Add a new Finalize Behaviour to fill **_provider** and **_receiver** attributes by accessing the tab **Behaviours** and clicking the button **Add new > Finalizer**. Set **SetCommitmentAgents** as Code and paste the following code:
+17. Add a new Finalize Behaviour to fill **_provider** and **_receiver** attributes by accessing the tab ***Behaviours/Add new /Finalizer***. Set ***SetCommitmentAgents*** as Code and paste the following code:
 
     ````
         OrderLines.ForEach(a => a._receiver = Company);
