@@ -30,6 +30,9 @@ There are currently five different execution moments for behaviours, which follo
 ![The behaviour execution lifecycle](images\modeler\BehaviourLifecycle.png)
 
 ## 3. Usage
+
+There are many possible usage scenarios for these behaviours, as C# coding will allow you to execute whatever you want. This section gives some guiding examples.
+
 ### 3.1. Usage of the behaviours in the platform languages
 
 Internally, in the development of the platform, these behaviours are used with the same structure. For example, when you create an Agent, you will see that, even though you didn't specify any attributes, a set of default attributes are present. This creation is handled by an **Initialize** behaviour. They also can't be deleted; this is ensured by having a **Finalize** behaviour that ensures that an exception is thrown if the user attempts to remove any _system_ attribute.
