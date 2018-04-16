@@ -1,7 +1,7 @@
 ---
 title: How to use the API
 keywords: omnia3, api
-summary: "First Steps on OMNIA Platform 3.0"
+summary: "How to use the OMNIA Platform's API, using Swagger"
 sidebar: omnia3_sidebar
 permalink: omnia3_api_swagger.html
 folder: omnia3
