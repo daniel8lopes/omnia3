@@ -17,6 +17,8 @@ Behaviours are code, written in C#, that allow you to **extend** the way the app
 - (optionally) its **attribute**, or which attribute of the model it is dependent on;
 - its **expression**, the aforementioned C# code.
 
+Behaviours are executed by the API of the platform - creating, updating or saving an entity will execute the appropriate behaviours.
+
 ## 2. Types of Behaviours
 
 There are currently five different execution moments for behaviours, which follow a logical flow:
