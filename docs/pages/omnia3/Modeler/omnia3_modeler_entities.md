@@ -81,7 +81,7 @@ Selecting the option _Add new element_ you will be able to add new elements to t
 ### How to change the positioning of an element?
 In the User Interface tab, select the element you want to change and, in the _Row_ and/or _Column_ fields, set the new positioning values.
 
-### How to change the positioning of an element?
+### How to change the size of an element?
 In the User Interface tab, select the element you want to change and, in the _Size_ field, select the new size.
 
 ### How to remove an element?
