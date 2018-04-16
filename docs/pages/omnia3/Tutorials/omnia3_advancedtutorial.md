@@ -24,11 +24,11 @@ It is necessary to have completed the steps in the  [Beginner tutorial](http://d
 
 ### Native API
  
-1. Go to the **Modeler** and edit the previously modeled document PurchaseOrder. Create a new  **Attribute**  by clicking the button  **Add new**  on the top right side, and setting its  **Code** and **Type**  to  **SupplierName** and **Primitive > Text**, respectively. Set the attribute as **Read Only**.
+1. Go to the **Modeler** and edit the previously modeled document PurchaseOrder. Create a new  **Attribute**  by clicking the button  ***Add new***  on the top right side, and setting its  **Code** and **Type**  to  **SupplierName** and ***Primitive / Text***, respectively. Set the attribute as **Read Only**.
 
     ![Modeler_Create_Document_Attribute](https://github.com/numbersbelieve/omnia3/raw/master/docs/tutorialPics/modelingTutorial/Modeler-Create-Attribute-SupplierName.PNG)
 
-2. Create a new **Action Behaviour**  to fill the new attribute (on the PurchaseOrder document, go to tab **Behaviours** and click on **Add new > Action**). Set **GetSupplierName** as **Code**, **Supplier** as the attribute that triggers the behaviour, and paste the following code:
+2. Create a new ***Action Behaviour***  to fill the new attribute (on the PurchaseOrder document, go to tab **Behaviours** and click on ***Add new / Action***). Set **GetSupplierName** as **Code**, **Supplier** as the attribute that triggers the behaviour, and paste the following code:
 
     ````
     var authValue = new System.Net.Http.Headers.AuthenticationHeaderValue("Bearer", this._context.Authentication.AccessToken);
@@ -54,9 +54,9 @@ It is necessary to have completed the steps in the  [Beginner tutorial](http://d
 
 ### External API
 
-1. Go to the **Modeler** and edit the previously modeled resource Product. Create a new  **Attribute**  by clicking the button  **Add new**  on the top right side, and setting its  **Code** and **Type**  to  **Artist** and **Primitive > Text**, respectively. Set the attribute as **Read Only**.
+1. Go to the **Modeler** and edit the previously modeled resource Product. Create a new  **Attribute**  by clicking the button  **Add new**  on the top right side, and setting its  **Code** and **Type**  to  **Artist** and ***Primitive / Text***, respectively. Set the attribute as **Read Only**.
 
-2. Create a new **Action Behaviour**  to fill the new attribute (on the PurchaseOrder document, go to tab **Behaviours** and click on **Add new > Action**). Set **GetRecordData** as **Code**, **Code** as the attribute that triggers the behaviour, and paste the following code:
+2. Create a new **Action Behaviour**  to fill the new attribute (on the PurchaseOrder document, go to tab ***Behaviours*** and click on ***Add new / Action***). Set ***GetRecordData*** as **Code**, ***Code*** as the attribute that triggers the behaviour, and paste the following code:
 
     ````
     var client = new System.Net.Http.HttpClient() {DefaultRequestHeaders = {}};
@@ -93,7 +93,7 @@ It is necessary to have completed the steps in the  [Beginner tutorial](http://d
 
 ### Queries and Lists
 
-1. On **Modeler**, go to **Data Analytics > Queries** and click on button **Add New** to create a new query. Set **ProductsArtists_Query** as Code and **Resource > Product** as Type.
+1. On **Modeler**, go to ***Data Analytics / Queries*** and click on button ***Add New*** to create a new query. Set **ProductsArtists_Query** as Code and ***Resource / Product*** as Type.
 
     ![Modeler_Create_Query](https://github.com/numbersbelieve/omnia3/raw/master/docs/tutorialPics/modelingTutorial/Modeler-Create-Query.PNG)
 
@@ -101,7 +101,7 @@ It is necessary to have completed the steps in the  [Beginner tutorial](http://d
     
 3. Repeat previous step to add columns with alias **Name** and **Artist**, whose Path is **_name** and **artist**, respectively.
 
-4. Go to **Data Analytics > Lists** and click on button **Add New** to create a new list. Set **ProductsArtists_List** as Code, the query created on first step (**ProductsArtists_Query**) as the source of the list and **Products** as Label.
+4. Go to ***Data Analytics / Lists*** and click on button **Add New** to create a new list. Set **ProductsArtists_List** as Code, the query created on first step (**ProductsArtists_Query**) as the source of the list and **Products** as Label.
 
     ![Modeler_Create_List](https://github.com/numbersbelieve/omnia3/raw/master/docs/tutorialPics/modelingTutorial/Modeler-Create-List.PNG)
     
@@ -114,7 +114,7 @@ It is necessary to have completed the steps in the  [Beginner tutorial](http://d
 
 ### Dashboards
 
-1. On **Modeler**, go to **Data Analytics > Dashboards** and click on button **Add New** to create a new dashboard. Set **Home** as Code, so that the dashboard is visible on application's homepage.
+1. On **Modeler**, go to ***Data Analytics / Dashboards*** and click on button **Add New** to create a new dashboard. Set **Home** as Code, so that the dashboard is visible on application's homepage.
 
     ![Modeler_Create_Dashboard](https://github.com/numbersbelieve/omnia3/raw/master/docs/tutorialPics/modelingTutorial/Modeler-Create-Dashboard.PNG)
 

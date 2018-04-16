@@ -25,7 +25,7 @@ If you do not have a deployment yet, please view the instructions for [Deploying
 
     ![OMNIA Sign in](https://raw.githubusercontent.com/numbersbelieve/omnia3/master/docs/tutorialPics/modelingTutorial/OMNIA%20-%20Sign%20In%20Account.PNG)
 
-2. Select the option ***Go to Tenants Management*** on the inferior section of the menu.
+2. Select the option ***Go to / Tenants Management*** on the inferior section of the menu.
 
     ![Go To Tenants Management](https://raw.githubusercontent.com/numbersbelieve/omnia3/master/docs/tutorialPics/modelingTutorial/OMNIA%20-%20Select%20-%20Tenant.PNG) 
  
