@@ -22,62 +22,62 @@ This tutorial assumes that you have created a OMNIA tenant, and are logged in as
     
     ![Homepage_Dashboard](http://funkyimg.com/i/2DVGv.png)
     
-2.  Through the left side menu, access the option  **Agents**. Create a new  **Agent**,  by clicking the button  **Add new**  on the top right side, and setting its  **Code**  to  **Company**.
+2.  Through the left side menu, access the option  ***Agents / Create new*** on the top right side, and setting its  *Code*  to  **Company**.
     
    
-3.  Return to the  **Agents**  list and add a new agent, by clicking on button  **Add new**  and setting its  _Code_  as  **Employee**.
+3.  Return to the  ***Agents / Add new*** and set its  *Code*  as  **Employee**.
 
     ![Modeler_Create_Agent](https://raw.githubusercontent.com/numbersbelieve/omnia3/master/docs/tutorialPics/modelingTutorial/Modeler-Agent-Employee.PNG)
     
-4.  Through the left side menu, access the option  **Resources**. Create a new  **Resource**, by clicking the button  **Add new** on the top right side, and setting its  **Code**  to  **Expenses**.
+4.  Through the left side menu, access the option  ***Resources / Create new*** and set its  *Code*  to  **Expenses**.
     
-5.  Access the option  **Versioning > Builds**  and build the tenant by clicking the button  **Create new**.
+5.  Access the option  ***Versioning / Builds / Create new***.
     
-6.  On the left side menu, select option  **Go to > Application**, and create a new  **Company**  by selecting the option  **Configurations > Company**  and defining its  _Code_  and  _Name_.
+6.  On the left side menu, select option  ***Go to / Application***, ***Configurations / Company / Create new***, and define its *Code*  and  *Name*.
     
     ![Application_Create_Agent](https://github.com/numbersbelieve/omnia3/raw/master/docs/tutorialPics/modelingTutorial/Application-Create-Agent.PNG)
     
 7.  Follow the same process of the previous step to create a new  **Employee**  and  **Expenses**.
     
-8.  Go back to modeling area (by accessing the option  **Go to > Modeler**) and create a new  **Commitment**  with  _Code_  set as  **ExpensesRequest**,  **Expenses**  as the resource to be exchanged,  **Employee**  as provider agent and  **Company**  as receiver agent.
+8.  Go back to modeling area (by accessing the option  ***Go to / Modeler***) and create a new  **Commitment**  with  *Code*  set as  **ExpensesRequest**,  **Expenses**  as the resource to be exchanged,  **Employee**  as provider agent and  **Company**  as receiver agent.
   
     ![Modeler_Create_Agent](https://raw.githubusercontent.com/numbersbelieve/omnia3/master/docs/tutorialPics/modelingTutorial/Modeler-Commitment-ExpenseRequest.PNG)
     
-9. Add a new document (by accessing the option **Documents** on side menu and clicking on **Add new** button) and set its *Code* as **ExpenseReport**. 
+9. Add a new document (by accessing the option ***Documents / Add new*** button) and set its *Code* as **ExpenseReport**. 
    
-10. On the left side menu, select the option **Generic Entity**. Create a new **Entity**, by clicking the button  **Add new**  on the top right side, and setting its  **Code**  to  **_Currency**.
+10. On the left side menu, select the option **Generic Entity**. Create a new **Entity**, by clicking the button  **Add new**  on the top right side, and setting its  **Code**  to  **Currency**.
   
-11. Go back to application area (by accessing the option **Go to > Application** and configure the option  **_Currency**. Set its *Code* as EUR and *name* as Euro.
+11. Go back to application area (by accessing the option ***Go to / Application*** and configure the option  **Currency**. Set its *Code* as EUR and *name* as Euro.
 
      ![Application_Create_Agent](https://raw.githubusercontent.com/numbersbelieve/omnia3/master/docs/tutorialPics/modelingTutorial/Application-Configurations-Currency.PNG)
         
-12. Access the option **Series** and a new Serie, by clicking on button **Add new**. Set its *Code* as **A** and *name* as **Expenses Report Serie**.
+12. Access the option ***Series / Add new*** and set its *Code* as **A**, and *name* as **Expenses Report Serie**.
 
-13. Go back to modeling area (by accessing the option  **Go to > Modeler**) and edit the  **ExpenseReport**  document to simplify its interface. Add a new attribute by clicking on button  **Add new**. Set its *Type*  as  **Agent > Company**, and as required by checking option  *Is required?*.
+13. Go back to modeling area (by accessing the option  ***Go to / Modeler***) and edit the  **ExpenseReport**  document to simplify its interface. Add a new attribute by clicking on button  ***Add new***. Set its *Type*  as  ***Agent / Company***, and as required by checking option  *Is required?*.
 
-14. Click on button **Add new** to add an **Attribute** to your **Document**. Set its _Code_ as _ExpenseLines_, _Type_ as **Commitment > ExpensesRequest**.
+14. Click on button **Add new** to add an **Attribute** to your **Document**. Set its *Code* as **ExpenseLines**, *Type* as ***Commitment / ExpensesRequest***.
 
     ![Application_Create_Agent](https://raw.githubusercontent.com/numbersbelieve/omnia3/master/docs/tutorialPics/modelingTutorial/Modeler-Document-Attribute2.PNG)
 
-    - Add a new Attribute to your **Document**. Set its _Code_ as _Currency, _Type_ as **Generic Entity > _Currency**, and as required by checking option *Is required?*.
+    - Add a new Attribute to your **Document**. Set its *Code* as **Currency**, *Type* as ***Generic Entity / Currency***, and as required by checking option *Is required?*.
 
-    - Add a new Attribute to your **Document**. Set its _Code_ as _Employee, _Type_ as **Agent > Employee**, and as required by checking option *Is required?*.
+    - Add a new Attribute to your **Document**. Set its *Code* as **Employee**, *Type* as ***Agent / Employee***, and as required by checking option *Is required?*.
 
-    - Add a new Attribute to your **Document**. Set its _Code_ as _DocumentDate, _Type_ as **Primitive > Date**.
+    - Add a new Attribute to your **Document**. Set its *Code* as **DocumentDate**, *Type* as ***Primitive / Date***.
 
-    - Add a new Attribute to your **Document**. Set its _Code_ as _ExpenseDetails, _Type_ as **Commitment > ExpensesRequest1**.
+    - Add a new Attribute to your **Document**. Set its *Code* as **ExpenseDetails**, *Type* as ***Commitment / ExpensesRequest1***.
 
-    - Add a new Attribute to your **Document**. Set its _Code_ as _ExchangeRate, Type as **Primitive > Decimal**, and as required by checking option *Is required?*.
+    - Add a new Attribute to your **Document**. Set its *Code* as **ExchangeRate**, *Type* as ***Primitive / Decimal***, and as required by checking option *Is required?*.
 
-    - Add a new Attribute to your **Document**. Set its _Code_ as _BaseCurrency, _Type_ as **Primitive > Text**.
+    - Add a new Attribute to your **Document**. Set its *Code* as **BaseCurrency**, *Type* as ***Primitive / Text***.
 
-    - Add a new Attribute to your **Document**. Set its _Code_ as _TotalAmount, _Type_ as **Primitive > Decimal**, and as required by checking option *Is required?*.
+    - Add a new Attribute to your **Document**. Set its *Code* as **TotalAmount**, *Type* as ***Primitive / Decimal***, and as required by checking option *Is required?*.
     
-    - Add a new Attribute to your **Document**. Set its _Code_ as _ExpenseDate, _Type_ as **Primitive > Date**, and as required by checking option *Is required?*.
+    - Add a new Attribute to your **Document**. Set its *Code* as **ExpenseDate**, *Type* as ***Primitive / Date***, and as required by checking option *Is required?*.
 
-15. On the left side menu, select the option **Commitments > ExpensesRequest**. Create a new **Attribute**, by clicking the button  **Add new**  on the top right side, and setting its  **Code**  to  **ExpenseAmount**, _Type_ as **Primitive > Decimal**, and as required by checking option *Is required?*.
+15. On the left side menu, select the option ***Commitments / ExpensesRequest***. Create a new **Attribute**, by clicking the button  **Add new**  on the top right side, and setting its  *Code*  to  **ExpenseAmount**, *Type* as ***Primitive / Decimal***, and as required by checking option *Is required?*.
 
-16. Perform a new Build (by accessing the option **Versioning > Builds** and clicking on button **Create new**).
+16. Perform a new Build (by accessing the option ***Versioning / Builds / Create new***).
 
 17. (**Optional**) Add a new **Action Behaviour**, in order to return automatically your updated *Exchange Rate*, based on an external API . Set *GetRateData* as Code and paste the following code:
 
@@ -96,7 +96,7 @@ This tutorial assumes that you have created a OMNIA tenant, and are logged in as
 
             ExchangeRate = Convert.ToDecimal(value["USD"].ToString());
 
-18. Add a new **Finalize Behaviour** to fill *Provider* and *Receiver* attributes by accessing the tab Behaviours and clicking the button **Add new > Finalizer**. Set *FinalizeBehaviours* as Code and paste the following code:
+18. Add a new **Finalize Behaviour** to fill *Provider* and *Receiver* attributes by accessing the tab Behaviours and clicking the button ***Add new / Finalizer***. Set *FinalizeBehaviours* as Code and paste the following code:
 
             ExpenseDetails.ForEach(a => a.Receiver = Company);
             ExpenseDetails.ForEach(a => a.Provider = Employee);
