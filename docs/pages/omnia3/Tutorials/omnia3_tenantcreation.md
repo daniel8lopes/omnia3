@@ -21,15 +21,15 @@ If you do not have a deployment yet, please view the instructions for [Deploying
 
 ## 3. Creating a Tenant
 
-1. Start by going to omniatest.numbersbelieve.com and sign in to your account, with your registration email and password, respectively.
+1. Start by going to omniatest.numbersbelieve.com and ***sign in*** to your account, with your registration email and password, respectively.
 
     ![OMNIA Sign in](https://raw.githubusercontent.com/numbersbelieve/omnia3/master/docs/tutorialPics/modelingTutorial/OMNIA%20-%20Sign%20In%20Account.PNG)
 
-2. Select the option **Go to Tenants Management** on the inferior section of the menu.
+2. Select the option ***Go to Tenants Management*** on the inferior section of the menu.
 
     ![Go To Tenants Management](https://raw.githubusercontent.com/numbersbelieve/omnia3/master/docs/tutorialPics/modelingTutorial/OMNIA%20-%20Select%20-%20Tenant.PNG) 
  
- 3. Create a new **Tenant**, by clicking the button **Add new** on the top right side, and setting its **Code**
+ 3. Create a new ***Tenant***, by clicking the button ***Add new*** on the top right side, and setting its ***Code***
 
     ![OMNIA Tenant Code](https://raw.githubusercontent.com/numbersbelieve/omnia3/master/docs/tutorialPics/modelingTutorial/OMNIA-Tenant-Code.PNG )
     
