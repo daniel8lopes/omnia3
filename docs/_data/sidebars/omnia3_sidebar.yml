@@ -25,78 +25,78 @@ entries:
     folderitems:
     - title: Welcome to OMNIA 3.0
       url: /omnia3_welcometoomnia.html
-      output: web
+      output: web, pdf
       
     - title: Deploying the Platform
       url: /omnia3_deploymenttutorial.html
-      output: web
+      output: web, pdf
   
   - title: Modeler
     output: web, pdf
     folderitems:
     - title: Introduction
-        url: /omnia3_modeler_introduction.html
-        output: web, pdf
+      url: /omnia3_modeler_introduction.html
+      output: web, pdf
         
     - title: Modeling Entities
-        url: /omnia3_modeler_entities.html
-        output: web, pdf
+      url: /omnia3_modeler_entities.html
+      output: web, pdf
         
     - title: Modeling Lifecycle
-        url: /omnia3_modeler_lifecycle.html
-        output: web, pdf
+      url: /omnia3_modeler_lifecycle.html
+      output: web, pdf
         
     - title: Behaviours
-        url: /omnia3_modeler_behaviours.html
-        output: web, pdf
+      url: /omnia3_modeler_behaviours.html
+      output: web, pdf
         
     - title: Data Visualization
-        url: /omnia3_modeler_datavisualization.html
-        output: web, pdf
+      url: /omnia3_modeler_datavisualization.html
+      output: web, pdf
         
   - title: Application
     output: web, pdf
     folderitems:
     - title: Introduction
-        url: /omnia3_application_introduction.html
-        output: web, pdf
+      url: /omnia3_application_introduction.html
+      output: web, pdf
         
   - title: Management
     output: web, pdf
     folderitems:
     - title: Introduction
-        url: /omnia3_management_introduction.html
-        output: web, pdf
+      url: /omnia3_management_introduction.html
+      output: web, pdf
         
   - title: API
     output: web, pdf
     folderitems:
     - title: How to use the API
-        url: /omnia3_api_swagger.html
-        output: web, pdf
+      url: /omnia3_api_swagger.html
+      output: web, pdf
         
   - title: Languages
     output: web, pdf
     folderitems:
     - title: Introduction and MEF
-        url: /omnia3_languages_introduction.html
-        output: web, pdf
+      url: /omnia3_languages_introduction.html
+      output: web, pdf
         
     - title: BML
-        url: /omnia3_languages_bml.html
-        output: web, pdf
+      url: /omnia3_languages_bml.html
+      output: web, pdf
         
     - title: QML
-        url: /omnia3_languages_qml.html
-        output: web, pdf
+      url: /omnia3_languages_qml.html
+      output: web, pdf
         
     - title: SML
-        url: /omnia3_languages_sml.html
-        output: web, pdf
+      url: /omnia3_languages_sml.html
+      output: web, pdf
         
     - title: UIML
-        url: /omnia3_languages_uiml.html
-        output: web, pdf
+      url: /omnia3_languages_uiml.html
+      output: web, pdf
         
   - title: Tutorials
     output: web, pdf
