@@ -31,7 +31,7 @@ Property | Type | Cardinality | Description
 ---------|----------|---------|---------
  Name | Text | 1..1 | The name of the entity represented by this classifier.
 
- ### 2.1.2. Type
+### 2.1.2. Type
 
  A **Type** is a classifier that defines an object type. There are three different kinds of Type: Class, Enumeration and Primitive.
 
@@ -39,7 +39,7 @@ Property | Type | Cardinality |  Description
 ---------|----------|---------|---------
  Kind | Enumeration | 1..1 | The kind of this type: Class, Enumeration or Primitive.
 
- ### 2.1.3 Class
+### 2.1.3 Class
  
  The **Class** is the object type that is most frequent in the below layers. It defines a series of Properties and Operations, which can be understood as similar to Attributes and Methods in Object-Oriented Programming classes.
 
@@ -49,7 +49,7 @@ Property | Type | Cardinality |  Description
  Properties | Property | 1..* | The list of all the properties of this class.
  Operations | Operation | 1..* | The list of all the operations of this class.
 
- ### 2.1.4. Enumeration
+### 2.1.4. Enumeration
 
  The **Enumeration** is the object type that represents a fixed list of possible values.
 
