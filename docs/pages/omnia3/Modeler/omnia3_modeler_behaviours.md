@@ -19,6 +19,8 @@ Behaviours are code, written in C#, that allow you to **extend** the way the app
 
 Behaviours are executed by the API of the platform - creating, updating or saving an entity will execute the appropriate behaviours.
 
+During the behaviour lifecycle, the platform stores the current state of the document in a cache, allowing for fast response times.
+
 ## 2. Types of Behaviours
 
 There are currently five different execution moments for behaviours, which follow a logical flow:
