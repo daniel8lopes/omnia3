@@ -63,7 +63,7 @@ It is necessary to have completed the steps in the  [Beginner tutorial](http://d
     _name = responseDictionary["title"].ToString();
 
     if (responseDictionary.ContainsKey("artists")) {
-    Linq.JArray artists = (Linq.JArray)responseDictionary["artists"];
+    Newtonsoft.Linq.JArray artists = (Newtonsoft.Linq.JArray)responseDictionary["artists"];
                 
     if (artists != null && artists.Count > 0) {
         Artist = artists[0]["name"].ToString();
