@@ -79,7 +79,7 @@ By editing a list in the menu, and selecting the option _Add new_, you can add t
 * _Format as_: Which formatting strategy should this column have. Similar to spreadsheet applications, i.e. a result of "5" can be shown normally, or formatted as a decimal.
 
 ## 4. Dashboards
-__*Data Analytics / Lists*__
+__*Data Analytics / Dashboards*__
 
 A dashboard is a collection of data analysis elements organized in a particular order.
 
