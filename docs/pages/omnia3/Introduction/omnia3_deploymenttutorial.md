@@ -76,10 +76,12 @@ sudo systemctl enable omnia omnia-*
     
 
 ### 4.2. Configure NGINX
+- Perform the following command to replace NGINX's default configurations with the ones we provide.
 ```
 sudo cp /home/omnia/setup/nginx/* /etc/nginx/ -r
 ```
 
+- Edit /etc/nginx/sites-enabled/default, and replace the **server_name** parameter with the public hostname of your site.
 
 ### 4.3. Configure HTTPS
 
