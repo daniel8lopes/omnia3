@@ -16,6 +16,7 @@ The _OMNIA Platform_ was designed around a development lifecycle with the follow
 Each operation is recorded, creating this way a full log of everything was made in the platform.
 
 On top of this lifecycle, there is also a multi-environment logic, where you can promote changes between different environments of the same tenant.
+
 ![Modeler Lifecycle](images\modeler\EnvironmentLifecycle.png)
 
 ## 2. History tracking
