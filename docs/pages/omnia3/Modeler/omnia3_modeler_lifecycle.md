@@ -8,12 +8,15 @@ folder: omnia3
 ---
 
 ## 1. Introduction
-The _OMNIA Platform_ is ready to a development lifecycle with the following steps:
+The _OMNIA Platform_ was designed around a development lifecycle with the following steps:
 * Model: create the model definitions;
 * Build: compile the model; 
 * Test: create records using the previously created model;
 
 Each operation is recorded, creating this way a full log of everything was made in the platform.
+
+On top of this lifecycle, there is also a multi-environment logic, where you can promote changes between different environments of the same tenant.
+![Modeler Lifecycle](images/EnvironmentLifecycle.png)
 
 ## 2. History tracking
 __*Versioning / History*__
