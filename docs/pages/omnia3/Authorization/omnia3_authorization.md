@@ -26,6 +26,10 @@ The authorization management is divided in two main areas, the platform authoriz
 
 ### 3.1 Platform
 
+In the platform authorization area you can manage the automatically created policies and roles.
+
+For each tenant in the platform a policy with code Administration[TenantCode] was created. Each policy contains at least one automatically create role with the code Administration.
+
 ### 3.2 Tenant
 
 
