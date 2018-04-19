@@ -18,6 +18,7 @@ There are three different modelable entities that will be used for this purpose,
 
 ## 2. Queries
 __*Data Analytics / Queries*__
+
 A **query**, in OMNIA, represents a way to define a series of properties whose values you want to obtain, from an entity or a series of entities. If you have ever worked with a query-based languages such as SQL, you will be familiar with this concept - in fact, the queries we model in OMNIA are later turned into SQL, in the [build](omnia3_modeler_lifecycle) process.
 
 A query is automatically created when an entity is created. This automatic query will obtain a series of system attributes, by default. 
