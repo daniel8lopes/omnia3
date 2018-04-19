@@ -78,9 +78,9 @@ If you do not have a tenant yet, please follow the steps of the [Tenant Creation
         OrderLines.ForEach(a => a._provider = Supplier);
     ````
 
-19. Go to your ***PurchaseOrder*** **Document** User Interface by accessing the respective tab, and reorganize them to simplify the interface. Remove attribute **Provider**, **Receiver**  and **Code** from **OrderLines** element. At last, remove **Code** attribute from Document.
+19. Go to your ***PurchaseOrder*** **Document** User Interface by accessing the respective tab, and reorganize them to simplify the interface. Remove the elements **Provider**, **Receiver**  and **Code** from **OrderLines** element. At last, remove **Code** attribute from Document.
 
-20. Reorganize Rows and Columns, re-establishing the **size** and **position** of their attributes:
+20. Reorganize Rows and Columns, re-establishing the **size** and **position** of their elements:
   * ***Serie***: Row 1, Column 1 and Size 4; 
   * ***Number***: Row 1, Column 5 and Size 4; 
   * ***Date***: Row 1, Column 9 and Size 4; 
