@@ -63,29 +63,31 @@ If you do not have a tenant yet, please follow the steps of the [Tenant Creation
 
 13. Perform a new Build (by accessing the option ***Versioning > Builds** and clicking on button **Create new**).
 
-14. Select option ***Go to / Application***, and create a new **PurchaseOrder** by selecting the option ***Documents / PurchaseOrder***.
+14. Select option ***Go to / Application***, and create a **Serie** for the document you just created, by selecting the option **Series / PurchaseOrderSeries**.
 
-15. Go back to modeling area (by accessing the option ***Go to / Modeler***) and edit the **PurchaseOrder** document to simplify its interface. Add a new attribute by clicking on button **Add new**. Set its *Code* as **Company**, *Type* as ***Agent / Company***, and as required by checking option *Is required?*.
+15. Create a new **PurchaseOrder** by selecting the option ***Documents / PurchaseOrder***.
 
-16. Add ***Attribute / Add new***. Set its *Code* as **Supplier**, *Type* as ***Agent / Supplier***, and as required by checking option *Is required?*. 
+16. Go back to modeling area (by accessing the option ***Go to / Modeler***) and edit the **PurchaseOrder** document to simplify its interface. Add a new attribute by clicking on button **Add new**. Set its *Code* as **Company**, *Type* as ***Agent / Company***, and as required by checking option *Is required?*.
 
-17. Add a new Finalize Behaviour to fill **_provider** and **_receiver** attributes by accessing the tab ***Behaviours / Add new Finalizer***. Set ***SetCommitmentAgents*** as Code and paste the following code:
+17. Add ***Attribute / Add new***. Set its *Code* as **Supplier**, *Type* as ***Agent / Supplier***, and as required by checking option *Is required?*. 
+
+18. Add a new Finalize Behaviour to fill **_provider** and **_receiver** attributes by accessing the tab ***Behaviours / Add new Finalizer***. Set ***SetCommitmentAgents*** as Code and paste the following code:
 
     ````
         OrderLines.ForEach(a => a._receiver = Company);
         OrderLines.ForEach(a => a._provider = Supplier);
     ````
 
-18. Go to your ***PurchaseOrder*** **Document** User Interface by accessing the respective tab, and reorganize them to simplify the interface. Remove attribute **Provider**, **Receiver**  and **Code** from **OrderLines** element. At last, remove **Code** attribute from Document.
+19. Go to your ***PurchaseOrder*** **Document** User Interface by accessing the respective tab, and reorganize them to simplify the interface. Remove the elements **Provider**, **Receiver**  and **Code** from **OrderLines** element. At last, remove **Code** attribute from Document.
 
-19. Reorganize Rows and Columns, re-establishing the **size** and **position** of their attributes:
+20. Reorganize Rows and Columns, re-establishing the **size** and **position** of their elements:
   * ***Serie***: Row 1, Column 1 and Size 4; 
   * ***Number***: Row 1, Column 5 and Size 4; 
   * ***Date***: Row 1, Column 9 and Size 4; 
   * ***Company***: Row 2, Column 1 and Size 4;
   * ***Supplier***: Row 2, Column 5 and Size 4.
 
-20. Go to application and validate interface changes by creating a new **PurchaseOrder** document. The interface should be equal to the one below:
+21. Go to application and validate interface changes by creating a new **PurchaseOrder** document. The interface should be equal to the one below:
 
     ![Application_Final_Interface](https://github.com/numbersbelieve/omnia3/raw/master/docs/tutorialPics/modelingTutorial/Application-Final-Interface.PNG)
 

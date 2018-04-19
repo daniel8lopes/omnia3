@@ -31,19 +31,7 @@ It is necessary to have completed the steps in the  [Beginner tutorial](http://d
 2. Create a new ***Action Behaviour***  to fill the new attribute (on the PurchaseOrder document, go to tab **Behaviours** and click on ***Add new / Action***). Set **GetSupplierName** as **Code**, **Supplier** as the attribute that triggers the behaviour, and paste the following code:
 
     ````
-    var authValue = new System.Net.Http.Headers.AuthenticationHeaderValue("Bearer", this._context.Authentication.AccessToken);
-
-    var client = new System.Net.Http.HttpClient() { DefaultRequestHeaders = { Authorization = authValue } };
-
-    string apiEndpoint = $"{this.Context.Tenant.ApiEndpoint}               {this.Context.Tenant.Code}/{this.Context.Tenant.EnvironmentCode}/Application/Supplier/{Supplier}";
-    var requestResult = client.GetAsync(apiEndpoint).GetAwaiter().GetResult();
-
-    string responseBody = requestResult.Content.ReadAsStringAsync().Result;
-    var supplier = JsonConvert.DeserializeObject<Dictionary<string, object>>(responseBody);
-
-    if (!requestResult.IsSuccessStatusCode)
-    throw new Exception("Error on retrieving Supplier name: "+ responseBody);
-
+    var supplier = ApiClient.Get(this.Context, "Supplier", newValue);
     SupplierName = supplier["_name"].ToString();
 
     ````
@@ -75,7 +63,7 @@ It is necessary to have completed the steps in the  [Beginner tutorial](http://d
     _name = responseDictionary["title"].ToString();
 
     if (responseDictionary.ContainsKey("artists")) {
-    Linq.JArray artists = (Linq.JArray)responseDictionary["artists"];
+    Newtonsoft.Json.Linq.JArray artists = (Newtonsoft.Json.Linq.JArray)responseDictionary["artists"];
                 
     if (artists != null && artists.Count > 0) {
         Artist = artists[0]["name"].ToString();

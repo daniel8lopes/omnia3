@@ -31,6 +31,36 @@ entries:
       url: /omnia3_deploymenttutorial.html
       output: web, pdf
   
+  - title: Tutorials
+    output: web, pdf
+    folderitems:      
+    - title: Tenant Creation
+      url: /omnia3_tenantcreation.html
+      output: web, pdf
+
+    - title: Beginner Tutorial
+      url: /omnia3_beginnertutorial.html
+      output: web, pdf
+
+    - title: Advanced Tutorial
+      url: /omnia3_advancedtutorial.html
+      output: web, pdf
+      
+    - title: Expenses Management Tutorial
+      url: /omnia3_expensemanagementtutorial.html
+      output: web, pdf
+      
+    - title: Workflow Tutorial
+      url: /omnia3_workflowtutorial.html
+      output: web, pdf
+        
+  - title: Management
+    output: web, pdf
+    folderitems:
+    - title: Introduction
+      url: /omnia3_management_introduction.html
+      output: web, pdf
+
   - title: Modeler
     output: web, pdf
     folderitems:
@@ -61,18 +91,18 @@ entries:
       url: /omnia3_application_introduction.html
       output: web, pdf
         
-  - title: Management
-    output: web, pdf
-    folderitems:
-    - title: Introduction
-      url: /omnia3_management_introduction.html
-      output: web, pdf
-        
   - title: API
     output: web, pdf
     folderitems:
     - title: How to use the API
       url: /omnia3_api_swagger.html
+      output: web, pdf
+        
+  - title: Authorization
+    output: web, pdf
+    folderitems:
+    - title: Introduction
+      url: /omnia3_authorization.html
       output: web, pdf
         
   - title: Languages
@@ -98,25 +128,11 @@ entries:
       url: /omnia3_languages_uiml.html
       output: web, pdf
         
-  - title: Tutorials
+        
+  - title: API
     output: web, pdf
-    folderitems:      
-    - title: Tenant Creation
-      url: /omnia3_tenantcreation.html
-      output: web, pdf
-
-    - title: Beginner Tutorial
-      url: /omnia3_beginnertutorial.html
-      output: web, pdf
-
-    - title: Advanced Tutorial
-      url: /omnia3_advancedtutorial.html
+    folderitems:
+    - title: How to use the API
+      url: /omnia3_api_swagger.html
       output: web, pdf
       
-    - title: Expenses Management Tutorial
-      url: /omnia3_expensemanagementtutorial.html
-      output: web, pdf
-      
-    - title: Workflow Tutorial
-      url: /omnia3_workflowtutorial.html
-      output: web, pdf
