@@ -24,4 +24,8 @@ The **OMNIA Platform** authorization uses a policy-based model. This policy-base
 
 The authorization management is divided in two main areas, the platform authorization and the [tenant](omnia3_management_introduction.html) authorization.
 
+### 3.1 Platform
+
+### 3.2 Tenant
+
 
