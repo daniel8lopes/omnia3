@@ -17,7 +17,7 @@ Here we explain what the different languages that exist in the platform are, as 
 ## 2. Meta-Entity Framework
 MEF is the type system that all the languages on the platform use. If we were to identify the different layers of an OMNIA application, we could say that the **application** itself is layer 0 (M0), the **model** of that application is layer 1 (M1), and the languages of the platform (the meta-meta model) are layer 2 (M2). MEF is a layer above those languages, M3.
 
-![Meta-modeling structure with examples](images/metamodeling.png)
+![Meta-modeling structure with examples](images\languages\metamodeling.png)
 
 An alternative way to describe MEF would be saying that it is a **Domain-Specific Language** used to define **metamodels** in OMNIA.
 
