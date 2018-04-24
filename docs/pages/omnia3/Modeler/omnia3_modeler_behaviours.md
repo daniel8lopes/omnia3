@@ -27,11 +27,11 @@ During the behaviour lifecycle, the platform stores the current state of the doc
 
 There are currently five different execution moments for behaviours, which follow a logical flow:
 - **Initialize**: Executes when an entity is created;
-- **BeforeUpdate**: Executes immediately before an update is received for that entity;
+- **BeforeChange**: Executes immediately before an update is received for that entity;
 - **Formula**: Executes during updates, requires an attribute, and **calculates** the value of that attribute;
 - **Action**: Executes during updates, requires an attribute, and, given the new and old values of that attribute, performs an operation;
-- **AfterUpdate**: Executes immediately after the update with the user's changes is done;
-- **Finalize**: Executes when an entity is saved.
+- **AfterChangee**: Executes immediately after the update with the user's changes is done;
+- **BeforeSave**: Executes when an entity is saved.
 
 ![The behaviour execution lifecycle](images\modeler\BehaviourLifecycle.png)
 
@@ -53,7 +53,7 @@ Here are some usage suggestions for each type of behaviour - though, of course, 
 
 - **Initialize**: 
     - Default values for fields;
-- **BeforeUpdate**: 
+- **BeforeChange**: 
     - Performing operations that depend on the previous state of the document; 
 - **Formula**: 
     - Summary/total fields;
@@ -62,10 +62,10 @@ Here are some usage suggestions for each type of behaviour - though, of course, 
     - Looking up data from an external API;
     - Changing information in the lines of a grid based on a change in the header;
     - Performing validations on an attribute;
-- **AfterUpdate**: 
+- **AfterChange**: 
     - Performing calculations that require information from commitments/events in the header;
     - Performing document-wide validations;
     - Calculating summary lines;
-- **Finalize**:
+- **BeforeSave**:
     - Performing final document-wide validations;
     - Integrating with external APIs;
