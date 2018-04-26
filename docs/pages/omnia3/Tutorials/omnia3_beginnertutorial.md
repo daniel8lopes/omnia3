@@ -71,7 +71,7 @@ If you do not have a tenant yet, please follow the steps of the [Tenant Creation
 
 17. Add ***Attribute / Add new***. Set its *Code* as **Supplier**, *Type* as ***Agent / Supplier***, and as required by checking option *Is required?*. 
 
-18. Add a new Before Save Behaviour to fill **_provider** and **_receiver** attributes by accessing the tab ***Behaviours / Add new Before Save***. Set ***SetCommitmentAgents*** as Code and paste the following code:
+18. Add a new **Before Save Behaviour** to fill **_provider** and **_receiver** attributes by accessing the tab ***Behaviours / Add new Before Save***. Set ***SetCommitmentAgents*** as Code and paste the following code:
 
     ````
         OrderLines.ForEach(a => a._receiver = Company);
