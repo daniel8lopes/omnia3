@@ -110,4 +110,6 @@ It is necessary to have completed the steps in the  [Beginner tutorial](http://d
 
     ![Modeler_Add_List_Dashboard](https://github.com/numbersbelieve/omnia3/raw/master/docs/tutorialPics/modelingTutorial/Modeler-Add-List-Dashboard.PNG)
 
-3. Go to application and check the homepage dashboard.
+3. **Build** the model.
+
+4. Go to the application and check the homepage dashboard. Data for the products you have created will be visible.
