@@ -96,7 +96,7 @@ This tutorial assumes that you have created a OMNIA tenant, and are logged in as
 
             ExchangeRate = Convert.ToDecimal(value["USD"].ToString());
 
-18. Add a new **Finalize Behaviour** to fill *Provider* and *Receiver* attributes by accessing the tab Behaviours and clicking the button ***Add new / Finalizer***. Set *FinalizeBehaviours* as Code and paste the following code:
+18. Add a new **Before Save Behaviour** to fill *Provider* and *Receiver* attributes by accessing the tab Behaviours and clicking the button ***Add new / Before Save***. Set *BeforeSaveBehaviours* as Code and paste the following code:
 
             ExpenseDetails.ForEach(a => a.Receiver = Company);
             ExpenseDetails.ForEach(a => a.Provider = Employee);
