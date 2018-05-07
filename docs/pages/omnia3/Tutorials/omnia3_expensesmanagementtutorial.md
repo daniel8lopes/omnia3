@@ -47,15 +47,19 @@ This tutorial assumes that you have created a OMNIA tenant, and are logged in as
    
 10. On the left side menu, select the option **Generic Entity**. Create a new **Entity**, by clicking the button  **Add new**  on the top right side, and setting its  **Code**  to  **Currency**.
   
-11. Go back to application area (by accessing the option ***Go to / Application*** and configure the option  **Currency**. Set its *Code* as EUR and *name* as Euro.
+11. Perform a new Build (by accessing the option ***Versioning / Builds / Create new***).
+
+12. Go back to application area (by accessing the option ***Go to / Application*** and configure the option  **Currency**. Set its *Code* as EUR and *name* as Euro.
 
      ![Application_Create_Agent](https://raw.githubusercontent.com/numbersbelieve/omnia3/master/docs/tutorialPics/modelingTutorial/Application-Configurations-Currency.PNG)
         
-12. Access the option ***Series / Add new*** and set its *Code* as **A**, and *name* as **Expenses Report Serie**.
+13. Access the option ***Series / Add new*** and set its *Code* as **A**, and *name* as **Expenses Report Serie**.
 
-13. Go back to modeling area (by accessing the option  ***Go to / Modeler***) and edit the  **ExpenseReport**  document to simplify its interface. Add a new attribute by clicking on button  ***Add new***. Set its *Type*  as  ***Agent / Company***, and as required by checking option  *Is required?*.
+14. Open ***Documents / Expense Report*** and create a document. As you can see, the interface is too complicated. We will now proceed to simplify it, and add more information.
 
-14. Click on button **Add new** to add an **Attribute** to your **Document**. Set its *Code* as **ExpenseLines**, *Type* as ***Commitment / ExpensesRequest***.
+15. Go back to modeling area (by accessing the option  ***Go to / Modeler***) and edit the **Document / ExpenseReport**  document to simplify its interface. Add a new attribute by clicking on button  ***Add new***. Set its _Code_ as **Company**, its *Type*  as  ***Agent / Company***, and as required by checking option *Is required?*.
+
+16. Click on button **Add new** to add an **Attribute** to your **Document**. Set its *Code* as **ExpenseLines**, *Type* as ***Commitment / ExpensesRequest***.
 
     ![Application_Create_Agent](https://raw.githubusercontent.com/numbersbelieve/omnia3/master/docs/tutorialPics/modelingTutorial/Modeler-Document-Attribute2.PNG)
 
@@ -63,23 +67,21 @@ This tutorial assumes that you have created a OMNIA tenant, and are logged in as
 
     - Add a new Attribute to your **Document**. Set its *Code* as **Employee**, *Type* as ***Agent / Employee***, and as required by checking option *Is required?*.
 
-    - Add a new Attribute to your **Document**. Set its *Code* as **DocumentDate**, *Type* as ***Primitive / Date***.
-
-    - Add a new Attribute to your **Document**. Set its *Code* as **ExpenseDetails**, *Type* as ***Commitment / ExpensesRequest1***.
+    - Add a new Attribute to your **Document**. Set its *Code* as **ExpenseDetails**, *Type* as ***Commitment / ExpensesRequest***.
 
     - Add a new Attribute to your **Document**. Set its *Code* as **ExchangeRate**, *Type* as ***Primitive / Decimal***, and as required by checking option *Is required?*.
-
-    - Add a new Attribute to your **Document**. Set its *Code* as **BaseCurrency**, *Type* as ***Primitive / Text***.
 
     - Add a new Attribute to your **Document**. Set its *Code* as **TotalAmount**, *Type* as ***Primitive / Decimal***, and as required by checking option *Is required?*.
     
     - Add a new Attribute to your **Document**. Set its *Code* as **ExpenseDate**, *Type* as ***Primitive / Date***, and as required by checking option *Is required?*.
 
-15. On the left side menu, select the option ***Commitments / ExpensesRequest***. Create a new **Attribute**, by clicking the button  **Add new**  on the top right side, and setting its  *Code*  to  **ExpenseAmount**, *Type* as ***Primitive / Decimal***, and as required by checking option *Is required?*.
+17. On the left side menu, select the option ***Commitments / ExpensesRequest***. Create a new **Attribute**, by clicking the button  **Add new**  on the top right side, and setting its  *Code*  to  **ExpenseAmount**, *Type* as ***Primitive / Decimal***, and as required by checking option *Is required?*.
 
-16. Perform a new Build (by accessing the option ***Versioning / Builds / Create new***).
+18. Perform a new Build (by accessing the option ***Versioning / Builds / Create new***). Access the application and test the new creation of the document.
 
-17. (**Optional**) Add a new **Action Behaviour**, in order to return automatically your updated *Exchange Rate*, based on an external API . Set *GetRateData* as Code and paste the following code:
+15. Go back to modeling area (by accessing the option  ***Go to / Modeler***) and edit the  **Document / ExpenseReport**  document.
+
+19. (**Optional**)  Add a new **Action Behaviour**, in order to return automatically your updated *Exchange Rate*, based on an external API . Set *GetRateData* as Code, and the attribute as _Currency_. Paste the following code:
 
             var client = new System.Net.Http.HttpClient() { };
 
@@ -96,17 +98,17 @@ This tutorial assumes that you have created a OMNIA tenant, and are logged in as
 
             ExchangeRate = Convert.ToDecimal(value["USD"].ToString());
 
-18. Add a new **Before Save Behaviour** to fill *Provider* and *Receiver* attributes by accessing the tab Behaviours and clicking the button ***Add new / Before Save***. Set *BeforeSaveBehaviours* as Code and paste the following code:
+20. Add a new **Before Save Behaviour** to fill *Provider* and *Receiver* attributes by accessing the tab Behaviours and clicking the button ***Add new / Before Save***. Set *BeforeSaveBehaviours* as Code and paste the following code:
 
-            ExpenseDetails.ForEach(a => a.Receiver = Company);
-            ExpenseDetails.ForEach(a => a.Provider = Employee);
+            ExpenseDetails.ForEach(a => a._receiver = Company);
+            ExpenseDetails.ForEach(a => a._provider = Employee);
             ExpenseDetails.ForEach(a => a._amount = a.ExpenseAmount/ExchangeRate);
             TotalAmount = ExpenseDetails.Sum(a => a._amount); 
                         
     
-19. Go to your **ExpenseReport** Document User Interface by accessing the respective tab, and reorganize them to simplify the interface. Remove attribute Provider, Receiver and Quantity from **ExpenseDetails** element. At last, remove Code (twice) attribute from Document.
+21. Go to your **ExpenseReport** Document User Interface by accessing the respective tab, and reorganize them to simplify the interface. Delete the attributes Code, Provider, Receiver and Quantity from the **ExpenseDetails** element. At last, delete the Code attribute from Document.
 
-20. Reorganize Rows and Columns, re-establishing the size and position of their attributes:
+22. Reorganize Rows and Columns, re-establishing the size and position of their attributes:
     - ***Serie***: Row 1, Column 1 and Size 4;
     - ***Number***: Row 1, Column 2 and Size 4;
     - ***Date***: Row 1, Column 3 and Size 4;
@@ -115,16 +117,18 @@ This tutorial assumes that you have created a OMNIA tenant, and are logged in as
     - ***Currency***: Row 2, Column 3 and Size 4;
     - ***ExchangeRate***: Row 3, Column 1 and Size 2;
     - ***ExpenseDate***: Row 3, Column 5 and Size 4;
-    - ***ExpenseDetails***: Row 5, Column 1 and Size 12;
-    - ***Resource***: Row 1, Column 1 and Size 2;
-    - ***Amount***: Row 1, Column 11 and Size 2;
+    - ***ExpenseDetails***: Row 5, Column 1 and Size 12. Within the Expense Details, change the attributes:
+        - ***Resource***: Row 1, Column 1 and Size 2;
+        - ***Amount***: Row 1, Column 11 and Size 2;
     - ***TotalAmount***: Row 8, Column 11 and Size 2.
 
-21. Go to application and validate User Interface changes, by creating a new **ExpenseReport** document. The interface should be equal to the one below:
+23. Perform a new Build (by accessing the option ***Versioning / Builds / Create new***).
+
+24. Go to application and validate User Interface changes, by creating a new **ExpenseReport** document. The interface should be equal to the one below:
 
        ![Application_Create_Agent](https://raw.githubusercontent.com/numbersbelieve/omnia3/master/docs/tutorialPics/modelingTutorial/Application-ExpensesReport-Form.PNG)
 
-    So, here you have it, a simple and descritive Expense Report, completely built on **OMNIA Platform 3.0**!
+    So, here you have it, a simple and descriptive Expense Report, completely built on **OMNIA Platform 3.0**!
     
-    We have one more exercise for you. At this time, your **OMNIA skills** are getting sharped and you're feeling already confortable       with our technology. Now, we want to show you how **OMNIA** can guide you through your **daily workflow** checklist: time to proceed to our     [**Workflow Tutorial**](http://docs.numbersbelieve.com/omnia3_workflowtutorial.html).
+    We have one more exercise for you. At this time, your **OMNIA skills** are getting sharpened and you're feeling comfortable with our technology. Now, we want to show you how **OMNIA** can guide you through your **daily workflow** checklist: time to proceed to our [**Workflow Tutorial**](http://docs.numbersbelieve.com/omnia3_workflowtutorial.html).
     
