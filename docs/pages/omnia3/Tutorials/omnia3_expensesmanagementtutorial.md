@@ -96,7 +96,9 @@ This tutorial assumes that you have created a OMNIA tenant, and are logged in as
 
             var value = JsonConvert.DeserializeObject<Dictionary<string, object>>(rateData["rates"].ToString());
 
-            ExchangeRate = Convert.ToDecimal(value["USD"].ToString());
+            ExchangeRate = Convert.ToDecimal(value[$"{Currency}"].ToString());
+
+This example will give the exchange rate between EUR and the currency provided in the attribute Currency. You can try it out with different currencies, such as **GBP** or **USD**.
 
 20. Add a new **Before Save Behaviour** to fill *Provider* and *Receiver* attributes by accessing the tab Behaviours and clicking the button ***Add new / Before Save***. Set *BeforeSaveBehaviours* as Code and paste the following code:
 
