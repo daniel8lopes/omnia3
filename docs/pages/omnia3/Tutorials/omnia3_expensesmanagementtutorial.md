@@ -71,7 +71,7 @@ This tutorial assumes that you have created a OMNIA tenant, and are logged in as
 
     - Add a new Attribute to your **Document**. Set its *Code* as **ExchangeRate**, *Type* as ***Primitive / Decimal***, and as required by checking option *Is required?*.
 
-    - Add a new Attribute to your **Document**. Set its *Code* as **TotalAmount**, *Type* as ***Primitive / Decimal***, and as required by checking option *Is required?*.
+    - Add a new Attribute to your **Document**. Set its *Code* as **TotalAmount**, *Type* as ***Primitive / Decimal***, as read only by checking option *Is read only* and as required by checking option *Is required?*.
     
     - Add a new Attribute to your **Document**. Set its *Code* as **ExpenseDate**, *Type* as ***Primitive / Date***, and as required by checking option *Is required?*.
 
