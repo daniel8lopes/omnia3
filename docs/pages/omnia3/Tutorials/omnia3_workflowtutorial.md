@@ -89,36 +89,29 @@ Copy the data from [this file](https://github.com/numbersbelieve/omnia3/raw/mast
 23. In the **TaskReport** document, go to tab *Behaviours* and click on ***Add new / Action***. Set **GetReportData** as *Code*, **SheetID** as the attribute that triggers the behaviour, and paste the following code, taking care to replace the "INSERT YOUR KEY HERE" with the key obtained in the last step:
 
     ````
-    if(!string.IsNullOrEmpty(SheetID)){
-        var client = new System.Net.Http.HttpClient() { };
-
-
+    if (!string.IsNullOrEmpty(SheetID))
+    {
+        var client = new System.Net.Http.HttpClient()
+        {};
         string googleApiKey = "INSERT YOUR KEY HERE";
         string apiEndpoint = $"https://sheets.googleapis.com/v4/spreadsheets/{SheetID}/values/Sheet1?key={googleApiKey}";
         var requestResult = client.GetAsync(apiEndpoint).GetAwaiter().GetResult();
-
         string responseBody = requestResult.Content.ReadAsStringAsync().Result;
-
         if (!requestResult.IsSuccessStatusCode)
             throw new Exception("Error on retrieving Google sheet: " + responseBody);
-
         var sheet = JsonConvert.DeserializeObject<Dictionary<string, object>>(responseBody);
-
-
-
         var values = JsonConvert.DeserializeObject<List<List<string>>>(sheet["values"].ToString());
 
-        foreach (var sheetLine in values)
+        for (int i = 2; i < values.Count; i++) //first two lines are headers
         {
-            Executedtask taskLine = new Executedtask();
-
-            taskLine._resource = sheetLine.ElementAt(0);
-            taskLine._quantity = Convert.ToInt32(sheetLine.ElementAt(1));
-
+            ExecutedTask taskLine = new ExecutedTask(_context, null);
+            taskLine._resource = values[i].ElementAt(0);
+            taskLine.TaskDate = Convert.ToDateTime(values[i].ElementAt(1));
+            taskLine.Description = values[i].ElementAt(2);
+            taskLine._quantity = Convert.ToInt32(values[i].ElementAt(3));
             ReportLines.Add(taskLine);
-                    
         }
-    } 
+    }
     ```` 
 
 24. In the **TaskReport** document, go to tab *Behaviours* and click on ***Add new / Action***. Set **GetSheetID** as *Code*, **Project** as the attribute that triggers the behaviour, and paste the following code:
