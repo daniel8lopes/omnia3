@@ -79,9 +79,9 @@ This tutorial assumes that you have created a OMNIA tenant, and are logged in as
 
 18. Perform a new Build (by accessing the option ***Versioning / Builds / Create new***). Access the application and test the new creation of the document.
 
-15. Go back to modeling area (by accessing the option  ***Go to / Modeler***) and edit the  **Document / ExpenseReport**  document.
+19. Go back to modeling area (by accessing the option  ***Go to / Modeler***) and edit the  **Document / ExpenseReport**  document.
 
-19. (**Optional**)  Add a new **Action Behaviour**, in order to return automatically your updated *Exchange Rate*, based on an external API . Set *GetRateData* as Code, and the attribute as _Currency_. Paste the following code:
+20. (**Optional**)  Add a new **Action Behaviour**, in order to return automatically your updated *Exchange Rate*, based on an external API . Set *GetRateData* as Code, and the attribute as _Currency_. Paste the following code:
 
             var client = new System.Net.Http.HttpClient() { };
 
@@ -100,7 +100,7 @@ This tutorial assumes that you have created a OMNIA tenant, and are logged in as
 
 This example will give the exchange rate between EUR and the currency provided in the attribute Currency. You can try it out with different currencies, such as **GBP** or **USD**.
 
-20. Add a new **Before Save Behaviour** to fill *Provider* and *Receiver* attributes by accessing the tab Behaviours and clicking the button ***Add new / Before Save***. Set *BeforeSaveBehaviours* as Code and paste the following code:
+21. Add a new **Before Save Behaviour** to fill *Provider* and *Receiver* attributes by accessing the tab Behaviours and clicking the button ***Add new / Before Save***. Set *BeforeSaveBehaviours* as Code and paste the following code:
 
             ExpenseDetails.ForEach(a => a._receiver = Company);
             ExpenseDetails.ForEach(a => a._provider = Employee);
@@ -108,9 +108,9 @@ This example will give the exchange rate between EUR and the currency provided i
             TotalAmount = ExpenseDetails.Sum(a => a._amount); 
                         
     
-21. Go to your **ExpenseReport** Document User Interface by accessing the respective tab, and reorganize them to simplify the interface. Delete the attributes Code, Provider, Receiver and Quantity from the **ExpenseDetails** element. At last, delete the Code attribute from Document.
+22. Go to your **ExpenseReport** Document User Interface by accessing the respective tab, and reorganize them to simplify the interface. Delete the attributes Code, Provider, Receiver and Quantity from the **ExpenseDetails** element. At last, delete the Code attribute from Document.
 
-22. Reorganize Rows and Columns, re-establishing the size and position of their attributes:
+23. Reorganize Rows and Columns, re-establishing the size and position of their attributes:
     - ***Serie***: Row 1, Column 1 and Size 4;
     - ***Number***: Row 1, Column 2 and Size 4;
     - ***Date***: Row 1, Column 3 and Size 4;
@@ -124,9 +124,9 @@ This example will give the exchange rate between EUR and the currency provided i
         - ***Amount***: Row 1, Column 11 and Size 2;
     - ***TotalAmount***: Row 8, Column 11 and Size 2.
 
-23. Perform a new Build (by accessing the option ***Versioning / Builds / Create new***).
+24. Perform a new Build (by accessing the option ***Versioning / Builds / Create new***).
 
-24. Go to application and validate User Interface changes, by creating a new **ExpenseReport** document. The interface should be equal to the one below:
+25. Go to application and validate User Interface changes, by creating a new **ExpenseReport** document. The interface should be equal to the one below:
 
        ![Application_Create_Agent](https://raw.githubusercontent.com/numbersbelieve/omnia3/master/docs/tutorialPics/modelingTutorial/Application-ExpensesReport-Form.PNG)
 
