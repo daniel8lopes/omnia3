@@ -122,7 +122,7 @@ If you do not have a tenant yet, please follow the steps of the [Tenant Creation
     foreach (var employee in responseData)
     {
       var line = new Dictionary<string, object>()
-      {{"_code", employee["id"]}, {"_name", employee["first_name"] + " " + employee["last_name"]}, };
+      {{"_code", employee["id"]}, {"_name", employee["first_name"] + " " + employee["last_name"]}};
       employeesList.Add(line);
     }
 
