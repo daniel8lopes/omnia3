@@ -81,7 +81,7 @@ If you do not have a tenant yet, please follow the steps of the [Tenant Creation
 
 5. Create a new Data Behaviour for operation "Read", so that data is retrieved when a Employee is edited. Copy and paste the following code:
 
-  ````
+ ````
     var client = new System.Net.Http.HttpClient();
     string apiEndpoint = $"https://reqres.in/api/users/{identifier}";
 
