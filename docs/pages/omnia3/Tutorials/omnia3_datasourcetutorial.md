@@ -26,6 +26,8 @@ If you do not have a tenant yet, please follow the steps of the [Tenant Creation
 
 1. Start by selecting the tenant where you are going to model, and you will be redirected to the modeling area.
 
+    ![Homepage_Dashboard](http://funkyimg.com/i/2DVGv.png)
+
 2. Create a new Data Source, named "ExternalAPI". Set its Behaviour runtime as Internal, and its Data access runtime as External
 
     ![Modeler_Create_DataSource](https://raw.githubusercontent.com/numbersbelieve/omnia3/master/docs/tutorialPics/modelingTutorial/Modeler-Create-DataSource.PNG)
