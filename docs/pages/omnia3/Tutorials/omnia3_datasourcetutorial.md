@@ -11,7 +11,7 @@ folder: omnia3
 
 Based on a simple Employee management scenario, this tutorial shows how easy can Omnia communicate with other systems.
 
-The system we are using to communicate is a free API named REQRES [ReqRes](https://reqres.in/), that simulates real time CRUD operations.
+The system we are using to communicate is a free API named [ReqRes](https://reqres.in/), that simulates real time CRUD operations.
 
 However, since this is only a simulation, no actual data is manipulated (written, updated or removed) on REQRES system. 
 
