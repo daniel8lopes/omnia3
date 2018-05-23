@@ -32,19 +32,27 @@ If you do not have a tenant yet, please follow the steps of the [Tenant Creation
 
   ````
     var client = new System.Net.Http.HttpClient();
+    
     string apiEndpoint = $"https://reqres.in/api/users/";
+
     var body = new
     {
       code = dto._code,
       name = dto._name
     };
+
     var jsonBody = JsonConvert.SerializeObject(body);
     var httpContent = new System.Net.Http.StringContent(jsonBody, System.Text.Encoding.UTF8, "application/json");
+
     var requestResult = client.PostAsync(apiEndpoint, httpContent).GetAwaiter().GetResult();
+
     string responseBody = requestResult.Content.ReadAsStringAsync().Result;
+
     if (!requestResult.IsSuccessStatusCode)
       throw new Exception("Error on creating contact: " + responseBody);
+
     var response = JsonConvert.DeserializeObject<Dictionary<string, object>>(responseBody);
+
     EmployeeDto employeeResponse = new EmployeeDto();
     employeeResponse._code = response["code"].ToString();
     employeeResponse._name = response["name"].ToString();
@@ -57,9 +65,13 @@ If you do not have a tenant yet, please follow the steps of the [Tenant Creation
 
   ````
     var client = new System.Net.Http.HttpClient();
+    
     string apiEndpoint = $"https://reqres.in/api/users/{identifier}";
+
     var requestResult = client.DeleteAsync(apiEndpoint).GetAwaiter().GetResult();
+
     string responseBody = requestResult.Content.ReadAsStringAsync().Result;
+
     if (!requestResult.IsSuccessStatusCode)
       throw new Exception("Error on removing Employee: " + responseBody);
 
@@ -83,8 +95,8 @@ If you do not have a tenant yet, please follow the steps of the [Tenant Creation
     var responseData = JsonConvert.DeserializeObject<Dictionary<string, object>>(response["data"].ToString());
 
     EmployeeDto employeeResponse = new EmployeeDto();
-    employeeResponse._code = responseData["code"].ToString();
-    employeeResponse._name = responseData["name"].ToString();
+    employeeResponse._code = responseData["id"].ToString();
+    employeeResponse._name = $"{responseData["first_name"].ToString()} {responseData["last_name"].ToString()}";
 
     return employeeResponse;
   
@@ -136,6 +148,7 @@ If you do not have a tenant yet, please follow the steps of the [Tenant Creation
 
     var requestResult = client.PutAsync(apiEndpoint, httpContent).GetAwaiter().GetResult();
     string responseBody = requestResult.Content.ReadAsStringAsync().Result;
+    
     if (!requestResult.IsSuccessStatusCode)
       throw new Exception("Error on creating contact: " + responseBody);
 
@@ -149,5 +162,11 @@ If you do not have a tenant yet, please follow the steps of the [Tenant Creation
   
 ````
 
-
 8. Build the model
+
+9. On Application area, create a new instance of the ExternalAPI data source, with code "ReqRes"
+
+10. On left side menu, navigate to Configurations | Employee, and check that the list is filled with data retrieved from external data source ReqRes;
+
+
+
