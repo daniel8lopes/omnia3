@@ -13,7 +13,7 @@ Based on a simple Employee management scenario, this tutorial shows how easy can
 
 The system we are using to communicate is a free API named REQRES [ReqRes](https://reqres.in/), that simulates real time CRUD operations.
 
-However, since this is only a simulation, no actual data is written on REQRES system. 
+However, since this is only a simulation, no actual data is manipulated (written, updated or removed) on REQRES system. 
 
 
 ## 2. Prerequisites
