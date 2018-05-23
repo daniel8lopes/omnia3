@@ -11,7 +11,7 @@ folder: omnia3
 
 Based on a simple Employee management scenario, this tutorial shows how easy can Omnia communicate with other systems.
 
-The system we are using to communicate is a free API named REQRES (https://reqres.in/), that simulates read and write operations on a live system.
+The system we are using to communicate is a free API named REQRES [ReqRes](https://reqres.in/), that simulates real time CRUD operations.
 
 However, since this is only a simulation, no actual data is written on REQRES system. 
 
@@ -168,3 +168,6 @@ If you do not have a tenant yet, please follow the steps of the [Tenant Creation
 9. On Application area, create a new instance of the ExternalAPI data source, with code "ReqRes"
 
 10. On left side menu, navigate to Configurations | Employee, and check that the list is filled with data retrieved from external data source ReqRes;
+
+
+
