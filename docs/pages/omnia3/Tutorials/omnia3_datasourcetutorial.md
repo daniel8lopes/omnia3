@@ -111,7 +111,7 @@ If you do not have a tenant yet, please follow the steps of the [Tenant Creation
 
     return employeeResponse;
     {% endraw %}
-  ````
+    ````
 
 7. Create a new Data Behaviour for operation "ReadList", so that data is retrieved when Employees list is requested. Copy and paste the following code:
 
