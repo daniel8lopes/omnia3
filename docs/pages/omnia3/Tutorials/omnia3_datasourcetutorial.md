@@ -179,6 +179,8 @@ If you do not have a tenant yet, please follow the steps of the [Tenant Creation
 
 10. On Application area, create a new instance of the ExternalAPI data source, with code "ReqRes"
 
+    ![Application-Create-DataSource](https://raw.githubusercontent.com/numbersbelieve/omnia3/master/docs/tutorialPics/modelingTutorial/Application-Create-DataSource.PNG)
+    
 11. On left side menu, navigate to Configurations / Employee, and check that the list is filled with data retrieved from the external data source
 
     ![Application_List_DataSource](https://raw.githubusercontent.com/numbersbelieve/omnia3/master/docs/tutorialPics/modelingTutorial/Application-List-External-DataSource.PNG)
