@@ -105,6 +105,7 @@ If you do not have a tenant yet, please follow the steps of the [Tenant Creation
 6. Create a new Data Behaviour for operation "ReadList", so that data is retrieved when Employees list is requested. Copy and paste the following code:
 
   ````
+  {% raw %}
     var client = new System.Net.Http.HttpClient();
     string apiEndpoint = $"https://reqres.in/api/users?page={page}";
 
@@ -127,7 +128,7 @@ If you do not have a tenant yet, please follow the steps of the [Tenant Creation
     }
 
     return (responseData.Count, employeesList);
-  
+  {% endraw %}
 ````
 
 7. Create a new Data Behaviour for operation "Update", so that data is retrieved when a single Employee is updated. Copy and paste the following code:
