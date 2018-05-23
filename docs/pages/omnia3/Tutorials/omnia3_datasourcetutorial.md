@@ -11,6 +11,8 @@ folder: omnia3
 
 Based on a simple Employee management scenario, this tutorial shows how easy can Omnia use information from different data sources.
 
+On the first tutorial area (CRUD Operations), we are going to evaluate how to interact with an external data source, by reading and manipulating its data. On the second area (External data sources data on Omnia), we are going to focus on the use of data source information on Omnia entities. 
+
 As our custom data source, we are going to use a free API named [ReqRes](https://reqres.in/), that simulates real time CRUD operations, based on a user management scenario
 
 Please notice that, since this is only a simulation, no actual data is manipulated (written, updated or removed) on REQRES system. 
@@ -22,7 +24,7 @@ This tutorial assumes that you have created a OMNIA tenant, and are logged in as
 
 If you do not have a tenant yet, please follow the steps of the [Tenant Creation tutorial](http://docs.numbersbelieve.com/omnia3_tenantcreation.html).
 
-## 3. Modeling an application
+## 3. CRUD operations
 
 1. Start by selecting the tenant where you are going to model, and you will be redirected to the modeling area.
 
@@ -184,3 +186,18 @@ If you do not have a tenant yet, please follow the steps of the [Tenant Creation
 11. On left side menu, navigate to Configurations / Employee, and check that the list is filled with data retrieved from the external data source
 
     ![Application_List_DataSource](https://raw.githubusercontent.com/numbersbelieve/omnia3/master/docs/tutorialPics/modelingTutorial/Application-List-External-DataSource.PNG)
+    
+    
+## 3. External data sources data on Omnia
+
+1. Go to modeling area
+
+2. Create a new GenericEntity "Department"
+
+3. Add a new attribute by clicking on button Add new. Set its Code as DataSource, Type as Data Sources / ExternalAPI
+
+4. Add another attribute that represents the Employee. Set its Code as Employee, Type as Agent / Employee, and ExternalAPI on Uses data source from attribute
+
+5. Build the model
+
+6. On Application area, create a new instance of the Department, and check that, after identifying the data source, Employees from that data source are now available for selection
