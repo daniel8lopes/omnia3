@@ -26,6 +26,8 @@ If you do not have a tenant yet, please follow the steps of the [Tenant Creation
 
 1. Create a new Data Source, named "ExternalAPI". Set its Behaviour runtime as Internal, and its Data access runtime as External
 
+    ![Modeler_Create_DataSource](https://raw.githubusercontent.com/numbersbelieve/omnia3/master/docs/tutorialPics/modelingTutorial/Modeler-Create-DataSource.PNG)
+    
 2. Create a new Agent "Employee", and set it as using the external data source "ExternalAPI"
 
 3. On Agent Employee, navigate to tab "Data Behaviours", and define a behaviour to be executed on "Create". This behaviour simulates a POST request to the external Application. Copy and paste the following code:
