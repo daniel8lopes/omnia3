@@ -24,15 +24,17 @@ If you do not have a tenant yet, please follow the steps of the [Tenant Creation
 
 ## 3. Modeling an application
 
-1. Create a new Data Source, named "ExternalAPI". Set its Behaviour runtime as Internal, and its Data access runtime as External
+1. Start by selecting the tenant where you are going to model, and you will be redirected to the modeling area.
+
+2. Create a new Data Source, named "ExternalAPI". Set its Behaviour runtime as Internal, and its Data access runtime as External
 
     ![Modeler_Create_DataSource](https://raw.githubusercontent.com/numbersbelieve/omnia3/master/docs/tutorialPics/modelingTutorial/Modeler-Create-DataSource.PNG)
     
-2. Create a new Agent "Employee", and set it as using the external data source "ExternalAPI"
+3. Create a new Agent "Employee", and set it as using the external data source "ExternalAPI"
 
     ![Modeler_Create_DataSource](https://raw.githubusercontent.com/numbersbelieve/omnia3/master/docs/tutorialPics/modelingTutorial/Modeler-Create-Agent-Employee.PNG)
 
-3. On Agent Employee, navigate to tab "Data Behaviours", and define a behaviour to be executed on "Create". This behaviour simulates a POST request to the external Application. Copy and paste the following code:
+4. On Agent Employee, navigate to tab "Data Behaviours", and define a behaviour to be executed on "Create". This behaviour simulates a POST request to the external Application. Copy and paste the following code:
 
   ````
     var client = new System.Net.Http.HttpClient();
@@ -64,7 +66,7 @@ If you do not have a tenant yet, please follow the steps of the [Tenant Creation
     
   ````
 
-4. On "Data Behaviours" of Agent Employee, define a behaviour, to be executed on "Delete" (when a Employee is deleted). Copy and paste the following code:
+5. On "Data Behaviours" of Agent Employee, define a behaviour, to be executed on "Delete" (when a Employee is deleted). Copy and paste the following code:
 
 
   ````
@@ -83,7 +85,7 @@ If you do not have a tenant yet, please follow the steps of the [Tenant Creation
   
 ````
 
-5. Create a new Data Behaviour for operation "Read", so that data is retrieved when a Employee is edited. Copy and paste the following code:
+6. Create a new Data Behaviour for operation "Read", so that data is retrieved when a Employee is edited. Copy and paste the following code:
 
  ````
     var client = new System.Net.Http.HttpClient();
@@ -106,7 +108,7 @@ If you do not have a tenant yet, please follow the steps of the [Tenant Creation
   
 ````
 
-6. Create a new Data Behaviour for operation "ReadList", so that data is retrieved when Employees list is requested. Copy and paste the following code:
+7. Create a new Data Behaviour for operation "ReadList", so that data is retrieved when Employees list is requested. Copy and paste the following code:
 
   ````
   {% raw %}
@@ -135,7 +137,7 @@ If you do not have a tenant yet, please follow the steps of the [Tenant Creation
   {% endraw %}
 ````
 
-7. Create a new Data Behaviour for operation "Update", so that data is retrieved when a single Employee is updated. Copy and paste the following code:
+8. Create a new Data Behaviour for operation "Update", so that data is retrieved when a single Employee is updated. Copy and paste the following code:
 
   ````
     var client = new System.Net.Http.HttpClient();
@@ -167,11 +169,8 @@ If you do not have a tenant yet, please follow the steps of the [Tenant Creation
   
 ````
 
-8. Build the model
+9. Build the model
 
-9. On Application area, create a new instance of the ExternalAPI data source, with code "ReqRes"
+10. On Application area, create a new instance of the ExternalAPI data source, with code "ReqRes"
 
-10. On left side menu, navigate to Configurations | Employee, and check that the list is filled with data retrieved from external data source ReqRes;
-
-
-
+11. On left side menu, navigate to Configurations | Employee, and check that the list is filled with data retrieved from external data source ReqRes;
