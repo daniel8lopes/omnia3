@@ -87,11 +87,11 @@ If you do not have a tenant yet, please follow the steps of the [Tenant Creation
 
     return true;
     {% endraw %}
-````
+  ````
 
 6. Create a new Data Behaviour for operation "Read", so that data is retrieved when a Employee is edited. Copy and paste the following code:
 
- ````
+  ````
    {% raw %}
     var client = new System.Net.Http.HttpClient();
     string apiEndpoint = $"https://reqres.in/api/users/{identifier}";
@@ -111,7 +111,7 @@ If you do not have a tenant yet, please follow the steps of the [Tenant Creation
 
     return employeeResponse;
     {% endraw %}
-````
+  ````
 
 7. Create a new Data Behaviour for operation "ReadList", so that data is retrieved when Employees list is requested. Copy and paste the following code:
 
@@ -140,7 +140,7 @@ If you do not have a tenant yet, please follow the steps of the [Tenant Creation
 
     return (responseData.Count, employeesList);
   {% endraw %}
-````
+  ````
 
 8. Create a new Data Behaviour for operation "Update", so that data is retrieved when a single Employee is updated. Copy and paste the following code:
 
@@ -173,10 +173,10 @@ If you do not have a tenant yet, please follow the steps of the [Tenant Creation
 
     return employeeResponse;
     {% endraw %}
-````
+  ````
 
 9. Build the model
 
 10. On Application area, create a new instance of the ExternalAPI data source, with code "ReqRes"
 
-11. On left side menu, navigate to Configurations | Employee, and check that the list is filled with data retrieved from external data source ReqRes;
+11. On left side menu, navigate to Configurations / Employee, and check that the list is filled with data retrieved from external data source ReqRes;
