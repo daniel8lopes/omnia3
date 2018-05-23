@@ -38,7 +38,7 @@ If you do not have a tenant yet, please follow the steps of the [Tenant Creation
 
 4. On Agent Employee, navigate to tab "Data Behaviours", and define a behaviour to be executed on "Create". This behaviour simulates a POST request to the external Application. Copy and paste the following code:
 
-  ````
+    ````
     {% raw %}
     var client = new System.Net.Http.HttpClient();
     
@@ -67,12 +67,12 @@ If you do not have a tenant yet, please follow the steps of the [Tenant Creation
     employeeResponse._name = response["name"].ToString();
     return employeeResponse;
       {% endraw %}
-  ````
+    ````
 
 5. On "Data Behaviours" of Agent Employee, define a behaviour, to be executed on "Delete" (when a Employee is deleted). Copy and paste the following code:
 
 
-  ````
+    ````
     {% raw %}
     var client = new System.Net.Http.HttpClient();
     
@@ -87,11 +87,11 @@ If you do not have a tenant yet, please follow the steps of the [Tenant Creation
 
     return true;
     {% endraw %}
-  ````
+    ````
 
 6. Create a new Data Behaviour for operation "Read", so that data is retrieved when a Employee is edited. Copy and paste the following code:
 
-  ````
+    ````
    {% raw %}
     var client = new System.Net.Http.HttpClient();
     string apiEndpoint = $"https://reqres.in/api/users/{identifier}";
@@ -115,7 +115,7 @@ If you do not have a tenant yet, please follow the steps of the [Tenant Creation
 
 7. Create a new Data Behaviour for operation "ReadList", so that data is retrieved when Employees list is requested. Copy and paste the following code:
 
-  ````
+    ````
   {% raw %}
     var client = new System.Net.Http.HttpClient();
     string apiEndpoint = $"https://reqres.in/api/users?page={page}";
@@ -140,11 +140,11 @@ If you do not have a tenant yet, please follow the steps of the [Tenant Creation
 
     return (responseData.Count, employeesList);
   {% endraw %}
-  ````
+    ````
 
 8. Create a new Data Behaviour for operation "Update", so that data is retrieved when a single Employee is updated. Copy and paste the following code:
 
-  ````
+    ````
     {% raw %}
     var client = new System.Net.Http.HttpClient();
     string apiEndpoint = $"https://reqres.in/api/users/{dto._code}";
@@ -173,7 +173,7 @@ If you do not have a tenant yet, please follow the steps of the [Tenant Creation
 
     return employeeResponse;
     {% endraw %}
-  ````
+    ````
 
 9. Build the model
 
