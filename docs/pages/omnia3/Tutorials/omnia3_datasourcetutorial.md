@@ -28,7 +28,7 @@ If you do not have a tenant yet, please follow the steps of the [Tenant Creation
 
     ![Homepage_Dashboard](http://funkyimg.com/i/2DVGv.png)
 
-2. Create a new Data Source, named "ExternalAPI". Set its Behaviour runtime as Internal, and its Data access runtime as External
+2. Through the left side menu create a new Data Source by accessing the option Data Sources / Create new on the top right side. Set its Name as "ExternalAPI", behaviour runtime as Internal and its Data access runtime as External.
 
     ![Modeler_Create_DataSource](https://raw.githubusercontent.com/numbersbelieve/omnia3/master/docs/tutorialPics/modelingTutorial/Modeler-Create-DataSource.PNG)
     
@@ -39,6 +39,7 @@ If you do not have a tenant yet, please follow the steps of the [Tenant Creation
 4. On Agent Employee, navigate to tab "Data Behaviours", and define a behaviour to be executed on "Create". This behaviour simulates a POST request to the external Application. Copy and paste the following code:
 
   ````
+    {% raw %}
     var client = new System.Net.Http.HttpClient();
     
     string apiEndpoint = $"https://reqres.in/api/users/";
@@ -65,13 +66,14 @@ If you do not have a tenant yet, please follow the steps of the [Tenant Creation
     employeeResponse._code = response["code"].ToString();
     employeeResponse._name = response["name"].ToString();
     return employeeResponse;
-    
+      {% endraw %}
   ````
 
 5. On "Data Behaviours" of Agent Employee, define a behaviour, to be executed on "Delete" (when a Employee is deleted). Copy and paste the following code:
 
 
   ````
+    {% raw %}
     var client = new System.Net.Http.HttpClient();
     
     string apiEndpoint = $"https://reqres.in/api/users/{identifier}";
@@ -84,12 +86,13 @@ If you do not have a tenant yet, please follow the steps of the [Tenant Creation
       throw new Exception("Error on removing Employee: " + responseBody);
 
     return true;
-  
+    {% endraw %}
 ````
 
 6. Create a new Data Behaviour for operation "Read", so that data is retrieved when a Employee is edited. Copy and paste the following code:
 
  ````
+   {% raw %}
     var client = new System.Net.Http.HttpClient();
     string apiEndpoint = $"https://reqres.in/api/users/{identifier}";
 
@@ -107,7 +110,7 @@ If you do not have a tenant yet, please follow the steps of the [Tenant Creation
     employeeResponse._name = $"{responseData["first_name"].ToString()} {responseData["last_name"].ToString()}";
 
     return employeeResponse;
-  
+    {% endraw %}
 ````
 
 7. Create a new Data Behaviour for operation "ReadList", so that data is retrieved when Employees list is requested. Copy and paste the following code:
@@ -142,6 +145,7 @@ If you do not have a tenant yet, please follow the steps of the [Tenant Creation
 8. Create a new Data Behaviour for operation "Update", so that data is retrieved when a single Employee is updated. Copy and paste the following code:
 
   ````
+    {% raw %}
     var client = new System.Net.Http.HttpClient();
     string apiEndpoint = $"https://reqres.in/api/users/{dto._code}";
 
@@ -168,7 +172,7 @@ If you do not have a tenant yet, please follow the steps of the [Tenant Creation
     employeeResponse._name = response["name"].ToString();
 
     return employeeResponse;
-  
+    {% endraw %}
 ````
 
 9. Build the model
