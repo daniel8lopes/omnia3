@@ -9,11 +9,11 @@ folder: omnia3
 
 ## 1. Introduction
 
-Based on a simple Employee management scenario, this tutorial shows how easy can Omnia communicate with other systems.
+Based on a simple Employee management scenario, this tutorial shows how easy can Omnia use information from different data sources.
 
-The system we are using to communicate is a free API named [ReqRes](https://reqres.in/), that simulates real time CRUD operations.
+As our custom data source, we are going to use a free API named [ReqRes](https://reqres.in/), that simulates real time CRUD operations, based on a user management scenario
 
-However, since this is only a simulation, no actual data is manipulated (written, updated or removed) on REQRES system. 
+Please notice that, since this is only a simulation, no actual data is manipulated (written, updated or removed) on REQRES system. 
 
 
 ## 2. Prerequisites
