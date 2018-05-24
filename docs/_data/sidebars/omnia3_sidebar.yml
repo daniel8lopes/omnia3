@@ -49,6 +49,10 @@ entries:
     - title: Expenses Management Tutorial
       url: /omnia3_expensemanagementtutorial.html
       output: web, pdf
+           
+    - title: Data Sources Tutorial
+      url: /omnia3_datasourcetutorial.html
+      output: web, pdf
       
   - title: Management
     output: web, pdf
