@@ -72,6 +72,7 @@ sudo systemctl enable omnia omnia-*
 - Edit /home/omnia/app/config/omnia.json, and fill in the following parameters:
     - ConnectionStrings > PostgreSQL: insert your database connection string;
     - Hostname: Platform hostname;
+    - IdentityServiceUrl: Platform hostname, prefixed with HTTP or HTTPS depending on what you are running.;
     - SMTP: A valid SMTP server configuration. Essential for the execution of Step 6;
     
 
@@ -95,6 +96,8 @@ If you don't have a certificate, you can choose one of these alternatives:
 - If you don't, you can use the platform via HTTP. This is **not supported** though, but it can be a solution for a quick trial.
 
 Running the platform without an SSL certificate in production is **not supported,** as well not GDPR-compliant.
+
+Remember to change the configuration in omnia.json! IdentityServiceUrl will need to point to the HTTPS version of the site.
 
 ## 5. Starting the site
 - When you run `sudo systemctl start omnia` (don't do it yet, though, finish the configuring process), services will be launched.
