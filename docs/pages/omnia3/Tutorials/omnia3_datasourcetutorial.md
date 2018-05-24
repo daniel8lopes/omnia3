@@ -188,7 +188,7 @@ If you do not have a tenant yet, please follow the steps of the [Tenant Creation
     ![Application_List_DataSource](https://raw.githubusercontent.com/numbersbelieve/omnia3/master/docs/tutorialPics/modelingTutorial/Application-List-External-DataSource.PNG)
     
     
-## 3. External data sources data on Omnia
+## 4. External data sources data on Omnia
 
 1. Go to modeling area
 
