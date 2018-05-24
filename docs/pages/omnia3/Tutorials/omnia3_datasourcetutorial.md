@@ -9,13 +9,13 @@ folder: omnia3
 
 ## 1. Introduction
 
-Based on a simple Employee management scenario, this tutorial shows how easy can Omnia use information from different data sources.
+Based on a simple Employee management scenario, this tutorial shows how easily OMNIA can use and combine information from different data sources.
 
-On the first tutorial area (CRUD Operations), we are going to evaluate how to interact with an external data source, by reading and manipulating its data. On the second area (External data sources data on Omnia), we are going to focus on the use of data source information on Omnia entities. 
+On the first tutorial area (CRUD Operations), we are going to evaluate how to interact with an external data source, by reading and manipulating its data. On the second area (External data sources data on OMNIA), we are going to focus on the use of data source information on OMNIA's entities. 
 
-As our custom data source, we are going to use a free API named [ReqRes](https://reqres.in/), that simulates real time CRUD operations, based on a user management scenario
+As our custom data source, we are going to use a free API named [ReqRes](https://reqres.in/), that simulates real time CRUD operations, based on a user management scenario.
 
-Please notice that, since this is only a simulation, no actual data is manipulated (written, updated or removed) on REQRES system. 
+Please notice that, since this is only a simulation, no actual data is manipulated (written, updated or removed) on REQRES's system. However, the code shown will be easily convertable to real-world scenarios. 
 
 
 ## 2. Prerequisites
@@ -30,15 +30,15 @@ If you do not have a tenant yet, please follow the steps of the [Tenant Creation
 
     ![Homepage_Dashboard](http://funkyimg.com/i/2DVGv.png)
 
-2. Through the left side menu create a new Data Source by accessing the option Data Sources / Create new on the top right side. Set its Name as "ExternalAPI", behaviour runtime as Internal and its Data access runtime as External.
+2. Through the left side menu, create a new Data Source by accessing the option ***Data Sources / Create new*** on the top right side. Set its Name as "ExternalAPI", Behaviour Runtime as Internal and its Data Access Runtime as External.
 
     ![Modeler_Create_DataSource](https://raw.githubusercontent.com/numbersbelieve/omnia3/master/docs/tutorialPics/modelingTutorial/Modeler-Create-DataSource.PNG)
     
-3. Create a new Agent "Employee", and set it as using the external data source "ExternalAPI"
+3. Create a new Agent with name "Employee", and set it as using the external data source "ExternalAPI" that you created earlier.
 
     ![Modeler_Create_DataSource](https://raw.githubusercontent.com/numbersbelieve/omnia3/master/docs/tutorialPics/modelingTutorial/Modeler-Create-Agent-Employee.PNG)
 
-4. On Agent Employee, navigate to tab "Data Behaviours", and define a behaviour to be executed on "Create". This behaviour simulates a POST request to the external Application. Copy and paste the following code:
+4. On Agent Employee, navigate to tab "Data Behaviours", and define a behaviour to be executed on "Create". This behaviour will be used to perform a POST request to the external Application when we create an instance of the Employee on the OMNIA platform. Copy and paste the following code:
 
     ````
     {% raw %}
@@ -71,7 +71,7 @@ If you do not have a tenant yet, please follow the steps of the [Tenant Creation
       {% endraw %}
     ````
 
-5. On "Data Behaviours" of Agent Employee, define a behaviour, to be executed on "Delete" (when a Employee is deleted). Copy and paste the following code:
+5. On "Data Behaviours" of Agent Employee, define a behaviour, to be executed on "Delete" (when a Employee is deleted on OMNIA). Copy and paste the following code:
 
 
     ````
@@ -91,7 +91,7 @@ If you do not have a tenant yet, please follow the steps of the [Tenant Creation
     {% endraw %}
     ````
 
-6. Create a new Data Behaviour for operation "Read", so that data is retrieved when a Employee is edited. Copy and paste the following code:
+6. Create a new Data Behaviour for the operation "Read", so that data is retrieved when a Employee is edited on OMNIA. Copy and paste the following code:
 
     ````
    {% raw %}
@@ -115,7 +115,7 @@ If you do not have a tenant yet, please follow the steps of the [Tenant Creation
     {% endraw %}
     ````
 
-7. Create a new Data Behaviour for operation "ReadList", so that data is retrieved when Employees list is requested. Copy and paste the following code:
+7. Create a new Data Behaviour for the operation "ReadList", so that data is retrieved when a list of Employees is requested. Copy and paste the following code:
 
     ````
   {% raw %}
@@ -144,7 +144,9 @@ If you do not have a tenant yet, please follow the steps of the [Tenant Creation
   {% endraw %}
     ````
 
-8. Create a new Data Behaviour for operation "Update", so that data is retrieved when a single Employee is updated. Copy and paste the following code:
+	NOTE: in this scenario, we are ignoring the query sent by the user when obtaining the list. In real world scenarios, you will want to change the query to the external system and/or the returned response, according to the parameters sent by the user.
+	
+8. Create a new Data Behaviour for the operation "Update", so that data is retrieved when an Employee is updated on OMNIA (i.e., edited and saved). Copy and paste the following code:
 
     ````
     {% raw %}
@@ -177,27 +179,27 @@ If you do not have a tenant yet, please follow the steps of the [Tenant Creation
     {% endraw %}
     ````
 
-9. Build the model
+9. Perform a new Build (by accessing the option ***Versioning / Builds / Create new***).
 
-10. On Application area, create a new instance of the ExternalAPI data source, with code "ReqRes"
+10. On Application area, create a new instance of the ExternalAPI data source, with code "ReqRes".
 
     ![Application-Create-DataSource](https://raw.githubusercontent.com/numbersbelieve/omnia3/master/docs/tutorialPics/modelingTutorial/Application-Create-DataSource.PNG)
     
-11. On left side menu, navigate to Configurations / Employee, and check that the list is filled with data retrieved from the external data source
+11. On left side menu, navigate to Configurations / Employee, and check that the list is filled with data retrieved from the external data source.
 
     ![Application_List_DataSource](https://raw.githubusercontent.com/numbersbelieve/omnia3/master/docs/tutorialPics/modelingTutorial/Application-List-External-DataSource.PNG)
     
     
-## 4. External data sources data on Omnia
+## 4. Crossing the external data sources with OMNIA
 
-1. Go to modeling area
+1. Go to the modeling area.
 
-2. Create a new GenericEntity "Department"
+2. Create a new GenericEntity with name "Department".
 
-3. Add a new attribute by clicking on button Add new. Set its Code as DataSource, Type as Data Sources / ExternalAPI
+3. Add a new attribute by clicking on button Add new. Set its Code as DataSource, Type as Data Sources / ExternalAPI.
 
-4. Add another attribute that represents the Employee. Set its Code as Employee, Type as Agent / Employee, and ExternalAPI on Uses data source from attribute
+4. Add another attribute that represents the Employee. Set its Code as Employee, Type as Agent / Employee, and ExternalAPI on Uses data source from attribute.
 
-5. Build the model
+5. Perform a new Build (by accessing the option ***Versioning / Builds / Create new***).
 
-6. On Application area, create a new instance of the Department, and check that, after identifying the data source, Employees from that data source are now available for selection
+6. On Application area, create a new instance of the Department, and check that, after identifying the data source, Employees from that data source are now available for selection.
