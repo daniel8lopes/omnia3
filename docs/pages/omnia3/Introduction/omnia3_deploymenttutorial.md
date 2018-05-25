@@ -14,20 +14,12 @@ folder: omnia3
 
 1.1.1. Ensure the firewall has its port 80 and 443 (HTTP and HTTPS) open to the exterior, so you will be able to access the application later on.
 
-1.2. Install .NET Core 2.0.3 SDK, by following the official Microsoft [instructions](https://docs.microsoft.com/en-us/dotnet/core/linux-prerequisites?tabs=netcore2x).
+1.2. Install .NET Core 2.1 SDK (current recommended version: SDK 2.1.300-rc1), by following the official Microsoft [instructions](https://docs.microsoft.com/en-us/dotnet/core/linux-prerequisites?tabs=netcore2x).
 
     _(NOTE: 
      This guide installs **the whole SDK** - for production, thus it is recommended to install the runtime only; however, the runtime installation on linux has no official guide, and requires extracting a .tar.gz and installing from there. )_
 
-1.3. Install the ASP.NET Core Runtime Store, **only if you have installed the runtime** instead of the SDK:
-```
-for version in '2.0.0' '2.0.3'; do \
-    curl -o /tmp/runtimestore.tar.gz https://dist.asp.net/runtimestore/$version/linux-x64/aspnetcore.runtimestore.tar.gz \
-    && export DOTNET_HOME=$(dirname $(readlink $(which dotnet))) \
-    && tar -x -C $DOTNET_HOME -f /tmp/runtimestore.tar.gz \
-    && rm /tmp/runtimestore.tar.gz; \
-done
-```
+1.3. Install the ASP.NET Core Runtime Store, **only if you have installed the runtime** instead of the SDK.
 
 - Install NGINX on the server, by running the following commmand:
 
@@ -36,7 +28,7 @@ done
 ```
 
 ## 2. Configuring the database
-2.1. Create a database with name **omnia**, with any username & password you want, in a PostgreSQL database server (version 9.6 supported)
+2.1. Create a database with name **omnia**, with any username & password you want, in a PostgreSQL database server (version 9.6 or above supported).
 
 2.1.1. Ensure you can access the database server through the firewall, via a tool such as [pgAdmin](https://www.pgadmin.org/), so you can perform management operations.
 
