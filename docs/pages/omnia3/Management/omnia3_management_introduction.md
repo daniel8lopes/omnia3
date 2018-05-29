@@ -34,7 +34,7 @@ In the management section, it is possible to configure Roles and Policies. For m
 For users to be able to perform administration operations on a given tenant, they must be in the automatically created Administration[TenantCode] role.
 
 ## 4. API Clients
-To allow an external application to consume the API of OMNIA Platform is required to register a API Client, to ensure the security requirements.
+To allow an external application to consume the API of OMNIA Platform is required to register an API Client, to ensure the security requirements.
 
 By accessing **API Clients**, you will have access to the API Clients management screen.
 
@@ -48,4 +48,4 @@ In the **API Clients** list, selecting one of the records will open a new window
 ### 4.2 Regenerate the Client Secret
 If you need to regenerate the Client Secret for some reason (e.g. someone took your credentials), select one of the records in the list and, in the details window, select the option **Regenerate secret**.
 
-This action will generate another Client Secret and in the further requests you need to send the new credentials.
+This action will generate another Client Secret and in the further requests, you need to send the new credentials.

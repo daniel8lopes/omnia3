@@ -32,4 +32,4 @@ It's possible to add your OMNIA API Client, allowing you to use the API the way 
 
 To do that, first you need to register your client in the platform ([see here how](omnia3_management_introduction.html#4-api-clients)).
 
-After the register, using the generated _Client ID_ and _Client Secret_ you are able to authenticate in the platform and to start using the API.
+After the register, using the generated _Client ID_ and _Client Secret_ you are able to authenticate on the platform and to start using the API.
