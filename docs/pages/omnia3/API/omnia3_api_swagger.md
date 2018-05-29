@@ -26,3 +26,10 @@ Usage guidelines:
 - All updates to existing resources use the HTTP PATCH method and implement the [JSONPatch](http://jsonpatch.com/) standard.
 
   In order to calculate the patch between the current state and the state you want it to be in, there are a number of tools, such as [JSON Patch Builder Online](https://json-patch-builder-online.github.io/).
+
+## 3. Creating a new API Client
+It's possible to add your OMNIA API Client, allowing you to use the API the way you need to.
+
+To do that, first you need to register your client in the platform ([See here how](omnia3_management_introduction.html)).
+
+After the register, using the generated _Client ID_ and _Client Secret_ you are able to authenticate in the platform and to start using the API.

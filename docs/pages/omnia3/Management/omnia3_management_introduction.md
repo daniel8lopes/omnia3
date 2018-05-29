@@ -32,3 +32,15 @@ Upon creating a tenant, some security information will automatically be created:
 In the management section, it is possible to configure Roles and Policies. For more details on these, please see [the description of how authorization works](omnia3_authorization.html), as well as [the language definitions](omnia3_languages_sml.html).
 
 For users to be able to perform administration operations on a given tenant, they must be in the automatically created Administration[TenantCode] role.
+
+## 4. API Clients
+To allow an external application to consume the API of OMNIA Platform is required to register a API Client, to ensure the security requirements.
+
+By accessing **API Clients**, you will have access to the API Clients management screen.
+
+Here you can **Add new** clients, identifying their Name.
+
+Upon creating a client, the *Client ID* and *Client Secret* are automatically created. 
+
+### 4.1 Get the API Client credentials
+In the **API Clients** list, selecting one of the records will open a new window containing the required credentials to accessing the OMNIA API: the **Client ID** and the **Client Secret**.
