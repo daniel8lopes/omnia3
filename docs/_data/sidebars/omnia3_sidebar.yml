@@ -91,13 +91,6 @@ entries:
       url: /omnia3_application_introduction.html
       output: web, pdf
         
-  - title: API
-    output: web, pdf
-    folderitems:
-    - title: How to use the API
-      url: /omnia3_api_swagger.html
-      output: web, pdf
-        
   - title: Authorization
     output: web, pdf
     folderitems:
