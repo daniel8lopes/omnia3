@@ -44,3 +44,8 @@ Upon creating a client, the *Client ID* and *Client Secret* are automatically cr
 
 ### 4.1 Get the API Client credentials
 In the **API Clients** list, selecting one of the records will open a new window containing the required credentials to accessing the OMNIA API: the **Client ID** and the **Client Secret**.
+
+## 4.2 Regenerate the Client Secret
+If you need to regenerate the Client Secret for some reason (e.g. someone took your credentials), select one of the records in the list and, in the details window, select the option **Regenerate secret**.
+
+This action will generate another Client Secret and in the further requests you need to send the new credentials.
