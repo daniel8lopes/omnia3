@@ -1,4 +1,3 @@
-
 ---
 title: OMNIA API Client Tutorial
 keywords: omnia3
