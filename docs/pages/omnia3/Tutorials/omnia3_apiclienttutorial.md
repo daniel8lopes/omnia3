@@ -13,7 +13,7 @@ Based on a simple Order Management sample application, this tutorial shows how e
 
 On the first tutorial area (Define an API Client), we are going to evaluate how an API client is defined on Omnia Platform, and how it is configured on Omnia's security system. On the second area (Consume Omnia API), we are going to see how on few steps Omnia API can be consumed.
 
-As a sample tool to consume Omnia API, we are going to use Postman [Postman](https://www.getpostman.com/), a tool that simplifies interaction with APIs.
+As a sample tool to consume Omnia API, we are going to use [Postman](https://www.getpostman.com/), a tool that simplifies interaction with APIs.
 
 
 ## 2. Prerequisites
