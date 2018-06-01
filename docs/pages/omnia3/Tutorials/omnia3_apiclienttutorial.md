@@ -49,6 +49,8 @@ If you do not have a tenant yet, please follow the steps of the [Tenant Creation
 
 2. Before creating a request to Omnia API, configure OAuth 2.0 as the authentication type to be used on requests, and fill the required paramters, as in the following image
 
+    ![Postman_Configure_AccessToken](https://raw.githubusercontent.com/numbersbelieve/omnia3/master/docs/tutorialPics/modelingTutorial/Postman-Configure-AccessToken.PNG)
+
     * Grant Type: Set as "Client Credentials"
     * Access token URL: The base url used to access Omnia, adding "/identity/connect/token" at the end
     * Client ID: client ID generated previously
