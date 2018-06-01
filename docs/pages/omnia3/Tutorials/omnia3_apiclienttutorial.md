@@ -47,12 +47,12 @@ If you do not have a tenant yet, please follow the steps of the [Tenant Creation
 
 2. Before creating a request to Omnia API, configure OAuth 2.0 as the authentication type to be used on requests, and fill the required paramters, as in the following image
 
-> Grant Type: Set as "Client Credentials"
-> Access token URL: The base url used to access Omnia, adding "/identity/connect/token" at the end
-> Client ID: client ID generated previously
-> Client Secret: secret generated previously
-> Scope: set as "api"
-> Client Authentication: set as "Send as Basic Auth header"
+* Grant Type: Set as "Client Credentials"
+* Access token URL: The base url used to access Omnia, adding "/identity/connect/token" at the end
+* Client ID: client ID generated previously
+* Client Secret: secret generated previously
+* Scope: set as "api"
+* Client Authentication: set as "Send as Basic Auth header"
 
 3. Set the request url as the base url used to access Omnia, adding "api/v1/DT008/prd/Application/Company/AnalogSound" at the end
 
