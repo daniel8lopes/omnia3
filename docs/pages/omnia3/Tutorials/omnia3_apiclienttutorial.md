@@ -16,8 +16,6 @@ On the first tutorial area (Define an API Client), we are going to evaluate how 
 As a tool to consume Omnia API, we are going to use [Postman](https://www.getpostman.com/), a tool that simplifies interaction with APIs. It is worth noting that the API could be consumed as easily with other tools or your own developments.
 
 
-
-
 ## 2. Prerequisites
 
 This tutorial assumes that you have created a OMNIA tenant, and have completed the beginner tutorial. You must also have access to a user with privileges to Modeling and Management areas
