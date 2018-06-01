@@ -54,7 +54,7 @@ entries:
       url: /omnia3_datasourcetutorial.html
       output: web, pdf
       
-      - title: API Clients Tutorial
+    - title: API Clients Tutorial
       url: /omnia3_apiclienttutorial.html
       output: web, pdf
       
