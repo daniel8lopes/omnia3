@@ -66,6 +66,14 @@ If you do not have a tenant yet, please follow the steps of the [Tenant Creation
 
 4. Copy the following Json as the request body
 
+    ````
+    {
+        "_code":"AnalogSound",
+        "_name":"Analog Sound Inc."
+    }
+
+    ````
+
 5. Click on send and check the Omnia API response. If request was made successfully, a 201 status code is expected
 
 6. Now change the request type to GET, and retrieve the Company record saved on last step by setting the url as the base url with "/api/v1/DT008/prd/Application/Company/default/AnalogSound" at the end
