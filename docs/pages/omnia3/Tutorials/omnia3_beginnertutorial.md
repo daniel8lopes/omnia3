@@ -55,7 +55,7 @@ If you do not have a tenant yet, please follow the steps of the [Tenant Creation
 
 10. Edit the attribute **_amount**, and mark it as Read Only.
 
-11. Add ***Behaviours / Create new*** and clicking on button **Add new > Formula**. Set its *Code* as **CalculateAmount**, attribute as **_amount** and set as code to execute `return UnitPrice * _quantity;`.
+11. Click on tab ***Entity Behaviours*** and on button **Add new > Formula**. Set its *Code* as **CalculateAmount**, attribute as **_amount** and set as code to execute `return UnitPrice * _quantity;`.
 
 12. Add a new document - ***Documents / Add new***. Set **PurchaseOrder** as the document's *Code*;
 
