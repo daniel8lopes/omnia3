@@ -33,7 +33,7 @@ If you do not have a tenant yet, please follow the steps of the [Tenant Creation
 
 2. Through the left side menu, create a new API Client by accessing the option ***API Clients / Create new*** on the top right side. Set its Name as "Tutorial API Client"
 
-    ![Modeler_Create_DataSource](https://raw.githubusercontent.com/numbersbelieve/omnia3/master/docs/tutorialPics/modelingTutorial/Modeler-Create-DataSource.PNG)
+    ![Management_Create_APIClient](https://raw.githubusercontent.com/numbersbelieve/omnia3/master/docs/tutorialPics/modelingTutorial/Manage-Create-APIClient.PNG)
     
 3. After creating, select the new API Client on the list, and check that you have now access to a Client Id and Secret to consume Omnia API. Copy the Client Email to the clipboard
 
