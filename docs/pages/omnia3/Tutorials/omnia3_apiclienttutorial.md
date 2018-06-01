@@ -41,4 +41,25 @@ If you do not have a tenant yet, please follow the steps of the [Tenant Creation
 
 5. Edit the role, and on tab "Users", click on button "Add new". Paste the Client Email copied on step 3 and click on Save
 
-## 3. Consume Omnia API 
+## 4. Consume Omnia API 
+
+1. To consume Omnia API, open previously installed Postman application
+
+2. Before creating a request to Omnia API, configure OAuth 2.0 as the authentication type to be used on requests, and fill the required paramters, as in the following image
+
+> Grant Type: Set as "Client Credentials"
+> Access token URL: The base url used to access Omnia, adding "/identity/connect/token" at the end
+> Client ID: client ID generated previously
+> Client Secret: secret generated previously
+> Scope: set as "api"
+> Client Authentication: set as "Send as Basic Auth header"
+
+3. Set the request url as the base url used to access Omnia, adding "api/v1/DT008/prd/Application/Company/AnalogSound" at the end
+
+4. Copy the following Json as the request body
+
+5. Click on send and check the Omnia API response. If request was made successfully, a 201 status code is expected
+
+6. Now change the request type to GET, and retrieve the Company record saved on last step by setting the url as the base url with "/api/v1/DT008/prd/Application/Company/default/AnalogSound" at the end
+
+7. Check that the response body has the data inserted on the POST request
