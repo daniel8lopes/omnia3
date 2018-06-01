@@ -67,12 +67,12 @@ If you do not have a tenant yet, please follow the steps of the [Tenant Creation
 4. Copy the following Json as the request body
 
     ````
-    {% raw %}
+{% raw %}
     {
         "_code":"AnalogSound",
         "_name":"Analog Sound Inc."
     }
-    {% endraw %}
+{% endraw %}
     ````
 
 5. Click on send and check the Omnia API response. If request was made successfully, a 201 status code is expected
