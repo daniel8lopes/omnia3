@@ -47,7 +47,9 @@ If you do not have a tenant yet, please follow the steps of the [Tenant Creation
 
 1. To consume Omnia API, open previously installed Postman application
 
-2. Before creating a request to Omnia API, configure OAuth 2.0 as the authentication type to be used on requests, and fill the required paramters, as in the following image
+3. We are going to start with a POST request, to create a new Company. Set the request type as "POST" and the request url as the base url used to access Omnia, adding "api/v1/[TenantCode]/prd/Application/Company/default" at the end (replace [TenantCode] with your actual tenant code).
+
+2. Before creating a request to Omnia API, configure OAuth 2.0 as the authentication type to be used on requests, and fill the required parameters, as in the following image
 
     ![Postman_Configure_AccessToken](https://raw.githubusercontent.com/numbersbelieve/omnia3/master/docs/tutorialPics/modelingTutorial/Postman-Configure-AccessToken.PNG)
 
@@ -58,7 +60,9 @@ If you do not have a tenant yet, please follow the steps of the [Tenant Creation
     * Scope: set as "api"
     * Client Authentication: set as "Send as Basic Auth header"
 
-3. Set the request url as the base url used to access Omnia, adding "api/v1/DT008/prd/Application/Company/AnalogSound" at the end
+4. Check that the request is configured as in the following image
+
+    ![Postman_Post_Configuration](https://raw.githubusercontent.com/numbersbelieve/omnia3/master/docs/tutorialPics/modelingTutorial/Postman-Post-Config.PNG)
 
 4. Copy the following Json as the request body
 
