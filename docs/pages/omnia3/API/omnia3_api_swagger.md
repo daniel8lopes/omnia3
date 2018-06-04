@@ -27,9 +27,9 @@ Usage guidelines:
 
   In order to calculate the patch between the current state and the state you want it to be in, there are a number of tools, such as [JSON Patch Builder Online](https://json-patch-builder-online.github.io/).
 
-## 3. Creating a new API Client
-It's possible to add your OMNIA API Client, allowing you to use the API the way you need to.
+## 3. Consuming the API with an API Client
+It's possible to use whatever language you want to access the OMNIA API, allowing you to use the API the way you need to.
 
-To do that, first you need to register your client in the platform ([see here how](omnia3_management_introduction.html#4-api-clients)).
+To do that, first you need to register an API client in the platform ([see here how](omnia3_management_introduction.html#4-api-clients)).
 
-After the register, using the generated _Client ID_ and _Client Secret_ you are able to authenticate on the platform and to start using the API.
+After the register, using the generated _Client ID_ and _Client Secret_, you are able to authenticate on the platform, through an OAuth 2.0 [Client Credentials](https://tools.ietf.org/html/rfc6749#section-1.3.4) flow, and to start using the API.

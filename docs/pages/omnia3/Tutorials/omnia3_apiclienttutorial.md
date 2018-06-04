@@ -9,11 +9,11 @@ folder: omnia3
 
 ## 1. Introduction
 
-Based on a simple Order Management sample application, this tutorial shows how easily Omnia Platform models can be used through API, by external applications.
+Based on a simple Order Management sample application, this tutorial shows how easily Omnia Platform models can be used through our API, by external applications.
 
 On the first tutorial area (Define an API Client), we are going to evaluate how an API client is defined on Omnia Platform, and how it is configured on Omnia's security system. On the second area (Consume Omnia API), we are going to see a simple example of how Omnia API can be consumed.
 
-As a tool to consume Omnia API, we are going to use [Postman](https://www.getpostman.com/), a tool that simplifies interaction with APIs. It is worth noting that the API could be consumed as easily with other tools or your own developments.
+As a tool to consume Omnia API, we are going to use [Postman](https://www.getpostman.com/), a tool that simplifies interaction with APIs. It is worth noting that the API could be consumed as easily with other tools or your own developments using your preferred programming language.
 
 
 ## 2. Prerequisites
@@ -43,9 +43,9 @@ If you do not have a tenant yet, please follow the steps of the [Tenant Creation
 
 ## 4. Consume Omnia API 
 
-1. To consume Omnia API, open previously installed Postman application
+1. To consume Omnia API, open the previously installed Postman application.
 
-3. We are going to start with a POST request, to create a new Company. Set the request type as "POST" and the request url as the base url used to access Omnia, adding "api/v1/TenantCode/prd/Application/Company/default" at the end (replace "TenantCode" with your actual tenant code).
+3. We are going to start with a POST request, to create a new Company. Set the request type as "POST" and the request url as the base url used to access Omnia (i.e. https://omnia.example.com/), adding "api/v1/[TenantCode]/prd/Application/Company/default" at the end (in this URL, replace "[TenantCode]" with your actual tenant code that shows up in the platform's URLs, i.e. Tenant001).
 
 2. Before creating a request to Omnia API, configure OAuth 2.0 as the authentication type to be used on requests, and fill the required parameters, as in the following image
 
@@ -62,7 +62,7 @@ If you do not have a tenant yet, please follow the steps of the [Tenant Creation
 
     ![Postman_Post_Configuration](https://raw.githubusercontent.com/numbersbelieve/omnia3/master/docs/tutorialPics/modelingTutorial/Postman-Post-Config.PNG)
 
-4. Copy the following Json as the request body
+4. Copy the following Json as the request body:
 
     ````
 {% raw %}
@@ -73,12 +73,14 @@ If you do not have a tenant yet, please follow the steps of the [Tenant Creation
 {% endraw %}
     ````
 
-5. Click on send and check the Omnia API response. If request was made successfully, a 201 status code is expected
+5. Click on send and check the Omnia API response. If request was made successfully, a 201 Created status code is the expected result. Validate the response - it should return a JSON object showing what was created.
 
-6. Now change the request type to GET, and retrieve the Company record saved on last step by setting the url as the base url with "/api/v1/TenantCode/prd/Application/Company/default/AnalogSound" at the end. Replace "TenantCode" with yout actual tenant code.
+6. Now change the request type to GET, and retrieve the Company record saved on the last step by setting the request url as the base url, with "api/v1/[TenantCode]/prd/Application/Company/default/AnalogSound" at the end. Replace "[TenantCode]" with yout actual tenant code.
 
-7. Check that the response body has the data previously inserted on the POST request
+7. Check that the response body has the data previously inserted on the POST request:
 
     ![Postman_Configure_AccessToken](https://raw.githubusercontent.com/numbersbelieve/omnia3/master/docs/tutorialPics/modelingTutorial/Postman-Get-Request.PNG)
 
-Now that you have completed our API Client tutorial, feel free to explore Omnia API, by testing other requests. Remember that Modeling area is also available via API, so that you can create and change your models programatically.
+Now that you have completed our API Client tutorial, feel free to explore the Omnia API, by testing other requests. Remember that the Modeling area is also available via API, so that you can create and change your models programatically.
+
+Also remember that the platform's API is automatically documented directly on your installation of it. For more information on this, check [this page](omnia3_api_swagger.html).
