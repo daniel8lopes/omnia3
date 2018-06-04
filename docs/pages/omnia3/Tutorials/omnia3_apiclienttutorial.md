@@ -43,7 +43,7 @@ If you do not have a tenant yet, please follow the steps of the [Tenant Creation
 
 ## 4. Consume Omnia API 
 
-1. To consume Omnia API, open the previously installed Postman application.
+1. To consume the Omnia API, open the previously installed Postman application.
 
 3. We are going to start with a POST request, to create a new Company. Set the request type as "POST" and the request url as the base url used to access Omnia (i.e. https://omnia.example.com/), adding "api/v1/[TenantCode]/prd/Application/Company/default" at the end (in this URL, replace "[TenantCode]" with your actual tenant code that shows up in the platform's URLs, i.e. Tenant001).
 
