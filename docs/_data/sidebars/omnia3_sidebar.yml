@@ -85,7 +85,7 @@ entries:
       output: web, pdf
         
     - title: Data Sources
-      url: /omnia3_modeler_datasources.html.html
+      url: /omnia3_modeler_datasources.html
       output: web, pdf
 
     - title: Developing and Testing Behaviours
