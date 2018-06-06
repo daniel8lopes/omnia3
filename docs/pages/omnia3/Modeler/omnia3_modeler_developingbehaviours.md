@@ -1,5 +1,5 @@
 ---
-title: Developing Behaviours
+title: Developing and Testing Behaviours
 keywords: omnia3
 summary: "How to develop and test Behaviours with the help of Visual Studio"
 sidebar: omnia3_sidebar
