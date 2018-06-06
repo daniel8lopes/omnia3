@@ -132,5 +132,3 @@ This example will give the exchange rate between EUR and the currency provided i
 
     So, here you have it, a simple and descriptive Expense Report, completely built on **OMNIA Platform 3.0**!
     
-    We have one more exercise for you. At this time, your **OMNIA skills** are getting sharpened and you're feeling comfortable with our technology. Now, we want to show you how **OMNIA** can guide you through your **daily workflow** checklist: time to proceed to our [**Workflow Tutorial**](http://docs.numbersbelieve.com/omnia3_workflowtutorial.html).
-    
