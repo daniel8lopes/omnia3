@@ -89,7 +89,7 @@ entries:
       output: web, pdf
 
     - title: Developing and Testing Behaviours
-      url: /omnia3_modeler_developingbehaviours.html.html
+      url: /omnia3_modeler_developingbehaviours.html
       output: web, pdf
 
     - title: Data Visualization
