@@ -102,6 +102,13 @@ entries:
       url: /omnia3_authorization.html
       output: web, pdf
         
+  - title: Connector
+    output: web, pdf
+    folderitems:
+    - title: Introduction
+      url: /omnia3_connector_introduction.html
+      output: web, pdf
+
   - title: Languages
     output: web, pdf
     folderitems:
