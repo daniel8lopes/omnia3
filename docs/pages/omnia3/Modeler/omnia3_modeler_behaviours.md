@@ -12,7 +12,11 @@ folder: omnia3
 
 In the **OMNIA Platform**, the primary way to customize the way the application works is by using Behaviours. 
 
-Behaviours are code, written in C#, that allow you to **extend** the way the application processes user input. A behaviour is defined by (see [BML](omnia3_languages_bml.html) for detailed definition):
+Behaviours are code, written in C#, that allow you to **extend** the way the application processes user input.
+
+There are two kinds of behaviours: **entity behaviours**, which extend the behaviour of the instances of that entity (for example, default values or specific validations), and **data behaviours**, which only exist for entities with an external data source, and replace the platform's create/read/update/delete (CRUD) code with user-written C# to perform those operations on the external data source. This document explains the Entity behaviours only; for more information on data behaviours please see [this page](omnia3_modeler_datasources.html).
+
+ A behaviour is defined by (see [BML](omnia3_languages_bml.html) for detailed definition):
 - its **type**, or the moment in which it will execute;
 - (optionally) its **attribute**, or which attribute of the model it is dependent on;
 - its **expression**, the aforementioned C# code.
@@ -69,3 +73,6 @@ Here are some usage suggestions for each type of behaviour - though, of course, 
 - **Before Save**:
     - Performing final document-wide validations;
     - Integrating with external APIs;
+
+## 4. Developing and testing behaviours
+The way to develop and test behaviours is explained in a [separate article](omnia3_modeler_developingbehaviours.html), as it is shared for both Entity and Data Behaviours.

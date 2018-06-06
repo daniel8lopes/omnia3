@@ -9,7 +9,7 @@ folder: omnia3
 
 ## 1. Introduction
 
-Based on a simple Employee management scenario, this tutorial shows how easily OMNIA can use and combine information from different data sources.
+Based on a simple Employee management scenario, this tutorial shows how easily OMNIA can use and combine information from different data sources. In order to understand how this works, please read [this section of the documentation](omnia3_modeler_datasources.html).
 
 On the first tutorial area (CRUD Operations), we are going to evaluate how to interact with an external data source, by reading and manipulating its data. On the second area (External data sources data on OMNIA), we are going to focus on the use of data source information on OMNIA's entities. 
 
