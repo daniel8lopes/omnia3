@@ -74,5 +74,10 @@ Here are some usage suggestions for each type of behaviour - though, of course, 
     - Performing final document-wide validations;
     - Integrating with external APIs;
 
-## 4. Developing and testing behaviours
+## 4. Referencing external libraries in Behaviours
+
+The way to use references to .NET assemblies is explained in a [separate article](omnia3_modeler_references.html), as it is shared for both Entity and Data Behaviours.
+
+## 5. Developing and testing behaviours
+
 The way to develop and test behaviours is explained in a [separate article](omnia3_modeler_developingbehaviours.html), as it is shared for both Entity and Data Behaviours.

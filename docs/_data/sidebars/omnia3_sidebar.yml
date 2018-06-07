@@ -92,9 +92,14 @@ entries:
       url: /omnia3_modeler_developingbehaviours.html
       output: web, pdf
 
+    - title: References in Behaviours
+      url: /omnia3_modeler_references.html
+      output: web, pdf
+
     - title: Data Visualization
       url: /omnia3_modeler_datavisualization.html
       output: web, pdf
+
         
   - title: Application
     output: web, pdf
