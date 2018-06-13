@@ -26,6 +26,7 @@ In order to add them, you can access the modeler, edit an entity, and go to ***E
 - **Name:** A platform-side identifier for the reference;
 - **Description:** A human-readable description for the reference;
 - **Path:** The path to that reference. If it's a System.* reference, you can leave it without a full path; any other references will require a valid absolute path for the system they will execute on.
+- **Assembly name:** The assembly name of the reference you are importing.
 - **Namespace:** The namespace used by the reference you are importing. Will be automatically added to all code for your convenience; i.e. importing ```ExampleCompany.SqlQuerier``` will allow you to use ```new ExampleQueryBuilder()``` instead of ```new ExampleCompany.SqlQuerier.ExampleQueryBuilder```, i.e, without having to fully qualify the name.
 
 ## 3. Supported references
