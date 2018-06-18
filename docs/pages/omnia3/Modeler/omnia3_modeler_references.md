@@ -25,7 +25,10 @@ Whatever the type, the place they execute on depends on the associated data sour
 In order to add them, you can access the modeler, edit an entity, and go to ***Entity references > Add new*** or ***Data references > Add new***. Here, you identify the reference you want:
 - **Name:** A platform-side identifier for the reference;
 - **Description:** A human-readable description for the reference;
-- **Path:** The path to that reference. If it's a System.* reference, you can leave it without a full path; any other references will require a valid absolute path for the system they will execute on.
+- **Path:** The path to that reference. The following paths are valid:
+    - If it's a System.* reference, the path can be defined with only the assembly file name. i.e. System.Data.dll
+    - For non-System assemblies, a full path (including the file name) can be provided i.e. C:\Assemblies\MyAssembly.dll
+    - Relative paths are also supported. The assumed start path is the folder where the application is running. i.e. If omnia is located on C:\Omnia, and your assembly is on C:\Assemblies, the path should be ..\Assemblies\MyAssembly.dll
 - **Assembly name:** The assembly name of the reference you are importing.
 - **Namespace:** The namespace used by the reference you are importing. Will be automatically added to all code for your convenience; i.e. importing ```ExampleCompany.SqlQuerier``` will allow you to use ```new ExampleQueryBuilder()``` instead of ```new ExampleCompany.SqlQuerier.ExampleQueryBuilder```, i.e, without having to fully qualify the name.
 
