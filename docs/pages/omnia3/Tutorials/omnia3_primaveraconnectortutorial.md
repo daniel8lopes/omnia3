@@ -111,23 +111,35 @@ This tutorial also requires an access to [Primavera ERP](https://pt.primaverabss
 
     ````
    {% raw %}
-    var client = new System.Net.Http.HttpClient();
-    string apiEndpoint = $"https://reqres.in/api/users/{identifier}";
+            EmployeeDto dto = new EmployeeDto();
+            StdBSConfApl platConfig = new StdBSConfApl();
 
-    var requestResult = client.GetAsync(apiEndpoint).GetAwaiter().GetResult();
+            platConfig.AbvtApl = "ERP";
+            platConfig.Instancia = "default";
+            platConfig.Utilizador = "[PrimaveraUSER]";
+            platConfig.PwdUtilizador = "[PrimaveraPWD]";
+            platConfig.LicVersaoMinima = "09.00";
 
-    string responseBody = requestResult.Content.ReadAsStringAsync().Result;
-    if (!requestResult.IsSuccessStatusCode)
-      throw new Exception("Error on creating contact: " + responseBody);
-      
-    var response = JsonConvert.DeserializeObject<Dictionary<string, object>>(responseBody);
-    var responseData = JsonConvert.DeserializeObject<Dictionary<string, object>>(response["data"].ToString());
+            Interop.StdPlatBS900.StdPlatBS bsPlat = new Interop.StdPlatBS900.StdPlatBS();
 
-    EmployeeDto employeeResponse = new EmployeeDto();
-    employeeResponse._code = responseData["id"].ToString();
-    employeeResponse._name = $"{responseData["first_name"].ToString()} {responseData["last_name"].ToString()}";
+            Interop.StdBE900.StdBETransaccao trans = null;
+            bsPlat.AbrePlataformaEmpresa("[PrimaveraCOMPANY]", trans, platConfig, Interop.StdBE900.EnumTipoPlataforma.tpEmpresarial, string.Empty);
 
-    return employeeResponse;
+            Interop.StdBE900.StdBELista queryResults = bsPlat.Registos.Consulta($"SELECT Codigo, Nome, Email, Telefone FROM Funcionarios WHERE Codigo = '{identifier}'");
+
+            if (!queryResults.Vazia())
+            {
+                dto._code = queryResults.Valor("Codigo").ToString();
+                dto._name = queryResults.Valor("Nome").ToString();
+
+            }
+            else {
+                throw new Exception($"Could not retrieve Employee with code {identifier}");
+            }
+
+            bsPlat.FechaPlataformaEmpresa();
+
+            return dto;
     {% endraw %}
     ````
 
@@ -135,28 +147,46 @@ This tutorial also requires an access to [Primavera ERP](https://pt.primaverabss
 
     ````
   {% raw %}
-    var client = new System.Net.Http.HttpClient();
-    string apiEndpoint = $"https://reqres.in/api/users?page={page}";
+            try
+            {
+                List<IDictionary<string, object>> employeesList = new List<IDictionary<string, object>>();
 
-    var requestResult = client.GetAsync(apiEndpoint).GetAwaiter().GetResult();
+                StdBSConfApl platConfig = new StdBSConfApl();
 
-    string responseBody = requestResult.Content.ReadAsStringAsync().Result;
-    if (!requestResult.IsSuccessStatusCode)
-      throw new Exception("Error on creating contact: " + responseBody);
-      
-    var response = JsonConvert.DeserializeObject<Dictionary<string, object>>(responseBody);
-    var responseData = JsonConvert.DeserializeObject<List<Dictionary<string, object>>>(response["data"].ToString());
+                platConfig.AbvtApl = "ERP";
+                platConfig.Instancia = "default";
+                platConfig.Utilizador = "[PrimaveraUSER]";
+                platConfig.PwdUtilizador = "[PrimaveraPWD]";
+                platConfig.LicVersaoMinima = "09.00";
 
-    List<IDictionary<string, object>> employeesList = new List<IDictionary<string, object>>();
+                Interop.StdPlatBS900.StdPlatBS bsPlat = new Interop.StdPlatBS900.StdPlatBS();
 
-    foreach (var employee in responseData)
-    {
-      var line = new Dictionary<string, object>()
-      {{"_code", employee["id"]}, {"_name", employee["first_name"] + " " + employee["last_name"]}};
-      employeesList.Add(line);
-    }
+                Interop.StdBE900.StdBETransaccao trans = null;
+                bsPlat.AbrePlataformaEmpresa("[PrimaveraCOMPANY]", trans, platConfig, Interop.StdBE900.EnumTipoPlataforma.tpEmpresarial, string.Empty);
 
-    return (responseData.Count, employeesList);
+                Interop.StdBE900.StdBELista queryResults = bsPlat.Registos.Consulta($"SELECT Employees.EmployeesCount, Codigo, Nome FROM Funcionarios CROSS JOIN (SELECT Count(*) AS EmployeesCount FROM Funcionarios) AS Employees ORDER BY Codigo OFFSET {(page - 1)*pageSize} ROWS FETCH NEXT {pageSize} ROWS ONLY");
+
+                int numberOfRecords = Convert.ToInt32(queryResults.Valor("EmployeesCount").ToString());
+                while (!queryResults.NoFim())
+                {
+
+                    var employee = new Dictionary<string, object>() {
+                        { "_code", queryResults.Valor("Codigo").ToString()},
+                        { "_name", queryResults.Valor("Nome").ToString()}
+                    };
+
+                    employeesList.Add(employee);
+                    queryResults.Seguinte();
+                }
+                
+                bsPlat.FechaPlataformaEmpresa();
+                return (numberOfRecords, employeesList);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+                throw;
+            }
   {% endraw %}
     ````
 
