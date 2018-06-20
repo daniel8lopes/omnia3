@@ -238,17 +238,3 @@ This tutorial also requires an access to [Primavera ERP](https://pt.primaverabss
 
     ![Application_List_DataSource](https://raw.githubusercontent.com/numbersbelieve/omnia3/master/docs/tutorialPics/modelingTutorial/Application-List-External-DataSource.PNG)
     
-    
-## 4. Crossing the external data sources with OMNIA
-
-1. Go to the modeling area.
-
-2. Create a new GenericEntity with name "Department".
-
-3. Add a new attribute by clicking on button Add new. Set its Code as DataSource, Type as Data Sources / ExternalAPI.
-
-4. Add another attribute that represents the Employee. Set its Code as Employee, Type as Agent / Employee, and ExternalAPI on Uses data source from attribute.
-
-5. Perform a new Build (by accessing the option ***Versioning / Builds / Create new***).
-
-6. On Application area, create a new instance of the Department, and check that, after identifying the data source, Employees from that data source are now available for selection.
