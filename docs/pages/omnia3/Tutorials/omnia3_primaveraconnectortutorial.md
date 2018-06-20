@@ -28,9 +28,21 @@ If you do not have a tenant yet, please follow the steps of the [Tenant Creation
 
 This tutorial also requires an access to [Primavera ERP](https://pt.primaverabss.com), on version 9. 
 
+## 3. Create a new connector
+
+1. Start by accessing the management area, by clicking the option "Go to Tenants management".
+
+2. Through the left side menu, create a new connector by accessing the option ***Connectors / Create new***. Set its Code and Name as "TutorialConnector"
+
+3. Select the connector, and a modal with connector data should be shown.
+
+4. Now we are going to grant the connector access privileges for the tenant. Access the option ***Security / Roles***, and select Administration role for the tenant (the tenant code with prefix "Administration")
+
+5. Click on button ***Add new*** to grant the connector user access to tenant. User can be retrieved on step 3, property "Client Email"
+
 ## 3. CRUD operations
 
-1. Start by selecting the tenant where you are going to model, and you will be redirected to the modeling area.
+1. Access Omnia homepage, select the tenant where you are going to model and you will be redirected to the modeling area.
 
     ![Homepage_Dashboard](http://funkyimg.com/i/2DVGv.png)
 
