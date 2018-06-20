@@ -227,11 +227,11 @@ This tutorial also requires an access to [Primavera ERP](https://pt.primaverabss
 
 9. Perform a new Build (by accessing the option ***Versioning / Builds / Create new***).
 
-10. On Application area, create a new instance of the ExternalAPI data source, with code "ReqRes".
+10. On Application area, create a new instance of the Primavera data source, with code "DEMO".
 
     ![Application-Create-DataSource](https://raw.githubusercontent.com/numbersbelieve/omnia3/master/docs/tutorialPics/modelingTutorial/Application-Create-DataSource.PNG)
     
-11. On left side menu, navigate to Configurations / Employee, and check that the list is filled with data retrieved from the external data source.
+11. On left side menu, navigate to Configurations / Employee, identify the Primavera data source instance (DEMO) and check that the list is filled with data retrieved from Primavera.
 
     ![Application_List_DataSource](https://raw.githubusercontent.com/numbersbelieve/omnia3/master/docs/tutorialPics/modelingTutorial/Application-List-External-DataSource.PNG)
     
