@@ -54,7 +54,9 @@ This tutorial also requires an access to [Primavera ERP](https://pt.primaverabss
 
     ![Modeler_Create_DataSource](https://raw.githubusercontent.com/numbersbelieve/omnia3/master/docs/tutorialPics/modelingTutorial/Modeler-Create-Agent-Employee.PNG)
 
-4. On Agent Employee, navigate to tab "Data Behaviours", and define a behaviour to be executed on "Create". This behaviour will be used to perform a POST request to the external Application when we create an instance of the Employee on the OMNIA platform. Copy and paste the following code:
+4. On Agent Employee, navigate to tab "Data References", and define a reference for Primavera assemblies "Interop.StdPlatBS900.dll" and "Interop.StdBE900.dll"
+
+5. Navigate to tab "Data Behaviours", and define a behaviour to be executed on "Create". This behaviour will be used to perform a POST request to the external Application when we create an instance of the Employee on the OMNIA platform. Copy and paste the following code:
 
     ````
     {% raw %}
@@ -87,7 +89,7 @@ This tutorial also requires an access to [Primavera ERP](https://pt.primaverabss
       {% endraw %}
     ````
 
-5. On "Data Behaviours" of Agent Employee, define a behaviour, to be executed on "Delete" (when a Employee is deleted on OMNIA). Copy and paste the following code:
+6. On "Data Behaviours" of Agent Employee, define a behaviour, to be executed on "Delete" (when a Employee is deleted on OMNIA). Copy and paste the following code:
 
 
     ````
@@ -107,7 +109,7 @@ This tutorial also requires an access to [Primavera ERP](https://pt.primaverabss
     {% endraw %}
     ````
 
-6. Create a new Data Behaviour for the operation "Read", so that data is retrieved when a Employee is edited on OMNIA. Copy and paste the following code:
+7. Create a new Data Behaviour for the operation "Read", so that data is retrieved when a Employee is edited on OMNIA. Copy and paste the following code:
 
     ````
    {% raw %}
@@ -143,7 +145,7 @@ This tutorial also requires an access to [Primavera ERP](https://pt.primaverabss
     {% endraw %}
     ````
 
-7. Create a new Data Behaviour for the operation "ReadList", so that data is retrieved when a list of Employees is requested. Copy and paste the following code:
+8. Create a new Data Behaviour for the operation "ReadList", so that data is retrieved when a list of Employees is requested. Copy and paste the following code:
 
     ````
   {% raw %}
@@ -192,7 +194,7 @@ This tutorial also requires an access to [Primavera ERP](https://pt.primaverabss
 
 	NOTE: in this scenario, we are ignoring the query sent by the user when obtaining the list. In real world scenarios, you will want to change the query to the external system and/or the returned response, according to the parameters sent by the user.
 	
-8. Create a new Data Behaviour for the operation "Update", so that data is retrieved when an Employee is updated on OMNIA (i.e., edited and saved). Copy and paste the following code:
+9. Create a new Data Behaviour for the operation "Update", so that data is retrieved when an Employee is updated on OMNIA (i.e., edited and saved). Copy and paste the following code:
 
     ````
     {% raw %}
@@ -224,14 +226,15 @@ This tutorial also requires an access to [Primavera ERP](https://pt.primaverabss
     return employeeResponse;
     {% endraw %}
     ````
+ 
 
-9. Perform a new Build (by accessing the option ***Versioning / Builds / Create new***).
+10. Perform a new Build (by accessing the option ***Versioning / Builds / Create new***).
 
-10. On Application area, create a new instance of the Primavera data source, with code "DEMO".
+11. On Application area, create a new instance of the Primavera data source, with code "DEMO".
 
     ![Application-Create-DataSource](https://raw.githubusercontent.com/numbersbelieve/omnia3/master/docs/tutorialPics/modelingTutorial/Application-Create-DataSource.PNG)
     
-11. On left side menu, navigate to Configurations / Employee, identify the Primavera data source instance (DEMO) and check that the list is filled with data retrieved from Primavera.
+12. On left side menu, navigate to Configurations / Employee, identify the Primavera data source instance (DEMO) and check that the list is filled with data retrieved from Primavera.
 
     ![Application_List_DataSource](https://raw.githubusercontent.com/numbersbelieve/omnia3/master/docs/tutorialPics/modelingTutorial/Application-List-External-DataSource.PNG)
     
