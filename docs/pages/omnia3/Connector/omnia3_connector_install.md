@@ -8,4 +8,16 @@ folder: omnia3
 ---
 ## 1. Installing the connector
 
-TODO
+After you have downloaded the connector (see our [Downloads page](omnia3_downloads.html)) and extracted it, you can either run it directly or install it as a Windows service.
+
+To run it, you should just do `Omnia.Connector.Windows.exe` (in cmd) or `./Omnia.Connector.Windows.exe` (in powershell) from the folder you extracted it to. In order to install the Windows service, add ` install` to the end of that line. To uninstall it, add ` uninstall`. In both of these scenarios, ensure you are running as an administrator.
+
+## 2. Configuring the connector
+
+A configuration file is distributed together with the connector that you must fill in in order to use it. 
+
+- **Endpoint**: The URL of the OMNIA subscription you want the connector to be used on.
+- **Client**
+    - **ID**: Client ID of the connector configuration you registered on the platform.
+    - **Secret**: Client Secret of the connector configuration you registered on the platform.
+- **Logging**: In this section you can configure where you want the logs of the connector to be stored. See [this page](omnia3_connector_logs.html) for further details on logging.
