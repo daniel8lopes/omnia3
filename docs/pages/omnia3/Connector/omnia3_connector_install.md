@@ -14,7 +14,7 @@ To run it, you should just do `Omnia.Connector.Windows.exe` (in cmd) or `./Omnia
 
 ## 2. Configuring the connector
 
-A configuration file is distributed together with the connector that you must fill in in order to use it. 
+A configuration file (_**config.json**_) is distributed together with the connector that you must fill in in order to use it. 
 
 - **Endpoint**: The URL of the OMNIA subscription you want the connector to be used on.
 - **Client**

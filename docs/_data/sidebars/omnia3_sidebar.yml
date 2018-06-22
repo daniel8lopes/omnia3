@@ -165,3 +165,6 @@ entries:
       url: /omnia3_api_swagger.html
       output: web, pdf
       
+  - title: Downloads
+    url: /omnia3_downloads.html
+    output: web, pdf
