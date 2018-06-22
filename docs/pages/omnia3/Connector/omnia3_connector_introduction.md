@@ -19,4 +19,6 @@ TODO
 
 * Internet access
 * .NET Framework 4.7.2
-* Windows
+* Compatible Windows version:
+    - Windows Server 2012 or higher
+    - Windows 7 SP1, 8.1 or 10 (Anniversary Update and beyond).
