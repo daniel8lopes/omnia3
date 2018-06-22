@@ -31,7 +31,7 @@ Following the instructions on [this page]( omnia3_modeler_developingbehaviours.h
 ## 5. Connectivity
 Once the connector is running, the connection between it and the server will be kept active without the user having to do anything special. 
 
-However, there are scenarios where it is necessary to perform manual maintenance on the installation, namely, when disconnections occur.
+However, there are scenarios where it is necessary to perform manual maintenance on the installation, namely, when disconnections occur, or the connector is failing to start its behaviour executing components.
 
 ### 5.1. Start policy
 If the connector cannot establish a connection when launching, it will retry that connection for up to one minute before crashing. 
