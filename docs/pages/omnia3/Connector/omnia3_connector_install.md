@@ -20,4 +20,3 @@ A configuration file (_**config.json**_) is distributed together with the connec
 - **Client**
     - **ID**: Client ID of the connector configuration you registered on the platform.
     - **Secret**: Client Secret of the connector configuration you registered on the platform.
-- **Logging**: In this section you can configure where you want the logs of the connector to be stored. See [this page](omnia3_connector_logs.html) for further details on logging.
