@@ -9,7 +9,7 @@ folder: omnia3
 
 ## Connector
 
-- [1.0.14](https://mymiswebdeploy.blob.core.windows.net/omnia3/connector/Omnia.Connector.Windows.1.0.14.zip)
+- [1.0.56](https://mymiswebdeploy.blob.core.windows.net/omnia3/connector/Omnia.Connector.Windows.1.0.56.zip)
 
 ## Behaviours Development solution
 
