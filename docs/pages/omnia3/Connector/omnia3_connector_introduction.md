@@ -13,7 +13,13 @@ folder: omnia3
 The **OMNIA Connector** is the software that the OMNIA Platform uses to communicate with the customer's servers in order to execute external behaviours. 
 
 ## 2. How it works
-TODO
+The **OMNIA Connector** shares the same behaviours engine as the **OMNIA Platform**. When the connector starts it'll launch a **Behaviours Manager** process. The manager is responsible for locate and launch the required **Behaviours Servers**. The server aside from the execution of the desired behaviours is also responsible for their compilation.
+
+![Connector architecture](images\connector_arch.jpg){: .image-center}
+
+
+
+The manager will launch a new server process when configurable maximal number of builds is reached. This new process will co-exists with the other server processes in the connector.
 
 ## 3. Requirements
 

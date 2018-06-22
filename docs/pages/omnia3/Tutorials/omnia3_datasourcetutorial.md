@@ -79,14 +79,14 @@ If you do not have a tenant yet, please follow the steps of the [Tenant Creation
     var client = new System.Net.Http.HttpClient();
     
     string apiEndpoint = $"https://reqres.in/api/users/{identifier}";
-
+    
     var requestResult = client.DeleteAsync(apiEndpoint).GetAwaiter().GetResult();
-
+    
     string responseBody = requestResult.Content.ReadAsStringAsync().Result;
-
+    
     if (!requestResult.IsSuccessStatusCode)
       throw new Exception("Error on removing Employee: " + responseBody);
-
+    
     return true;
     {% endraw %}
     ````
@@ -94,7 +94,7 @@ If you do not have a tenant yet, please follow the steps of the [Tenant Creation
 6. Create a new Data Behaviour for the operation "Read", so that data is retrieved when a Employee is edited on OMNIA. Copy and paste the following code:
 
     ````
-   {% raw %}
+      {% raw %}
     var client = new System.Net.Http.HttpClient();
     string apiEndpoint = $"https://reqres.in/api/users/{identifier}";
 
@@ -118,7 +118,7 @@ If you do not have a tenant yet, please follow the steps of the [Tenant Creation
 7. Create a new Data Behaviour for the operation "ReadList", so that data is retrieved when a list of Employees is requested. Copy and paste the following code:
 
     ````
-  {% raw %}
+    {% raw %}
     var client = new System.Net.Http.HttpClient();
     string apiEndpoint = $"https://reqres.in/api/users?page={page}";
 
@@ -141,7 +141,7 @@ If you do not have a tenant yet, please follow the steps of the [Tenant Creation
     }
 
     return (responseData.Count, employeesList);
-  {% endraw %}
+    {% endraw %}
     ````
 
 	NOTE: in this scenario, we are ignoring the query sent by the user when obtaining the list. In real world scenarios, you will want to change the query to the external system and/or the returned response, according to the parameters sent by the user.
@@ -203,3 +203,7 @@ If you do not have a tenant yet, please follow the steps of the [Tenant Creation
 5. Perform a new Build (by accessing the option ***Versioning / Builds / Create new***).
 
 6. On Application area, create a new instance of the Department, and check that, after identifying the data source, Employees from that data source are now available for selection.
+
+
+
+Now that you know how to use Data Sources, we recommend you to take a look at [this tutorial](omnia3_primaveraconnectortutorial.html) where you will learn how to expose an on-premise Data Source to OMNIA.
