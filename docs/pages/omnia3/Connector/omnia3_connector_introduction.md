@@ -17,6 +17,8 @@ The **OMNIA Connector** shares the same behaviours engine as the **OMNIA Platfor
 
 ![Connector architecture](images\connector_arch.jpg)
 
+
+
 The manager will launch a new server process when configurable maximal number of builds is reached. This new process will co-exists with the other server processes in the connector.
 
 ## 3. Requirements
