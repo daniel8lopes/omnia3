@@ -122,6 +122,18 @@ entries:
       url: /omnia3_connector_introduction.html
       output: web, pdf
 
+    - title: Install Guide
+      url: /omnia3_connector_install.html
+      output: web, pdf
+
+    - title: Configuration
+      url: /omnia3_connector_configuration.html
+      output: web, pdf
+
+    - title: Logging
+      url: /omnia3_connector_logs.html
+      output: web, pdf
+
   - title: Languages
     output: web, pdf
     folderitems:
