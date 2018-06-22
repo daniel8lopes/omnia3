@@ -12,12 +12,20 @@ In Management area it's possible to manage the available Connectors to the subsc
 
 In order to use the connector, you will first need to register it on the platform. [See here how to do it](omnia3_management_introduction.html#5-connectors).
 
-When creating a **Data Source**, if it has the configuration for having a connector associated, it will have a **_connector** attribute, where you can input the Code we defined here, so that we know to use that connector when accessing entities of that Data Source.
+## 2. Configuring the connector in your application
 
-## 2. Using the connector
+To communicate with a connector it's neccessary to work with a custom **Data Source** ([see here how to do it](omnia3_modeler_datasources.html)).
 
-Once the connector is running, the connection between it and the server will be kept active without the user having to do anything special. However, there are scenarios where it is necessary to perform manual maintenance on the installation, namely, when disconnections occur.
+### 2.1. How to configure the model
+If the Data Source is created with *Data Access runtime* or *Behaviour runtime* properties setted as *External*, will be possible to execute operations in a connector.
 
-If the connector cannot establish a connection when launching, it will retry that connection for up to one minute before crashing. 
+To allow that, an attribute with name **_connector** is automatically added to the Data Source.
 
-If it is already running, the process is more complex: when a disconnection is detected, we begin a process of **exponential backoff**; i.e. we keep attempting to re-establish the connection, with more and more space between attempts. This process will eventually end, however - after **22 attempts** (approximately 2 hours and 20 minutes total), we assume there is a _permanent_ issue with the connection and will stop trying to reconnect. This will lead to manual intervention being necessary.
+### 2.2. How to configure the application data
+Before execute operations in the connector is required to configure to which connector the requests will be made.
+
+Accessing the application, in the menu, select the Data Source you previously created and **Add new** record.
+
+Fill the form with the required information and in the **Connector** field write in the code of the Connector you want to commicate to.
+
+From now on, the communication of the entities configurated to use this Data Source will send the requests to the configured Connector.
