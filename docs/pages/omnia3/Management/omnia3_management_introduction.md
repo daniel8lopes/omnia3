@@ -42,10 +42,26 @@ Here you can **Add new** clients, identifying their Name.
 
 Upon creating a client, the *Client ID* and *Client Secret* are automatically created. 
 
-### 4.1 Get the API Client credentials
+### 4.1. Get the API Client credentials
 In the **API Clients** list, selecting one of the records will open a new window containing the required credentials to accessing the OMNIA API: the **Client ID** and the **Client Secret**.
 
-### 4.2 Regenerate the Client Secret
+### 4.2. Regenerate the Client Secret
 If you need to regenerate the Client Secret for some reason (e.g. your private secret got shared publically accidentally), select one of the records in the list and, in the details window, select the option **Regenerate secret**.
 
 This action will generate another Client Secret and, from now on, you will need to use the new Secret.
+
+
+## 5. Connectors
+To allow to establish a communication between the OMNIA Platform and system in another machine, it is required to register a **Connector**.
+
+By accessing **Connectors**, you will have access to the Connectors management screen.
+
+Here you can **Add new** connectors, identifying their Code and Name.
+
+Upon creating a connector, it is automatically created a new API Client and a new User to the connector.
+
+### 5.1. Get the Connector's email
+In the **Connectors** list, selecting one of the records will open a new window containing **Client Email**.
+
+### 5.2. Get the API Client credentials
+In the **Connectors** list, selecting one of the records will open a new window containing the required credentials to accessing the OMNIA API: the **Client ID** and the **Client Secret**.
