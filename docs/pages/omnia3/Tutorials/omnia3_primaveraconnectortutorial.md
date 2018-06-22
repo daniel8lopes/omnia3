@@ -57,98 +57,91 @@ This tutorial also requires an access to [Primavera ERP](https://pt.primaverabss
 
     ![Modeler add reference](/images/tutorials/primaveraconnector/add-new-reference.png)
 
-
 5. Navigate to tab "Data Behaviours", and define a behaviour to be executed on "ReadList". This behaviour will be used to perform a Query/List request to the external Application. 
     Copy and paste the following code:
+    ```C#
+    List<IDictionary<string, object>> employeesList = new List<IDictionary<string, object>>();
 
-```C#
-List<IDictionary<string, object>> employeesList = new List<IDictionary<string, object>>();
+    StdBSConfApl platConfig = new StdBSConfApl();
 
-StdBSConfApl platConfig = new StdBSConfApl();
+    platConfig.AbvtApl = "ERP";
+    platConfig.Instancia = "default";
+    platConfig.Utilizador = "USER";
+    platConfig.PwdUtilizador = "PASS";
+    platConfig.LicVersaoMinima = "09.00";
 
-platConfig.AbvtApl = "ERP";
-platConfig.Instancia = "default";
-platConfig.Utilizador = "USER";
-platConfig.PwdUtilizador = "PASS";
-platConfig.LicVersaoMinima = "09.00";
+    Interop.StdPlatBS900.StdPlatBS bsPlat = new Interop.StdPlatBS900.StdPlatBS();
 
-Interop.StdPlatBS900.StdPlatBS bsPlat = new Interop.StdPlatBS900.StdPlatBS();
+    Interop.StdBE900.StdBETransaccao trans = null;
+    bsPlat.AbrePlataformaEmpresa("DEMO", trans, platConfig, Interop.StdBE900.EnumTipoPlataforma.tpEmpresarial, string.Empty);
 
-Interop.StdBE900.StdBETransaccao trans = null;
-bsPlat.AbrePlataformaEmpresa("DEMO", trans, platConfig, Interop.StdBE900.EnumTipoPlataforma.tpEmpresarial, string.Empty);
+    Interop.StdBE900.StdBELista queryResults = bsPlat.Registos.Consulta($"SELECT Employees.EmployeesCount, Codigo, Nome FROM Funcionarios CROSS JOIN (SELECT Count(*) AS EmployeesCount FROM Funcionarios) AS Employees ORDER BY Codigo OFFSET {(page - 1)*pageSize} ROWS FETCH NEXT {pageSize} ROWS ONLY");
 
-Interop.StdBE900.StdBELista queryResults = bsPlat.Registos.Consulta($"SELECT Employees.EmployeesCount, Codigo, Nome FROM Funcionarios CROSS JOIN (SELECT Count(*) AS EmployeesCount FROM Funcionarios) AS Employees ORDER BY Codigo OFFSET {(page - 1)*pageSize} ROWS FETCH NEXT {pageSize} ROWS ONLY");
+    int numberOfRecords = Convert.ToInt32(queryResults.Valor("EmployeesCount").ToString());
+    while (!queryResults.NoFim())
+    {
 
-int numberOfRecords = Convert.ToInt32(queryResults.Valor("EmployeesCount").ToString());
-while (!queryResults.NoFim())
-{
+        var employee = new Dictionary<string, object>() {
+            { "_code", queryResults.Valor("Codigo").ToString()},
+            { "_name", queryResults.Valor("Nome").ToString()}
+        };
 
-    var employee = new Dictionary<string, object>() {
-        { "_code", queryResults.Valor("Codigo").ToString()},
-        { "_name", queryResults.Valor("Nome").ToString()}
-    };
-
-    employeesList.Add(employee);
-    queryResults.Seguinte();
-}
-bsPlat.FechaPlataformaEmpresa();
-return (numberOfRecords, employeesList);
-    
-```
-
+        employeesList.Add(employee);
+        queryResults.Seguinte();
+    }
+    bsPlat.FechaPlataformaEmpresa();
+    return (numberOfRecords, employeesList);
+    ```
 6. Create a new Data Behaviour for the operation "Read", so that data is retrieved when an Employee is edited on OMNIA. Copy and paste the following code:
 
-```C#
-EmployeeDto dto = new EmployeeDto();
-StdBSConfApl platConfig = new StdBSConfApl();
+    ```C#
+    EmployeeDto dto = new EmployeeDto();
+    StdBSConfApl platConfig = new StdBSConfApl();
 
-platConfig.AbvtApl = "ERP";
-platConfig.Instancia = "default";
-platConfig.Utilizador = "USER";
-platConfig.PwdUtilizador = "PASS";
-platConfig.LicVersaoMinima = "09.00";
+    platConfig.AbvtApl = "ERP";
+    platConfig.Instancia = "default";
+    platConfig.Utilizador = "USER";
+    platConfig.PwdUtilizador = "PASS";
+    platConfig.LicVersaoMinima = "09.00";
 
-Interop.StdPlatBS900.StdPlatBS bsPlat = new Interop.StdPlatBS900.StdPlatBS();
+    Interop.StdPlatBS900.StdPlatBS bsPlat = new Interop.StdPlatBS900.StdPlatBS();
 
-Interop.StdBE900.StdBETransaccao trans = null;
-bsPlat.AbrePlataformaEmpresa("DEMO", trans, platConfig, Interop.StdBE900.EnumTipoPlataforma.tpEmpresarial, string.Empty);
+    Interop.StdBE900.StdBETransaccao trans = null;
+    bsPlat.AbrePlataformaEmpresa("DEMO", trans, platConfig, Interop.StdBE900.EnumTipoPlataforma.tpEmpresarial, string.Empty);
 
-Interop.StdBE900.StdBELista queryResults = bsPlat.Registos.Consulta($"SELECT Codigo, Nome, Email, Telefone FROM Funcionarios WHERE Codigo = '{identifier}'");
+    Interop.StdBE900.StdBELista queryResults = bsPlat.Registos.Consulta($"SELECT Codigo, Nome, Email, Telefone FROM Funcionarios WHERE Codigo = '{identifier}'");
 
-if (!queryResults.Vazia())
-{
-    dto._code = queryResults.Valor("Codigo").ToString();
-    dto._name = queryResults.Valor("Nome").ToString();
+    if (!queryResults.Vazia())
+    {
+        dto._code = queryResults.Valor("Codigo").ToString();
+        dto._name = queryResults.Valor("Nome").ToString();
 
-}
-else {
-    throw new Exception($"Could not retrieve Employee with code {identifier}");
-}
+    }
+    else {
+        throw new Exception($"Could not retrieve Employee with code {identifier}");
+    }
 
-bsPlat.FechaPlataformaEmpresa();
+    bsPlat.FechaPlataformaEmpresa();
 
-return dto;
-```
+    return dto;
+    ```
 
-7. On "Data Behaviours" of Agent Employee, define a behaviour, to be executed on "Update" (when an Employee is updated on OMNIA). 
-Copy and paste the following code:
+7. On "Data Behaviours" of Agent Employee, define a behaviour, to be executed on "Update" (when an Employee is updated on OMNIA). Copy and paste the following code:
 
-```C#
-ErpBS bsERP = new ErpBS();
-bsERP.AbreEmpresaTrabalho(EnumTipoPlataforma.tpEmpresarial, "DEMO", "USER", "PASS");
+    ```C#
+    ErpBS bsERP = new ErpBS();
+    bsERP.AbreEmpresaTrabalho(EnumTipoPlataforma.tpEmpresarial, "DEMO", "USER", "PASS");
 
-RhpBEFuncionario funcionario = bsERP.RecursosHumanos.Funcionarios.Edita(dto._code);
+    RhpBEFuncionario funcionario = bsERP.RecursosHumanos.Funcionarios.Edita(dto._code);
 
-funcionario.set_Nome(dto._name);
+    funcionario.set_Nome(dto._name);
 
-bsERP.RecursosHumanos.Funcionarios.Actualiza(funcionario);
+    bsERP.RecursosHumanos.Funcionarios.Actualiza(funcionario);
 
-bsERP.FechaEmpresaTrabalho();
+    bsERP.FechaEmpresaTrabalho();
 
-return dto;
-
-```
-
+    return dto;
+    ```
 
 8. Perform a new Build (by accessing the option ***Versioning / Builds / Create new***).
 
