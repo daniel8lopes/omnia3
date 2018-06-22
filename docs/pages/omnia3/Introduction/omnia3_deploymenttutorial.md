@@ -92,7 +92,7 @@ Running the platform without an SSL certificate in production is **not supported
 Remember to change the configuration in omnia.json! IdentityServiceUrl will need to point to the HTTPS version of the site.
 
 ## 5. Starting the site
-- When you run `sudo systemctl start omnia` (don't do it yet, though, finish the configuring process), services will be launched.
+- When you run `sudo systemctl start omnia`, the services will be launched. To obtain logs, you can check the logs folder `/var/log/omnia/`, or read `journalctl`.
 
 - Do `sudo service nginx reload` and verify if the platform is running when accessing the site, the swagger api (site/api/docs), and logging in.
 
