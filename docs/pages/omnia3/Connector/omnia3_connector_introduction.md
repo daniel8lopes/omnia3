@@ -23,15 +23,20 @@ TODO
     - Windows Server 2012 or higher
     - Windows 7 SP1, 8.1 or 10 (Anniversary Update and beyond).
 
-## 4. Connectivity
+## 4. Debugging behaviours on the connector
+By default, the behaviours the connector executes will be downloaded to the temporary folder of your system, under an "omnia" folder, i.e., `%temp%/omnia` on Windows, and organized inside that folder by their tenant/environment codes.
+
+Following the instructions on [this page]( omnia3_modeler_developingbehaviours.html), you will be able to develop and/or test any behaviours that are meant to run connector-side. Our recommendation is to, if possible, install Visual Studio on the same machine that is running the connector, so you can reference all the same DLLs and local files that are being used in the behaviours.
+
+## 5. Connectivity
 Once the connector is running, the connection between it and the server will be kept active without the user having to do anything special. 
 
 However, there are scenarios where it is necessary to perform manual maintenance on the installation, namely, when disconnections occur.
 
-### 4.1. Start policy
+### 5.1. Start policy
 If the connector cannot establish a connection when launching, it will retry that connection for up to one minute before crashing. 
 
-### 4.2. Disconnection retry policy
+### 5.2. Disconnection retry policy
 If the connector is running and a disconnection is detected, it will begin a process of **exponential backoff**. 
 
 This means that the connector will keep attempting to re-establish the connection, with more and more space between attempts. 
