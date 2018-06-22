@@ -11,9 +11,9 @@ folder: omnia3
 
 Based on a simple Employee management scenario, this tutorial shows a real scenario of how easily OMNIA can use information from an external data source, using the Omnia connector to access data located on-premises. 
 
-This tutorial is an advanced implementation of the [data sources tutorial](omnia3_datasourcetutorial.html) In order to understand how data sources work, please read [this section of the documentation](omnia3_modeler_datasources.html).
+This tutorial is an advanced implementation of the [data sources tutorial](omnia3_datasourcetutorial.html) in order to understand how data sources work, please read [this section of the documentation](omnia3_modeler_datasources.html).
 
-On the first tutorial area (CRUD Operations), we are going to evaluate how to interact with an external data source, by reading and manipulating its data.
+On the CRUD Operations tutorial area, we are going to evaluate how to interact with an external data source, by reading and manipulating its data.
 
 As our custom data source, we are going to use the [PRIMAVERA ERP V9](https://pt.primaverabss.com).
 
@@ -39,15 +39,15 @@ This tutorial also requires an access to [Primavera ERP](https://pt.primaverabss
 
 1. Access Omnia homepage, select the tenant where you are going to model and you will be redirected to the modeling area.
 
-2. Through the left side menu, create a new Data Source by accessing the option ***Data Sources / Create new*** on the top right side. Set its Name as "Primavera", Behaviour Runtime and Data Access Runtime as External.
+2. Through the left side menu, create a new Data Source by accessing the option ***Data Sources / Create new*** on the top right side. Set its Name as "*Primavera*", Behaviour Runtime and Data Access Runtime as *"External"*.
 
     ![Modeler create DataSource](/images/tutorials/primaveraconnector/add-new-datasource.png)
 
-3. Create a new Agent with name "Employee", and set it as using the external data source "Primavera" that you created earlier.
+3. Create a new Agent with name *"Employee"*, and set it as using the external data source *"Primavera"* that you created earlier.
 
     ![Modeler create Agent](/images/tutorials/primaveraconnector/add-new-agent.png)
 
-4. On Agent Employee, navigate to tab "Data References", and define a reference for Primavera assemblies:
+4. On Agent *"Employee"*, navigate to tab *"Data References"*, and define a reference for Primavera assemblies:
 
     1. Interop.StdPlatBS900.dll
     2. Interop.StdBE900.dll
@@ -57,7 +57,7 @@ This tutorial also requires an access to [Primavera ERP](https://pt.primaverabss
 
     ![Modeler add reference](/images/tutorials/primaveraconnector/add-new-reference.png)
 
-5. Navigate to tab "Data Behaviours", and define a behaviour to be executed on "ReadList". This behaviour will be used to perform a Query/List request to the external Application. 
+5. Navigate to tab *"Data Behaviours"*, and define a behaviour to be executed on *"ReadList"*. This behaviour will be used to perform a Query/List request to the external Application. 
     Copy and paste the following code:
     ```C#
     List<IDictionary<string, object>> employeesList = new List<IDictionary<string, object>>();
@@ -92,7 +92,7 @@ This tutorial also requires an access to [Primavera ERP](https://pt.primaverabss
     bsPlat.FechaPlataformaEmpresa();
     return (numberOfRecords, employeesList);
     ```
-6. Create a new Data Behaviour for the operation "Read", so that data is retrieved when an Employee is edited on OMNIA. Copy and paste the following code:
+6. Create a new Data Behaviour for the operation *"Read"*, so that data is retrieved when an Employee is edited on OMNIA. Copy and paste the following code:
 
     ```C#
     EmployeeDto dto = new EmployeeDto();
@@ -126,7 +126,7 @@ This tutorial also requires an access to [Primavera ERP](https://pt.primaverabss
     return dto;
     ```
 
-7. On "Data Behaviours" of Agent Employee, define a behaviour, to be executed on "Update" (when an Employee is updated on OMNIA). Copy and paste the following code:
+7. On *"Data Behaviours"* of Agent Employee, define a behaviour, to be executed on *"Update"* (when an Employee is updated on OMNIA). Copy and paste the following code:
 
     ```C#
     ErpBS bsERP = new ErpBS();
@@ -147,8 +147,8 @@ This tutorial also requires an access to [Primavera ERP](https://pt.primaverabss
 
 9. Go to the Application area.
 
-10. Create a new instance of the Primavera data source, with code "DEMO" and with the Code of the Connector that you have created.
+10. Create a new instance of the Primavera data source, with code *"DEMO"* and with the Code of the Connector that you have created.
 
-11. On left side menu, navigate to Configurations / Employee, identify the Primavera data source instance (DEMO) and check that the list is filled with data retrieved from Primavera.
+11. On left side menu, navigate to *Configurations / Employee*, identify the Primavera data source instance (DEMO) and check that the list is filled with data retrieved from Primavera.
   
 12. Now you can List and Update Employees directly on your on-premise system.
