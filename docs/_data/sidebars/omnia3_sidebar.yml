@@ -59,8 +59,11 @@ entries:
       output: web, pdf
       
   - title: Management
-    url: /omnia3_management_introduction.html
     output: web, pdf
+    folderitems:
+    - title: Introduction
+      url: /omnia3_management_introduction.html
+      output: web, pdf
 
   - title: Modeler
     output: web, pdf
@@ -99,12 +102,18 @@ entries:
 
         
   - title: Application
-    url: /omnia3_application_introduction.html
     output: web, pdf
+    folderitems:
+    - title: Introduction
+      url: /omnia3_application_introduction.html
+      output: web, pdf
         
   - title: Authorization
-    url: /omnia3_authorization.html
     output: web, pdf
+    folderitems:
+    - title: Introduction
+      url: /omnia3_authorization.html
+      output: web, pdf
         
   - title: Connector
     output: web, pdf
@@ -150,6 +159,9 @@ entries:
         
         
   - title: API
-    url: /omnia3_api_swagger.html
     output: web, pdf
+    folderitems:
+    - title: How to use the API
+      url: /omnia3_api_swagger.html
+      output: web, pdf
       
