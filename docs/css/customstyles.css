@@ -1201,5 +1201,5 @@ h4.panel-title {
 
 .post-content img.image-center {
 	display: block;
-	max-width: auto;
+	max-width: 100%;
 }
