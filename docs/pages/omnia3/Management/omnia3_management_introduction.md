@@ -61,7 +61,7 @@ Here you can **Add new** connectors, identifying their Code and Name.
 Upon creating a connector, it is automatically created a new API Client and a new User to the connector.
 
 ### 5.1. Get the Connector's email
-In the **Connectors** list, selecting one of the records will open a new window containing **Client Email**.
+In the **Connectors** list, selecting one of the records will open a new window containing the **Client Email**.
 
 ### 5.2. Get the API Client credentials
 In the **Connectors** list, selecting one of the records will open a new window containing the required credentials to accessing the OMNIA API: the **Client ID** and the **Client Secret**.
