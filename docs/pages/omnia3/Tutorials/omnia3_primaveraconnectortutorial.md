@@ -47,7 +47,7 @@ This tutorial also requires an access to [Primavera ERP](https://pt.primaverabss
 
     ![Modeler create Agent](/images/tutorials/primaveraconnector/add-new-agent.png)
 
-4. On Agent *"Employee"*, navigate to tab *"Data References"*, and define a reference for Primavera assemblies:
+4. On Agent *"Employee"*, navigate to tab *"[Data References](https://docs.numbersbelieve.com/omnia3_modeler_references.html)"*, and define a reference for Primavera assemblies:
 
     1. Interop.StdPlatBS900.dll
     2. Interop.StdBE900.dll
@@ -57,35 +57,35 @@ This tutorial also requires an access to [Primavera ERP](https://pt.primaverabss
 
     ![Modeler add reference](/images/tutorials/primaveraconnector/add-new-reference.png)
 
-5. Navigate to tab *"Data Behaviours"*, and define a behaviour to be executed on *"ReadList"*. This behaviour will be used to perform a Query/List request to the external Application. 
+5. Navigate to tab *"[Data Behaviours](https://docs.numbersbelieve.com/omnia3_modeler_datasources.html)"*, and define a behaviour to be executed on *"ReadList"*. This behaviour will be used to perform a Query/List request to the external Application. 
     Copy and paste the following code:
     ```C#
     List<IDictionary<string, object>> employeesList = new List<IDictionary<string, object>>();
-
+    
     StdBSConfApl platConfig = new StdBSConfApl();
-
+    
     platConfig.AbvtApl = "ERP";
     platConfig.Instancia = "default";
     platConfig.Utilizador = "USER";
     platConfig.PwdUtilizador = "PASS";
     platConfig.LicVersaoMinima = "09.00";
-
+    
     Interop.StdPlatBS900.StdPlatBS bsPlat = new Interop.StdPlatBS900.StdPlatBS();
-
+    
     Interop.StdBE900.StdBETransaccao trans = null;
     bsPlat.AbrePlataformaEmpresa("DEMO", trans, platConfig, Interop.StdBE900.EnumTipoPlataforma.tpEmpresarial, string.Empty);
-
+    
     Interop.StdBE900.StdBELista queryResults = bsPlat.Registos.Consulta($"SELECT Employees.EmployeesCount, Codigo, Nome FROM Funcionarios CROSS JOIN (SELECT Count(*) AS EmployeesCount FROM Funcionarios) AS Employees ORDER BY Codigo OFFSET {(page - 1)*pageSize} ROWS FETCH NEXT {pageSize} ROWS ONLY");
-
+    
     int numberOfRecords = Convert.ToInt32(queryResults.Valor("EmployeesCount").ToString());
     while (!queryResults.NoFim())
     {
-
+    
         var employee = new Dictionary<string, object>() {
             { "_code", queryResults.Valor("Codigo").ToString()},
             { "_name", queryResults.Valor("Nome").ToString()}
         };
-
+    
         employeesList.Add(employee);
         queryResults.Seguinte();
     }
@@ -97,32 +97,32 @@ This tutorial also requires an access to [Primavera ERP](https://pt.primaverabss
     ```C#
     EmployeeDto dto = new EmployeeDto();
     StdBSConfApl platConfig = new StdBSConfApl();
-
+    
     platConfig.AbvtApl = "ERP";
     platConfig.Instancia = "default";
     platConfig.Utilizador = "USER";
     platConfig.PwdUtilizador = "PASS";
     platConfig.LicVersaoMinima = "09.00";
-
+    
     Interop.StdPlatBS900.StdPlatBS bsPlat = new Interop.StdPlatBS900.StdPlatBS();
-
+    
     Interop.StdBE900.StdBETransaccao trans = null;
     bsPlat.AbrePlataformaEmpresa("DEMO", trans, platConfig, Interop.StdBE900.EnumTipoPlataforma.tpEmpresarial, string.Empty);
-
+    
     Interop.StdBE900.StdBELista queryResults = bsPlat.Registos.Consulta($"SELECT Codigo, Nome, Email, Telefone FROM Funcionarios WHERE Codigo = '{identifier}'");
-
+    
     if (!queryResults.Vazia())
     {
         dto._code = queryResults.Valor("Codigo").ToString();
         dto._name = queryResults.Valor("Nome").ToString();
-
+    
     }
     else {
         throw new Exception($"Could not retrieve Employee with code {identifier}");
     }
-
+    
     bsPlat.FechaPlataformaEmpresa();
-
+    
     return dto;
     ```
 
@@ -131,15 +131,15 @@ This tutorial also requires an access to [Primavera ERP](https://pt.primaverabss
     ```C#
     ErpBS bsERP = new ErpBS();
     bsERP.AbreEmpresaTrabalho(EnumTipoPlataforma.tpEmpresarial, "DEMO", "USER", "PASS");
-
+    
     RhpBEFuncionario funcionario = bsERP.RecursosHumanos.Funcionarios.Edita(dto._code);
-
+    
     funcionario.set_Nome(dto._name);
-
+    
     bsERP.RecursosHumanos.Funcionarios.Actualiza(funcionario);
-
+    
     bsERP.FechaEmpresaTrabalho();
-
+    
     return dto;
     ```
 
@@ -150,5 +150,5 @@ This tutorial also requires an access to [Primavera ERP](https://pt.primaverabss
 10. Create a new instance of the Primavera data source, with code *"DEMO"* and with the Code of the Connector that you have created.
 
 11. On left side menu, navigate to *Configurations / Employee*, identify the Primavera data source instance (DEMO) and check that the list is filled with data retrieved from Primavera.
-  
+
 12. Now you can List and Update Employees directly on your on-premise system.
