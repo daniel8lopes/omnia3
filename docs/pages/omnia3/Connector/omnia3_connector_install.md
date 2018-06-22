@@ -9,11 +9,3 @@ folder: omnia3
 ## 1. Installing the connector
 
 TODO
-
-### 1.1. On Windows
-
-TODO
-
-### 1.2. On Linux
-
-TODO

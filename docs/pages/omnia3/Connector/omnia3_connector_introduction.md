@@ -10,21 +10,13 @@ folder: omnia3
 
 ## 1. Introduction
 
-The **OMNIA Connector** is the software that the OMNIA Platform uses in order to communicate with the customer's servers in order to execute external behaviours. The connector can be installed in any Windows or Linux machine, on-premise or in the cloud, and configured to communicate with any OMNIA installation.
+The **OMNIA Connector** is the software that the OMNIA Platform uses to communicate with the customer's servers in order to execute external behaviours. 
 
 ## 2. How it works
 TODO
 
 ## 3. Requirements
 
-TODO
-
-### 3.1. Connectivity
-
-todo
-
-### 3.2. To install on Windows
-
-.net version
-windows version
-etc.
+* Internet access
+* .NET Framework 4.7.2
+* Windows
