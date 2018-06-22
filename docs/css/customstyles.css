@@ -1198,3 +1198,8 @@ h4.panel-title {
         display:block !important;
     }
 }
+
+.image-center {
+	display: block;
+    margin: auto;
+}
