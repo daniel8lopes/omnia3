@@ -1199,7 +1199,7 @@ h4.panel-title {
     }
 }
 
-.image-center {
+.post-context img..image-center {
 	display: block;
-    margin: auto;
+	max-width: auto;
 }
