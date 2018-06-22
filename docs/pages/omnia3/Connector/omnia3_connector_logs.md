@@ -14,4 +14,4 @@ Each of them will output their logs into the log folder configured by the user, 
 ## 2. Analyzing the logs
 To analyze these logs, we recommend using a tool such as Notepad++, due to their potentially large file size and contents.
 
-By default, they will be present in the temporary folder of your system, under an "omnia" folder, i.e., `%temp/omnia` on Windows.
+By default, they will be present in the temporary folder of your system, under an "omnia" folder, i.e., `%temp%/omnia` on Windows.
