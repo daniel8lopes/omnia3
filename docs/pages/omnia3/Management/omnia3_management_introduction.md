@@ -52,7 +52,7 @@ This action will generate another Client Secret and, from now on, you will need 
 
 
 ## 5. Connectors
-To allow to establish a communication between the OMNIA Platform and system in another machine, it is required to register a **Connector**.
+To allow to establish a communication between the OMNIA Platform and a system in another machine, it is required to register a **Connector**.
 
 By accessing **Connectors**, you will have access to the Connectors management screen.
 
