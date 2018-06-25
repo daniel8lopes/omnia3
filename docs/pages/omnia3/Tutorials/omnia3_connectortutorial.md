@@ -34,7 +34,7 @@ This tutorial assumes that you have created a OMNIA tenant ([click here to see h
 
 5. Click the button ***Add new*** to grant the connector user access to the tenant. The user can be retrieved on step 3, property "Client Email"
 
-6. Now use these configurations to configure a connector in the machine with the Primavera ERP, following the [installation guide](omnia3_connector_install.html) and [configuration guide](omnia3_connector_configuration.html).
+6. Now use these configurations to configure a connector on your local machine (or a Windows VM), following the [installation guide](omnia3_connector_install.html) and [configuration guide](omnia3_connector_configuration.html).
 
 7. Start the configured connector.
 
@@ -42,11 +42,11 @@ This tutorial assumes that you have created a OMNIA tenant ([click here to see h
 
 1. Access Omnia homepage, select the tenant where you are going to model and you will be redirected to the modeling area.
 
-2. Through the left side menu, create a new Data Source by accessing the option ***Data Sources / Add new*** on the top right side. Set its Name as "*Primavera*", Behaviour Runtime and Data Access Runtime as *"External"*.
+2. Through the left side menu, create a new Data Source by accessing the option ***Data Sources / Add new*** on the top right side. Set its Name as "*CSVSource*", Behaviour Runtime and Data Access Runtime as *"External"*.
 
     ![Modeler create DataSource](/images/tutorials/primaveraconnector/add-new-datasource.png)
 
-3. Create a new Agent with name *"Contact"*, and set it as using the external data source *"Primavera"* that you created earlier.
+3. Create a new Agent with name *"Contact"*, and set it as using the external data source *"CSVSource"* that you created earlier.
 
     ![Modeler create Agent](/images/tutorials/primaveraconnector/add-new-agent.png)
 
@@ -204,8 +204,8 @@ This tutorial assumes that you have created a OMNIA tenant ([click here to see h
 
 10. Go to the Application area.
 
-11. Create a new instance of the Primavera data source, with code *"DEMO"* and with the Code of the Connector that you have created.
+11. Create a new instance of the CSVSource data source, with code *"LOCAL"* and with the Code of the Connector that you have created.
 
-12. On left side menu, navigate to *Configurations / Contact*, identify the Primavera data source instance (DEMO) and check that the list is filled with data retrieved from Primavera.
+12. On left side menu, navigate to *Configurations / Contact*, identify the CSVSource data source instance (LOCAL) and check that the list is filled with data retrieved from CSVSource.
 
 13. Now you can List and Update Contacts directly on your on-premise system, providing your connector is correctly configured and running.
