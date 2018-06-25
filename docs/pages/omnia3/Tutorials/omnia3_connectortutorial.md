@@ -60,7 +60,7 @@ This tutorial assumes that you have created a OMNIA tenant ([click here to see h
     List<IDictionary<string, object>> listData = new List<IDictionary<string, object>>();
     
     string filePath = @"C:\temp\Contacts.csv";
-    char csvSplitChar = ';':
+    char csvSplitChar = ';';
     
     int numberOfRecords = 0;
     using (var reader = new System.IO.StreamReader(filePath))
