@@ -181,11 +181,11 @@ This tutorial assumes that you have created a OMNIA tenant ([click here to see h
     ContactDto contact = new ContactDto();
     string fileContent = "";
     string filePath = @"C:\temp\Contacts.csv";
-    char csvSplitChar = ';':
+    char csvSplitChar = ';';
     
     using (var reader = new System.IO.StreamReader(filePath))
     {
-    	while (!reader.EndOfStream)
+ 	    while (!reader.EndOfStream)
         {
             var line = reader.ReadLine();
             var values = line.Split(csvSplitChar);
@@ -196,9 +196,9 @@ This tutorial assumes that you have created a OMNIA tenant ([click here to see h
         }								
     }
     			
-    System.IO.File.WriteAllText(fileName, fileContent);
+    System.IO.File.WriteAllText(filePath, fileContent);
     			
-    return contact;
+    return true;
     ```
 
 9. Perform a new Build (by accessing the option ***Versioning / Builds / Create new***).
