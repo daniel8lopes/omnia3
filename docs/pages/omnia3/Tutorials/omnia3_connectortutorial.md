@@ -123,7 +123,7 @@ This tutorial assumes that you have created a OMNIA tenant ([click here to see h
 
 7. On *"Data Behaviours"* of Agent Contact, define a behaviour, to be executed on *"Update"* (when a Contact is updated on OMNIA). 
 
-Remember to **change** the variable **```filePath```** and **```csvSplitChar```**  with your csv file full path and the character configured as the CSV column delimiter.
+    Remember to **change** the variable **```filePath```** and **```csvSplitChar```**  with your csv file full path and the character configured as the CSV column delimiter.
 
     Copy and paste the following code:
 
