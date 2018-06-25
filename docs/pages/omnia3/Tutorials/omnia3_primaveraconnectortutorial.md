@@ -63,7 +63,7 @@ This tutorial also requires an access to [Primavera ERP](https://pt.primaverabss
 
 5. Navigate to tab *"[Data Behaviours](https://docs.numbersbelieve.com/omnia3_modeler_datasources.html)"*, and define a behaviour to be executed on *"ReadList"*. This behaviour will be used for Query and List requests for this entity.
 
-    Remember to change the ```platConfig.Utilizador``` and ```platConfig.PwdUtilizador``` fields to your actual username and password.
+    Remember to **change** the **```platConfig.Utilizador```** and **```platConfig.PwdUtilizador```** fields to your actual username and password.
 
     Copy and paste the following code:
     ```C#
@@ -102,7 +102,7 @@ This tutorial also requires an access to [Primavera ERP](https://pt.primaverabss
 
 6. Create a new Data Behaviour for the operation *"Read"*, so that data is retrieved when an Employee is edited on OMNIA.
 
-    Remember to change the ```platConfig.Utilizador``` and ```platConfig.PwdUtilizador``` fields to your actual username and password.
+    Remember to **change** the **```platConfig.Utilizador```** and **```platConfig.PwdUtilizador```** fields to your actual username and password.
 
     Copy and paste the following code:
 
@@ -140,7 +140,7 @@ This tutorial also requires an access to [Primavera ERP](https://pt.primaverabss
 
 7. On *"Data Behaviours"* of Agent Employee, define a behaviour, to be executed on *"Update"* (when an Employee is updated on OMNIA). 
 
-    Remember to change the ```"USER"``` and ```"PASS"``` fields to your actual username and password.
+    Remember to **change** the **```"USER"```** and **```"PASS"```** fields to your actual username and password.
 
     Copy and paste the following code:
 
