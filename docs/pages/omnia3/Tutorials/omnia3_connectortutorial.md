@@ -50,6 +50,7 @@ This tutorial assumes that you have created a OMNIA tenant ([click here to see h
 
     ![Modeler create Agent](/images/tutorials/primaveraconnector/add-new-agent.png)
 
+4. Create attributes BirthDate and PhoneNo
 
 4. Navigate to tab *"[Data Behaviours](https://docs.numbersbelieve.com/omnia3_modeler_datasources.html)"*, and define a behaviour to be executed on *"ReadList"*. This behaviour will be used for Query and List requests for this entity.
 
