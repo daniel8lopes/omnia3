@@ -54,7 +54,11 @@ This tutorial assumes that you have created a OMNIA tenant ([click here to see h
 
 - BirthDate
 
+	![Modeler create BirthDate_attribute](/images/tutorials/csvconnector/modeler-add-contact-birthdate.png)
+
 - PhoneNo
+
+	![Modeler create PhoneNo_attribute](/images/tutorials/csvconnector/modeler-add-contact-phone.png)
 
 5. Navigate to tab *"[Data Behaviours](https://docs.numbersbelieve.com/omnia3_modeler_datasources.html)"*, and define a behaviour to be executed on *"ReadList"*. This behaviour will be used for Query and List requests for this entity.
 
