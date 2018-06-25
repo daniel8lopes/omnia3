@@ -52,11 +52,11 @@ This tutorial assumes that you have created a OMNIA tenant ([click here to see h
 
 4. On Agent *"Contact"*, create the following attributes:
 
-- BirthDate
+    - BirthDate
 
 	![Modeler create BirthDate_attribute](/images/tutorials/csvconnector/modeler-add-contact-birthdate.png)
 
-- PhoneNo
+    - PhoneNo
 
 	![Modeler create PhoneNo_attribute](/images/tutorials/csvconnector/modeler-add-contact-phone.png)
 
