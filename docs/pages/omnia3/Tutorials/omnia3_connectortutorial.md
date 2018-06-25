@@ -59,13 +59,16 @@ This tutorial assumes that you have created a OMNIA tenant ([click here to see h
     ```C#
     List<IDictionary<string, object>> listData = new List<IDictionary<string, object>>();
     
+    string filePath = @"C:\temp\Contacts.csv";
+    char csvSplitChar = ';':
+    
     int numberOfRecords = 0;
-    using (var reader = new System.IO.StreamReader(@"C:\Users\NB\Desktop\Contacts.csv"))
+    using (var reader = new System.IO.StreamReader(filePath))
     {
     	while (!reader.EndOfStream)
         {
     		var line = reader.ReadLine();
-            var values = line.Split(';');
+            var values = line.Split(csvSplitChar);
             Dictionary<string, object> contactData = new Dictionary<string, object>();
             if (values.Length > 1)
             {
