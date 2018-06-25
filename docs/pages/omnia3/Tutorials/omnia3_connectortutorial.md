@@ -169,6 +169,36 @@ This tutorial assumes that you have created a OMNIA tenant ([click here to see h
 
     return dto;
     ```
+    
+7. On *"Data Behaviours"* of Agent Contact, define a behaviour, to be executed on *"Delete"* (when a Contact is deleted on OMNIA). 
+
+    Remember to **change** the variable **```filePath```** and **```csvSplitChar```**  with your csv file full path and the character configured as the CSV column delimiter.
+
+    Copy and paste the following code:
+
+    ```C#
+    ContactDto contact = new ContactDto();
+    string fileContent = "";
+    string filePath = @"C:\temp\Contacts.csv";
+    char csvSplitChar = ';':
+    
+    using (var reader = new System.IO.StreamReader(filePath))
+    {
+    	while (!reader.EndOfStream)
+        {
+            var line = reader.ReadLine();
+            var values = line.Split(csvSplitChar);
+            var valuesLen = values.Length;
+            if (!values[0].Equals(identifier, System.StringComparison.InvariantCultureIgnoreCase)) {
+                fileContent+= "\n"+line;						
+            }
+        }								
+    }
+    			
+    System.IO.File.WriteAllText(fileName, fileContent);
+    			
+    return contact;
+    ```
 
 8. Perform a new Build (by accessing the option ***Versioning / Builds / Create new***).
 
