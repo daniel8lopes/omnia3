@@ -18,5 +18,5 @@ A configuration file (_**config.json**_) is distributed together with the connec
 
 - **Endpoint**: The URL of the OMNIA subscription you want the connector to be used on.
 - **Client**: [Click here to know how to get the Client Id and Secret](omnia3_management_introduction.html#52-get-the-api-client-credentials)
-    - **Id**: Client Id of the connector configuration you registered on the platform.
+    - **ID**: Client ID of the connector configuration you registered on the platform.
     - **Secret**: Client Secret of the connector configuration you registered on the platform.
