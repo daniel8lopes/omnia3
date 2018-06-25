@@ -53,7 +53,7 @@ This tutorial assumes that you have created a OMNIA tenant ([click here to see h
 
 5. Navigate to tab *"[Data Behaviours](https://docs.numbersbelieve.com/omnia3_modeler_datasources.html)"*, and define a behaviour to be executed on *"ReadList"*. This behaviour will be used for Query and List requests for this entity.
 
-    Remember to **change** the **```platConfig.Utilizador```** and **```platConfig.PwdUtilizador```** fields to your actual username and password.
+    Remember to **change** the variable **```filePath```** and **```csvSplitChar```** fields with your csv file full path and the character configured as the CSV column delimiter.
 
     Copy and paste the following code:
     ```C#
