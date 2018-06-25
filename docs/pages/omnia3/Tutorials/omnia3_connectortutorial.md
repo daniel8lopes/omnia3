@@ -65,7 +65,7 @@ This tutorial assumes that you have created a OMNIA tenant ([click here to see h
     int numberOfRecords = 0;
     using (var reader = new System.IO.StreamReader(filePath))
     {
-    	while (!reader.EndOfStream)
+        while (!reader.EndOfStream)
         {
             var line = reader.ReadLine();
             var values = line.Split(csvSplitChar);
@@ -77,7 +77,7 @@ This tutorial assumes that you have created a OMNIA tenant ([click here to see h
                 numberOfRecords++;
                 listData.Add(contactData);
             }
-    	}
+        }
     }
     
     return (numberOfRecords, listData);
