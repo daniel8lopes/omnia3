@@ -160,12 +160,12 @@ This tutorial assumes that you have created a OMNIA tenant ([click here to see h
 
     ```C#
     string filePath = @"C:\temp\Contacts.csv";
-    char csvSplitChar = ';':
+    char csvSplitChar = ';';
     string contactDetails = $"\n{dto._code}{csvSplitChar}{dto._name}{csvSplitChar}{dto.BirthDate}{csvSplitChar}{dto.PhoneNo}";
 
-    if (System.IO.File.Exists(fileName))
+    if (System.IO.File.Exists(filePath))
     {
-        System.IO.File.AppendAllText(fileName, contactDetails);
+        System.IO.File.AppendAllText(filePath, contactDetails);
     }
 
     return dto;
