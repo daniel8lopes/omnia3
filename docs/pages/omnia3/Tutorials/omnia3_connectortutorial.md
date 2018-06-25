@@ -53,7 +53,7 @@ This tutorial assumes that you have created a OMNIA tenant ([click here to see h
 
 5. Navigate to tab *"[Data Behaviours](https://docs.numbersbelieve.com/omnia3_modeler_datasources.html)"*, and define a behaviour to be executed on *"ReadList"*. This behaviour will be used for Query and List requests for this entity.
 
-    Remember to **change** the variable **```filePath```** and **```csvSplitChar```** fields with your csv file full path and the character configured as the CSV column delimiter.
+    Remember to **change** the variable **```filePath```** and **```csvSplitChar```** with your csv file full path and the character configured as the CSV column delimiter.
 
     Copy and paste the following code:
     ```C#
@@ -85,7 +85,7 @@ This tutorial assumes that you have created a OMNIA tenant ([click here to see h
 
 6. Create a new Data Behaviour for the operation *"Read"*, so that data is retrieved when an Employee is edited on OMNIA.
 
-    Remember to **change** the **```platConfig.Utilizador```** and **```platConfig.PwdUtilizador```** fields to your actual username and password.
+    Remember to **change** the variable **```filePath```** and **```csvSplitChar```**  with your csv file full path and the character configured as the CSV column delimiter.
 
     Copy and paste the following code:
 
@@ -98,22 +98,22 @@ This tutorial assumes that you have created a OMNIA tenant ([click here to see h
     {
     	while (!reader.EndOfStream)
     	{
-    		var line = reader.ReadLine();
+            var line = reader.ReadLine();
             var values = line.Split(csvSplitChar);
             var valuesLen = values.Length;
             if (values[0].Equals(identifier, System.StringComparison.InvariantCultureIgnoreCase)) {
-                            
-            contact._code = values[0];
-            contact._name = values[1];
-            if (valuesLen > 2)
-            {
-                DateTime birthDate;
-                if (DateTime.TryParse(values[2], out birthDate)) {
-    				contact.BirthDate = birthDate;
+                           
+                contact._code = values[0];
+                contact._name = values[1];
+                if (valuesLen > 2)
+                {
+                    DateTime birthDate;
+                    if (DateTime.TryParse(values[2], out birthDate)) {
+                        contact.BirthDate = birthDate;
+                    }
                 }
-            }
-    		if (valuesLen > 3)
-    			contact.PhoneNo = values[3];
+            if (valuesLen > 3)
+                contact.PhoneNo = values[3];
             }
         }
     }
