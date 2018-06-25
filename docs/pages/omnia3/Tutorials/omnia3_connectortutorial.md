@@ -105,7 +105,8 @@ This tutorial assumes that you have created a OMNIA tenant ([click here to see h
                             
             contact._code = values[0];
             contact._name = values[1];
-            if (valuesLen > 2) {
+            if (valuesLen > 2)
+            {
     			DateTime birthDate;
                 if (DateTime.TryParse(values[2], out birthDate)) {
     				contact.BirthDate = birthDate;
