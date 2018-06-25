@@ -51,7 +51,7 @@ This tutorial assumes that you have created a OMNIA tenant ([click here to see h
     ![Modeler create Agent](/images/tutorials/primaveraconnector/add-new-agent.png)
 
 
-5. Navigate to tab *"[Data Behaviours](https://docs.numbersbelieve.com/omnia3_modeler_datasources.html)"*, and define a behaviour to be executed on *"ReadList"*. This behaviour will be used for Query and List requests for this entity.
+4. Navigate to tab *"[Data Behaviours](https://docs.numbersbelieve.com/omnia3_modeler_datasources.html)"*, and define a behaviour to be executed on *"ReadList"*. This behaviour will be used for Query and List requests for this entity.
 
     Remember to **change** the variable **```filePath```** and **```csvSplitChar```** with your csv file full path and the character configured as the CSV column delimiter.
 
@@ -83,7 +83,7 @@ This tutorial assumes that you have created a OMNIA tenant ([click here to see h
     return (numberOfRecords, listData);
     ```
 
-6. Create a new Data Behaviour for the operation *"Read"*, so that data is retrieved when a Contact is edited on OMNIA.
+5. Create a new Data Behaviour for the operation *"Read"*, so that data is retrieved when a Contact is edited on OMNIA.
 
     Remember to **change** the variable **```filePath```** and **```csvSplitChar```**  with your csv file full path and the character configured as the CSV column delimiter.
 
@@ -121,7 +121,7 @@ This tutorial assumes that you have created a OMNIA tenant ([click here to see h
     return contact;
     ```
 
-7. On *"Data Behaviours"* of Agent Contact, define a behaviour, to be executed on *"Update"* (when a Contact is updated on OMNIA). 
+6. On *"Data Behaviours"* of Agent Contact, define a behaviour, to be executed on *"Update"* (when a Contact is updated on OMNIA). 
 
     Remember to **change** the variable **```filePath```** and **```csvSplitChar```**  with your csv file full path and the character configured as the CSV column delimiter.
 
@@ -170,7 +170,7 @@ This tutorial assumes that you have created a OMNIA tenant ([click here to see h
     return dto;
     ```
     
-7. On *"Data Behaviours"* of Agent Contact, define a behaviour, to be executed on *"Delete"* (when a Contact is deleted on OMNIA). 
+8. On *"Data Behaviours"* of Agent Contact, define a behaviour, to be executed on *"Delete"* (when a Contact is deleted on OMNIA). 
 
     Remember to **change** the variable **```filePath```** and **```csvSplitChar```**  with your csv file full path and the character configured as the CSV column delimiter.
 
@@ -200,12 +200,12 @@ This tutorial assumes that you have created a OMNIA tenant ([click here to see h
     return contact;
     ```
 
-8. Perform a new Build (by accessing the option ***Versioning / Builds / Create new***).
+9. Perform a new Build (by accessing the option ***Versioning / Builds / Create new***).
 
-9. Go to the Application area.
+10. Go to the Application area.
 
-10. Create a new instance of the Primavera data source, with code *"DEMO"* and with the Code of the Connector that you have created.
+11. Create a new instance of the Primavera data source, with code *"DEMO"* and with the Code of the Connector that you have created.
 
-11. On left side menu, navigate to *Configurations / Employee*, identify the Primavera data source instance (DEMO) and check that the list is filled with data retrieved from Primavera.
+12. On left side menu, navigate to *Configurations / Contact*, identify the Primavera data source instance (DEMO) and check that the list is filled with data retrieved from Primavera.
 
-12. Now you can List and Update Employees directly on your on-premise system, providing your connector is correctly configured and running.
+13. Now you can List and Update Contacts directly on your on-premise system, providing your connector is correctly configured and running.
