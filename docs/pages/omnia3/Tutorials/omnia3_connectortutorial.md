@@ -50,9 +50,13 @@ This tutorial assumes that you have created a OMNIA tenant ([click here to see h
 
     ![Modeler create Agent](/images/tutorials/csvconnector/modeler-add-agent-contact.png)
 
-4. Create attributes BirthDate and PhoneNo
+4. On Agent *"Contact"*, create the following attributes:
 
-4. Navigate to tab *"[Data Behaviours](https://docs.numbersbelieve.com/omnia3_modeler_datasources.html)"*, and define a behaviour to be executed on *"ReadList"*. This behaviour will be used for Query and List requests for this entity.
+- BirthDate
+
+- PhoneNo
+
+5. Navigate to tab *"[Data Behaviours](https://docs.numbersbelieve.com/omnia3_modeler_datasources.html)"*, and define a behaviour to be executed on *"ReadList"*. This behaviour will be used for Query and List requests for this entity.
 
     Remember to **change** the variable **```filePath```** and **```csvSplitChar```** with your csv file full path and the character configured as the CSV column delimiter.
 
@@ -84,7 +88,7 @@ This tutorial assumes that you have created a OMNIA tenant ([click here to see h
     return (numberOfRecords, listData);
     ```
 
-5. Create a new Data Behaviour for the operation *"Read"*, so that data is retrieved when a Contact is edited on OMNIA.
+6. Create a new Data Behaviour for the operation *"Read"*, so that data is retrieved when a Contact is edited on OMNIA.
 
     Remember to **change** the variable **```filePath```** and **```csvSplitChar```**  with your csv file full path and the character configured as the CSV column delimiter.
 
@@ -122,7 +126,7 @@ This tutorial assumes that you have created a OMNIA tenant ([click here to see h
     return contact;
     ```
 
-6. On *"Data Behaviours"* of Agent Contact, define a behaviour, to be executed on *"Update"* (when a Contact is updated on OMNIA). 
+7. On *"Data Behaviours"* of Agent Contact, define a behaviour, to be executed on *"Update"* (when a Contact is updated on OMNIA). 
 
     Remember to **change** the variable **```filePath```** and **```csvSplitChar```**  with your csv file full path and the character configured as the CSV column delimiter.
 
@@ -155,7 +159,7 @@ This tutorial assumes that you have created a OMNIA tenant ([click here to see h
     return contact;
     ```
 
-7. On *"Data Behaviours"* of Agent Contact, define a behaviour, to be executed on *"Create"* (when a Contact is updated on OMNIA). 
+8. On *"Data Behaviours"* of Agent Contact, define a behaviour, to be executed on *"Create"* (when a Contact is updated on OMNIA). 
 
     Remember to **change** the variable **```filePath```** and **```csvSplitChar```**  with your csv file full path and the character configured as the CSV column delimiter.
 
@@ -174,7 +178,7 @@ This tutorial assumes that you have created a OMNIA tenant ([click here to see h
     return dto;
     ```
     
-8. On *"Data Behaviours"* of Agent Contact, define a behaviour, to be executed on *"Delete"* (when a Contact is deleted on OMNIA). 
+9. On *"Data Behaviours"* of Agent Contact, define a behaviour, to be executed on *"Delete"* (when a Contact is deleted on OMNIA). 
 
     Remember to **change** the variable **```filePath```** and **```csvSplitChar```**  with your csv file full path and the character configured as the CSV column delimiter.
 
@@ -204,12 +208,12 @@ This tutorial assumes that you have created a OMNIA tenant ([click here to see h
     return true;
     ```
 
-9. Perform a new Build (by accessing the option ***Versioning / Builds / Create new***).
+10. Perform a new Build (by accessing the option ***Versioning / Builds / Create new***).
 
-10. Go to the Application area.
+11. Go to the Application area.
 
-11. Create a new instance of the CSVSource data source, with code *"LOCAL"* and with the Code of the Connector that you have created.
+12. Create a new instance of the CSVSource data source, with code *"LOCAL"* and with the Code of the Connector that you have created.
 
-12. On left side menu, navigate to *Configurations / Contact*, identify the CSVSource data source instance (LOCAL) and check that the list is filled with data retrieved from CSVSource.
+13. On left side menu, navigate to *Configurations / Contact*, identify the CSVSource data source instance (LOCAL) and check that the list is filled with data retrieved from CSVSource.
 
-13. Now you can List and Update Contacts directly on your on-premise system, providing your connector is correctly configured and running.
+14. Now you can List and Update Contacts directly on your on-premise system, providing your connector is correctly configured and running.
