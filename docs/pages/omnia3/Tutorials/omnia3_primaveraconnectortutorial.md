@@ -35,7 +35,7 @@ This tutorial also requires an access to [Primavera ERP](https://pt.primaverabss
 
 5. Click the button ***Add new*** to grant the connector user access to the tenant. The user can be retrieved on step 3, property "Client Email"
 
-## 3. CRUD operations
+## 4. CRUD operations
 
 1. Access Omnia homepage, select the tenant where you are going to model and you will be redirected to the modeling area.
 
