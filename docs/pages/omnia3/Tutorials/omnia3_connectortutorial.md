@@ -26,7 +26,7 @@ This tutorial assumes that you have created a OMNIA tenant ([click here to see h
 
 1. Start by accessing the management area, by clicking the option "Go to Tenants management".
 
-2. Through the left side menu, create a new connector by accessing the option ***Connectors / Add new***. Set its Code and Name as "TutorialConnector"
+2. Through the left side menu, create a new connector by accessing the option ***Connectors / Add new***. Set its Code and Name as "CSVConnector"
 
 3. Select the connector, and a modal with connector data should be shown.
 
