@@ -83,7 +83,7 @@ This tutorial assumes that you have created a OMNIA tenant ([click here to see h
     return (numberOfRecords, listData);
     ```
 
-6. Create a new Data Behaviour for the operation *"Read"*, so that data is retrieved when an Employee is edited on OMNIA.
+6. Create a new Data Behaviour for the operation *"Read"*, so that data is retrieved when a Contact is edited on OMNIA.
 
     Remember to **change** the variable **```filePath```** and **```csvSplitChar```**  with your csv file full path and the character configured as the CSV column delimiter.
 
@@ -121,25 +121,33 @@ This tutorial assumes that you have created a OMNIA tenant ([click here to see h
     return contact;
     ```
 
-7. On *"Data Behaviours"* of Agent Employee, define a behaviour, to be executed on *"Update"* (when an Employee is updated on OMNIA). 
+7. On *"Data Behaviours"* of Agent Contact, define a behaviour, to be executed on *"Update"* (when a Contact is updated on OMNIA). 
 
-    Remember to **change** the **```"USER"```** and **```"PASS"```** fields to your actual username and password.
+Remember to **change** the variable **```filePath```** and **```csvSplitChar```**  with your csv file full path and the character configured as the CSV column delimiter.
 
     Copy and paste the following code:
 
     ```C#
-    ErpBS bsERP = new ErpBS();
-    bsERP.AbreEmpresaTrabalho(EnumTipoPlataforma.tpEmpresarial, "DEMO", "USER", "PASS");
-
-    RhpBEFuncionario funcionario = bsERP.RecursosHumanos.Funcionarios.Edita(dto._code);
-
-    funcionario.set_Nome(dto._name);
-
-    bsERP.RecursosHumanos.Funcionarios.Actualiza(funcionario);
-
-    bsERP.FechaEmpresaTrabalho();
-
-    return dto;
+    ContactDto contact = new ContactDto();
+    string fileContent = "";
+    string fileName =@"C:\Users\NB\Desktop\Contacts.csv"; 
+    
+    using (var reader = new System.IO.StreamReader(fileName))
+    {
+    	while (!reader.EndOfStream)
+        {
+    		var line = reader.ReadLine();
+            var values = line.Split(';');
+            var valuesLen = values.Length;
+            if (!values[0].Equals(identifier, System.StringComparison.InvariantCultureIgnoreCase)) {
+    			fileContent+= "\n"+line;						
+    		}
+        }								
+    }
+    			
+    System.IO.File.WriteAllText(fileName, fileContent);
+    			
+    return contact;
     ```
 
 8. Perform a new Build (by accessing the option ***Versioning / Builds / Create new***).
