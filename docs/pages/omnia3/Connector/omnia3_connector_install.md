@@ -20,3 +20,7 @@ A configuration file (_**config.json**_) is distributed together with the connec
 - **Client**: [Click here to know how to get the Client ID and Secret](omnia3_management_introduction.html#52-get-the-api-client-credentials)
     - **ID**: Client ID of the connector configuration you registered on the platform.
     - **Secret**: Client Secret of the connector configuration you registered on the platform.
+
+It also supports optional parameters:
+
+- **BehavioursManagerPort**: The port that the connector will open its behaviours manager on. If ommitted, defaults to **49995**. If this is already in use (i.e. you want to have two connectors in parallel), you must add this configuration.
