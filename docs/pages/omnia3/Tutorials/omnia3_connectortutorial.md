@@ -57,37 +57,27 @@ This tutorial assumes that you have created a OMNIA tenant ([click here to see h
 
     Copy and paste the following code:
     ```C#
-    List<IDictionary<string, object>> employeesList = new List<IDictionary<string, object>>();
-
-    StdBSConfApl platConfig = new StdBSConfApl();
-
-    platConfig.AbvtApl = "ERP";
-    platConfig.Instancia = "default";
-    platConfig.Utilizador = "USER";
-    platConfig.PwdUtilizador = "PASS";
-    platConfig.LicVersaoMinima = "09.00";
-
-    Interop.StdPlatBS900.StdPlatBS bsPlat = new Interop.StdPlatBS900.StdPlatBS();
-
-    Interop.StdBE900.StdBETransaccao trans = null;
-    bsPlat.AbrePlataformaEmpresa("DEMO", trans, platConfig, Interop.StdBE900.EnumTipoPlataforma.tpEmpresarial, string.Empty);
-
-    Interop.StdBE900.StdBELista queryResults = bsPlat.Registos.Consulta($"SELECT Employees.EmployeesCount, Codigo, Nome FROM Funcionarios CROSS JOIN (SELECT Count(*) AS EmployeesCount FROM Funcionarios) AS Employees ORDER BY Codigo OFFSET {(page - 1)*pageSize} ROWS FETCH NEXT {pageSize} ROWS ONLY");
-
-    int numberOfRecords = Convert.ToInt32(queryResults.Valor("EmployeesCount").ToString());
-    while (!queryResults.NoFim())
+    List<IDictionary<string, object>> listData = new List<IDictionary<string, object>>();
+    
+    int numberOfRecords = 0;
+    using (var reader = new System.IO.StreamReader(@"C:\Users\NB\Desktop\Contacts.csv"))
     {
-
-        var employee = new Dictionary<string, object>() {
-            { "_code", queryResults.Valor("Codigo").ToString()},
-            { "_name", queryResults.Valor("Nome").ToString()}
-        };
-
-        employeesList.Add(employee);
-        queryResults.Seguinte();
+    	while (!reader.EndOfStream)
+        {
+    		var line = reader.ReadLine();
+            var values = line.Split(';');
+            Dictionary<string, object> contactData = new Dictionary<string, object>();
+            if (values.Length > 1)
+            {
+    			contactData.Add("_code", values[0]);
+                contactData.Add("_name", values[1]);
+                numberOfRecords++;
+                listData.Add(contactData);
+    		}
+    	}
     }
-    bsPlat.FechaPlataformaEmpresa();
-    return (numberOfRecords, employeesList);
+    
+    return (numberOfRecords, listData);
     ```
 
 6. Create a new Data Behaviour for the operation *"Read"*, so that data is retrieved when an Employee is edited on OMNIA.
