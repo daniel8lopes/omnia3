@@ -48,7 +48,7 @@ This tutorial assumes that you have created a OMNIA tenant ([click here to see h
 
 3. Create a new Agent with name *"Contact"*, and set it as using the external data source *"CSVSource"* that you created earlier.
 
-    ![Modeler create Agent](/images/tutorials/primaveraconnector/modeler-add-agent-contact.png)
+    ![Modeler create Agent](/images/tutorials/csvconnector/modeler-add-agent-contact.png)
 
 4. Create attributes BirthDate and PhoneNo
 
