@@ -46,19 +46,10 @@ This tutorial assumes that you have created a OMNIA tenant ([click here to see h
 
     ![Modeler create DataSource](/images/tutorials/primaveraconnector/add-new-datasource.png)
 
-3. Create a new Agent with name *"Employee"*, and set it as using the external data source *"Primavera"* that you created earlier.
+3. Create a new Agent with name *"Contact"*, and set it as using the external data source *"Primavera"* that you created earlier.
 
     ![Modeler create Agent](/images/tutorials/primaveraconnector/add-new-agent.png)
 
-4. On Agent *"Employee"*, navigate to tab *"[Data References](https://docs.numbersbelieve.com/omnia3_modeler_references.html)"*, and define a reference for Primavera assemblies:
-
-    1. Interop.StdPlatBS900.dll
-    2. Interop.StdBE900.dll
-    3. Interop.RhpBE900.dll
-    4. Interop.IRhpBS900.dll
-    5. Interop.ErpBS900.dll
-
-    ![Modeler add reference](/images/tutorials/primaveraconnector/add-new-reference.png)
 
 5. Navigate to tab *"[Data Behaviours](https://docs.numbersbelieve.com/omnia3_modeler_datasources.html)"*, and define a behaviour to be executed on *"ReadList"*. This behaviour will be used for Query and List requests for this entity.
 
