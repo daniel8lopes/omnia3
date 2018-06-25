@@ -27,7 +27,7 @@ This tutorial also requires an access to [Primavera ERP](https://pt.primaverabss
 
 1. Start by accessing the management area, by clicking the option "Go to Tenants management".
 
-2. Through the left side menu, create a new connector by accessing the option ***Connectors / Create new***. Set its Code and Name as "TutorialConnector"
+2. Through the left side menu, create a new connector by accessing the option ***Connectors / Add new***. Set its Code and Name as "TutorialConnector"
 
 3. Select the connector, and a modal with connector data should be shown.
 
@@ -39,7 +39,7 @@ This tutorial also requires an access to [Primavera ERP](https://pt.primaverabss
 
 1. Access Omnia homepage, select the tenant where you are going to model and you will be redirected to the modeling area.
 
-2. Through the left side menu, create a new Data Source by accessing the option ***Data Sources / Create new*** on the top right side. Set its Name as "*Primavera*", Behaviour Runtime and Data Access Runtime as *"External"*.
+2. Through the left side menu, create a new Data Source by accessing the option ***Data Sources / Add new*** on the top right side. Set its Name as "*Primavera*", Behaviour Runtime and Data Access Runtime as *"External"*.
 
     ![Modeler create DataSource](/images/tutorials/primaveraconnector/add-new-datasource.png)
 
