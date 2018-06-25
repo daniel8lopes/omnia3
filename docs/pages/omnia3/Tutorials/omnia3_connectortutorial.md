@@ -90,35 +90,34 @@ This tutorial assumes that you have created a OMNIA tenant ([click here to see h
     Copy and paste the following code:
 
     ```C#
-    EmployeeDto dto = new EmployeeDto();
-    StdBSConfApl platConfig = new StdBSConfApl();
-
-    platConfig.AbvtApl = "ERP";
-    platConfig.Instancia = "default";
-    platConfig.Utilizador = "USER";
-    platConfig.PwdUtilizador = "PASS";
-    platConfig.LicVersaoMinima = "09.00";
-
-    Interop.StdPlatBS900.StdPlatBS bsPlat = new Interop.StdPlatBS900.StdPlatBS();
-
-    Interop.StdBE900.StdBETransaccao trans = null;
-    bsPlat.AbrePlataformaEmpresa("DEMO", trans, platConfig, Interop.StdBE900.EnumTipoPlataforma.tpEmpresarial, string.Empty);
-
-    Interop.StdBE900.StdBELista queryResults = bsPlat.Registos.Consulta($"SELECT Codigo, Nome, Email, Telefone FROM Funcionarios WHERE Codigo = '{identifier}'");
-
-    if (!queryResults.Vazia())
+    string filePath = @"C:\temp\Contacts.csv";
+    char csvSplitChar = ';':
+    
+    ContactDto contact = new ContactDto();
+    using (var reader = new System.IO.StreamReader(filePath))
     {
-        dto._code = queryResults.Valor("Codigo").ToString();
-        dto._name = queryResults.Valor("Nome").ToString();
-
+    	while (!reader.EndOfStream)
+    	{
+    		var line = reader.ReadLine();
+            var values = line.Split(csvSplitChar);
+            var valuesLen = values.Length;
+            if (values[0].Equals(identifier, System.StringComparison.InvariantCultureIgnoreCase)) {
+                            
+            contact._code = values[0];
+            contact._name = values[1];
+            if (valuesLen > 2) {
+    			DateTime birthDate;
+                if (DateTime.TryParse(values[2], out birthDate)) {
+    				contact.BirthDate = birthDate;
+                }
+            }
+    		if (valuesLen > 3)
+    			contact.PhoneNo = values[3];
+            }
+        }
     }
-    else {
-        throw new Exception($"Could not retrieve Employee with code {identifier}");
-    }
-
-    bsPlat.FechaPlataformaEmpresa();
-
-    return dto;
+    
+    return contact;
     ```
 
 7. On *"Data Behaviours"* of Agent Employee, define a behaviour, to be executed on *"Update"* (when an Employee is updated on OMNIA). 
