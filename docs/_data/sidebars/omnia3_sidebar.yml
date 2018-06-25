@@ -53,6 +53,10 @@ entries:
     - title: Data Sources Tutorial
       url: /omnia3_datasourcetutorial.html
       output: web, pdf
+      
+    - title: Connector Tutorial
+      url: /omnia3_connectortutorial.html
+      output: web, pdf
 
     - title: PRIMAVERA Connector Tutorial
       url: /omnia3_primaveraconnectortutorial.html
