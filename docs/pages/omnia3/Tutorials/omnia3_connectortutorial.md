@@ -92,13 +92,13 @@ This tutorial assumes that you have created a OMNIA tenant ([click here to see h
 
     ```C#
     string filePath = @"C:\temp\Contacts.csv";
-    char csvSplitChar = ';':
+    char csvSplitChar = ';';
     
     ContactDto contact = new ContactDto();
     using (var reader = new System.IO.StreamReader(filePath))
     {
-    	while (!reader.EndOfStream)
-    	{
+ 	    while (!reader.EndOfStream)
+ 	    {
             var line = reader.ReadLine();
             var values = line.Split(csvSplitChar);
             var valuesLen = values.Length;
