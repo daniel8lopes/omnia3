@@ -44,7 +44,7 @@ This tutorial assumes that you have created a OMNIA tenant ([click here to see h
 
 2. Through the left side menu, create a new Data Source by accessing the option ***Data Sources / Add new*** on the top right side. Set its Name as "*CSVSource*", Behaviour Runtime and Data Access Runtime as *"External"*.
 
-    ![Modeler create DataSource](/images/tutorials/csvconnector/application_datasource.png)
+    ![Modeler create DataSource](/images/tutorials/csvconnector/modeler-add-datasource.png)
 
 3. Create a new Agent with name *"Contact"*, and set it as using the external data source *"CSVSource"* that you created earlier.
 
