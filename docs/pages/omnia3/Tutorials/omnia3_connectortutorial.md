@@ -137,12 +137,12 @@ This tutorial assumes that you have created a OMNIA tenant ([click here to see h
     {
     	while (!reader.EndOfStream)
         {
-    		var line = reader.ReadLine();
+            var line = reader.ReadLine();
             var values = line.Split(csvSplitChar);
             var valuesLen = values.Length;
             if (!values[0].Equals(identifier, System.StringComparison.InvariantCultureIgnoreCase)) {
-    			fileContent+= "\n"+line;						
-    		}
+                fileContent+= "\n"+line;						
+            }
         }								
     }
     			
