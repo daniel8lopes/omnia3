@@ -35,6 +35,10 @@ This tutorial also requires an access to [Primavera ERP](https://pt.primaverabss
 
 5. Click the button ***Add new*** to grant the connector user access to the tenant. The user can be retrieved on step 3, property "Client Email"
 
+6. Now use these configurations to configure a connector in the machine with the Primavera ERP, following the [installation guide](omnia3_connector_install.html) and [configuration guide](omnia3_connector_configuration.html).
+
+7. Start the configured connector.
+
 ## 4. CRUD operations
 
 1. Access Omnia homepage, select the tenant where you are going to model and you will be redirected to the modeling area.
@@ -163,4 +167,4 @@ This tutorial also requires an access to [Primavera ERP](https://pt.primaverabss
 
 11. On left side menu, navigate to *Configurations / Employee*, identify the Primavera data source instance (DEMO) and check that the list is filled with data retrieved from Primavera.
 
-12. Now you can List and Update Employees directly on your on-premise system.
+12. Now you can List and Update Employees directly on your on-premise system, providing your connector is correctly configured and running.
