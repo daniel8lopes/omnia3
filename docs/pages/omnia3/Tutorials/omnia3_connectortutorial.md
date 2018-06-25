@@ -67,16 +67,16 @@ This tutorial assumes that you have created a OMNIA tenant ([click here to see h
     {
     	while (!reader.EndOfStream)
         {
-    		var line = reader.ReadLine();
+            var line = reader.ReadLine();
             var values = line.Split(csvSplitChar);
             Dictionary<string, object> contactData = new Dictionary<string, object>();
             if (values.Length > 1)
             {
-    			contactData.Add("_code", values[0]);
+                contactData.Add("_code", values[0]);
                 contactData.Add("_name", values[1]);
                 numberOfRecords++;
                 listData.Add(contactData);
-    		}
+            }
     	}
     }
     
