@@ -24,3 +24,17 @@ A configuration file (_**config.json**_) is distributed together with the connec
 It also supports optional parameters:
 
 - **BehavioursManagerPort**: The port that the connector will open its behaviours manager on. If ommitted, defaults to **49995**. If this is already in use (i.e. you want to have two connectors in parallel), you must add this configuration.
+
+## 2. Managing the connector
+
+When the connector is installed as a Windows service, it can be started or stopped on Windows Services list.
+
+The connector can also be started through console, by inserting on cmd `Omnia.Connector.Windows.exe`.
+
+Either way, the connector will launch three different processes on the machine:
+
+- Omnia.Connector.Windows.exe
+- Omnia.Services.Behaviours.Manager.exe
+- Omnia.Services.Behaviours.Server.exe
+
+All processes are essential and should not be manually closed, so that the connector is always responsive.
