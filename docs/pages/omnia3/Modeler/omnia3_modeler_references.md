@@ -38,4 +38,9 @@ As the platform uses .NET Core, all references that run on an Internal data sour
 - **.NET Core 1.0 - 2.1**
 - **.NET Standard 1.0 - 2.0**
 
+References that run on External data sources have to be compiled against:
+- **.NET Full**
+- **.NET Standard 1.0 - 2.0**
+
+
 This is the only way we can guarantee compatibility. The most recent version of either is recommended, if you're developing a library yourself.
