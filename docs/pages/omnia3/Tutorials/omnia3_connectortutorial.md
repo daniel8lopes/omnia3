@@ -11,9 +11,9 @@ folder: omnia3
 
 Based on a simple Contact management scenario, this tutorial shows a case of how easily OMNIA can use information from an external data source, using the Omnia connector to access data located on-premises. 
 
-This tutorial is an advanced implementation of the [data sources tutorial](omnia3_datasourcetutorial.html) in order to understand how data sources work, please read [this section of the documentation](omnia3_modeler_datasources.html).
+This tutorial is an advanced implementation of the [data sources tutorial](omnia3_datasourcetutorial.html). In order to understand how data sources work, please read [this section of the documentation](omnia3_modeler_datasources.html).
 
-On the CRUD Operations tutorial area, we are going to evaluate how to interact with an external data source, by reading and manipulating its data.
+For this CRUD Operations tutorial, we are going to show how to interact with an external data source, by reading and manipulating its data.
 
 As our custom data source, we are going to use a CSV file with a list of Contacts.
 
@@ -52,11 +52,11 @@ This tutorial assumes that you have created a OMNIA tenant ([click here to see h
 
 4. On Agent *"Contact"*, create the following attributes:
 
-    - BirthDate
+    - BirthDate (Primitive/Date)
 
 	![Modeler create BirthDate_attribute](/images/tutorials/csvconnector/modeler-add-contact-birthdate.png)
 
-    - PhoneNo
+    - PhoneNo (Primitive/Text)
 
 	![Modeler create PhoneNo_attribute](/images/tutorials/csvconnector/modeler-add-contact-phone.png)
 
