@@ -73,6 +73,9 @@ Here are some usage suggestions for each type of behaviour - though, of course, 
 - **Before Save**:
     - Performing final document-wide validations;
     - Integrating with external APIs;
+    
+ Keep in mind that all Omnia entities are independent, and therefore an entity behaviour should not depend on another entity. 
+ As an example, a Commitment behaviour code should not be dependent of a specific Document, because a Commitment can be available on more than one Document. On these scenarios, the behaviour should be defined on the Document.
 
 ## 4. Referencing external libraries in Behaviours
 
