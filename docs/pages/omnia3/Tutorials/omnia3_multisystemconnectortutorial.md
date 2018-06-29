@@ -99,7 +99,7 @@ This tutorial also requires an access to [Primavera ERP](https://pt.primaverabss
 
 6. Create a new Data Behaviour for the operation “Read”, so that data is retrieved when an Employee is edited on OMNIA.
 
-Copy and paste the following code (Remember to change the "USER" and "PASS" fields to your actual username and password.):
+    Copy and paste the following code (Remember to change the "USER" and "PASS" fields to your actual username and password.):
 
     ```C#
 	SupplierDto dto = new SupplierDto();
