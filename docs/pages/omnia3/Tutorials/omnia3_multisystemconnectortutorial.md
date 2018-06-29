@@ -43,9 +43,12 @@ This tutorial also requires an access to [Primavera ERP](https://pt.primaverabss
 
 1. Access Omnia homepage, select the tenant where you are going to model and you will be redirected to the modeling area.
 
-2. Through the left side menu, create a new Data Source by accessing the option ***Data Sources / Add new*** on the top right side. Set its Name as "*Primavera*", Behaviour Runtime and Data Access Runtime as *"External"*.
 
-    ![Modeler create DataSource](/images/tutorials/primaveraconnector/add-new-datasource.png)
+3. Through the left side menu, create a new Agent by accessing the option ***Agents / Add new*** on the top right side. Set *"Company"* as its with name.
+
+3. Through the left side menu, create a new Generic Entity by accessing the option ***Generic Entities / Add new***. Set *"Artist"* as its with name.
+    
+4. Through the left side menu, create a new Data Source by accessing the option ***Data Sources / Add new*** on the top right side. Set its Name as "*Primavera*", Behaviour Runtime as *"Internal"* and Data Access Runtime as *"External"*.
 
 3. Create a new Agent with name *"Supplier"*, and set it as using the external data source *"Primavera"* that you created earlier.
 
@@ -55,42 +58,43 @@ This tutorial also requires an access to [Primavera ERP](https://pt.primaverabss
 
     1. Interop.StdBE900.dll
     2. Interop.ErpBS900.dll
-
-    ![Modeler add reference](/images/tutorials/primaveraconnector/add-new-reference.png)
+    3. Interop.IGcpBS900.dll
+    4. Interop.GcpBE900.dll
 
 5. Navigate to tab *"[Data Behaviours](https://docs.numbersbelieve.com/omnia3_modeler_datasources.html)"*, and define a behaviour to be executed on *"ReadList"*. This behaviour will be used for Query and List requests for this entity.
 
     Copy and paste the following code (*Remember to **change** the **```"USER"```** and **```"PASS"```** fields to your actual username and password.*):
 
     ```C#
-    try
-    {
-	List<IDictionary<string, object>> suppliersList = new List<IDictionary<string, object>>();
-
-	ErpBS bsERP = new ErpBS();
-	bsERP.AbreEmpresaTrabalho(EnumTipoPlataforma.tpEmpresarial, "DEMO", "NB", "NB_2012#");
-        StdBELista queryResults = bsERP.Consulta($"SELECT Suppliers.SuppliersCount, Fornecedor, Nome from Fornecedores CROSS JOIN       (SELECT Count(*) AS SuppliersCount FROM Fornecedores) AS Suppliers ORDER BY Fornecedor ASC OFFSET {(page - 1)*pageSize} ROWS FETCH NEXT {pageSize} ROWS ONLY");
-
-        int numberOfRecords = Convert.ToInt32(queryResults.Valor("SuppliersCount").ToString());
-        while (!queryResults.NoFim())
+	try
         {
+        	List<IDictionary<string, object>> suppliersList = new List<IDictionary<string, object>>();
 
-            var supplier = new Dictionary<string, object>() {
-		{ "_code", queryResults.Valor("Fornecedor").ToString()},
-                { "_name", queryResults.Valor("Nome").ToString()}
-            };
+                ErpBS bsERP = new ErpBS();
+		
+		bsERP.AbreEmpresaTrabalho(EnumTipoPlataforma.tpEmpresarial, "DEMO", "NB", "NB_2012#");
+                StdBELista queryResults = bsERP.Consulta($"SELECT Suppliers.SuppliersCount, Fornecedor, Nome from Fornecedores CROSS JOIN (SELECT Count(*) AS SuppliersCount FROM Fornecedores) AS Suppliers ORDER BY Fornecedor ASC OFFSET {(page - 1)*pageSize} ROWS FETCH NEXT {pageSize} ROWS ONLY");
 
-            suppliersList.Add(supplier);
-            queryResults.Seguinte();
+                int numberOfRecords = Convert.ToInt32(queryResults.Valor("SuppliersCount").ToString());
+                while (!queryResults.NoFim())
+                {
+
+                    var supplier = new Dictionary<string, object>() {
+			{ "_code", queryResults.Valor("Fornecedor").ToString()},
+                        { "_name", queryResults.Valor("Nome").ToString()}
+                    };
+
+                    suppliersList.Add(supplier);
+                    queryResults.Seguinte();
+                }
+                
+        	return (numberOfRecords, suppliersList);
         }
-    
-        return (numberOfRecords, suppliersList);
-    }
-    catch (Exception e)
-    {
-        Console.WriteLine(e.Message);
-        throw;
-    }
+        catch (Exception e)
+        {
+		Console.WriteLine(e.Message);
+                throw;
+	}
     ```
 
 7. Create a new Resource with name *"Product"*, and set it as using the external data source *"Primavera"* that you created earlier.
