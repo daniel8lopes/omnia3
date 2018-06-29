@@ -153,30 +153,30 @@ This tutorial also requires an access to [Primavera ERP](https://pt.primaverabss
     ```C#
 	try
         {
-        	List<IDictionary<string, object>> productsList = new List<IDictionary<string, object>>();
+		List<IDictionary<string, object>> productsList = new List<IDictionary<string, object>>();
 
-        	ErpBS bsERP = new ErpBS();
+		ErpBS bsERP = new ErpBS();
 		bsERP.AbreEmpresaTrabalho(EnumTipoPlataforma.tpEmpresarial, "DEMO", "USER", "PASS");
-        	StdBELista queryResults = bsERP.Consulta($"SELECT Products.ProductsCount, Artigo, Descricao from Artigo CROSS JOIN (SELECT Count(*) AS ProductsCount FROM Artigo) AS Products ORDER BY Artigo ASC OFFSET {(page - 1)*pageSize} ROWS FETCH NEXT {pageSize} ROWS ONLY");
+		StdBELista queryResults = bsERP.Consulta($"SELECT Products.ProductsCount, Artigo, Descricao from Artigo CROSS JOIN (SELECT Count(*) AS ProductsCount FROM Artigo) AS Products ORDER BY Artigo ASC OFFSET {(page - 1)*pageSize} ROWS FETCH NEXT {pageSize} ROWS ONLY");
 
-        	int numberOfRecords = Convert.ToInt32(queryResults.Valor("ProductsCount").ToString());
-        	while (!queryResults.NoFim())
-        	{
+		int numberOfRecords = Convert.ToInt32(queryResults.Valor("ProductsCount").ToString());
+		while (!queryResults.NoFim())
+		{
 			var product = new Dictionary<string, object>() {
 				{ "_code", queryResults.Valor("Artigo").ToString()},
-        			{ "_name", queryResults.Valor("Descricao").ToString()}
-        		};
+				{ "_name", queryResults.Valor("Descricao").ToString()}
+			};
 
-        		productsList.Add(product);
-        		queryResults.Seguinte();
-        	}
+			productsList.Add(product);
+			queryResults.Seguinte();
+		}
                 
-        	return (numberOfRecords, productsList);
+		return (numberOfRecords, productsList);
         }
         catch (Exception e)
         {
 		Console.WriteLine(e.Message);
-        	throw;
+		throw;
         }
     ```
 
