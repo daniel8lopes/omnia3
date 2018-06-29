@@ -174,10 +174,10 @@ This tutorial also requires an access to [Primavera ERP](https://pt.primaverabss
 		return (numberOfRecords, productsList);
         }
         catch (Exception e)
-        {
+	{
 		Console.WriteLine(e.Message);
 		throw;
-        }
+	}
     ```
 
 13. Through the left side menu, create a new Commitment by accessing the option ***Commitments / Add new***. Set its Name as "*GoodsPurchaseRequest*", *"Provider"* as the resource to be exchanged, *"Supplier"* as provider agent and *"Company"* as receiver agent. Before saving, check option *"Uses a custom data source?"*, and select *"Primavera"* as Data Source.
