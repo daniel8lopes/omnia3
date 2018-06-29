@@ -76,7 +76,7 @@ This tutorial also requires an access to [Primavera ERP](https://pt.primaverabss
         {
 
             var supplier = new Dictionary<string, object>() {
-			    { "_code", queryResults.Valor("Fornecedor").ToString()},
+		{ "_code", queryResults.Valor("Fornecedor").ToString()},
                 { "_name", queryResults.Valor("Nome").ToString()}
             };
 
