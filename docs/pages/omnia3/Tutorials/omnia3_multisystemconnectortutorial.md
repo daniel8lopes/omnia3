@@ -172,7 +172,7 @@ This tutorial also requires an access to [Primavera ERP](https://pt.primaverabss
 		}
                 
 		return (numberOfRecords, productsList);
-        }
+	}
 	catch (Exception e)
 	{
 		Console.WriteLine(e.Message);
