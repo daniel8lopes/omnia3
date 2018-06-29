@@ -63,29 +63,34 @@ This tutorial also requires an access to [Primavera ERP](https://pt.primaverabss
     Copy and paste the following code (*Remember to **change** the **```"USER"```** and **```"PASS"```** fields to your actual username and password.*):
 
     ```C#
-    List<IDictionary<string, object>> employeesList = new List<IDictionary<string, object>>();
-    ErpBS qbsERP = new ErpBS();
-    
-    qbsERP.AbreEmpresaTrabalho(EnumTipoPlataforma.tpEmpresarial, "DEMO", "USER", "PASS");
-    
-    StdBELista queryResults = qbsERP.Consulta($"SELECT Employees.EmployeesCount, Codigo, Nome FROM Funcionarios CROSS JOIN (SELECT Count(*) AS EmployeesCount FROM  Funcionarios) AS Employees ORDER BY Codigo OFFSET {(page - 1)*pageSize} ROWS FETCH NEXT {pageSize} ROWS ONLY");
-    
-    int numberOfRecords = Convert.ToInt32(queryResults.Valor("EmployeesCount").ToString());
-    while (!queryResults.NoFim())
+    try
     {
+	    List<IDictionary<string, object>> suppliersList = new List<IDictionary<string, object>>();
+
+        ErpBS bsERP = new ErpBS();
+	    bsERP.AbreEmpresaTrabalho(EnumTipoPlataforma.tpEmpresarial, "DEMO", "NB", "NB_2012#");
+        StdBELista queryResults = bsERP.Consulta($"SELECT Suppliers.SuppliersCount, Fornecedor, Nome from Fornecedores CROSS JOIN       (SELECT Count(*) AS SuppliersCount FROM Fornecedores) AS Suppliers ORDER BY Fornecedor ASC OFFSET {(page - 1)*pageSize} ROWS FETCH NEXT {pageSize} ROWS ONLY");
+
+        int numberOfRecords = Convert.ToInt32(queryResults.Valor("SuppliersCount").ToString());
+        while (!queryResults.NoFim())
+        {
+
+            var supplier = new Dictionary<string, object>() {
+			    { "_code", queryResults.Valor("Fornecedor").ToString()},
+                { "_name", queryResults.Valor("Nome").ToString()}
+            };
+
+            suppliersList.Add(supplier);
+            queryResults.Seguinte();
+        }
     
-        var employee = new Dictionary<string, object>() {
-            { "_code", queryResults.Valor("Codigo").ToString()},
-            { "_name", queryResults.Valor("Nome").ToString()}
-        };
-    
-        employeesList.Add(employee);
-        queryResults.Seguinte();
+        return (numberOfRecords, suppliersList);
     }
-    
-    qbsERP.FechaEmpresaTrabalho();
-    
-    return (numberOfRecords, employeesList);
+    catch (Exception e)
+    {
+        Console.WriteLine(e.Message);
+        throw;
+    }
     ```
 
 6. Create a new Data Behaviour for the operation *"Read"*, so that data is retrieved when an Employee is edited on OMNIA.
