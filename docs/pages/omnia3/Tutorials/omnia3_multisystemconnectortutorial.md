@@ -226,7 +226,7 @@ This tutorial also requires an access to [Primavera ERP](https://pt.primaverabss
 
     ```C#
 	OrderLines.ForEach(line => {
- 		line._provider = Supplier;
+		line._provider = Supplier;
 		line._receiver = "AnalogSound";
 		line.Primavera = Primavera;
 	});
