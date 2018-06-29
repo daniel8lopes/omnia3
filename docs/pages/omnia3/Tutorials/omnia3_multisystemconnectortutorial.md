@@ -189,17 +189,39 @@ This tutorial also requires an access to [Primavera ERP](https://pt.primaverabss
 - Primavera
 - AlbumMBid
 
-10. Still on commitment "*GoodsPurchaseRequest*", edit attributes _resource and _provider and set attribute Primavera as the Data Source
+10. On Document "*GoodsPurchaseRequest*", navigate to tab *"[Entity References](https://docs.numbersbelieve.com/omnia3_modeler_references.html)"*, and define a reference for .NET assembly System.Net.Http
 
-11. Through the left side menu, create a new Document by accessing the option ***Documents / Add new***. Set its Name as "*PurchaseOrder*". Before saving, check option *"Uses a custom data source?"*, and select *"Primavera"* as Data Source.
+11. Navigate to tab *"[Entity Behaviours](https://docs.numbersbelieve.com/omnia3_modeler_datasources.html)"*, and define an *"Action"* behaviour to be executed when attribute _resource is changed. This behaviour will be used to retrieve from LastFM API a unique album identifier.
 
-12. On Document "*PurchaseOrder*", add the following attributes:
+    Copy and paste the following code (*Remember to **change** the **```"API_KEY"```** field to your actual LastFM API Key.*):
+
+    ```C#
+	if (!string.IsNullOrEmpty(newValue) && !string.IsNullOrEmpty(this.Artist))
+	{
+		var client = new HttpClient();
+		string apiEndpoint = $"http://ws.audioscrobbler.com/2.0/?method=album.getinfo&api_key=API_KEY&artist={this.Artist}&album={newValue}&format=json";
+		var requestResult = client.GetAsync(apiEndpoint).GetAwaiter().GetResult();
+		string responseBody = requestResult.Content.ReadAsStringAsync().Result;
+		if (!requestResult.IsSuccessStatusCode)
+			throw new Exception("Error on retrieving album: " + responseBody);
+		var response = JsonConvert.DeserializeObject<Dictionary<string, object>>(responseBody);
+		var albumData = JsonConvert.DeserializeObject<Dictionary<string, object>>(response["album"].ToString());
+
+		this._dto.AlbumMBid = albumData["mbid"].ToString();
+	}
+    ```
+
+12. Still on commitment "*GoodsPurchaseRequest*", edit attributes _resource and _provider and set attribute Primavera as the Data Source
+
+13. Through the left side menu, create a new Document by accessing the option ***Documents / Add new***. Set its Name as "*PurchaseOrder*". Before saving, check option *"Uses a custom data source?"*, and select *"Primavera"* as Data Source.
+
+14. On Document "*PurchaseOrder*", add the following attributes:
 
 - Primavera
 - Supplier
 - OrderLines
 
-12. Navigate to tab *"[Entity Behaviours](https://docs.numbersbelieve.com/omnia3_modeler_datasources.html)"*, and define a behaviour to be executed *"After Change"*. This behaviour will be used to set default values on Commitment instances.
+15. Navigate to tab *"[Entity Behaviours](https://docs.numbersbelieve.com/omnia3_modeler_datasources.html)"*, and define a behaviour to be executed *"After Change"*. This behaviour will be used to set default values on Commitment instances.
 
     Copy and paste the following code:
 
@@ -211,14 +233,14 @@ This tutorial also requires an access to [Primavera ERP](https://pt.primaverabss
 	});
     ```
 
-11. On Document "*PurchaseOrder*", navigate to tab *"[Data References](https://docs.numbersbelieve.com/omnia3_modeler_references.html)"*, and define a reference for Primavera assemblies:
+16. On Document "*PurchaseOrder*", navigate to tab *"[Data References](https://docs.numbersbelieve.com/omnia3_modeler_references.html)"*, and define a reference for Primavera assemblies:
 
     1. Interop.StdBE900.dll
     2. Interop.ErpBS900.dll
     3. Interop.IGcpBS900.dll
     4. Interop.GcpBE900.dll
 
-12. Navigate to tab *"[Data Behaviours](https://docs.numbersbelieve.com/omnia3_modeler_datasources.html)"*, and define a behaviour to be executed on *"ReadList"*. This behaviour will be used for Query and List requests for this entity.
+17. Navigate to tab *"[Data Behaviours](https://docs.numbersbelieve.com/omnia3_modeler_datasources.html)"*, and define a behaviour to be executed on *"ReadList"*. This behaviour will be used for Query and List requests for this entity.
 
     Copy and paste the following code (*Remember to **change** the **```"USER"```** and **```"PASS"```** fields to your actual username and password.*):
 
@@ -256,7 +278,7 @@ This tutorial also requires an access to [Primavera ERP](https://pt.primaverabss
 		throw;
 	}
     ```
-13. Navigate to tab *"[Data Behaviours](https://docs.numbersbelieve.com/omnia3_modeler_datasources.html)"*, and define a behaviour to be executed on *"Create"*. This behaviour will be used to create new instances on ERP everytime a new PurchaseOrder is created on Omnia.
+18. Navigate to tab *"[Data Behaviours](https://docs.numbersbelieve.com/omnia3_modeler_datasources.html)"*, and define a behaviour to be executed on *"Create"*. This behaviour will be used to create new instances on ERP everytime a new PurchaseOrder is created on Omnia.
 
     Copy and paste the following code (*Remember to **change** the **```"USER"```** and **```"PASS"```** fields to your actual username and password.*):
 
@@ -295,16 +317,16 @@ This tutorial also requires an access to [Primavera ERP](https://pt.primaverabss
 	}
     ```
 
-10. Behaviour onChange (API LastFM)
+19. Reorganize the PurchaseOrder attributes (by accessing the option ***User Interface***)
 
-10. Create attribute OrderLines
+20. Perform a new Build (by accessing the option ***Versioning / Builds / Create new***).
 
-8. Perform a new Build (by accessing the option ***Versioning / Builds / Create new***).
+21. Go to the Application area.
 
-9. Go to the Application area.
+22. Create a new instance of the Primavera data source, with code *"DEMO"* and with the Code of the Connector that you have created.
 
-10. Create a new instance of the Primavera data source, with code *"DEMO"* and with the Code of the Connector that you have created.
+23. On left side menu, navigate to *Configurations / Supplier*, identify the Primavera data source instance (DEMO) and check that the list is filled with data retrieved from Primavera.
 
-11. On left side menu, navigate to *Configurations / Employee*, identify the Primavera data source instance (DEMO) and check that the list is filled with data retrieved from Primavera.
+24. Now you can try to List and Create new Products directly on your on-premise system
 
-12. Now you can List and Update Employees directly on your on-premise system, providing your connector is correctly configured and running.
+25. 
