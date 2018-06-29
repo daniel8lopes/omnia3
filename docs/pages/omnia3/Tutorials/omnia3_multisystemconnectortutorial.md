@@ -97,6 +97,30 @@ This tutorial also requires an access to [Primavera ERP](https://pt.primaverabss
 	}
     ```
 
+6. Create a new Data Behaviour for the operation “Read”, so that data is retrieved when an Employee is edited on OMNIA.
+
+Copy and paste the following code (Remember to change the "USER" and "PASS" fields to your actual username and password.):
+
+    ```C#
+	SupplierDto dto = new SupplierDto();
+	ErpBS bsERP = new ErpBS();
+    
+	bsERP.AbreEmpresaTrabalho(EnumTipoPlataforma.tpEmpresarial, "DEMO", "NB", "NB_2012#");
+	StdBELista queryResults = bsERP.Consulta($"SELECT Fornecedor, Nome FROM Fornecedores WHERE Fornecedor = '{identifier}'");
+    
+	if (!queryResults.Vazia())
+	{
+     		dto._code = queryResults.Valor("Fornecedor").ToString();
+     		dto._name = queryResults.Valor("Nome").ToString();
+	}
+	else
+	{
+     		throw new Exception($"Could not retrieve Supplier with code '{identifier}'");
+	}
+	bsERP.FechaEmpresaTrabalho();
+	return dto;
+    ```
+    
 7. Create a new Resource with name *"Product"*, and set it as using the external data source *"Primavera"* that you created earlier.
 
     ![Modeler create Agent](/images/tutorials/primaveraconnector/add-new-agent.png)
