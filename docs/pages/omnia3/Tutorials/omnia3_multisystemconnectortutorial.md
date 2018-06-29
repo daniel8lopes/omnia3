@@ -188,7 +188,7 @@ This tutorial also requires an access to [Primavera ERP](https://pt.primaverabss
     - Primavera
     - AlbumMBid
 
-15. On Document "*GoodsPurchaseRequest*", navigate to tab *"[Entity References](https://docs.numbersbelieve.com/omnia3_modeler_references.html)"*, and define a reference for .NET assembly System.Net.Http
+15. On Commitment "*GoodsPurchaseRequest*", navigate to tab *"[Entity References](https://docs.numbersbelieve.com/omnia3_modeler_references.html)"*, and define a reference for .NET assembly System.Net.Http
 
 16. Navigate to tab *"[Entity Behaviours](https://docs.numbersbelieve.com/omnia3_modeler_datasources.html)"*, and define an *"Action"* behaviour to be executed when attribute _resource is changed. This behaviour will be used to retrieve from LastFM API a unique album identifier.
 
