@@ -70,9 +70,9 @@ This tutorial also requires an access to [Primavera ERP](https://pt.primaverabss
         {
         	List<IDictionary<string, object>> suppliersList = new List<IDictionary<string, object>>();
 
-                ErpBS bsERP = new ErpBS();
+		ErpBS bsERP = new ErpBS();
 		
-		bsERP.AbreEmpresaTrabalho(EnumTipoPlataforma.tpEmpresarial, "DEMO", "NB", "NB_2012#");
+		bsERP.AbreEmpresaTrabalho(EnumTipoPlataforma.tpEmpresarial, "DEMO", "USER", "PASS");
                 StdBELista queryResults = bsERP.Consulta($"SELECT Suppliers.SuppliersCount, Fornecedor, Nome from Fornecedores CROSS JOIN (SELECT Count(*) AS SuppliersCount FROM Fornecedores) AS Suppliers ORDER BY Fornecedor ASC OFFSET {(page - 1)*pageSize} ROWS FETCH NEXT {pageSize} ROWS ONLY");
 
                 int numberOfRecords = Convert.ToInt32(queryResults.Valor("SuppliersCount").ToString());
