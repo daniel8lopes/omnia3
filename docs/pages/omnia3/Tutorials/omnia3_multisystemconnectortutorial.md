@@ -185,9 +185,9 @@ This tutorial also requires an access to [Primavera ERP](https://pt.primaverabss
 
 9. Edit the commitment "*GoodsPurchaseRequest*", and create the following attributes:
 
-- Artist
-- Primavera
-- AlbumMBid
+    - Artist
+    - Primavera
+    - AlbumMBid
 
 10. On Document "*GoodsPurchaseRequest*", navigate to tab *"[Entity References](https://docs.numbersbelieve.com/omnia3_modeler_references.html)"*, and define a reference for .NET assembly System.Net.Http
 
@@ -217,9 +217,9 @@ This tutorial also requires an access to [Primavera ERP](https://pt.primaverabss
 
 14. On Document "*PurchaseOrder*", add the following attributes:
 
-- Primavera
-- Supplier
-- OrderLines
+    - Primavera
+    - Supplier
+    - OrderLines
 
 15. Navigate to tab *"[Entity Behaviours](https://docs.numbersbelieve.com/omnia3_modeler_datasources.html)"*, and define a behaviour to be executed *"After Change"*. This behaviour will be used to set default values on Commitment instances.
 
