@@ -1,7 +1,7 @@
 ---
 title: OMNIA Multi System Connector Tutorial
 keywords: omnia3
-summary: "OMNIA Platform 3.0 ERP Primavera as Data Source"
+summary: "OMNIA Platform 3.0 Multi System Connector Tutorial"
 sidebar: omnia3_sidebar
 permalink: omnia3_multisystemconnectortutorial.html
 folder: omnia3
@@ -9,11 +9,11 @@ folder: omnia3
 
 ## 1. Introduction
 
-Based on a simple Employee management scenario, this tutorial shows a real scenario of how easily OMNIA can use information from an external data source, using the Omnia connector to access data located on-premises. 
+Based on a Purchase Orders management scenario, this tutorial shows a real scenario of how easily OMNIA can combine information from multiple external data sources, using the Omnia connector to access data located on-premises. 
 
 This tutorial is an advanced implementation of the [data sources tutorial](omnia3_datasourcetutorial.html) in order to understand how data sources work, please read [this section of the documentation](omnia3_modeler_datasources.html).
 
-On the CRUD Operations tutorial area, we are going to evaluate how to interact with an external data source, by reading and manipulating its data.
+On the Modeling Scenario tutorial area, we are going to evaluate how to develop this solution from scratch, and how we can combine information present on Omnia, an on-premises ERP, and an API.
 
 As our custom data source, we are going to use the [PRIMAVERA ERP V9](https://pt.primaverabss.com).
 
@@ -39,7 +39,7 @@ This tutorial also requires an access to [Primavera ERP](https://pt.primaverabss
 
 7. Start the configured connector.
 
-## 4. CRUD operations
+## 4. Modeling Scenario
 
 1. Access Omnia homepage, select the tenant where you are going to model and you will be redirected to the modeling area.
 
