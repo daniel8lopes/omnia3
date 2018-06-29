@@ -72,25 +72,25 @@ This tutorial also requires an access to [Primavera ERP](https://pt.primaverabss
 		bsERP.AbreEmpresaTrabalho(EnumTipoPlataforma.tpEmpresarial, "DEMO", "USER", "PASS");
 		StdBELista queryResults = bsERP.Consulta($"SELECT Suppliers.SuppliersCount, Fornecedor, Nome from Fornecedores CROSS JOIN (SELECT Count(*) AS SuppliersCount FROM Fornecedores) AS Suppliers ORDER BY Fornecedor ASC OFFSET {(page - 1)*pageSize} ROWS FETCH NEXT {pageSize} ROWS ONLY");
 
-                int numberOfRecords = Convert.ToInt32(queryResults.Valor("SuppliersCount").ToString());
-                while (!queryResults.NoFim())
-                {
+		int numberOfRecords = Convert.ToInt32(queryResults.Valor("SuppliersCount").ToString());
+		while (!queryResults.NoFim())
+		{
 
-                    var supplier = new Dictionary<string, object>() {
-			{ "_code", queryResults.Valor("Fornecedor").ToString()},
-                        { "_name", queryResults.Valor("Nome").ToString()}
-                    };
+			var supplier = new Dictionary<string, object>() {
+				{ "_code", queryResults.Valor("Fornecedor").ToString()},
+				{ "_name", queryResults.Valor("Nome").ToString()}
+			};
 
-                    suppliersList.Add(supplier);
-                    queryResults.Seguinte();
-                }
+			suppliersList.Add(supplier);
+			queryResults.Seguinte();
+		}
                 
-        	return (numberOfRecords, suppliersList);
-        }
-        catch (Exception e)
-        {
+		return (numberOfRecords, suppliersList);
+	}
+	catch (Exception e)
+	{
 		Console.WriteLine(e.Message);
-                throw;
+		throw;
 	}
     ```
 
