@@ -44,24 +44,24 @@ This tutorial also requires an access to [Primavera ERP](https://pt.primaverabss
 1. Access Omnia homepage, select the tenant where you are going to model and you will be redirected to the modeling area.
 
 
-3. Through the left side menu, create a new Agent by accessing the option ***Agents / Add new*** on the top right side. Set *"Company"* as its with name.
+2. Through the left side menu, create a new Agent by accessing the option ***Agents / Add new*** on the top right side. Set *"Company"* as its with name.
 
 3. Through the left side menu, create a new Generic Entity by accessing the option ***Generic Entities / Add new***. Set *"Artist"* as its with name.
     
 4. Through the left side menu, create a new Data Source by accessing the option ***Data Sources / Add new*** on the top right side. Set its Name as "*Primavera*", Behaviour Runtime as *"Internal"* and Data Access Runtime as *"External"*.
 
-3. Create a new Agent with name *"Supplier"*, and set it as using the external data source *"Primavera"* that you created earlier.
+5. Create a new Agent with name *"Supplier"*, and set it as using the external data source *"Primavera"* that you created earlier.
 
     ![Modeler create Agent](/images/tutorials/primaveraconnector/add-new-agent.png)
 
-4. On Agent *"Supplier"*, navigate to tab *"[Data References](https://docs.numbersbelieve.com/omnia3_modeler_references.html)"*, and define a reference for Primavera assemblies:
+6. On Agent *"Supplier"*, navigate to tab *"[Data References](https://docs.numbersbelieve.com/omnia3_modeler_references.html)"*, and define a reference for Primavera assemblies:
 
     1. Interop.StdBE900.dll
     2. Interop.ErpBS900.dll
     3. Interop.IGcpBS900.dll
     4. Interop.GcpBE900.dll
 
-5. Navigate to tab *"[Data Behaviours](https://docs.numbersbelieve.com/omnia3_modeler_datasources.html)"*, and define a behaviour to be executed on *"ReadList"*. This behaviour will be used for Query and List requests for this entity.
+7. Navigate to tab *"[Data Behaviours](https://docs.numbersbelieve.com/omnia3_modeler_datasources.html)"*, and define a behaviour to be executed on *"ReadList"*. This behaviour will be used for Query and List requests for this entity.
 
     Copy and paste the following code (*Remember to **change** the **```"USER"```** and **```"PASS"```** fields to your actual username and password.*):
 
@@ -97,7 +97,7 @@ This tutorial also requires an access to [Primavera ERP](https://pt.primaverabss
 	}
     ```
 
-6. Create a new Data Behaviour for the operation “Read”, so that data is retrieved when an Employee is edited on OMNIA.
+8. Create a new Data Behaviour for the operation “Read”, so that data is retrieved when an Employee is edited on OMNIA.
 
     Copy and paste the following code (Remember to change the "USER" and "PASS" fields to your actual username and password.):
 
@@ -105,7 +105,7 @@ This tutorial also requires an access to [Primavera ERP](https://pt.primaverabss
 	SupplierDto dto = new SupplierDto();
 	ErpBS bsERP = new ErpBS();
     
-	bsERP.AbreEmpresaTrabalho(EnumTipoPlataforma.tpEmpresarial, "DEMO", "NB", "NB_2012#");
+	bsERP.AbreEmpresaTrabalho(EnumTipoPlataforma.tpEmpresarial, "DEMO", "USER", "PASS");
 	StdBELista queryResults = bsERP.Consulta($"SELECT Fornecedor, Nome FROM Fornecedores WHERE Fornecedor = '{identifier}'");
     
 	if (!queryResults.Vazia())
@@ -121,7 +121,28 @@ This tutorial also requires an access to [Primavera ERP](https://pt.primaverabss
 	return dto;
     ```
     
-7. Create a new Resource with name *"Product"*, and set it as using the external data source *"Primavera"* that you created earlier.
+9. Create a new Data Behaviour for the operation “Create”, so that a new Supplier is created on Primavera ERP when it is created on OMNIA.
+
+    Copy and paste the following code (Remember to change the "USER" and "PASS" fields to your actual username and password.):
+
+    ```C#
+	ErpBS bsERP = new ErpBS();
+
+	bsERP.AbreEmpresaTrabalho(EnumTipoPlataforma.tpEmpresarial, "DEMO", "USER", "PASS");
+
+        GcpBEFornecedor fornecedor = new GcpBEFornecedor();
+        fornecedor.set_Fornecedor(dto._code);
+        fornecedor.set_Nome(dto._name);
+        fornecedor.set_Moeda("EUR");
+        fornecedor.set_NumContribuinte("999999990");
+            
+        bsERP.Comercial.Fornecedores.Actualiza(fornecedor);
+
+        bsERP.FechaEmpresaTrabalho();
+        return dto;
+    ```
+    
+10. Create a new Resource with name *"Product"*, and set it as using the external data source *"Primavera"* that you created earlier.
 
     ![Modeler create Agent](/images/tutorials/primaveraconnector/add-new-agent.png)
 
