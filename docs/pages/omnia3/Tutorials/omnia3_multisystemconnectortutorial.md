@@ -162,8 +162,7 @@ This tutorial also requires an access to [Primavera ERP](https://pt.primaverabss
         	int numberOfRecords = Convert.ToInt32(queryResults.Valor("ProductsCount").ToString());
         	while (!queryResults.NoFim())
         	{
-
-        		var product = new Dictionary<string, object>() {
+			var product = new Dictionary<string, object>() {
 				{ "_code", queryResults.Valor("Artigo").ToString()},
         			{ "_name", queryResults.Valor("Descricao").ToString()}
         		};
@@ -176,7 +175,7 @@ This tutorial also requires an access to [Primavera ERP](https://pt.primaverabss
         }
         catch (Exception e)
         {
-        	Console.WriteLine(e.Message);
+		Console.WriteLine(e.Message);
         	throw;
         }
     ```
