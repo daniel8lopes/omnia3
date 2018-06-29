@@ -128,15 +128,15 @@ This tutorial also requires an access to [Primavera ERP](https://pt.primaverabss
 	bsERP.AbreEmpresaTrabalho(EnumTipoPlataforma.tpEmpresarial, "DEMO", "USER", "PASS");
 
 	GcpBEFornecedor fornecedor = new GcpBEFornecedor();
-        fornecedor.set_Fornecedor(dto._code);
-        fornecedor.set_Nome(dto._name);
-        fornecedor.set_Moeda("EUR");
-        fornecedor.set_NumContribuinte("999999990");
+	fornecedor.set_Fornecedor(dto._code);
+	fornecedor.set_Nome(dto._name);
+	fornecedor.set_Moeda("EUR");
+	fornecedor.set_NumContribuinte("999999990");
             
-        bsERP.Comercial.Fornecedores.Actualiza(fornecedor);
+	bsERP.Comercial.Fornecedores.Actualiza(fornecedor);
 
-        bsERP.FechaEmpresaTrabalho();
-        return dto;
+	bsERP.FechaEmpresaTrabalho();
+	return dto;
     ```
     
 10. Create a new Resource with name *"Product"*, and set it as using the external data source *"Primavera"* that you created earlier.
