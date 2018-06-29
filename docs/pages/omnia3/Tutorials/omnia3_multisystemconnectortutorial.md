@@ -329,4 +329,4 @@ This tutorial also requires an access to [Primavera ERP](https://pt.primaverabss
 
 24. Now you can try to List and Create new Products directly on your on-premise system
 
-25. 
+25. Finally, try to create new Purchase Orders on Omnia, and check that they are integrated on your on-premise system 
