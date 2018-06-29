@@ -65,10 +65,10 @@ This tutorial also requires an access to [Primavera ERP](https://pt.primaverabss
     ```C#
     try
     {
-	    List<IDictionary<string, object>> suppliersList = new List<IDictionary<string, object>>();
+	List<IDictionary<string, object>> suppliersList = new List<IDictionary<string, object>>();
 
-        ErpBS bsERP = new ErpBS();
-	    bsERP.AbreEmpresaTrabalho(EnumTipoPlataforma.tpEmpresarial, "DEMO", "NB", "NB_2012#");
+	ErpBS bsERP = new ErpBS();
+	bsERP.AbreEmpresaTrabalho(EnumTipoPlataforma.tpEmpresarial, "DEMO", "NB", "NB_2012#");
         StdBELista queryResults = bsERP.Consulta($"SELECT Suppliers.SuppliersCount, Fornecedor, Nome from Fornecedores CROSS JOIN       (SELECT Count(*) AS SuppliersCount FROM Fornecedores) AS Suppliers ORDER BY Fornecedor ASC OFFSET {(page - 1)*pageSize} ROWS FETCH NEXT {pageSize} ROWS ONLY");
 
         int numberOfRecords = Convert.ToInt32(queryResults.Valor("SuppliersCount").ToString());
@@ -93,35 +93,44 @@ This tutorial also requires an access to [Primavera ERP](https://pt.primaverabss
     }
     ```
 
-6. Create a new Data Behaviour for the operation *"Read"*, so that data is retrieved when an Employee is edited on OMNIA.
-
-    Copy and paste the following code (*Remember to **change** the **```"USER"```** and **```"PASS"```** fields to your actual username and password.*):
-
-    ```C#
-    EmployeeDto dto = new EmployeeDto();
-    ErpBS qbsERP = new ErpBS();
-    
-    qbsERP.AbreEmpresaTrabalho(EnumTipoPlataforma.tpEmpresarial, "DEMO", "USER", "PASS");
-    StdBELista queryResults = qbsERP.Consulta($"SELECT Codigo, Nome, Email, Telefone FROM Funcionarios WHERE Codigo = '{identifier}'");
-    
-    if (!queryResults.Vazia())
-    {
-        dto._code = queryResults.Valor("Codigo").ToString();
-        dto._name = queryResults.Valor("Nome").ToString()
-    }
-    else
-    {
-        throw new Exception($"Could not retrieve Employee with code '{identifier}'");
-    }
-    qbsERP.FechaEmpresaTrabalho();
-    return dto;
-    ```
-
 7. Create a new Resource with name *"Product"*, and set it as using the external data source *"Primavera"* that you created earlier.
 
     ![Modeler create Agent](/images/tutorials/primaveraconnector/add-new-agent.png)
 
-    --Read, ReadList, Update
+5. Navigate to tab *"[Data Behaviours](https://docs.numbersbelieve.com/omnia3_modeler_datasources.html)"*, and define a behaviour to be executed on *"ReadList"*. This behaviour will be used for Query and List requests for this entity.
+
+    Copy and paste the following code (*Remember to **change** the **```"USER"```** and **```"PASS"```** fields to your actual username and password.*):
+
+    ```C#
+	try
+	{
+		List<IDictionary<string, object>> productsList = new List<IDictionary<string, object>>();
+
+		ErpBS bsERP = new ErpBS();
+		bsERP.AbreEmpresaTrabalho(EnumTipoPlataforma.tpEmpresarial, "DEMO", "NB", "NB_2012#");
+		StdBELista queryResults = bsERP.Consulta($"SELECT Products.ProductsCount, Artigo, Descricao from Artigo CROSS JOIN (SELECT Count(*) AS ProductsCount FROM Artigo) AS Products ORDER BY Artigo ASC OFFSET {(page - 1)*pageSize} ROWS FETCH NEXT {pageSize} ROWS ONLY");
+
+		int numberOfRecords = Convert.ToInt32(queryResults.Valor("ProductsCount").ToString());
+		while (!queryResults.NoFim())
+		{
+
+    		var product = new Dictionary<string, object>() {
+			{ "_code", queryResults.Valor("Artigo").ToString()},
+        		{ "_name", queryResults.Valor("Descricao").ToString()}
+    		};
+
+    		productsList.Add(product);
+    		queryResults.Seguinte();
+		}
+
+		return (numberOfRecords, productsList);
+	}
+	catch (Exception e)
+	{
+    	Console.WriteLine(e.Message);
+    	throw;
+	}
+    ```
 
 8. Create a new commitment GoodsPurchaseRequest
 
