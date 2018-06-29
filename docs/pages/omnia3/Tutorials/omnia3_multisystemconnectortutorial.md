@@ -127,7 +127,7 @@ This tutorial also requires an access to [Primavera ERP](https://pt.primaverabss
 
 	bsERP.AbreEmpresaTrabalho(EnumTipoPlataforma.tpEmpresarial, "DEMO", "USER", "PASS");
 
-        GcpBEFornecedor fornecedor = new GcpBEFornecedor();
+	GcpBEFornecedor fornecedor = new GcpBEFornecedor();
         fornecedor.set_Fornecedor(dto._code);
         fornecedor.set_Nome(dto._name);
         fornecedor.set_Moeda("EUR");
