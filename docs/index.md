@@ -9,6 +9,6 @@ summary: Index
 
 Welcome to the Numbersbelieve Documentation Page!
 
-This page has documentation for all of our products, including the OMNIA Platform.
+This page has documentation for all of our products, including the [OMNIA Platform](/omnia3_welcometoomnia.html).
 
 {% include links.html %}
