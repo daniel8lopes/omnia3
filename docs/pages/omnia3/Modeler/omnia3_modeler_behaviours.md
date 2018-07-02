@@ -14,7 +14,7 @@ In the **OMNIA Platform**, the primary way to customize the way the application 
 
 Behaviours are code, written in C#, that allow you to **extend** the way the application processes user input.
 
-There are two kinds of behaviours: **entity behaviours**, which extend the behaviour of the instances of that entity (for example, default values or specific validations), and **data behaviours**, which only exist for entities with an external data source, and replace the platform's create/read/update/delete (CRUD) code with user-written C# to perform those operations on the external data source. This document explains the Entity behaviours only; for more information on data behaviours please see [this page](omnia3_modeler_datasources.html).
+There are three kinds of behaviours: **entity behaviours**, which extend the behaviour of the instances of that entity (for example, default values or specific validations), **data behaviours**, which only exist for entities with an external data source, and replace the platform's create/read/update/delete (CRUD) code with user-written C# to perform those operations on the external data source, and **application behaviours**, which are used in the other behaviours. This document explains the Entity behaviours (here normally mentioned as 'behaviours' only) and application behaviours; for more information on data behaviours please see [this page](omnia3_modeler_datasources.html).
 
  A behaviour is defined by (see [BML](omnia3_languages_bml.html) for detailed definition):
 - its **type**, or the moment in which it will execute;
@@ -81,6 +81,12 @@ Here are some usage suggestions for each type of behaviour - though, of course, 
 
 The way to use references to .NET assemblies is explained in a [separate article](omnia3_modeler_references.html), as it is shared for both Entity and Data Behaviours.
 
-## 5. Developing and testing behaviours
+## 5. Application Behaviours
+
+Application behaviours are created in the Modeler's **Extensibility** area. Their main difference compared to the other behaviours is that they are available on a per-data source basis; i.e. instead of picking an Attribute and Type, you define the data source where it will be available.
+
+Every system that has application behaviours will have them under the base namespace of that tenant, for example, ``` Omnia.Behaviours.Tenant001.v1_0_5.Application```, with a partial class logic: every application behaviour is in its own file, but they are all in the same class. If you want to use an application behaviour with the code ```ValidateAPIAccess``` in the **System** data source's **Initialize** behaviour, you will do so by writing ```SystemApplicationBehaviours.ValidateAPIAccess()``` in your code.
+
+## 6. Developing and testing behaviours
 
 The way to develop and test behaviours is explained in a [separate article](omnia3_modeler_developingbehaviours.html), as it is shared for both Entity and Data Behaviours.
