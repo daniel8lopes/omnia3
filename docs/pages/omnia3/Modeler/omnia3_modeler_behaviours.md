@@ -73,7 +73,11 @@ Here are some usage suggestions for each type of behaviour - though, of course, 
 - **Before Save**:
     - Performing final document-wide validations;
     - Integrating with external APIs;
-    
+- **After Save**:
+    - Performing integrations with external systems that depend on the OMNIA-side document already being saved.
+    - Triggering e-mail notifications.
+    **Note**: After Save behaviours are not called immediately after saving, but go into a queue. More information in a separate article.
+
  Keep in mind that all Omnia entities are independent, and therefore an entity behaviour should not depend on another entity. 
  As an example, a Commitment behaviour code should not be dependent of a specific Document, because a Commitment can be available on more than one Document. On these scenarios, the behaviour should be defined on the Document.
 
@@ -86,6 +90,8 @@ The way to use references to .NET assemblies is explained in a [separate article
 Application behaviours are created in the Modeler's **Extensibility** area. Their main difference compared to the other behaviours is that they are available on a per-data source basis; i.e. instead of picking an Attribute and Type, you define the data source where it will be available.
 
 Every system that has application behaviours will have them under the base namespace of that tenant, for example, ``` Omnia.Behaviours.Tenant001.v1_0_5.Application```, with a partial class logic: every application behaviour is in its own file, but they are all in the same class. If you want to use an application behaviour with the code ```ValidateAPIAccess``` in the **System** data source's **Initialize** behaviour, you will do so by writing ```SystemApplicationBehaviours.ValidateAPIAccess()``` in your code.
+
+The application behaviours are ```static```. They all receive an (optional) ```IDictionary<string,object> args```, which can be used to send any necessary information when calling them from other places, and also must return a dictionary.
 
 ## 6. Developing and testing behaviours
 
