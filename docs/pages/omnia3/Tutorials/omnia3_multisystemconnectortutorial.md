@@ -216,6 +216,8 @@ This tutorial also requires an access to [Primavera ERP](https://pt.primaverabss
 
 1. Go to modeling area and, through the left side menu, create a new Commitment by accessing the option ***Commitments / Add new***. Set its Name as "*GoodsPurchaseRequest*", *"Product"* as the resource to be exchanged, *"Supplier"* as provider agent and *"Company"* as receiver agent. Before saving, check option *"Uses a custom data source?"*, and select *"Primavera"* as Data Source.
 
+    ![Modeler create Commitment_GoodsPurchaseRequest](/images/tutorials/multisystemconnector/Create-Commitment-GoodsPurchaseRequest.PNG)
+
 2. Edit the commitment "*GoodsPurchaseRequest*", and create the following attributes:
 
     - Artist
