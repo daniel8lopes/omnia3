@@ -210,7 +210,7 @@ This tutorial also requires an access to [Primavera ERP](https://pt.primaverabss
 
 20. Perform a new build
 
-21. Demo
+21. Go to application area, and check that ERP Products can now be listed on Omnia
 
 ## 5. Modeling Purchase Order
 
