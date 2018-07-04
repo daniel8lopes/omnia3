@@ -198,7 +198,7 @@ This tutorial also requires an access to [Primavera ERP](https://pt.primaverabss
 			productsList.Add(product);
 			queryResults.Seguinte();
 		}
-                
+		bsERP.FechaEmpresaTrabalho();
 		return (numberOfRecords, productsList);
 	}
 	catch (Exception e)
