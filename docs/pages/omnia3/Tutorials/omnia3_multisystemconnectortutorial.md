@@ -45,7 +45,7 @@ This tutorial also requires an access to [Primavera ERP](https://pt.primaverabss
 
 2. Through the left side menu, create a new Agent by accessing the option ***Agents / Add new*** on the top right side. Set *"Company"* as its with name.
 
-    ![Modeler create Agent](/images/tutorials/multisystemconnector/create_agent_company.png)
+    ![Modeler create Agent](/images/tutorials/multisystemconnector/create_agent_company.PNG)
 
 3. Through the left side menu, create a new Generic Entity by accessing the option ***Generic Entities / Add new***. Set *"Artist"* as its with name.
 
