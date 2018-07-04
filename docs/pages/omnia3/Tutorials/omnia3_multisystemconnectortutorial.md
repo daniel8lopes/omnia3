@@ -328,7 +328,7 @@ This tutorial also requires an access to [Primavera ERP](https://pt.primaverabss
 
 10. Go to the Application area, and validate that ERP Purchase Orders can now be listed.
 
-11. On Modeling area, navigate to tab *"[Entity Behaviours](https://docs.numbersbelieve.com/omnia3_modeler_datasources.html)"*, and define a behaviour to be executed *"After Change"*. This behaviour will be used to set default values on Commitment instances.
+11. On Modeling area, navigate to *"PurchaseOrder"* tab *"[Entity Behaviours](https://docs.numbersbelieve.com/omnia3_modeler_datasources.html)"*, and define a behaviour to be executed *"After Change"*. This behaviour will be used to set default values on Commitment instances.
 
     Copy and paste the following code:
 
@@ -340,7 +340,14 @@ This tutorial also requires an access to [Primavera ERP](https://pt.primaverabss
 	});
     ```
 
-12. Reorganize UI
+12. On *"PurchaseOrder"* navigate to tab User Interface to reorganize UI, with the following inputs:
+
+    - On document header, remove Code attribute and reorganize remaining attributes
+    - On OrderLines attributes, hide attributes Provider, Receiver, Code and Primavera
+    
+    A possible final result is the following:
+    
+    
 
 ## 5. Communicate with an external API
 
