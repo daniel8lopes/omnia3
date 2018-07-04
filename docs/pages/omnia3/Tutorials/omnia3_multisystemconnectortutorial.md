@@ -167,6 +167,8 @@ This tutorial also requires an access to [Primavera ERP](https://pt.primaverabss
 
 17. Go to modeling area. Create a new Resource with name *"Product"*, and set it as using the external data source *"Primavera"* that you created earlier.
 
+    ![Modeler create Resource_Product](/images/tutorials/multisystemconnector/Create-Resource-Product.PNG)
+
 18. On Resource *"Product"*, navigate to tab *"[Data References](https://docs.numbersbelieve.com/omnia3_modeler_references.html)"*, and define a reference for Primavera assemblies:
 
     1. Interop.StdBE900.dll
