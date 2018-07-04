@@ -347,7 +347,7 @@ This tutorial also requires an access to [Primavera ERP](https://pt.primaverabss
     
     A possible final result is the following:
     
-    
+    ![Modeler purchaseOrder UI_Result](/images/tutorials/multisystemconnector/PurchaseOrder-UI-Result.PNG)
 
 ## 5. Communicate with an external API
 
