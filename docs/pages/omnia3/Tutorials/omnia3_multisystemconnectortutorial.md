@@ -159,6 +159,8 @@ This tutorial also requires an access to [Primavera ERP](https://pt.primaverabss
 
 14. Go to application area, and create new Instance of Primavera. The Connector value is the code defined earlier when the connector was created
 
+    ![Modeler create Primavera_Demo](/images/tutorials/multisystemconnector/Create-Primavera-Demo.PNG)
+
 15. Create new Instance of Supplier
 
 16. Create a new Resource with name *"Product"*, and set it as using the external data source *"Primavera"* that you created earlier.
