@@ -232,6 +232,8 @@ This tutorial also requires an access to [Primavera ERP](https://pt.primaverabss
 
 4. Through the left side menu, create a new Document by accessing the option ***Documents / Add new***. Set its Name as "*PurchaseOrder*". Before saving, check option *"Uses a custom data source?"*, and select *"Primavera"* as Data Source.
 
+    ![Modeler create Document_PurchaseOrder](/images/tutorials/multisystemconnector/Create-Document-PurchaseOrder.PNG)
+
 5. On Document "*PurchaseOrder*", add the following attributes:
 
     - Primavera
