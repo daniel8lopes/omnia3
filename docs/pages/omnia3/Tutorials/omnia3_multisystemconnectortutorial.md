@@ -31,7 +31,7 @@ This tutorial also requires an access to [Primavera ERP](https://pt.primaverabss
 
 3. On connectors list, select the previously created connector, and a modal with its data should be shown.
 
-4. Now we are going to grant the connector access privileges for the tenant. Access the option ***Security / Roles***, and select Administration role for the tenant (the tenant code with prefix "Administration")
+4. Now we are going to grant the connector access privileges for the tenant. Access the option ***Security / Roles***, and select Administration role for the tenant (composed by the tenant code with prefix "Administration". E.g. AdministrationDemoTenant)
 
 5. Click the button ***Add new*** to grant the connector user access to the tenant. The user can be retrieved on step 3, property "Client Username"
 
