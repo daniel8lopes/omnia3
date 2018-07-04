@@ -63,6 +63,8 @@ This tutorial also requires an access to [Primavera ERP](https://pt.primaverabss
 
 8. Create a new Agent with name *"Supplier"*, and set it as using the external data source *"Primavera"* that you created earlier.
 
+    ![Modeler create Agent_Supplier](/images/tutorials/multisystemconnector/Create-Agent-Supplier.PNG)
+
 9. On Agent *"Supplier"*, navigate to tab *"[Data References](https://docs.numbersbelieve.com/omnia3_modeler_references.html)"*, and define a reference for Primavera assemblies:
 
     1. Interop.StdBE900.dll
