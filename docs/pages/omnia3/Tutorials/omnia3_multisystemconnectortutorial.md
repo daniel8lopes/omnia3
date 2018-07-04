@@ -98,7 +98,9 @@ This tutorial also requires an access to [Primavera ERP](https://pt.primaverabss
 			suppliersList.Add(supplier);
 			queryResults.Seguinte();
 		}
-                
+		
+                bsERP.FechaEmpresaTrabalho();
+		
 		return (numberOfRecords, suppliersList);
 	}
 	catch (Exception e)
