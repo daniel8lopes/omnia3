@@ -50,3 +50,7 @@ This means that the connector will keep attempting to re-establish the connectio
 If after **22 attempts** (approximately 2 hours and 20 minutes total), we assume there is a _permanent_ issue with the connection and will stop trying to reconnect. 
 
 This will lead to manual intervention being necessary.
+
+### 5.3 Single connection per Connector
+With OMNIA you can just have one connector running using the same pair of configurations (client and secret). For this reason, if you start a new connector with the same configuration, the platform will request the previously active connector to shut down. 
+In this case, you will see a warning in the new connector saying *"Another connector or connection has been disconnected."*. This message can also mean that the connector for some reason (network instability for example) needed to start a new connection with the server.
