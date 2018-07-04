@@ -39,7 +39,7 @@ This tutorial also requires an access to [Primavera ERP](https://pt.primaverabss
 
 7. Start the configured connector.
 
-## 4. Modeling Scenario
+## 4. Modeling Entities
 
 1. Access Omnia homepage, select the tenant where you are going to model and you will be redirected to the modeling area.
 
@@ -194,6 +194,8 @@ This tutorial also requires an access to [Primavera ERP](https://pt.primaverabss
 
 19. Demo
 
+## 5. Modeling Purchase Order
+
 13. Through the left side menu, create a new Commitment by accessing the option ***Commitments / Add new***. Set its Name as "*GoodsPurchaseRequest*", *"Provider"* as the resource to be exchanged, *"Supplier"* as provider agent and *"Company"* as receiver agent. Before saving, check option *"Uses a custom data source?"*, and select *"Primavera"* as Data Source.
 
 14. Edit the commitment "*GoodsPurchaseRequest*", and create the following attributes:
@@ -343,3 +345,5 @@ This tutorial also requires an access to [Primavera ERP](https://pt.primaverabss
 29. Now you can try to List and Create new Products directly on your on-premise system
 
 30. Finally, try to create new Purchase Orders on Omnia, and check that they are integrated on your on-premise system 
+
+## 5. Communicate with an external API
