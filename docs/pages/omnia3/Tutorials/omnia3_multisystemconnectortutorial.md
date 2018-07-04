@@ -157,7 +157,7 @@ This tutorial also requires an access to [Primavera ERP](https://pt.primaverabss
   
 13. Perform a new build
 
-14. Create new Instance of Primavera
+14. Go to application area, and create new Instance of Primavera. The Connector value is the code defined earlier when the connector was created
 
 15. Create new Instance of Supplier
 
