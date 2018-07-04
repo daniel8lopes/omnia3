@@ -161,7 +161,7 @@ This tutorial also requires an access to [Primavera ERP](https://pt.primaverabss
 
     ![Modeler create Primavera_Demo](/images/tutorials/multisystemconnector/Create-Primavera-Demo.PNG)
 
-15. List Suppliers, and check that list is filled with ERP database Suppliers
+15. List Suppliers. If prompted, select the Primavera instance and check that list is filled with ERP database Suppliers
 
 16. Create a new Supplier, and check that it is integrated on ERP Primavera
 
