@@ -222,9 +222,9 @@ This tutorial also requires an access to [Primavera ERP](https://pt.primaverabss
 
 2. Edit the commitment "*GoodsPurchaseRequest*", and create the following attributes:
 
-    - Artist (Type: Generic entity | Artist)
-    - Primavera (Type: Data source | Primavera)
-    - AlbumMBid (Type: Primitive | Text)
+    - Artist (Type: Generic entity, Artist)
+    - Primavera (Type: Data source, Primavera)
+    - AlbumMBid (Type: Primitive, Text)
 
 3. Still on commitment "*GoodsPurchaseRequest*", edit attributes _resource and _provider and set attribute Primavera as the Data Source
 
