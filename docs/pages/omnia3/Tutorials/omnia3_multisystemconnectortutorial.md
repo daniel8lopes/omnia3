@@ -13,9 +13,10 @@ Based on a Purchase Orders management scenario, this tutorial shows a real scena
 
 This tutorial is an advanced implementation of the [data sources tutorial](omnia3_datasourcetutorial.html) in order to understand how data sources work, please read [this section of the documentation](omnia3_modeler_datasources.html).
 
-On the Modeling Scenario tutorial area, we are going to evaluate how to develop this solution from scratch, and how we can combine information present on Omnia, an on-premises ERP, and an API.
+The tutorial is divided in 4 different areas. On the first area, Create a new connector, we are going to check how a new connector is created and associated to a tenant. Next, on Modeling entities area, we are going to evaluate how to model the core entities for this solution from scratch.
+On the third area, we are going to focus on Purchase Order modeling, combining all previously modeled entities and integrating information on ERP Primavera. To end, we will evaluate how to communicate with an external API. 
 
-As our custom data source, we are going to use the [PRIMAVERA ERP V9](https://pt.primaverabss.com).
+As our custom data source, we are going to use the [PRIMAVERA ERP V9](https://pt.primaverabss.com). The chosen external API is [Last FM](https://www.last.fm/api), which provides data related to music.
 
 ## 2. Prerequisites
 
