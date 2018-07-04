@@ -374,3 +374,7 @@ This tutorial also requires an access to [Primavera ERP](https://pt.primaverabss
 		this._dto.AlbumMBid = albumData["mbid"].ToString();
 	}
     ```
+
+3. Perform a new build
+
+4. Go to application area, and create a new Purchase Order. Check that, when Artist and Resource are identified and valid, attribute Album MBid is filled with the album unique identifier
