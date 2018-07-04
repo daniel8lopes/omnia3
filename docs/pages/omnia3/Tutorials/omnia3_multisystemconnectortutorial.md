@@ -157,20 +157,22 @@ This tutorial also requires an access to [Primavera ERP](https://pt.primaverabss
   
 13. Perform a new build
 
-14. Go to application area, and create new Instance of Primavera. The Connector value is the code defined earlier when the connector was created
+14. Go to application area, and create new instance of Primavera. The Connector value is the code defined earlier when the connector was created
 
     ![Modeler create Primavera_Demo](/images/tutorials/multisystemconnector/Create-Primavera-Demo.PNG)
 
-15. Create new Instance of Supplier
+15. List Suppliers, and check that list is filled with ERP database Suppliers
 
-16. Create a new Resource with name *"Product"*, and set it as using the external data source *"Primavera"* that you created earlier.
+16. Create a new Supplier, and check that it is integrated on ERP Primavera
 
-17. On Resource *"Product"*, navigate to tab *"[Data References](https://docs.numbersbelieve.com/omnia3_modeler_references.html)"*, and define a reference for Primavera assemblies:
+17. Create a new Resource with name *"Product"*, and set it as using the external data source *"Primavera"* that you created earlier.
+
+18. On Resource *"Product"*, navigate to tab *"[Data References](https://docs.numbersbelieve.com/omnia3_modeler_references.html)"*, and define a reference for Primavera assemblies:
 
     1. Interop.StdBE900.dll
     2. Interop.ErpBS900.dll
 
-18. Navigate to tab *"[Data Behaviours](https://docs.numbersbelieve.com/omnia3_modeler_datasources.html)"*, and define a behaviour to be executed on *"ReadList"*. This behaviour will be used for Query and List requests for this entity.
+19. Navigate to tab *"[Data Behaviours](https://docs.numbersbelieve.com/omnia3_modeler_datasources.html)"*, and define a behaviour to be executed on *"ReadList"*. This behaviour will be used for Query and List requests for this entity.
 
     Copy and paste the following code (*Remember to **change** the **```"USER"```** and **```"PASS"```** fields to your actual username and password.*):
 
@@ -204,9 +206,9 @@ This tutorial also requires an access to [Primavera ERP](https://pt.primaverabss
 	}
     ```
 
-19. Perform a new build
+20. Perform a new build
 
-20. Demo
+21. Demo
 
 ## 5. Modeling Purchase Order
 
