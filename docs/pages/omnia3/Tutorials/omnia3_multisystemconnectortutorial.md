@@ -165,7 +165,7 @@ This tutorial also requires an access to [Primavera ERP](https://pt.primaverabss
 
 16. Create a new Supplier, and check that it is integrated on ERP Primavera
 
-17. Create a new Resource with name *"Product"*, and set it as using the external data source *"Primavera"* that you created earlier.
+17. Go to modeling area. Create a new Resource with name *"Product"*, and set it as using the external data source *"Primavera"* that you created earlier.
 
 18. On Resource *"Product"*, navigate to tab *"[Data References](https://docs.numbersbelieve.com/omnia3_modeler_references.html)"*, and define a reference for Primavera assemblies:
 
