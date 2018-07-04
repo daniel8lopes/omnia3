@@ -290,38 +290,32 @@ This tutorial also requires an access to [Primavera ERP](https://pt.primaverabss
     Copy and paste the following code (*Remember to **change** the **```"USER"```** and **```"PASS"```** fields to your actual username and password.*):
 
     ```C#
-	try
-	{
-		List<IDictionary<string, object>> ordersList = new List<IDictionary<string, object>>();
+    ErpBS bsERP = new ErpBS();
 
-		ErpBS bsERP = new ErpBS();
-		bsERP.AbreEmpresaTrabalho(EnumTipoPlataforma.tpEmpresarial, "DEMO", "USER", "PASS");
+    bsERP.AbreEmpresaTrabalho(EnumTipoPlataforma.tpEmpresarial, "DEMO", "USER", "PASS");
 
-		Interop.StdBE900.StdBELista queryResults = bsERP.Consulta($"SELECT Orders.OrderCount, Serie, TipoDoc, NumDoc, Entidade, CONVERT (NVARCHAR(10), DataDoc, 120) AS DataDoc from CabecCompras  CROSS JOIN (SELECT Count(*) AS OrderCount FROM CabecCompras where TipoDoc = 'ECF') AS Orders where TipoDoc = 'ECF' ORDER BY DataDoc DESC OFFSET {(page - 1)*pageSize} ROWS FETCH NEXT {pageSize} ROWS ONLY");
+    GcpBEDocumentoCompra purchaseOrder = new GcpBEDocumentoCompra();
 
-		int numberOfRecords = Convert.ToInt32(queryResults.Valor("OrderCount").ToString());
-		while (!queryResults.NoFim())
-		{
+    purchaseOrder.set_Tipodoc("ECF");
+    purchaseOrder.set_Serie("A");
+    purchaseOrder.set_TipoEntidade("F");
+    purchaseOrder.set_Entidade(dto.Supplier);
+    purchaseOrder.set_NumDocExterno("0");
+    purchaseOrder.set_Observacoes($"Documento gerado no portal OMNIA: Pedido de Encomenda {dto._serie} / {dto._number}");
+    purchaseOrder.set_DataCarga(DateTime.Now.ToShortDateString());
+    purchaseOrder.set_DataDescarga(DateTime.Now.ToShortDateString());
 
-			var order = new Dictionary<string, object>() {
-				{ "_code", queryResults.Valor("Serie").ToString()+"/"+queryResults.Valor("NumDoc").ToString()},
-				{ "_serie", queryResults.Valor("Serie").ToString()},
-				{ "_number", queryResults.Valor("NumDoc").ToString()},
-				{ "_date", queryResults.Valor("DataDoc").ToString()}
-			};
+    bsERP.Comercial.Compras.PreencheDadosRelacionados(purchaseOrder);
+    foreach (var line in dto.OrderLines)
+    {
+        bsERP.Comercial.Compras.AdicionaLinha(purchaseOrder, line._resource, Convert.ToDouble(line._quantity));
+    }
 
-			ordersList.Add(order);
-			queryResults.Seguinte();
-		}
-                
-		bsERP.FechaEmpresaTrabalho();
-		return (numberOfRecords, ordersList);
-	}
-	catch (Exception e)
-	{
-		Console.WriteLine(e.Message);
-		throw;
-	}
+    bsERP.Comercial.Compras.Actualiza(purchaseOrder);
+
+    bsERP.FechaEmpresaTrabalho();
+
+    return dto;
     ```
 
 9. Perform a new Build
