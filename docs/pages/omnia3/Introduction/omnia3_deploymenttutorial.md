@@ -14,7 +14,7 @@ folder: omnia3
 
 1.1.1. Ensure the firewall has its port 80 and 443 (HTTP and HTTPS) open to the exterior, so you will be able to access the application later on.
 
-1.2. Install .NET Core 2.1 SDK (current recommended version: SDK 2.1.300-rc1), by following the official Microsoft [instructions](https://docs.microsoft.com/en-us/dotnet/core/linux-prerequisites?tabs=netcore2x).
+1.2. Install .NET Core 2.1 SDK (current recommended version: SDK 2.1.301), by following the official Microsoft [instructions](https://docs.microsoft.com/en-us/dotnet/core/linux-prerequisites?tabs=netcore2x).
 
     _(NOTE: 
      This guide installs **the whole SDK** - for production, thus it is recommended to install the runtime only; however, the runtime installation on linux has no official guide, and requires extracting a .tar.gz and installing from there. )_
