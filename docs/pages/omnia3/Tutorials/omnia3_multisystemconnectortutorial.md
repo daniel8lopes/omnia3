@@ -53,20 +53,22 @@ This tutorial also requires an access to [Primavera ERP](https://pt.primaverabss
 
 4. Perform a new Build (by accessing the option ***Versioning / Builds / Create new***).
 
-5. Create a new Artist
+5. Go to application area and create a new Company (by accessing the option ***Configurations / Company / Create new***)
+
+6. Create a new Artist
     
-6. Through the left side menu, create a new Data Source by accessing the option ***Data Sources / Add new*** on the top right side. Set its Name as "*Primavera*", Behaviour Runtime as *"Internal"* and Data Access Runtime as *"External"*. Check the flag "Will be executed in a connector?"
+7. Through the left side menu, create a new Data Source by accessing the option ***Data Sources / Add new*** on the top right side. Set its Name as "*Primavera*", Behaviour Runtime as *"Internal"* and Data Access Runtime as *"External"*. Check the flag "Will be executed in a connector?"
 
-7. Create a new Agent with name *"Supplier"*, and set it as using the external data source *"Primavera"* that you created earlier.
+8. Create a new Agent with name *"Supplier"*, and set it as using the external data source *"Primavera"* that you created earlier.
 
-8. On Agent *"Supplier"*, navigate to tab *"[Data References](https://docs.numbersbelieve.com/omnia3_modeler_references.html)"*, and define a reference for Primavera assemblies:
+9. On Agent *"Supplier"*, navigate to tab *"[Data References](https://docs.numbersbelieve.com/omnia3_modeler_references.html)"*, and define a reference for Primavera assemblies:
 
     1. Interop.StdBE900.dll
     2. Interop.ErpBS900.dll
     3. Interop.IGcpBS900.dll
     4. Interop.GcpBE900.dll
 
-9. Navigate to tab *"[Data Behaviours](https://docs.numbersbelieve.com/omnia3_modeler_datasources.html)"*, and define a behaviour to be executed on *"ReadList"*. This behaviour will be used for Query and List requests for this entity.
+10. Navigate to tab *"[Data Behaviours](https://docs.numbersbelieve.com/omnia3_modeler_datasources.html)"*, and define a behaviour to be executed on *"ReadList"*. This behaviour will be used for Query and List requests for this entity.
 
     Copy and paste the following code (*Remember to **change** the **```"USER"```** and **```"PASS"```** fields to your actual username and password.*):
 
@@ -102,7 +104,7 @@ This tutorial also requires an access to [Primavera ERP](https://pt.primaverabss
 	}
     ```
 
-10. Create a new Data Behaviour for the operation “Read”, so that data is retrieved when an Employee is edited on OMNIA.
+11. Create a new Data Behaviour for the operation “Read”, so that data is retrieved when an Employee is edited on OMNIA.
 
     Copy and paste the following code (Remember to change the "USER" and "PASS" fields to your actual username and password.):
 
@@ -126,7 +128,7 @@ This tutorial also requires an access to [Primavera ERP](https://pt.primaverabss
 	return dto;
     ```
     
-11. Create a new Data Behaviour for the operation “Create”, so that a new Supplier is created on Primavera ERP when it is created on OMNIA.
+12. Create a new Data Behaviour for the operation “Create”, so that a new Supplier is created on Primavera ERP when it is created on OMNIA.
 
     Copy and paste the following code (Remember to change the "USER" and "PASS" fields to your actual username and password.):
 
@@ -147,20 +149,20 @@ This tutorial also requires an access to [Primavera ERP](https://pt.primaverabss
 	return dto;
     ```
   
-12. Perform a new build
+13. Perform a new build
 
-13. Create new Instance of Primavera
+14. Create new Instance of Primavera
 
-14. Create new Instance of Supplier
+15. Create new Instance of Supplier
 
-15. Create a new Resource with name *"Product"*, and set it as using the external data source *"Primavera"* that you created earlier.
+16. Create a new Resource with name *"Product"*, and set it as using the external data source *"Primavera"* that you created earlier.
 
-16. On Resource *"Product"*, navigate to tab *"[Data References](https://docs.numbersbelieve.com/omnia3_modeler_references.html)"*, and define a reference for Primavera assemblies:
+17. On Resource *"Product"*, navigate to tab *"[Data References](https://docs.numbersbelieve.com/omnia3_modeler_references.html)"*, and define a reference for Primavera assemblies:
 
     1. Interop.StdBE900.dll
     2. Interop.ErpBS900.dll
 
-17. Navigate to tab *"[Data Behaviours](https://docs.numbersbelieve.com/omnia3_modeler_datasources.html)"*, and define a behaviour to be executed on *"ReadList"*. This behaviour will be used for Query and List requests for this entity.
+18. Navigate to tab *"[Data Behaviours](https://docs.numbersbelieve.com/omnia3_modeler_datasources.html)"*, and define a behaviour to be executed on *"ReadList"*. This behaviour will be used for Query and List requests for this entity.
 
     Copy and paste the following code (*Remember to **change** the **```"USER"```** and **```"PASS"```** fields to your actual username and password.*):
 
@@ -194,9 +196,9 @@ This tutorial also requires an access to [Primavera ERP](https://pt.primaverabss
 	}
     ```
 
-18. Perform a new build
+19. Perform a new build
 
-19. Demo
+20. Demo
 
 ## 5. Modeling Purchase Order
 
