@@ -226,7 +226,7 @@ This tutorial also requires an access to [Primavera ERP](https://pt.primaverabss
     - Primavera (Type: Data source, Primavera)
     - AlbumMBid (Type: Primitive, Text)
 
-3. Still on commitment "*GoodsPurchaseRequest*", edit attributes _resource and _provider and set attribute Primavera as the Data Source
+3. Still on commitment "*GoodsPurchaseRequest*", edit attributes *"_resource"* and *"_provider"* and set attribute Primavera as the Data Source
 
 4. Through the left side menu, create a new Document by accessing the option ***Documents / Add new***. Set its Name as "*PurchaseOrder*". Before saving, check option *"Uses a custom data source?"*, and select *"Primavera"* as Data Source.
 
