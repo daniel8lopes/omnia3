@@ -236,9 +236,9 @@ This tutorial also requires an access to [Primavera ERP](https://pt.primaverabss
 
 5. On Document "*PurchaseOrder*", add the following attributes:
 
-    - Primavera
-    - Supplier
-    - OrderLines
+    - Primavera (Type: Data source, Primavera)
+    - Supplier (Type: Agent, Supplier)
+    - OrderLines (Type: Commitment, GoodsPurchaseRequest)
 
 6. On Document "*PurchaseOrder*", navigate to tab *"[Data References](https://docs.numbersbelieve.com/omnia3_modeler_references.html)"*, and define a reference for Primavera assemblies:
 
