@@ -349,6 +349,12 @@ This tutorial also requires an access to [Primavera ERP](https://pt.primaverabss
     
     ![Modeler purchaseOrder UI_Result](/images/tutorials/multisystemconnector/PurchaseOrder-UI-Result.PNG)
 
+13. Perform a new Build
+
+14. Go to application area. Access the option ***Series / PurchaseOrderSerie / Add new***, and create a new number serie for document PurchaseOrder
+
+15. Access the option ***Documents / PurchaseOrder / Add new***, and create a new Purchase Order. After saving, the Order should be integrated on ERP Primavera
+
 ## 5. Communicate with an external API
 
 1. On Commitment "*GoodsPurchaseRequest*", navigate to tab *"[Entity References](https://docs.numbersbelieve.com/omnia3_modeler_references.html)"*, and define a reference for .NET assembly System.Net.Http
