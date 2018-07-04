@@ -51,7 +51,7 @@ This tutorial also requires an access to [Primavera ERP](https://pt.primaverabss
 
     ![Modeler create GenericEntity_Artist](/images/tutorials/multisystemconnector/Create-GenericEntity-Artist.PNG)
 
-4. Build the model
+4. Perform a new Build (by accessing the option ***Versioning / Builds / Create new***).
 
 5. Create a new Artist
     
@@ -147,7 +147,7 @@ This tutorial also requires an access to [Primavera ERP](https://pt.primaverabss
 	return dto;
     ```
   
-12. Build the model
+12. Perform a new build
 
 13. Create new Instance of Primavera
 
@@ -194,7 +194,7 @@ This tutorial also requires an access to [Primavera ERP](https://pt.primaverabss
 	}
     ```
 
-18. Build the model
+18. Perform a new build
 
 19. Demo
 
@@ -304,7 +304,7 @@ This tutorial also requires an access to [Primavera ERP](https://pt.primaverabss
 
 9. Reorganize the PurchaseOrder attributes (by accessing the option ***User Interface***)
 
-10. Perform a new Build (by accessing the option ***Versioning / Builds / Create new***).
+10. Perform a new Build
 
 11. Go to the Application area.
 
