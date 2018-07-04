@@ -214,7 +214,99 @@ This tutorial also requires an access to [Primavera ERP](https://pt.primaverabss
     - Supplier
     - OrderLines
 
-6. Navigate to tab *"[Entity Behaviours](https://docs.numbersbelieve.com/omnia3_modeler_datasources.html)"*, and define a behaviour to be executed *"After Change"*. This behaviour will be used to set default values on Commitment instances.
+6. On Document "*PurchaseOrder*", navigate to tab *"[Data References](https://docs.numbersbelieve.com/omnia3_modeler_references.html)"*, and define a reference for Primavera assemblies:
+
+    1. Interop.StdBE900.dll
+    2. Interop.ErpBS900.dll
+    3. Interop.IGcpBS900.dll
+    4. Interop.GcpBE900.dll
+
+7. Navigate to tab *"[Data Behaviours](https://docs.numbersbelieve.com/omnia3_modeler_datasources.html)"*, and define a behaviour to be executed on *"ReadList"*. This behaviour will be used for Query and List requests for this entity.
+
+    Copy and paste the following code (*Remember to **change** the **```"USER"```** and **```"PASS"```** fields to your actual username and password.*):
+
+    ```C#
+	try
+	{
+		List<IDictionary<string, object>> ordersList = new List<IDictionary<string, object>>();
+
+		ErpBS bsERP = new ErpBS();
+		bsERP.AbreEmpresaTrabalho(EnumTipoPlataforma.tpEmpresarial, "DEMO", "USER", "PASS");
+
+		Interop.StdBE900.StdBELista queryResults = bsERP.Consulta($"SELECT Orders.OrderCount, Serie, TipoDoc, NumDoc, Entidade, CONVERT (NVARCHAR(10), DataDoc, 120) AS DataDoc from CabecCompras  CROSS JOIN (SELECT Count(*) AS OrderCount FROM CabecCompras where TipoDoc = 'ECF') AS Orders where TipoDoc = 'ECF' ORDER BY DataDoc DESC OFFSET {(page - 1)*pageSize} ROWS FETCH NEXT {pageSize} ROWS ONLY");
+
+		int numberOfRecords = Convert.ToInt32(queryResults.Valor("OrderCount").ToString());
+		while (!queryResults.NoFim())
+		{
+
+			var order = new Dictionary<string, object>() {
+				{ "_code", queryResults.Valor("Serie").ToString()+"/"+queryResults.Valor("NumDoc").ToString()},
+				{ "_serie", queryResults.Valor("Serie").ToString()},
+				{ "_number", queryResults.Valor("NumDoc").ToString()},
+				{ "_date", queryResults.Valor("DataDoc").ToString()}
+			};
+
+			ordersList.Add(order);
+			queryResults.Seguinte();
+		}
+                
+		bsERP.FechaEmpresaTrabalho();
+		return (numberOfRecords, ordersList);
+	}
+	catch (Exception e)
+	{
+		Console.WriteLine(e.Message);
+		throw;
+	}
+    ```
+8. Navigate to tab *"[Data Behaviours](https://docs.numbersbelieve.com/omnia3_modeler_datasources.html)"*, and define a behaviour to be executed on *"Create"*. This behaviour will be used to create new instances on ERP everytime a new PurchaseOrder is created on Omnia.
+
+    Copy and paste the following code (*Remember to **change** the **```"USER"```** and **```"PASS"```** fields to your actual username and password.*):
+
+    ```C#
+	try
+	{
+		List<IDictionary<string, object>> ordersList = new List<IDictionary<string, object>>();
+
+		ErpBS bsERP = new ErpBS();
+		bsERP.AbreEmpresaTrabalho(EnumTipoPlataforma.tpEmpresarial, "DEMO", "USER", "PASS");
+
+		Interop.StdBE900.StdBELista queryResults = bsERP.Consulta($"SELECT Orders.OrderCount, Serie, TipoDoc, NumDoc, Entidade, CONVERT (NVARCHAR(10), DataDoc, 120) AS DataDoc from CabecCompras  CROSS JOIN (SELECT Count(*) AS OrderCount FROM CabecCompras where TipoDoc = 'ECF') AS Orders where TipoDoc = 'ECF' ORDER BY DataDoc DESC OFFSET {(page - 1)*pageSize} ROWS FETCH NEXT {pageSize} ROWS ONLY");
+
+		int numberOfRecords = Convert.ToInt32(queryResults.Valor("OrderCount").ToString());
+		while (!queryResults.NoFim())
+		{
+
+			var order = new Dictionary<string, object>() {
+				{ "_code", queryResults.Valor("Serie").ToString()+"/"+queryResults.Valor("NumDoc").ToString()},
+				{ "_serie", queryResults.Valor("Serie").ToString()},
+				{ "_number", queryResults.Valor("NumDoc").ToString()},
+				{ "_date", queryResults.Valor("DataDoc").ToString()}
+			};
+
+			ordersList.Add(order);
+			queryResults.Seguinte();
+		}
+                
+		bsERP.FechaEmpresaTrabalho();
+		return (numberOfRecords, ordersList);
+	}
+	catch (Exception e)
+	{
+		Console.WriteLine(e.Message);
+		throw;
+	}
+    ```
+
+9. Reorganize the PurchaseOrder attributes (by accessing the option ***User Interface***)
+
+10. Perform a new Build (by accessing the option ***Versioning / Builds / Create new***).
+
+11. Go to the Application area.
+
+12. Demo
+
+13. Navigate to tab *"[Entity Behaviours](https://docs.numbersbelieve.com/omnia3_modeler_datasources.html)"*, and define a behaviour to be executed *"After Change"*. This behaviour will be used to set default values on Commitment instances.
 
     Copy and paste the following code:
 
@@ -226,103 +318,7 @@ This tutorial also requires an access to [Primavera ERP](https://pt.primaverabss
 	});
     ```
 
-7. On Document "*PurchaseOrder*", navigate to tab *"[Data References](https://docs.numbersbelieve.com/omnia3_modeler_references.html)"*, and define a reference for Primavera assemblies:
-
-    1. Interop.StdBE900.dll
-    2. Interop.ErpBS900.dll
-    3. Interop.IGcpBS900.dll
-    4. Interop.GcpBE900.dll
-
-8. Navigate to tab *"[Data Behaviours](https://docs.numbersbelieve.com/omnia3_modeler_datasources.html)"*, and define a behaviour to be executed on *"ReadList"*. This behaviour will be used for Query and List requests for this entity.
-
-    Copy and paste the following code (*Remember to **change** the **```"USER"```** and **```"PASS"```** fields to your actual username and password.*):
-
-    ```C#
-	try
-	{
-		List<IDictionary<string, object>> ordersList = new List<IDictionary<string, object>>();
-
-		ErpBS bsERP = new ErpBS();
-		bsERP.AbreEmpresaTrabalho(EnumTipoPlataforma.tpEmpresarial, "DEMO", "USER", "PASS");
-
-		Interop.StdBE900.StdBELista queryResults = bsERP.Consulta($"SELECT Orders.OrderCount, Serie, TipoDoc, NumDoc, Entidade, CONVERT (NVARCHAR(10), DataDoc, 120) AS DataDoc from CabecCompras  CROSS JOIN (SELECT Count(*) AS OrderCount FROM CabecCompras where TipoDoc = 'ECF') AS Orders where TipoDoc = 'ECF' ORDER BY DataDoc DESC OFFSET {(page - 1)*pageSize} ROWS FETCH NEXT {pageSize} ROWS ONLY");
-
-		int numberOfRecords = Convert.ToInt32(queryResults.Valor("OrderCount").ToString());
-		while (!queryResults.NoFim())
-		{
-
-			var order = new Dictionary<string, object>() {
-				{ "_code", queryResults.Valor("Serie").ToString()+"/"+queryResults.Valor("NumDoc").ToString()},
-				{ "_serie", queryResults.Valor("Serie").ToString()},
-				{ "_number", queryResults.Valor("NumDoc").ToString()},
-				{ "_date", queryResults.Valor("DataDoc").ToString()}
-			};
-
-			ordersList.Add(order);
-			queryResults.Seguinte();
-		}
-                
-		bsERP.FechaEmpresaTrabalho();
-		return (numberOfRecords, ordersList);
-	}
-	catch (Exception e)
-	{
-		Console.WriteLine(e.Message);
-		throw;
-	}
-    ```
-9. Navigate to tab *"[Data Behaviours](https://docs.numbersbelieve.com/omnia3_modeler_datasources.html)"*, and define a behaviour to be executed on *"Create"*. This behaviour will be used to create new instances on ERP everytime a new PurchaseOrder is created on Omnia.
-
-    Copy and paste the following code (*Remember to **change** the **```"USER"```** and **```"PASS"```** fields to your actual username and password.*):
-
-    ```C#
-	try
-	{
-		List<IDictionary<string, object>> ordersList = new List<IDictionary<string, object>>();
-
-		ErpBS bsERP = new ErpBS();
-		bsERP.AbreEmpresaTrabalho(EnumTipoPlataforma.tpEmpresarial, "DEMO", "USER", "PASS");
-
-		Interop.StdBE900.StdBELista queryResults = bsERP.Consulta($"SELECT Orders.OrderCount, Serie, TipoDoc, NumDoc, Entidade, CONVERT (NVARCHAR(10), DataDoc, 120) AS DataDoc from CabecCompras  CROSS JOIN (SELECT Count(*) AS OrderCount FROM CabecCompras where TipoDoc = 'ECF') AS Orders where TipoDoc = 'ECF' ORDER BY DataDoc DESC OFFSET {(page - 1)*pageSize} ROWS FETCH NEXT {pageSize} ROWS ONLY");
-
-		int numberOfRecords = Convert.ToInt32(queryResults.Valor("OrderCount").ToString());
-		while (!queryResults.NoFim())
-		{
-
-			var order = new Dictionary<string, object>() {
-				{ "_code", queryResults.Valor("Serie").ToString()+"/"+queryResults.Valor("NumDoc").ToString()},
-				{ "_serie", queryResults.Valor("Serie").ToString()},
-				{ "_number", queryResults.Valor("NumDoc").ToString()},
-				{ "_date", queryResults.Valor("DataDoc").ToString()}
-			};
-
-			ordersList.Add(order);
-			queryResults.Seguinte();
-		}
-                
-		bsERP.FechaEmpresaTrabalho();
-		return (numberOfRecords, ordersList);
-	}
-	catch (Exception e)
-	{
-		Console.WriteLine(e.Message);
-		throw;
-	}
-    ```
-
-10. Reorganize the PurchaseOrder attributes (by accessing the option ***User Interface***)
-
-11. Perform a new Build (by accessing the option ***Versioning / Builds / Create new***).
-
-12. Go to the Application area.
-
-13. Create a new instance of the Primavera data source, with code *"DEMO"* and with the Code of the Connector that you have created.
-
-14. On left side menu, navigate to *Configurations / Supplier*, identify the Primavera data source instance (DEMO) and check that the list is filled with data retrieved from Primavera.
-
-15. Now you can try to List and Create new Products directly on your on-premise system
-
-16. Finally, try to create new Purchase Orders on Omnia, and check that they are integrated on your on-premise system 
+14. Reorganize UI
 
 ## 5. Communicate with an external API
 
