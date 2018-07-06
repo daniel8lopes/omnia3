@@ -37,6 +37,9 @@ There are currently five different execution moments for behaviours, which follo
 - **After Change**: Executes immediately after the update with the user's changes is done;
 - **Before Save**: Executes when an entity is saved.
 
+Other than these, there is a special entity behaviour that executes afterwards:
+- **After Save**: Executes after an entity is saved, asynchronously, by being put in an **outbox** and processed separately.
+
 ![The behaviour execution lifecycle](images\modeler\BehaviourLifecycle.png)
 
 ## 3. Usage
