@@ -76,8 +76,10 @@ If you do not have a tenant yet, please follow the steps of the [Tenant Creation
 19. Add a new **After Change** Behaviour to fill **_provider** and **_receiver** attributes by accessing the tab Behaviours and clicking the button ***Add new / After Change***. Set ***SetCommitmentAgents*** as Name and paste the following code:
 
     ````
-        OrderLines.ForEach(a => a._receiver = Company);
-        OrderLines.ForEach(a => a._provider = Supplier);
+        OrderLines.ForEach(line => {
+	           line._provider = Supplier;
+	           line._receiver = Company;
+        });
     ````
 
 20. Go to your ***PurchaseOrder*** **Document** User Interface by accessing the respective tab, and reorganize them to simplify the interface. Remove the elements **Provider**, **Receiver**  and **Code** from **OrderLines** element. At last, remove **Code** attribute from Document.
