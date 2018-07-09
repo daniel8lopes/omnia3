@@ -28,13 +28,12 @@ It is necessary to have completed the steps in the  [Beginner tutorial](http://d
 
     ![Modeler_Create_Document_Attribute](/images/tutorials/advanced/Modeler-Create-Attribute-SupplierName.PNG)
 
-2. Create a new ***Action Behaviour***  to fill the new attribute (on the PurchaseOrder document, go to tab **Behaviours** and click on ***Add new / Action***). Set **GetSupplierName** as **Code**, **Supplier** as the attribute that triggers the behaviour, and paste the following code:
+2. Create a new ***Action Behaviour***  to fill the new attribute (on the *PurchaseOrder* document, go to tab **Entity Behaviours** and click on ***Add new / Action***). Set **GetSupplierName** as **Name**, **Supplier** as the attribute that triggers the behaviour, and paste the following code:
 
-    ````
+    ```C#
     var supplier = ApiClient.Get(this.Context, "Supplier", newValue);
     SupplierName = supplier["_name"].ToString();
-
-    ````
+    ```
 
 3. Build the model.
 
