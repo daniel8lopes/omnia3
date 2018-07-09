@@ -39,41 +39,43 @@ If you do not have a tenant yet, please follow the steps of the [Tenant Creation
 
 5. Access the option ***Versioning / Builds*** and build the tenant by clicking the button ***Create new***.
 
-6. On the left side menu, select option ***Go to / Application*** and create a new **Company**, by selecting the option ***Configurations / Company*** and defining its *Code* and *Name*.
+6. On the left side menu, select option ***Go to / Application***. You will now be redirected to the application area. 
 
     ![Application_Create_Agent](/images/tutorials/beginner/Modeler-Navigate-Application.PNG)
+    
+7. Create a new **Company**, by selecting the option ***Configurations / Company*** and defining its *Code* and *Name*.
 
-7.  Follow the same process of the previous step to create a new **Supplier** and **Product**.
+8.  Follow the same process of the previous step to create a new **Supplier** and **Product**.
 
-8. Go back to modeling area (***Go to / Modeler***) and create a new **Commitment** with *Code* set as ***GoodsPurchaseRequest***, **Product** as the resource to be exchanged, **Supplier** as provider agent and **Company** as receiver agent.
+9. Go back to modeling area (***Go to / Modeler***) and create a new **Commitment** with *Code* set as ***GoodsPurchaseRequest***, **Product** as the resource to be exchanged, **Supplier** as provider agent and **Company** as receiver agent.
 
     ![Modeler_Create_Commitment](https://github.com/numbersbelieve/omnia3/raw/master/docs/tutorialPics/modelingTutorial/Modeler-Create-Commitment.PNG)
 
-9. Add a new attribute by clicking on button **Add new**. Set its *Code* as **UnitPrice**, *Type* as ***Primitive / Decimal***, and as required by checking option *Is required?*.
+10. Add a new attribute by clicking on button **Add new**. Set its *Code* as **UnitPrice**, *Type* as ***Primitive / Decimal***, and as required by checking option *Is required?*.
 
     ![Modeler_Create_Attribute](https://github.com/numbersbelieve/omnia3/raw/master/docs/tutorialPics/modelingTutorial/Modeler-Create-Attribute.PNG)
 
-10. Edit the attribute **_amount**, and mark it as Read Only.
+11. Edit the attribute **_amount**, and mark it as Read Only.
 
-11. Click on tab ***Entity Behaviours*** and on button **Add new > Formula**. Set its *Name* as **CalculateAmount**, attribute as **_amount** and set as code to execute `return UnitPrice * _quantity;`.
+12. Click on tab ***Entity Behaviours*** and on button **Add new > Formula**. Set its *Name* as **CalculateAmount**, attribute as **_amount** and set as code to execute `return UnitPrice * _quantity;`.
 
-12. Add a new document - ***Documents / Add new***. Set **PurchaseOrder** as the document's *Name*;
+13. Add a new document - ***Documents / Add new***. Set **PurchaseOrder** as the document's *Name*;
 
-13. Click on ***Attribute / Add new*** in **Document**. Set its *Code* as *OrderLines*, *Type* as **Commitment > GoodsPurchaseRequest**.
+14. Click on ***Attribute / Add new*** in **Document**. Set its *Code* as *OrderLines*, *Type* as **Commitment > GoodsPurchaseRequest**.
 
     ![Modeler_Create_Composite_Attribute](https://github.com/numbersbelieve/omnia3/raw/master/docs/tutorialPics/modelingTutorial/Modeler-Create-CompositeAttribute.PNG)
 
-14. Perform a new Build (by accessing the option ***Versioning > Builds** and clicking on button **Create new**).
+15. Perform a new Build (by accessing the option ***Versioning > Builds** and clicking on button **Create new**).
 
-15. Select option ***Go to / Application***, and create a **Serie** for the document you just created, by selecting the option **Series / PurchaseOrderSeries**.
+16. Select option ***Go to / Application***, and create a **Serie** for the document you just created, by selecting the option **Series / PurchaseOrderSeries**.
 
-16. Create a new **PurchaseOrder** by selecting the option ***Documents / PurchaseOrder***.
+17. Create a new **PurchaseOrder** by selecting the option ***Documents / PurchaseOrder***.
 
-17. Go back to modeling area (by accessing the option ***Go to / Modeler***) and edit the **PurchaseOrder** document to simplify its interface. Add a new attribute by clicking on button **Add new**. Set its *Code* as **Company**, *Type* as ***Agent / Company***, and as required by checking option *Is required?*.
+18. Go back to modeling area (by accessing the option ***Go to / Modeler***) and edit the **PurchaseOrder** document to simplify its interface. Add a new attribute by clicking on button **Add new**. Set its *Code* as **Company**, *Type* as ***Agent / Company***, and as required by checking option *Is required?*.
 
-18. Add ***Attribute / Add new***. Set its *Code* as **Supplier**, *Type* as ***Agent / Supplier***, and as required by checking option *Is required?*. 
+19. Add ***Attribute / Add new***. Set its *Code* as **Supplier**, *Type* as ***Agent / Supplier***, and as required by checking option *Is required?*. 
 
-19. Add a new **After Change** Behaviour to fill **_provider** and **_receiver** attributes by accessing the tab Behaviours and clicking the button ***Add new / After Change***. Set ***SetCommitmentAgents*** as Name and paste the following code:
+20. Add a new **After Change** Behaviour to fill **_provider** and **_receiver** attributes by accessing the tab Behaviours and clicking the button ***Add new / After Change***. Set ***SetCommitmentAgents*** as Name and paste the following code:
 
     ````
         OrderLines.ForEach(line => {
@@ -82,16 +84,16 @@ If you do not have a tenant yet, please follow the steps of the [Tenant Creation
         });
     ````
 
-20. Go to your ***PurchaseOrder*** **Document** User Interface by accessing the respective tab, and reorganize them to simplify the interface. Remove the elements **Provider**, **Receiver**  and **Code** from **OrderLines** element. At last, remove **Code** attribute from Document.
+21. Go to your ***PurchaseOrder*** **Document** User Interface by accessing the respective tab, and reorganize them to simplify the interface. Remove the elements **Provider**, **Receiver**  and **Code** from **OrderLines** element. At last, remove **Code** attribute from Document.
 
-21. Reorganize Rows and Columns, re-establishing the **size** and **position** of their elements:
+22. Reorganize Rows and Columns, re-establishing the **size** and **position** of their elements:
   * ***Serie***: Row 1, Column 1 and Size 4; 
   * ***Number***: Row 1, Column 5 and Size 4; 
   * ***Date***: Row 1, Column 9 and Size 4; 
   * ***Company***: Row 2, Column 1 and Size 4;
   * ***Supplier***: Row 2, Column 5 and Size 4.
 
-22. Go to application and validate interface changes by creating a new **PurchaseOrder** document. The interface should be equal to the one below:
+23. Go to application and validate interface changes by creating a new **PurchaseOrder** document. The interface should be equal to the one below:
 
     ![Application_Final_Interface](https://github.com/numbersbelieve/omnia3/raw/master/docs/tutorialPics/modelingTutorial/Application-Final-Interface.PNG)
 
