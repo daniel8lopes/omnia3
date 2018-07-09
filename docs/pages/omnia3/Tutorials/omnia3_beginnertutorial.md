@@ -53,7 +53,7 @@ If you do not have a tenant yet, please follow the steps of the [Tenant Creation
 
     ![Modeler_Create_Commitment](/images/tutorials/beginner/Modeler-Create-Commitment.PNG)
 
-10. Add a new attribute by clicking on button **Add new**. Set its *Code* as **UnitPrice**, *Type* as ***Primitive / Decimal***, and as required by checking option *Is required?*.
+10. Add a new attribute by clicking on button **Add new**. Set its *Name* as **UnitPrice**, *Type* as ***Primitive / Decimal***, and as required by checking option *Is required?*.
 
     ![Modeler_Create_Attribute](/images/tutorials/beginner/Modeler-Create-Attribute.PNG)
 
@@ -75,16 +75,16 @@ If you do not have a tenant yet, please follow the steps of the [Tenant Creation
 
 18. Go back to modeling area (by accessing top bar menu option ***Modeler***) and edit the **PurchaseOrder** document to simplify its interface. Add a new attribute by clicking on button **Add new**. Set its *Name* as **Company**, *Type* as ***Agent / Company***, and as required by checking option *Is required?*.
 
-19. Add ***Attribute / Add new***. Set its *Code* as **Supplier**, *Type* as ***Agent / Supplier***, and as required by checking option *Is required?*. 
+19. Add ***Attribute / Add new***. Set its *Name* as **Supplier**, *Type* as ***Agent / Supplier***, and as required by checking option *Is required?*. 
 
 20. Add a new **After Change** Behaviour to fill **_provider** and **_receiver** attributes by accessing the tab Behaviours and clicking the button ***Add new / After Change***. Set ***SetCommitmentAgents*** as Name and paste the following code:
 
-    ````
+    ```C#
         OrderLines.ForEach(line => {
 	           line._provider = Supplier;
 	           line._receiver = Company;
         });
-    ````
+    ```
 
 21. Go to your ***PurchaseOrder*** **Document** User Interface by accessing the respective tab, and reorganize them to simplify the interface. Remove the elements **Provider**, **Receiver**  and **Code** from **OrderLines** element. At last, remove **Code** attribute from Document.
 
