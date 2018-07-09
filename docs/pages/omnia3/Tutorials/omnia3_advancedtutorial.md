@@ -85,9 +85,9 @@ It is necessary to have completed the steps in the  [Beginner tutorial](http://d
 
 ### Queries and Lists
 
-1. On **Modeler**, go to ***Data Analytics / Queries*** and click on button ***Add New*** to create a new query. Set **ProductsArtists_Query** as Code and ***Resource / Product*** as Type.
+1. On **Modeler**, go to ***Data analytics / Queries*** and click on button ***Add New*** to create a new query. Set **ProductsArtists_Query** as *Name* and ***Resource / Product*** as *Type*.
 
-    ![Modeler_Create_Query](https://github.com/numbersbelieve/omnia3/raw/master/docs/tutorialPics/modelingTutorial/Modeler-Create-Query.PNG)
+    ![Modeler_Create_Query](/images/tutorials/advanced/Modeler-Create-Query.PNG)
 
 2. Click on button **Add New** to add columns to Query. Add a column with Alias **Code** and Path **_code**.
     
