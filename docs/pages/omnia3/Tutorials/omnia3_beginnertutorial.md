@@ -67,9 +67,9 @@ If you do not have a tenant yet, please follow the steps of the [Tenant Creation
 
     ![Modeler_Create_Composite_Attribute](/images/tutorials/beginner/Modeler-Create-OrderLines-Attribute.PNG)
 
-15. Perform a new Build (by accessing the option ***Versioning / Builds** and clicking on button **Create new**).
+15. Perform a new Build (by accessing the option **Versioning / Builds** and clicking on button **Create new**).
 
-16. Select option ***Go to / Application***, and create a **Serie** for the document you just created, by selecting the option **Series / PurchaseOrderSeries**.
+16. Navigate to ***Application*** through the top bar option, and create a **Serie** for the document you just created, by selecting the option **Series / PurchaseOrderSeries**.
 
 17. Create a new **PurchaseOrder** by selecting the option ***Documents / PurchaseOrder***.
 
