@@ -26,7 +26,7 @@ It is necessary to have completed the steps in the  [Beginner tutorial](http://d
  
 1. Go to the **Modeler** and edit the previously modeled document *PurchaseOrder*. Create a new  **Attribute**  by clicking the button  ***Add new***  on the top right side, and setting its  **Name** and **Type**  to  **SupplierName** and ***Primitive / Text***, respectively. Set the attribute as **Read Only**.
 
-    ![Modeler_Create_Document_Attribute](https://github.com/numbersbelieve/omnia3/raw/master/docs/tutorialPics/modelingTutorial/Modeler-Create-Attribute-SupplierName.PNG)
+    ![Modeler_Create_Document_Attribute](/images/tutorials/advanced/Modeler-Create-Attribute-SupplierName.PNG)
 
 2. Create a new ***Action Behaviour***  to fill the new attribute (on the PurchaseOrder document, go to tab **Behaviours** and click on ***Add new / Action***). Set **GetSupplierName** as **Code**, **Supplier** as the attribute that triggers the behaviour, and paste the following code:
 
