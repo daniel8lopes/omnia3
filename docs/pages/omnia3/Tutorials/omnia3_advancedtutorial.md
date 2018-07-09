@@ -110,9 +110,9 @@ It is necessary to have completed the steps in the  [Beginner tutorial](http://d
 
     ![Modeler_Create_Dashboard](/images/tutorials/advanced/Modeler-Create-Dashboard.PNG)
 
-2. Click on button **Add New** to add lists to Dashboard. Set **ProductsList** as Code, select **ProductsArtists_List** (created previously) and position it in the first **Row** and **Column**, with **Size** six.
+2. Click on button **Add New** to add lists to Dashboard. Set **ProductsList** as Code, select **ProductsArtists_QueryList** (created previously) and position it in the first **Row** and **Column**, with **Size** six.
 
-    ![Modeler_Add_List_Dashboard](https://github.com/numbersbelieve/omnia3/raw/master/docs/tutorialPics/modelingTutorial/Modeler-Add-List-Dashboard.PNG)
+    ![Modeler_Add_List_Dashboard](/images/tutorials/advanced/Modeler-Add-List-Dashboard.PNG)
 
 3. **Build** the model.
 
