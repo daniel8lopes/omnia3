@@ -27,7 +27,7 @@ If you do not have a tenant yet, please follow the steps of the [Tenant Creation
 
 1. Start by selecting the tenant where you are going to model, and you will be redirected to the modeling area.
  
-    ![Homepage_Dashboard](http://funkyimg.com/i/2DVGv.png)
+    ![Homepage_Dashboard](/images/tutorials/beginner/Modeler-Homepage.PNG)
  
 2. Through the left side menu, access the option ***Agents / Create New*** on the top right side, and setting its **Code** to **Company**.
 
