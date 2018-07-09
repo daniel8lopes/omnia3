@@ -40,7 +40,7 @@ There are currently five different execution moments for behaviours, which follo
 Other than these, there is a special entity behaviour that executes afterwards:
 - **After Save**: Executes after an entity is saved, asynchronously, by being put in an **outbox** and processed separately. 
 
-    **Note**: After Save behaviours are not called immediately after saving, but go into a queue. More information [here](omnia3_application_notifications_and_operations.html). _**No changes to the status of the entity will be saved! If you want to change an entity on an After Save, you must do it via our API.**_.
+    **Note**: After Save behaviours are not called immediately after saving, but go into a queue. More information [here](omnia3_application_notifications_and_operations.html). _**No changes to the status of the entity will be saved! If you want to change an entity on an After Save, you must do it via our API.**_
 
 ![The behaviour execution lifecycle](images\modeler\BehaviourLifecycle.png)
 
