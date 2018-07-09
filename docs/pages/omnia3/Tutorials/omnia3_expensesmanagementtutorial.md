@@ -20,7 +20,7 @@ This tutorial assumes that you have created a OMNIA tenant, and are logged in as
 
 1.  Start by selecting the tenant where you are going to model, and you will be redirected to the modeling area.
     
-    ![Homepage_Dashboard](http://funkyimg.com/i/2DVGv.png)
+    ![Homepage_Dashboard](/images/tutorials/beginner/Modeler-Homepage.PNG)
     
 2.  Through the left side menu, access the option  ***Agents / Create new*** on the top right side, and setting its  *Code*  to  **Company**.
     
@@ -98,7 +98,7 @@ This tutorial assumes that you have created a OMNIA tenant, and are logged in as
 
             ExchangeRate = Convert.ToDecimal(value[$"{Currency}"].ToString());
 
-This example will give the exchange rate between EUR and the currency provided in the attribute Currency. You can try it out with different currencies, such as **GBP** or **USD**.
+    This example will give the exchange rate between EUR and the currency provided in the attribute Currency. You can try it out with different currencies, such as **GBP** or **USD**.
 
 21. Add a new **Before Save Behaviour** to fill *Provider* and *Receiver* attributes by accessing the tab Behaviours and clicking the button ***Add new / Before Save***. Set *BeforeSaveBehaviours* as Code and paste the following code:
 
