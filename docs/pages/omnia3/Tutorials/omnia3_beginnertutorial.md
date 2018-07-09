@@ -63,9 +63,9 @@ If you do not have a tenant yet, please follow the steps of the [Tenant Creation
 
 13. Add a new document by selecting option ***Documents / Add new***. Set **PurchaseOrder** as the document's *Name*;
 
-14. Click on ***Attribute / Add new*** in **Document**. Set its *Code* as *OrderLines*, *Type* as **Commitment > GoodsPurchaseRequest**.
+14. Click on ***Attribute / Add new*** in **Document**. Set its *Name* as *OrderLines*, *Type* as **Commitment > GoodsPurchaseRequest**.
 
-    ![Modeler_Create_Composite_Attribute](https://github.com/numbersbelieve/omnia3/raw/master/docs/tutorialPics/modelingTutorial/Modeler-Create-CompositeAttribute.PNG)
+    ![Modeler_Create_Composite_Attribute](/images/tutorials/beginner/Modeler-Create-OrderLines-Attribute.PNG)
 
 15. Perform a new Build (by accessing the option ***Versioning > Builds** and clicking on button **Create new**).
 
