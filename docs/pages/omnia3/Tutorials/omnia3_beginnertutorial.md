@@ -35,7 +35,7 @@ If you do not have a tenant yet, please follow the steps of the [Tenant Creation
 
 3. Return to the ***Agents*** list and add a new agent by clicking on button ***Add new*** and setting its *Name* as **Supplier**.
 
-4. Through the left side menu, access the option ***Resources / Add new*** on the top right side, and setting its *Name* to **Product**.
+4. Through the left side menu, access the option ***Resources / Add new*** on the top right side, and setting its *Name* as **Product**.
 
 5. Access the option ***Versioning / Builds*** and build the tenant by clicking the button ***Create new***.
 
