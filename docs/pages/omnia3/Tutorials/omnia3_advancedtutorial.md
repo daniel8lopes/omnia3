@@ -93,15 +93,9 @@ It is necessary to have completed the steps in the  [Beginner tutorial](http://d
     
 3. Repeat previous step to add columns with alias **Name** and **Artist**, whose Path is **_name** and **artist**, respectively.
 
-4. Go to ***Data Analytics / Lists*** and click on button **Add New** to create a new list. Set **ProductsArtists_List** as Code, the query created on first step (**ProductsArtists_Query**) as the source of the list and **Products** as Label.
+4. On top right side, click on button ***More options / Generate list*** to create a new list based on the given query.
 
-    ![Modeler_Create_List](https://github.com/numbersbelieve/omnia3/raw/master/docs/tutorialPics/modelingTutorial/Modeler-Create-List.PNG)
-    
-5. Click on button **Add New** to add columns to List. Add a column for Query Property **Code** with Label **Album Code**, and format as **Text**
-
-    ![Modeler_Create_List_Attribute](https://github.com/numbersbelieve/omnia3/raw/master/docs/tutorialPics/modelingTutorial/Modeler-Create-List-Attribute.PNG)
-
-6. Repeat previous step to add columns for Query Properties **Name** and **Artist**.
+    ![Modeler_Generate_List](/images/tutorials/advanced/Modeler-Generate-List.PNG)
 
 
 ### Dashboards
