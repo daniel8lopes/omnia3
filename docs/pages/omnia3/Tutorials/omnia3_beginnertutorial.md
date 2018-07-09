@@ -41,7 +41,7 @@ If you do not have a tenant yet, please follow the steps of the [Tenant Creation
 
 6. On the left side menu, select option ***Go to / Application*** and create a new **Company**, by selecting the option ***Configurations / Company*** and defining its *Code* and *Name*.
 
-    ![Application_Create_Agent](https://github.com/numbersbelieve/omnia3/raw/master/docs/tutorialPics/modelingTutorial/Application-Create-Agent.PNG)
+    ![Application_Create_Agent](/images/tutorials/beginner/Modeler-Navigate-Application.PNG)
 
 7.  Follow the same process of the previous step to create a new **Supplier** and **Product**.
 
