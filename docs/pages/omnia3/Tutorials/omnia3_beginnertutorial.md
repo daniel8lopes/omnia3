@@ -49,9 +49,9 @@ If you do not have a tenant yet, please follow the steps of the [Tenant Creation
 
 8.  Follow the same process of the previous step to create a new **Supplier** and **Product**.
 
-9. Go back to modeling area (***Modeler***) and create a new **Commitment** with *Code* set as ***GoodsPurchaseRequest***, **Product** as the resource to be exchanged, **Supplier** as provider agent and **Company** as receiver agent.
+9. Go back to modeling area (***Modeler***) and create a new **Commitment** with *Name* set as ***GoodsPurchaseRequest***, **Product** as the resource to be exchanged, **Supplier** as provider agent and **Company** as receiver agent.
 
-    ![Modeler_Create_Commitment](https://github.com/numbersbelieve/omnia3/raw/master/docs/tutorialPics/modelingTutorial/Modeler-Create-Commitment.PNG)
+    ![Modeler_Create_Commitment](/images/tutorials/beginner/Modeler-Create-Commitment.PNG)
 
 10. Add a new attribute by clicking on button **Add new**. Set its *Code* as **UnitPrice**, *Type* as ***Primitive / Decimal***, and as required by checking option *Is required?*.
 
