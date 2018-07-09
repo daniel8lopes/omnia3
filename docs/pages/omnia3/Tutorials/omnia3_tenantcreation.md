@@ -29,7 +29,7 @@ If you do not have a deployment yet, please view the instructions for [Deploying
 
     ![Go To Tenants Management](/images/tutorials/tenantcreation/Application-Select-Tenant.PNG)
  
- 3. Create a new ***Tenant***, by clicking the button ***Add new*** on the top right side, and setting its ***Code***
+ 3. Create a new ***Tenant***, by clicking the button ***Add new*** on the top right side, and setting its ***Code*** and ***Name***.
 
     ![OMNIA Tenant Code](/images/tutorials/tenantcreation/Management-Create-Tenant.PNG)
     
