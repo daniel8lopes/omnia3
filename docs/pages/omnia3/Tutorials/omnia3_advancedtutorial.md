@@ -79,7 +79,7 @@ It is necessary to have completed the steps in the  [Beginner tutorial](http://d
 
 5. Go to **Application** area, and create a new **Product** resource. Observe that, when **Code** is identified (e.g. try with value 8540), the **Name** and **Artist** is automatically retrieved.
 
-    ![Application_Create_Resource](https://github.com/numbersbelieve/omnia3/raw/master/docs/tutorialPics/modelingTutorial/Application-Create-Product.PNG)
+    ![Application_Create_Resource](/images/tutorials/advanced/Application-Create-Product.PNG)
 
 ## 4. Data Analysis
 
