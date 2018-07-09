@@ -29,7 +29,7 @@ If you do not have a tenant yet, please follow the steps of the [Tenant Creation
  
     ![Homepage_Dashboard](/images/tutorials/beginner/Modeler-Homepage.PNG)
  
-2. Through the left side menu, access the option ***Agents / Add New*** on the top right side, and setting its **Code** to **Company**.
+2. Through the left side menu, access the option ***Agents / Add New*** on the top right side, and setting its *Name* as **Company**.
 
     ![Modeler_Create_Agent](/images/tutorials/beginner/Modeler-Create-Agent.PNG)
 
