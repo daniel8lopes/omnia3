@@ -61,7 +61,7 @@ If you do not have a tenant yet, please follow the steps of the [Tenant Creation
 
 12. Click on tab ***Entity Behaviours*** and on button **Add new > Formula**. Set its *Name* as **CalculateAmount**, attribute as **_amount** and set as code to execute `return UnitPrice * _quantity;`.
 
-13. Add a new document - ***Documents / Add new***. Set **PurchaseOrder** as the document's *Name*;
+13. Add a new document by selecting option ***Documents / Add new***. Set **PurchaseOrder** as the document's *Name*;
 
 14. Click on ***Attribute / Add new*** in **Document**. Set its *Code* as *OrderLines*, *Type* as **Commitment > GoodsPurchaseRequest**.
 
