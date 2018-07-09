@@ -32,13 +32,13 @@ During the behaviour lifecycle, the platform stores the current state of the doc
 There are currently five different execution moments for behaviours, which follow a logical flow:
 - **Initialize**: Executes when an entity is created;
 - **Before Change**: Executes immediately before an update is received for that entity;
-- **Formula**: Executes during updates, requires an attribute, and **calculates** the value of that attribute;
+- **Formula**: Executes during updates, requires an attribute, and **calculates** the value of that attribute. Must return a value of the correct type;
 - **Action**: Executes during updates, requires an attribute, and, given the new and old values of that attribute, performs an operation;
 - **After Change**: Executes immediately after the update with the user's changes is done;
 - **Before Save**: Executes when an entity is saved.
 
 Other than these, there is a special entity behaviour that executes afterwards:
-- **After Save**: Executes after an entity is saved, asynchronously, by being put in an **outbox** and processed separately.
+- **After Save**: Executes after an entity is saved, asynchronously, by being put in an **outbox** and processed separately. _**No changes to the status of the entity will be saved! If you want to change an entity on an After Save, you must do it via our API.**_.
 
 ![The behaviour execution lifecycle](images\modeler\BehaviourLifecycle.png)
 
@@ -79,7 +79,7 @@ Here are some usage suggestions for each type of behaviour - though, of course, 
 - **After Save**:
     - Performing integrations with external systems that depend on the OMNIA-side document already being saved.
     - Triggering e-mail notifications.
-    **Note**: After Save behaviours are not called immediately after saving, but go into a queue. More information in a separate article.
+    **Note**: After Save behaviours are not called immediately after saving, but go into a queue. More information [here](omnia3_application_notifications_and_operations.html).
 
  Keep in mind that all Omnia entities are independent, and therefore an entity behaviour should not depend on another entity. 
  As an example, a Commitment behaviour code should not be dependent of a specific Document, because a Commitment can be available on more than one Document. On these scenarios, the behaviour should be defined on the Document.
