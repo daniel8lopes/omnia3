@@ -46,7 +46,7 @@ It is necessary to have completed the steps in the  [Beginner tutorial](http://d
 
 2. Create a new **Action Behaviour**  to fill the new attribute (on the PurchaseOrder document, go to tab ***Entity Behaviours*** and click on ***Add new / Action***). Set ***GetRecordData*** as **Name**, ***Code*** as the attribute that triggers the behaviour, and paste the following code:
 
-    ````
+    ```C#
     var client = new System.Net.Http.HttpClient() {DefaultRequestHeaders = {}};
     client.DefaultRequestHeaders.Add("User-Agent", "OMNIA");
 
@@ -63,13 +63,13 @@ It is necessary to have completed the steps in the  [Beginner tutorial](http://d
     _name = responseDictionary["title"].ToString();
 
     if (responseDictionary.ContainsKey("artists")) {
-    Newtonsoft.Json.Linq.JArray artists = (Newtonsoft.Json.Linq.JArray)responseDictionary["artists"];
+        Newtonsoft.Json.Linq.JArray artists = (Newtonsoft.Json.Linq.JArray)responseDictionary["artists"];
                 
-    if (artists != null && artists.Count > 0) {
-        Artist = artists[0]["name"].ToString();
+        if (artists != null && artists.Count > 0) {
+            Artist = artists[0]["name"].ToString();
+        }
     }
-    }
-    ````
+    ```
 
 3. Build the model.
 
