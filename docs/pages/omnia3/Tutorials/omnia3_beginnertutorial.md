@@ -33,7 +33,7 @@ If you do not have a tenant yet, please follow the steps of the [Tenant Creation
 
     ![Modeler_Create_Agent](/images/tutorials/beginner/Modeler-Create-Agent.PNG)
 
-3. Return to the ***Agents*** list and add a new agent by clicking on button ***Add new*** and setting its *Name* as **Supplier**.
+3. Return to the ***Agents*** list and click on button ***Add new*** to add a new Agent. Set its *Name* as **Supplier**.
 
 4. Through the left side menu, access the option ***Resources / Add new*** on the top right side, and setting its *Name* as **Product**.
 
