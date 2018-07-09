@@ -44,7 +44,11 @@ It is necessary to have completed the steps in the  [Beginner tutorial](http://d
 
 1. Go to the **Modeler** and edit the previously modeled resource *Product*. Create a new  **Attribute**  by clicking the button  **Add new**  on the top right side, and setting its  **Name** and **Type**  to  **Artist** and ***Primitive / Text***, respectively. Set the attribute as **Read Only**.
 
-2. Create a new **Action Behaviour**  to fill the new attribute (on the PurchaseOrder document, go to tab ***Entity Behaviours*** and click on ***Add new / Action***). Set ***GetRecordData*** as **Name**, ***_code*** as the attribute that triggers the behaviour, and paste the following code:
+2. Navigate to tab *"[Entity References](https://docs.numbersbelieve.com/omnia3_modeler_references.html)"*, and define a reference for .NET assembly System.Net.Http
+
+    ![Modeler goodsPurchaseRequest Add_Reference](/images/tutorials/multisystemconnector/Add-GoodsPurchaseRequest-Reference.PNG)
+
+3. Create a new **Action Behaviour**  to fill the new attribute (on the PurchaseOrder document, go to tab ***Entity Behaviours*** and click on ***Add new / Action***). Set ***GetRecordData*** as **Name**, ***_code*** as the attribute that triggers the behaviour, and paste the following code:
 
     ```C#
     var client = new HttpClient() {DefaultRequestHeaders = {}};
@@ -71,9 +75,9 @@ It is necessary to have completed the steps in the  [Beginner tutorial](http://d
     }
     ```
 
-3. Build the model.
+4. Build the model.
 
-4. Go to **Application** area, and create a new **Product** resource. Observe that, when **Code** is identified (e.g. try with value 8540), the **Name** and **Artist** is automatically retrieved.
+5. Go to **Application** area, and create a new **Product** resource. Observe that, when **Code** is identified (e.g. try with value 8540), the **Name** and **Artist** is automatically retrieved.
 
     ![Application_Create_Resource](https://github.com/numbersbelieve/omnia3/raw/master/docs/tutorialPics/modelingTutorial/Application-Create-Product.PNG)
 
