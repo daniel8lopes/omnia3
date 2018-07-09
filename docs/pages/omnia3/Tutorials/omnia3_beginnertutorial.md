@@ -55,7 +55,7 @@ If you do not have a tenant yet, please follow the steps of the [Tenant Creation
 
 10. Add a new attribute by clicking on button **Add new**. Set its *Code* as **UnitPrice**, *Type* as ***Primitive / Decimal***, and as required by checking option *Is required?*.
 
-    ![Modeler_Create_Attribute](https://github.com/numbersbelieve/omnia3/raw/master/docs/tutorialPics/modelingTutorial/Modeler-Create-Attribute.PNG)
+    ![Modeler_Create_Attribute](/images/tutorials/beginner/Modeler-Create-Attribute.PNG)
 
 11. Edit the attribute **_amount**, and mark it as Read Only.
 
