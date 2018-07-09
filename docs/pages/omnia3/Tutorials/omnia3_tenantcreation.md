@@ -25,13 +25,13 @@ If you do not have a deployment yet, please view the instructions for [Deploying
 
     ![OMNIA Sign in](https://raw.githubusercontent.com/numbersbelieve/omnia3/master/docs/tutorialPics/modelingTutorial/OMNIA%20-%20Sign%20In%20Account.PNG)
 
-2. Select the option ***Go to / Tenants Management*** on the inferior section of the menu.
+2. Select the option ***Go to Tenants management*** on the inferior section of the menu.
 
-    ![Go To Tenants Management](https://raw.githubusercontent.com/numbersbelieve/omnia3/master/docs/tutorialPics/modelingTutorial/OMNIA%20-%20Select%20-%20Tenant.PNG) 
+    ![Go To Tenants Management](/images/tutorials/tenantcreation/Application-Select-Tenant.PNG)
  
- 3. Create a new ***Tenant***, by clicking the button ***Add new*** on the top right side, and setting its ***Code***
+ 3. Create a new ***Tenant***, by clicking the button ***Add new*** on the top right side, and setting its ***Code*** and ***Name***.
 
-    ![OMNIA Tenant Code](https://raw.githubusercontent.com/numbersbelieve/omnia3/master/docs/tutorialPics/modelingTutorial/OMNIA-Tenant-Code.PNG )
+    ![OMNIA Tenant Code](/images/tutorials/tenantcreation/Management-Create-Tenant.PNG)
     
     **Everything's ready** for your **first glimpse** into **OMNIA Platform**, with [**OMNIA's Beginner Tutorial**](http://docs.numbersbelieve.com/omnia3_beginnertutorial.html).
 
