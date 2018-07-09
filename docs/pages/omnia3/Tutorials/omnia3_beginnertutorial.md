@@ -31,7 +31,7 @@ If you do not have a tenant yet, please follow the steps of the [Tenant Creation
  
 2. Through the left side menu, access the option ***Agents / Create New*** on the top right side, and setting its **Code** to **Company**.
 
-    ![Modeler_Create_Agent](https://github.com/numbersbelieve/omnia3/raw/master/docs/tutorialPics/modelingTutorial/Modeler-Create-Agent.PNG)
+    ![Modeler_Create_Agent](/images/tutorials/beginner/Modeler-Create-Agent.PNG)
 
 3. Return to the ***Agents*** list and add a new agent by clicking on button ***Add new*** and setting its *Code* as **Supplier**.
 
