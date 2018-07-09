@@ -57,7 +57,7 @@ If you do not have a tenant yet, please follow the steps of the [Tenant Creation
 
     ![Modeler_Create_Attribute](/images/tutorials/beginner/Modeler-Create-Attribute.PNG)
 
-11. Edit the attribute **_amount**, and mark it as Read Only.
+11. Edit the attribute **_amount**, and check option *Is read only?*.
 
 12. Click on tab ***Entity Behaviours*** and on button **Add new > Formula**. Set its *Name* as **CalculateAmount**, attribute as **_amount** and set as code to execute `return UnitPrice * _quantity;`.
 
