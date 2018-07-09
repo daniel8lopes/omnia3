@@ -42,7 +42,7 @@ It is necessary to have completed the steps in the  [Beginner tutorial](http://d
 
 ### External API
 
-1. Go to the **Modeler** and edit the previously modeled resource Product. Create a new  **Attribute**  by clicking the button  **Add new**  on the top right side, and setting its  **Code** and **Type**  to  **Artist** and ***Primitive / Text***, respectively. Set the attribute as **Read Only**.
+1. Go to the **Modeler** and edit the previously modeled resource *Product*. Create a new  **Attribute**  by clicking the button  **Add new**  on the top right side, and setting its  **Code** and **Type**  to  **Artist** and ***Primitive / Text***, respectively. Set the attribute as **Read Only**.
 
 2. Create a new **Action Behaviour**  to fill the new attribute (on the PurchaseOrder document, go to tab ***Behaviours*** and click on ***Add new / Action***). Set ***GetRecordData*** as **Code**, ***Code*** as the attribute that triggers the behaviour, and paste the following code:
 
