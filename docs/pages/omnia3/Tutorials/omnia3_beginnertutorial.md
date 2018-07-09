@@ -41,9 +41,11 @@ If you do not have a tenant yet, please follow the steps of the [Tenant Creation
 
 6. On the left side menu, select option ***Go to / Application***. You will now be redirected to the application area. 
 
-    ![Application_Create_Agent](/images/tutorials/beginner/Modeler-Navigate-Application.PNG)
+    ![Modeler_Navigate_Application](/images/tutorials/beginner/Modeler-Navigate-Application.PNG)
     
 7. Create a new **Company**, by selecting the option ***Configurations / Company*** and defining its *Code* and *Name*.
+
+    ![Application_Create_Company](/images/tutorials/beginner/Application-Create-Company.PNG)
 
 8.  Follow the same process of the previous step to create a new **Supplier** and **Product**.
 
