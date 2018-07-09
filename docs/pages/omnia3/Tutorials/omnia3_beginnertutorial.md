@@ -97,7 +97,7 @@ If you do not have a tenant yet, please follow the steps of the [Tenant Creation
 
 23. Go to application and validate interface changes by creating a new **PurchaseOrder** document. The interface should be equal to the one below:
 
-    ![Application_Final_Interface](https://github.com/numbersbelieve/omnia3/raw/master/docs/tutorialPics/modelingTutorial/Application-Final-Interface.PNG)
+    ![Application_Final_Interface](/images/tutorials/beginner/Application-View-PurchaseOrder.PNG)
 
 
     **Congratulations** on your very **first insight** into OMNIA Platform's true **development agility**! Now, it's time to **move** to our next challenge: [**OMNIA's Platform Advanced Tutorial**](http://docs.numbersbelieve.com/omnia3_advancedtutorial.html). 
