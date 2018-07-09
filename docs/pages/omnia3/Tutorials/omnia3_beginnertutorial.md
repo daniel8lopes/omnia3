@@ -39,7 +39,7 @@ If you do not have a tenant yet, please follow the steps of the [Tenant Creation
 
 5. Access the option ***Versioning / Builds*** and build the tenant by clicking the button ***Create new***.
 
-6. On the left side menu, select option ***Go to / Application***. You will now be redirected to the application area. 
+6. On the right side of the top bar, click first button and select option ***Application***. You will now be redirected to the application area. 
 
     ![Modeler_Navigate_Application](/images/tutorials/beginner/Modeler-Navigate-Application.PNG)
     
@@ -49,7 +49,7 @@ If you do not have a tenant yet, please follow the steps of the [Tenant Creation
 
 8.  Follow the same process of the previous step to create a new **Supplier** and **Product**.
 
-9. Go back to modeling area (***Go to / Modeler***) and create a new **Commitment** with *Code* set as ***GoodsPurchaseRequest***, **Product** as the resource to be exchanged, **Supplier** as provider agent and **Company** as receiver agent.
+9. Go back to modeling area (***Modeler***) and create a new **Commitment** with *Code* set as ***GoodsPurchaseRequest***, **Product** as the resource to be exchanged, **Supplier** as provider agent and **Company** as receiver agent.
 
     ![Modeler_Create_Commitment](https://github.com/numbersbelieve/omnia3/raw/master/docs/tutorialPics/modelingTutorial/Modeler-Create-Commitment.PNG)
 
