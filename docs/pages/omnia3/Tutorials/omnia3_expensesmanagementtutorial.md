@@ -60,7 +60,7 @@ This tutorial assumes that you have created a OMNIA tenant, and are logged in as
 
 16. Click on button **Add new** to add an **Attribute** to your **Document**. Set its *Name* as **ExpenseLines**, *Type* as ***Commitment / ExpenseRefundRequest***.
 
-    ![Application_Create_Agent](https://raw.githubusercontent.com/numbersbelieve/omnia3/master/docs/tutorialPics/modelingTutorial/Modeler-Document-Attribute2.PNG)
+    ![Modeler_Add_Commitment_Attribute](/images/tutorials/expensemanagement/Modeler-Add-ExpenseReport-ExpenseRefundRequest.PNG)
 
     - Add a new Attribute to your **Document**. Set its *Name* as **Currency**, *Type* as ***Generic Entity / Currency***, and as required by checking option *Is required?*.
 
