@@ -26,7 +26,7 @@ A connector is also required to complete this tutorial.
 
 2. Through the left side menu, create a new Data Source by accessing the option ***Data Sources / Add new*** on the top right side. Set its Name as "*Primavera*", Behaviour Runtime and Data Access Runtime as *"External"*.
 
-    ![Modeler create DataSource](/images/tutorials/applicationBehaviours/Modeler-Create-DataSource.PNG)
+    ![Modeler create DataSource](/images/tutorials/applicationbehaviours/Modeler-Create-DataSource.PNG)
 
 3. Through the left side menu, create a new Agent Data Source by accessing the option ***Agents / Add new*** on the top right side. Set its Name as "*Employee*" and Data Source as Primavera.
 
