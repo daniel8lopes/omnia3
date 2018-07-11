@@ -68,7 +68,7 @@ A connector is also required to complete this tutorial.
     return (numberOfRecords, employeesList);
     ```
 
-6. Navigate to tab Attributes, and add the following attributes by clicking on button Add new. 
+6. Through the left side menu, navigate to PurchaseOrder Document, by accessing the option ***Documents / PurchaseOrder***. Add the following attributes by clicking on button Add new. 
 
     - Primavera (Type: Data source / Primavera)
     - Employee (Type: Agent / Employee; Data Source attribute: Primavera)
@@ -126,4 +126,10 @@ A connector is also required to complete this tutorial.
 
 9. Build the model
 
-10. Create a new Purchase Order
+7. Go to application area, and create new instance of Primavera. The Connector value is the code defined earlier when the connector was created
+
+10. Create a new Purchase Order.
+
+11. After creating the purchase order, click on the first option of the top bar, and check the operation result is now visible.
+
+    ![Modeler view Notifications](/images/tutorials/applicationbehaviours/Application-NotificationCenter.PNG)
