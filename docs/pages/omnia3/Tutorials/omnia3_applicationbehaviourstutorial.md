@@ -36,6 +36,8 @@ A connector is also required to complete this tutorial.
     - Interop.StdBE900.dll
     - Interop.GcpBE900.dll
     - Interop.IGcpBS900.dll
+    
+    ![Modeler add Reference](/images/tutorials/applicationbehaviours/Modeler-Add-Reference.PNG)
 
 5. Navigate to tab “Data Behaviours“, and define a behaviour to be executed on “ReadList”. This behaviour will be used for Query and List requests for this entity.
 
