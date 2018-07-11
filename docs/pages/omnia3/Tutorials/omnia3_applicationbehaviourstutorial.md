@@ -28,7 +28,7 @@ A connector is also required to complete this tutorial.
 
     ![Modeler create DataSource](/images/tutorials/applicationbehaviours/Modeler-Create-DataSource.PNG)
 
-3. Through the left side menu, create a new Agent by accessing the option ***Agents / Add new*** on the top right side. Set its Name as "*Employee*" and Data Source as Primavera.
+3. Through the left side menu, create a new Agent by accessing the option ***Agents / Add new*** on the top right side. Set its Name as *Employee* and Data Source as *Primavera*.
 
 4. On Agent *Employee*, navigate to tab **Data References**, and define a reference for Primavera assemblies
 
