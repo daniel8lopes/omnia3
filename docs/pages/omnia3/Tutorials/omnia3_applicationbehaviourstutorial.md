@@ -127,18 +127,19 @@ Interop.IGcpBS900.dll
 
     Copy and paste the following code:
 
-    ```C#
+    ```C#   
     var context = new ConnectorContext(Context.Tenant.Code, Context.Tenant.EnvironmentCode, Context.Tenant.Version, Context.Authentication.AccessToken, Context.Tenant.BaseEndpoint);
     var client = new ConnectorClient(context);
     var message = new ConnectorMessage(MessageType.Application, "IntegratePurchaseOrder", OperationType.Execute);
-    message.Data = new Dictionary<string, object>()
-        {{"dataSource", _dto.Primavera}, {"dataSourceType", "Primavera"}, {"data", _dto}};
+    message.Data = new Dictionary<string, object>(){
+        {"dataSource", _dto.Primavera}, {"dataSourceType", "Primavera"}, {"data", _dto}
+    };
     var connectorUsername = "09adbc5f6f23489da6e189d7de33a824@connectors";
     var response = await client.ExecuteAsync(connectorUsername, message);
     if (response.ContainsKey("isSuccess") && (bool)response["isSuccess"] == false)
         throw new Exception(response.ContainsKey("message") ? response["message"].ToString() : "An error has occurred");
     ```
 
-10. Build the modeling
+10. Build the model
 
 11. Create a new Purchase Order
