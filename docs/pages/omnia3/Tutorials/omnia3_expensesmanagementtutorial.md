@@ -124,10 +124,10 @@ This tutorial assumes that you have created a OMNIA tenant, and are logged in as
     - ***Currency***: Row 2, Column 3 and Size 4;
     - ***ExchangeRate***: Row 3, Column 1 and Size 2;
     - ***ExpenseDate***: Row 3, Column 5 and Size 4;
-    - ***ExpenseLines***: Row 5, Column 1 and Size 12. Within the Expense Lines, change the attributes:
+    - ***ExpenseLines***: Row 4, Column 1 and Size 12. Within the Expense Lines, change the attributes:
         - ***Resource***: Row 1, Column 1 and Size 2;
         - ***Amount***: Row 1, Column 11 and Size 2;
-    - ***TotalAmount***: Row 8, Column 11 and Size 2.
+    - ***TotalAmount***: Row 5, Column 11 and Size 2.
 
 24. Perform a new Build (by accessing the option ***Versioning / Builds / Create new***).
 
