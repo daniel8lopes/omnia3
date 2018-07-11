@@ -68,11 +68,12 @@ A connector is also required to complete this tutorial.
     return (numberOfRecords, employeesList);
     ```
 
-6. Navigate to tab Attributes, and add new one by clicking on button Add new. Set its Name as Primavera, Type as Data source / Primavera, and as required by checking option Is required?.
+6. Navigate to tab Attributes, and add the following attributes by clicking on button Add new. 
 
-7. Navigate to tab Attributes, and add new one by clicking on button Add new. Set its Name as Employee, Type as Agent / Employee, and set Primavera as data source attribute.
+    - Primavera (Type: Data source / Primavera)
+    - Employee (Type: Agent / Employee; Data Source attribute: Primavera)
 
-8. Through the left side menu, create a new application behaviour by accessing the option ***Extensibility / Application Behaviours / Add new***. Set its name as "IntegratePurchaseOrder", and Primavera as Data Source.
+7. Through the left side menu, create a new application behaviour by accessing the option ***Extensibility / Application Behaviours / Add new***. Set its name as "IntegratePurchaseOrder", and Primavera as Data Source.
 
     Copy and paste the following code:
 
@@ -106,7 +107,7 @@ A connector is also required to complete this tutorial.
     return new Dictionary<string, object>();
     ```
 
-9. Through the left side menu, navigate to PurchaseOrder document, by accessing the option ***Documents / PurchaseOrder / Entity Behaviours***. Add a new entity behaviour by clicking on ***Add new / After Save***, setting its name as "IntegrateOnSave".
+8. Through the left side menu, navigate to PurchaseOrder document, by accessing the option ***Documents / PurchaseOrder / Entity Behaviours***. Add a new entity behaviour by clicking on ***Add new / After Save***, setting its name as "IntegrateOnSave".
 
     Copy and paste the following code:
 
@@ -123,6 +124,6 @@ A connector is also required to complete this tutorial.
         throw new Exception(response.ContainsKey("message") ? response["message"].ToString() : "An error has occurred");
     ```
 
-10. Build the model
+9. Build the model
 
-11. Create a new Purchase Order
+10. Create a new Purchase Order
