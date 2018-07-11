@@ -73,15 +73,15 @@ A connector is also required to complete this tutorial.
     - Primavera (Type: Data source / Primavera)
     - Employee (Type: Agent / Employee; Data Source attribute: Primavera)
 
-7. Through the left side menu, create a new application behaviour by accessing the option ***Extensibility / Application Behaviours / Add new***. Set its name as "IntegratePurchaseOrder", and Primavera as Data Source.
+7. Through the left side menu, create a new application behaviour by accessing the option ***Extensibility / Application Behaviours / Add new***. Set its *Name* as "IntegratePurchaseOrder", and "Primavera" as *Data Source*.
 
-    Copy and paste the following code:
+    Copy and paste the following code (Remember to change the "USER" and "PASS" fields to your actual username and password.):
 
     ```C#
     PurchaseOrderDto dto = JsonConvert.DeserializeObject<PurchaseOrderDto>(JsonConvert.SerializeObject(args));
     Interop.ErpBS900.ErpBS bsERP = new Interop.ErpBS900.ErpBS();
 
-    bsERP.AbreEmpresaTrabalho(Interop.StdBE900.EnumTipoPlataforma.tpEmpresarial, dto.Primavera, "NB", "NB_2012#");
+    bsERP.AbreEmpresaTrabalho(Interop.StdBE900.EnumTipoPlataforma.tpEmpresarial, dto.Primavera, "USER", "PASS");
 
     Interop.GcpBE900.GcpBEDocumentoCompra purchaseOrder = new Interop.GcpBE900.GcpBEDocumentoCompra();
 
@@ -107,9 +107,9 @@ A connector is also required to complete this tutorial.
     return new Dictionary<string, object>();
     ```
 
-8. Through the left side menu, navigate to PurchaseOrder document, by accessing the option ***Documents / PurchaseOrder / Entity Behaviours***. Add a new entity behaviour by clicking on ***Add new / After Save***, setting its name as "IntegrateOnSave".
+8. Through the left side menu, navigate to PurchaseOrder Document, by accessing the option ***Documents / PurchaseOrder / Entity Behaviours***. Add a new entity behaviour by clicking on ***Add new / After Save***, setting its name as "IntegrateOnSave".
 
-    Copy and paste the following code:
+    Copy and paste the following code (Remember to change the "CONNECTORUSER" field to your actual connector user.):
 
     ```C#   
     var context = new ConnectorContext(Context.Tenant.Code, Context.Tenant.EnvironmentCode, Context.Tenant.Version, Context.Authentication.AccessToken, Context.Tenant.BaseEndpoint);
@@ -118,7 +118,7 @@ A connector is also required to complete this tutorial.
     message.Data = new Dictionary<string, object>(){
         {"dataSource", _dto.Primavera}, {"dataSourceType", "Primavera"}, {"data", _dto}
     };
-    var connectorUsername = "09adbc5f6f23489da6e189d7de33a824@connectors";
+    var connectorUsername = "CONNECTORUSER";
     var response = await client.ExecuteAsync(connectorUsername, message);
     if (response.ContainsKey("isSuccess") && (bool)response["isSuccess"] == false)
         throw new Exception(response.ContainsKey("message") ? response["message"].ToString() : "An error has occurred");
