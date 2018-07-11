@@ -51,10 +51,10 @@ It is necessary to have completed the steps in the  [Beginner tutorial](http://d
 
 4. On Agent *Employee*, navigate to tab **Data References**, and define a reference for Primavera assemblies
 
-- Interop.ErpBS900.dll
-- Interop.StdBE900.dll
-- Interop.GcpBE900.dll
-- Interop.IGcpBS900.dll
+    - Interop.ErpBS900.dll
+    - Interop.StdBE900.dll
+    - Interop.GcpBE900.dll
+    - Interop.IGcpBS900.dll
 
 5. Navigate to tab “Data Behaviours“, and define a behaviour to be executed on “ReadList”. This behaviour will be used for Query and List requests for this entity.
 
