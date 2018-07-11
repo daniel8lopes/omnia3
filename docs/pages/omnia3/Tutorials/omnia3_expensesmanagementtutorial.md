@@ -41,24 +41,26 @@ This tutorial assumes that you have created a OMNIA tenant, and are logged in as
 8.  Go back to modeling area (through the top bar, by accessing the option  ***Modeler***) and create a new  **Commitment**  with  *Name*  set as  **ExpenseRefundRequest**,  **Expenses**  as the resource to be exchanged,  **Employee**  as provider agent and  **Company**  as receiver agent.
   
     ![Modeler_Create_Commitment](/images/tutorials/expensemanagement/Modeler-Add-Commitment.PNG)
+ 
+9. On the left side menu, select the option ***Commitments / ExpenseRefundRequest***. Create a new **Attribute**, by clicking the button  **Add new**  on the top right side, and setting its  *Name*  to  **ExpenseAmount**, *Type* as ***Primitive / Decimal***, and as required by checking option *Is required?*. Additionally, set *_amount* attribute as read-only.
     
-9. Add a new document (by accessing the option ***Documents / Add new*** button) and set its *Name* as **ExpenseReport**. 
+10. Add a new document (by accessing the option ***Documents / Add new*** button) and set its *Name* as **ExpenseReport**. 
    
-10. On the left side menu, select the option **Generic Entities**. Create a new one, by clicking the button  **Add new**  on the top right side, and set its *Name*  as  **Currency**.
+11. On the left side menu, select the option **Generic Entities**. Create a new one, by clicking the button  **Add new**  on the top right side, and set its *Name*  as  **Currency**.
   
-11. Perform a new Build (by accessing the option ***Versioning / Builds / Create new***).
+12. Perform a new Build (by accessing the option ***Versioning / Builds / Create new***).
 
-12. Go back to application area (through the top bar option) and create a new **Currency**. Set its *Code* as EUR and *name* as Euro.
+13. Go back to application area (through the top bar option) and create a new **Currency**. Set its *Code* as EUR and *name* as Euro.
 
      ![Application_Create_Agent](/images/tutorials/expensemanagement/Application-Create-Currency.PNG)
         
-13. Access the option ***Series / ExpenseReportSerie / Add new*** and set its *Code* as **A**, and *Name* as **Expenses Report Serie**.
+14. Access the option ***Series / ExpenseReportSerie / Add new*** and set its *Code* as **A**, and *Name* as **Expenses Report Serie**.
 
-14. Open ***Documents / Expense Report*** and create a document. As you can see, the interface usability can be improved. We will now proceed to simplify it, and add more information.
+15. Open ***Documents / Expense Report*** and create a document. As you can see, the interface usability can be improved. We will now proceed to simplify it, and add more information.
 
-15. Go back to modeling area (through the top bar option) and edit the **Document / ExpenseReport**  document to simplify its interface. Add a new attribute by clicking on button  ***Add new***. Set its *Name* as **Company**, its *Type*  as  ***Agent / Company***, and as required by checking option *Is required?*.
+16. Go back to modeling area (through the top bar option) and edit the **Document / ExpenseReport**  document to simplify its interface. Add a new attribute by clicking on button  ***Add new***. Set its *Name* as **Company**, its *Type*  as  ***Agent / Company***, and as required by checking option *Is required?*.
 
-16. Click on button **Add new** to add an **Attribute** to your **Document**. Set its *Name* as **ExpenseLines**, *Type* as ***Commitment / ExpenseRefundRequest***.
+17. Click on button **Add new** to add an **Attribute** to your **Document**. Set its *Name* as **ExpenseLines**, *Type* as ***Commitment / ExpenseRefundRequest***.
 
     ![Modeler_Add_Commitment_Attribute](/images/tutorials/expensemanagement/Modeler-Add-ExpenseReport-ExpenseRefundRequest.PNG)
 
@@ -73,8 +75,6 @@ This tutorial assumes that you have created a OMNIA tenant, and are logged in as
     - Add a new Attribute to your **Document**. Set its *Name* as **TotalAmount**, *Type* as ***Primitive / Decimal***, as read only by checking option *Is read only* and as required by checking option *Is required?*.
     
     - Add a new Attribute to your **Document**. Set its *Name* as **ExpenseDate**, *Type* as ***Primitive / Date***, and as required by checking option *Is required?*.
-
-17. On the left side menu, select the option ***Commitments / ExpenseRefundRequest***. Create a new **Attribute**, by clicking the button  **Add new**  on the top right side, and setting its  *Name*  to  **ExpenseAmount**, *Type* as ***Primitive / Decimal***, and as required by checking option *Is required?*.
 
 18. Perform a new Build (by accessing the option ***Versioning / Builds / Create new***). Access the application and test the new creation of the document.
 
