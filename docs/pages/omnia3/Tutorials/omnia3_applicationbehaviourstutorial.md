@@ -47,7 +47,7 @@ A connector is also required to complete this tutorial.
     List<IDictionary<string, object>> employeesList = new List<IDictionary<string, object>>();
     ErpBS qbsERP = new ErpBS();
     
-    qbsERP.AbreEmpresaTrabalho(EnumTipoPlataforma.tpEmpresarial, "DEMO", "USER", "PASS");
+    qbsERP.AbreEmpresaTrabalho(EnumTipoPlataforma.tpEmpresarial, Context.Operation.DataSource, "USER", "PASS");
     
     StdBELista queryResults = qbsERP.Consulta($"SELECT Employees.EmployeesCount, Codigo, Nome FROM Funcionarios CROSS JOIN (SELECT Count(*) AS EmployeesCount FROM  Funcionarios) AS Employees ORDER BY Codigo OFFSET {(page - 1)*pageSize} ROWS FETCH NEXT {pageSize} ROWS ONLY");
     
