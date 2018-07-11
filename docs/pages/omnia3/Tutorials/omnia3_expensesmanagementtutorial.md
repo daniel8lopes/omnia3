@@ -80,10 +80,14 @@ This tutorial assumes that you have created a OMNIA tenant, and are logged in as
 
 19. Go back to modeling area (through the top bar option) and edit the  **Document / ExpenseReport**  document.
 
-20. (**Optional**)  Add a new **Action Behaviour**, in order to return automatically your updated *Exchange Rate*, based on an external API . Set *GetRateData* as Code, and the attribute as _Currency_. Paste the following code:
+20. (**Optional**) Navigate to tab “Entity References“, and define a reference for .NET assembly System.Net.Http
+
+    ![Modeler_Create_Reference](/images/tutorials/expensemanagement/Modeler-Create-Reference.PNG)
+    
+    Add a new **Action Behaviour**, in order to return automatically your updated *Exchange Rate*, based on an external API . Set *GetRateData* as Code, and the attribute as *Currency*. Paste the following code:
 
     ```C#
-    var client = new System.Net.Http.HttpClient() { };
+    var client = new HttpClient() { };
 
     string apiEndpoint = $"http://data.fixer.io/api/latest?access_key=13854a5cc70cff0901740c1a7ac3c5b3&symbols={Currency}";
     var requestResult = client.GetAsync(apiEndpoint).GetAwaiter().GetResult();
