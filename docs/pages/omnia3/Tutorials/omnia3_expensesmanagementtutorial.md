@@ -66,7 +66,7 @@ This tutorial assumes that you have created a OMNIA tenant, and are logged in as
 
     - Add a new Attribute to your **Document**. Set its *Name* as **Employee**, *Type* as ***Agent / Employee***, and as required by checking option *Is required?*.
 
-    - Add a new Attribute to your **Document**. Set its *Name* as **ExpenseDetails**, *Type* as ***Commitment / ExpenseRefundRequest***.
+    - Add a new Attribute to your **Document**. Set its *Name* as **ExpenseDetails**, *Type* as ***Primitive / Text***.
 
     - Add a new Attribute to your **Document**. Set its *Name* as **ExchangeRate**, *Type* as ***Primitive / Decimal***, and as required by checking option *Is required?*.
 
