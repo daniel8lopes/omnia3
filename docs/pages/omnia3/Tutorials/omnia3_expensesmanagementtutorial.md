@@ -50,7 +50,7 @@ This tutorial assumes that you have created a OMNIA tenant, and are logged in as
 
 12. Go back to application area (through the top bar option) and create a new **Currency**. Set its *Code* as EUR and *name* as Euro.
 
-     ![Application_Create_Agent](https://raw.githubusercontent.com/numbersbelieve/omnia3/master/docs/tutorialPics/modelingTutorial/Application-Configurations-Currency.PNG)
+     ![Application_Create_Agent](/images/tutorials/expensemanagement/Application-Create-Currency.PNG)
         
 13. Access the option ***Series / ExpenseReportSerie / Add new*** and set its *Code* as **A**, and *Name* as **Expenses Report Serie**.
 
