@@ -22,8 +22,7 @@ This tutorial assumes that you have created a OMNIA tenant, and are logged in as
     
     ![Homepage_Dashboard](/images/tutorials/beginner/Modeler-Homepage.PNG)
     
-2.  Through the left side menu, access the option  ***Agents / Create new*** on the top right side, and setting its  *Name*  to  **Company**.
-    
+2.  Through the left side menu, access the option  ***Agents / Add new*** on the top right side, and setting its  *Name*  to  **Company**.
    
 3.  Return to the  ***Agents / Add new*** and set its  *Name*  as  **Employee**.
 
