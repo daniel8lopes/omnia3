@@ -38,9 +38,9 @@ This tutorial assumes that you have created a OMNIA tenant, and are logged in as
     
 7.  Follow the same process of the previous step to create a new  **Employee**  and  **Expenses**.
     
-8.  Go back to modeling area (through the top bar, by accessing the option  ***Modeler***) and create a new  **Commitment**  with  *Name*  set as  **ExpensesRequest**,  **Expenses**  as the resource to be exchanged,  **Employee**  as provider agent and  **Company**  as receiver agent.
+8.  Go back to modeling area (through the top bar, by accessing the option  ***Modeler***) and create a new  **Commitment**  with  *Name*  set as  **ExpenseRefundRequest**,  **Expenses**  as the resource to be exchanged,  **Employee**  as provider agent and  **Company**  as receiver agent.
   
-    ![Modeler_Create_Agent](https://raw.githubusercontent.com/numbersbelieve/omnia3/master/docs/tutorialPics/modelingTutorial/Modeler-Commitment-ExpenseRequest.PNG)
+    ![Modeler_Create_Commitment](/images/tutorials/expensemanagement/Modeler-Add-Commitment.PNG)
     
 9. Add a new document (by accessing the option ***Documents / Add new*** button) and set its *Name* as **ExpenseReport**. 
    
