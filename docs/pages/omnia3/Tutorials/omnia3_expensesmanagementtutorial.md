@@ -68,8 +68,6 @@ This tutorial assumes that you have created a OMNIA tenant, and are logged in as
 
     - Add a new Attribute to your **Document**. Set its *Name* as **Employee**, *Type* as ***Agent / Employee***, and as required by checking option *Is required?*.
 
-    - Add a new Attribute to your **Document**. Set its *Name* as **ExpenseDetails**, *Type* as ***Primitive / Text***.
-
     - Add a new Attribute to your **Document**. Set its *Name* as **ExchangeRate**, *Type* as ***Primitive / Decimal***, and as required by checking option *Is required?*.
 
     - Add a new Attribute to your **Document**. Set its *Name* as **TotalAmount**, *Type* as ***Primitive / Decimal***, as read only by checking option *Is read only* and as required by checking option *Is required?*.
@@ -104,18 +102,18 @@ This tutorial assumes that you have created a OMNIA tenant, and are logged in as
     ```
     This example will give the exchange rate between EUR and the currency provided in the attribute Currency. You can try it out with different currencies, such as **GBP** or **USD**.
 
-21. Add a new **Before Save Behaviour** to fill *Provider* and *Receiver* attributes by accessing the tab Behaviours and clicking the button ***Add new / Before Save***. Set *BeforeSaveBehaviours* as Name and paste the following code:
+21. Add a new **After Change Behaviour** to fill *Provider* and *Receiver* attributes by accessing the tab Behaviours and clicking the button ***Add new / Before Save***. Set *AfterChangeBehaviours* as Name and paste the following code:
 
     ```C#
-    ExpenseDetails.ForEach(a => {
+    ExpenseLines.ForEach(a => {
         a._receiver = Company;
         a._provider = Employee;
-        a._amount = a.ExpenseAmount/ExchangeRate
+        a._amount = a.ExpenseAmount/ExchangeRate;
     });
-    TotalAmount = ExpenseDetails.Sum(a => a._amount); 
+    TotalAmount = ExpenseLines.Sum(a => a._amount); 
     ```
     
-22. Go to your **ExpenseReport** Document User Interface by accessing the respective tab, and reorganize it to simplify the interface. Delete the attributes Code, Provider, Receiver and Quantity from the **ExpenseDetails** element. At last, delete the Code attribute from Document.
+22. Go to your **ExpenseReport** Document User Interface by accessing the respective tab, and reorganize it to simplify the interface. Delete the attributes Code, Provider, Receiver and Quantity from the **ExpenseLines** element. At last, delete the Code attribute from Document.
 
 23. Reorganize Rows and Columns, re-establishing the size and position of their attributes:
     - ***Serie***: Row 1, Column 1 and Size 4;
@@ -126,7 +124,7 @@ This tutorial assumes that you have created a OMNIA tenant, and are logged in as
     - ***Currency***: Row 2, Column 3 and Size 4;
     - ***ExchangeRate***: Row 3, Column 1 and Size 2;
     - ***ExpenseDate***: Row 3, Column 5 and Size 4;
-    - ***ExpenseDetails***: Row 5, Column 1 and Size 12. Within the Expense Details, change the attributes:
+    - ***ExpenseLines***: Row 5, Column 1 and Size 12. Within the Expense Lines, change the attributes:
         - ***Resource***: Row 1, Column 1 and Size 2;
         - ***Amount***: Row 1, Column 11 and Size 2;
     - ***TotalAmount***: Row 8, Column 11 and Size 2.
