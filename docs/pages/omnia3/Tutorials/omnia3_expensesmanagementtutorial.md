@@ -22,7 +22,7 @@ This tutorial assumes that you have created a OMNIA tenant, and are logged in as
     
     ![Homepage_Dashboard](/images/tutorials/beginner/Modeler-Homepage.PNG)
     
-2.  Through the left side menu, access the option  ***Agents / Create new*** on the top right side, and setting its  *Code*  to  **Company**.
+2.  Through the left side menu, access the option  ***Agents / Create new*** on the top right side, and setting its  *Name*  to  **Company**.
     
    
 3.  Return to the  ***Agents / Add new*** and set its  *Name*  as  **Employee**.
@@ -31,33 +31,33 @@ This tutorial assumes that you have created a OMNIA tenant, and are logged in as
     
 4.  Through the left side menu, access the option  ***Resources / Create new*** and set its  *Name*  to  **Expenses**.
     
-5.  Access the option  ***Versioning / Builds / Create new***.
+5.  Build the model, by accessing the option  ***Versioning / Builds / Create new***.
     
-6.  On the left side menu, select option  ***Go to / Application***, ***Configurations / Company / Create new***, and define its *Code*  and  *Name*.
+6.  On the right side of the top bar, click second button and select option ***Application*** to be redirected to application area. Then, on left side menu, click on ***Configurations / Company / Create new*** to create a new Company. Define its *Code*  and  *Name*.
     
     ![Application_Create_Agent](https://github.com/numbersbelieve/omnia3/raw/master/docs/tutorialPics/modelingTutorial/Application-Create-Agent.PNG)
     
 7.  Follow the same process of the previous step to create a new  **Employee**  and  **Expenses**.
     
-8.  Go back to modeling area (by accessing the option  ***Go to / Modeler***) and create a new  **Commitment**  with  *Name*  set as  **ExpensesRequest**,  **Expenses**  as the resource to be exchanged,  **Employee**  as provider agent and  **Company**  as receiver agent.
+8.  Go back to modeling area (through the top bar, by accessing the option  ***Modeler***) and create a new  **Commitment**  with  *Name*  set as  **ExpensesRequest**,  **Expenses**  as the resource to be exchanged,  **Employee**  as provider agent and  **Company**  as receiver agent.
   
     ![Modeler_Create_Agent](https://raw.githubusercontent.com/numbersbelieve/omnia3/master/docs/tutorialPics/modelingTutorial/Modeler-Commitment-ExpenseRequest.PNG)
     
 9. Add a new document (by accessing the option ***Documents / Add new*** button) and set its *Name* as **ExpenseReport**. 
    
-10. On the left side menu, select the option **Generic Entity**. Create a new **Entity**, by clicking the button  **Add new**  on the top right side, and setting its  *Name*  to  **Currency**.
+10. On the left side menu, select the option **Generic Entity**. Create a new **Entity**, by clicking the button  **Add new**  on the top right side, and setting its *Name*  to  **Currency**.
   
 11. Perform a new Build (by accessing the option ***Versioning / Builds / Create new***).
 
-12. Go back to application area (by accessing the option ***Go to / Application*** and configure the option  **Currency**. Set its *Code* as EUR and *name* as Euro.
+12. Go back to application area (through the top bar option) and create a new **Currency**. Set its *Code* as EUR and *name* as Euro.
 
      ![Application_Create_Agent](https://raw.githubusercontent.com/numbersbelieve/omnia3/master/docs/tutorialPics/modelingTutorial/Application-Configurations-Currency.PNG)
         
-13. Access the option ***Series / Add new*** and set its *Code* as **A**, and *Name* as **Expenses Report Serie**.
+13. Access the option ***Series / ExpenseReportSerie / Add new*** and set its *Code* as **A**, and *Name* as **Expenses Report Serie**.
 
-14. Open ***Documents / Expense Report*** and create a document. As you can see, the interface is too complicated. We will now proceed to simplify it, and add more information.
+14. Open ***Documents / Expense Report*** and create a document. As you can see, the interface usability can be improved. We will now proceed to simplify it, and add more information.
 
-15. Go back to modeling area (by accessing the option  ***Go to / Modeler***) and edit the **Document / ExpenseReport**  document to simplify its interface. Add a new attribute by clicking on button  ***Add new***. Set its *Name* as **Company**, its *Type*  as  ***Agent / Company***, and as required by checking option *Is required?*.
+15. Go back to modeling area (through the top bar option) and edit the **Document / ExpenseReport**  document to simplify its interface. Add a new attribute by clicking on button  ***Add new***. Set its *Name* as **Company**, its *Type*  as  ***Agent / Company***, and as required by checking option *Is required?*.
 
 16. Click on button **Add new** to add an **Attribute** to your **Document**. Set its *Name* as **ExpenseLines**, *Type* as ***Commitment / ExpensesRequest***.
 
@@ -79,36 +79,40 @@ This tutorial assumes that you have created a OMNIA tenant, and are logged in as
 
 18. Perform a new Build (by accessing the option ***Versioning / Builds / Create new***). Access the application and test the new creation of the document.
 
-19. Go back to modeling area (by accessing the option  ***Go to / Modeler***) and edit the  **Document / ExpenseReport**  document.
+19. Go back to modeling area (through the top bar option) and edit the  **Document / ExpenseReport**  document.
 
 20. (**Optional**)  Add a new **Action Behaviour**, in order to return automatically your updated *Exchange Rate*, based on an external API . Set *GetRateData* as Code, and the attribute as _Currency_. Paste the following code:
 
-            var client = new System.Net.Http.HttpClient() { };
+    ```C#
+    var client = new System.Net.Http.HttpClient() { };
 
-            string apiEndpoint = $"http://data.fixer.io/api/latest?access_key=13854a5cc70cff0901740c1a7ac3c5b3&symbols={Currency}";
-            var requestResult = client.GetAsync(apiEndpoint).GetAwaiter().GetResult();
+    string apiEndpoint = $"http://data.fixer.io/api/latest?access_key=13854a5cc70cff0901740c1a7ac3c5b3&symbols={Currency}";
+    var requestResult = client.GetAsync(apiEndpoint).GetAwaiter().GetResult();
 
-            var responseBody = requestResult.Content.ReadAsStringAsync().Result;
-            var rateData = JsonConvert.DeserializeObject<Dictionary<string, object>>(responseBody);
+    var responseBody = requestResult.Content.ReadAsStringAsync().Result;
+    var rateData = JsonConvert.DeserializeObject<Dictionary<string, object>>(responseBody);
 
-            if (!requestResult.IsSuccessStatusCode)
-                throw new Exception("Error on retrieving rate: " + responseBody);
+    if (!requestResult.IsSuccessStatusCode)
+        throw new Exception("Error on retrieving rate: " + responseBody);
 
-            var value = JsonConvert.DeserializeObject<Dictionary<string, object>>(rateData["rates"].ToString());
+    var value = JsonConvert.DeserializeObject<Dictionary<string, object>>(rateData["rates"].ToString());
 
-            ExchangeRate = Convert.ToDecimal(value[$"{Currency}"].ToString());
-
+    ExchangeRate = Convert.ToDecimal(value[$"{Currency}"].ToString());
+    ```
     This example will give the exchange rate between EUR and the currency provided in the attribute Currency. You can try it out with different currencies, such as **GBP** or **USD**.
 
-21. Add a new **Before Save Behaviour** to fill *Provider* and *Receiver* attributes by accessing the tab Behaviours and clicking the button ***Add new / Before Save***. Set *BeforeSaveBehaviours* as Code and paste the following code:
+21. Add a new **Before Save Behaviour** to fill *Provider* and *Receiver* attributes by accessing the tab Behaviours and clicking the button ***Add new / Before Save***. Set *BeforeSaveBehaviours* as Name and paste the following code:
 
-            ExpenseDetails.ForEach(a => a._receiver = Company);
-            ExpenseDetails.ForEach(a => a._provider = Employee);
-            ExpenseDetails.ForEach(a => a._amount = a.ExpenseAmount/ExchangeRate);
-            TotalAmount = ExpenseDetails.Sum(a => a._amount); 
-                        
+    ```C#
+    ExpenseDetails.ForEach(a => {
+        a._receiver = Company;
+        a._provider = Employee;
+        a._amount = a.ExpenseAmount/ExchangeRate
+    });
+    TotalAmount = ExpenseDetails.Sum(a => a._amount); 
+    ```
     
-22. Go to your **ExpenseReport** Document User Interface by accessing the respective tab, and reorganize them to simplify the interface. Delete the attributes Code, Provider, Receiver and Quantity from the **ExpenseDetails** element. At last, delete the Code attribute from Document.
+22. Go to your **ExpenseReport** Document User Interface by accessing the respective tab, and reorganize it to simplify the interface. Delete the attributes Code, Provider, Receiver and Quantity from the **ExpenseDetails** element. At last, delete the Code attribute from Document.
 
 23. Reorganize Rows and Columns, re-establishing the size and position of their attributes:
     - ***Serie***: Row 1, Column 1 and Size 4;
