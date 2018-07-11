@@ -9,13 +9,8 @@ folder: omnia3
 
 ## 1. Introduction
 
-OMNIA 3.0, a truly **Agile Development** and operation of **Management Information Systems**' platform, welcomes you aboard to its continuous development process: the User Experience.
+After you have completed the [Beginner Tutorial](https://docs.numbersbelieve.com/omnia3_beginnertutorial.html), whose result is a functional order management application, OMNIA Application Behaviours Tutorial focus on the execution of behaviours on external applications.
 
-We do understand all your difficulties on how to build a **business management application** from ground zero. That's why **OMNIA** takes the pledge to **leverage and accelerate** the entire development process, providing a **simple**, **fast** and **responsive-by-default** platform.
-
-It's now time to judge our premises. To that end, we've just created a simple and intuitive tutorial based on an Order Management's example, guiding you throughout the **short-time period** of deploying all your inputs into a **business application**.
-
-**Start your 20-minute exercise on OMNIA Platform V.3.0!**
 
 ## 2. Prerequisites
 
@@ -23,25 +18,11 @@ This tutorial assumes that you have created a OMNIA tenant, and are logged in as
 
 It is necessary to have completed the steps in the  [Beginner tutorial](http://docs.numbersbelieve.com/omnia3_beginnertutorial.html), as this tutorial builds upon it.
 
-## 3. Create a new connector
+A connector is also required to complete this tutorial.
 
-1. Start by accessing the management area, by clicking the option "Go to Tenants management".
+## 3. Application Behaviours
 
-2. Through the left side menu, create a new connector by accessing the option ***Connectors / Add new***. Set its Code and Name as "TutorialConnector"
-
-3. Select the connector, and a modal with connector data should be shown.
-
-4. Now we are going to grant the connector access privileges for the tenant. Access the option ***Security / Roles***, and select Administration role for the tenant (the tenant code with prefix "Administration")
-
-5. Click the button ***Add new*** to grant the connector user access to the tenant. The user can be retrieved on step 3, property "Client Username"
-
-6. Now use these configurations to configure a connector in the machine with the Primavera ERP, following the [installation guide](omnia3_connector_install.html) and [configuration guide](omnia3_connector_configuration.html).
-
-7. Start the configured connector.
-
-## 4. Modeling an application
-
-1. Access Omnia homepage, select the tenant where you are going to model and go to modeling area.
+1. Access Omnia homepage, select the tenant where you have developed the beginner tutorial, and go to the modeling area.
 
 2. Through the left side menu, create a new Data Source by accessing the option ***Data Sources / Add new*** on the top right side. Set its Name as "*Primavera*", Behaviour Runtime and Data Access Runtime as *"External"*.
 
