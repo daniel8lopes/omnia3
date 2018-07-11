@@ -22,11 +22,11 @@ This tutorial assumes that you have created a OMNIA tenant, and are logged in as
     
     ![Homepage_Dashboard](/images/tutorials/beginner/Modeler-Homepage.PNG)
     
-2.  Through the left side menu, access the option  ***Agents / Add new*** on the top right side, and setting its  *Name*  to  **Company**.
-   
-3.  Return to the  ***Agents / Add new*** and set its  *Name*  as  **Employee**.
+2.  Through the left side menu, access the option  ***Agents / Add new*** on the top right side, and set its  *Name*  as  **Company**.
 
-    ![Modeler_Create_Agent](https://raw.githubusercontent.com/numbersbelieve/omnia3/master/docs/tutorialPics/modelingTutorial/Modeler-Agent-Employee.PNG)
+    ![Modeler_Create_Agent](/images/tutorials/expensemanagement/Modeler-Add-Agent.PNG)
+   
+3.  Return to the  ***Agents / Add new*** and set its *Name* as **Employee**.
     
 4.  Through the left side menu, access the option  ***Resources / Create new*** and set its  *Name*  to  **Expenses**.
     
