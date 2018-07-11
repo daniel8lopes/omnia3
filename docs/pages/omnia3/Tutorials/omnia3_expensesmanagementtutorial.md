@@ -34,7 +34,7 @@ This tutorial assumes that you have created a OMNIA tenant, and are logged in as
     
 6.  On the right side of the top bar, click second button and select option ***Application*** to be redirected to application area. Then, on left side menu, click on ***Configurations / Company / Create new*** to create a new Company. Define its *Code*  and  *Name*.
     
-    ![Application_Create_Agent](https://github.com/numbersbelieve/omnia3/raw/master/docs/tutorialPics/modelingTutorial/Application-Create-Agent.PNG)
+    ![Application_Create_Agent](/images/tutorials/expensemanagement/Application-Add-Agent.PNG)
     
 7.  Follow the same process of the previous step to create a new  **Employee**  and  **Expenses**.
     
