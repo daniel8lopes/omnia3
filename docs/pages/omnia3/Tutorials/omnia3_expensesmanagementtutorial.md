@@ -28,7 +28,7 @@ This tutorial assumes that you have created a OMNIA tenant, and are logged in as
    
 3.  Return to the  ***Agents / Add new*** and set its *Name* as **Employee**.
     
-4.  Through the left side menu, access the option  ***Resources / Add new*** and set its  *Name*  to  **Expenses**.
+4.  Through the left side menu, access the option  ***Resources / Add new*** and set its  *Name*  as  **Expenses**.
     
 5.  Build the model, by accessing the option  ***Versioning / Builds / Create new***.
     
