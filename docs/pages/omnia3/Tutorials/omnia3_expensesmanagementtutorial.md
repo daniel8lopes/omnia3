@@ -44,7 +44,7 @@ This tutorial assumes that you have created a OMNIA tenant, and are logged in as
     
 9. Add a new document (by accessing the option ***Documents / Add new*** button) and set its *Name* as **ExpenseReport**. 
    
-10. On the left side menu, select the option **Generic Entities**. Create a new one, by clicking the button  **Add new**  on the top right side, and setting its *Name*  to  **Currency**.
+10. On the left side menu, select the option **Generic Entities**. Create a new one, by clicking the button  **Add new**  on the top right side, and set its *Name*  as  **Currency**.
   
 11. Perform a new Build (by accessing the option ***Versioning / Builds / Create new***).
 
