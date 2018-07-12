@@ -74,7 +74,7 @@ If you do not have a tenant yet, please follow the steps of the [Tenant Creation
 5. On "Data Behaviours" of Agent Employee, define a behaviour, to be executed on "Delete" (when a Employee is deleted on OMNIA). Copy and paste the following code:
 
 
-    ````
+    ```C#
     {% raw %}
     var client = new System.Net.Http.HttpClient();
     
@@ -89,11 +89,11 @@ If you do not have a tenant yet, please follow the steps of the [Tenant Creation
     
     return true;
     {% endraw %}
-    ````
+    ```
 
 6. Create a new Data Behaviour for the operation "Read", so that data is retrieved when a Employee is edited on OMNIA. Copy and paste the following code:
 
-    ````
+    ```C#
       {% raw %}
     var client = new System.Net.Http.HttpClient();
     string apiEndpoint = $"https://reqres.in/api/users/{identifier}";
@@ -113,11 +113,11 @@ If you do not have a tenant yet, please follow the steps of the [Tenant Creation
 
     return employeeResponse;
     {% endraw %}
-    ````
+    ```
 
 7. Create a new Data Behaviour for the operation "ReadList", so that data is retrieved when a list of Employees is requested. Copy and paste the following code:
 
-    ````
+    ```C#
     {% raw %}
     var client = new System.Net.Http.HttpClient();
     string apiEndpoint = $"https://reqres.in/api/users?page={page}";
@@ -142,13 +142,13 @@ If you do not have a tenant yet, please follow the steps of the [Tenant Creation
 
     return (responseData.Count, employeesList);
     {% endraw %}
-    ````
+    ```
 
 	NOTE: in this scenario, we are ignoring the query sent by the user when obtaining the list. In real world scenarios, you will want to change the query to the external system and/or the returned response, according to the parameters sent by the user.
 	
 8. Create a new Data Behaviour for the operation "Update", so that data is retrieved when an Employee is updated on OMNIA (i.e., edited and saved). Copy and paste the following code:
 
-    ````
+    ```C#
     {% raw %}
     var client = new System.Net.Http.HttpClient();
     string apiEndpoint = $"https://reqres.in/api/users/{dto._code}";
@@ -177,7 +177,7 @@ If you do not have a tenant yet, please follow the steps of the [Tenant Creation
 
     return employeeResponse;
     {% endraw %}
-    ````
+    ```
 
 9. Perform a new Build (by accessing the option ***Versioning / Builds / Create new***).
 
