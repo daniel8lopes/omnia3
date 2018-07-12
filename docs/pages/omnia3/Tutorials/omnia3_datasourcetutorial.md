@@ -42,7 +42,7 @@ If you do not have a tenant yet, please follow the steps of the [Tenant Creation
 
     ```C#
     {% raw %}
-    var client = new System.Net.Http.HttpClient();
+    var client = new HttpClient();
     
     string apiEndpoint = $"https://reqres.in/api/users/";
 
@@ -53,7 +53,7 @@ If you do not have a tenant yet, please follow the steps of the [Tenant Creation
     };
 
     var jsonBody = JsonConvert.SerializeObject(body);
-    var httpContent = new System.Net.Http.StringContent(jsonBody, System.Text.Encoding.UTF8, "application/json");
+    var httpContent = new StringContent(jsonBody, System.Text.Encoding.UTF8, "application/json");
 
     var requestResult = client.PostAsync(apiEndpoint, httpContent).GetAwaiter().GetResult();
 
@@ -76,7 +76,7 @@ If you do not have a tenant yet, please follow the steps of the [Tenant Creation
 
     ```C#
     {% raw %}
-    var client = new System.Net.Http.HttpClient();
+    var client = new HttpClient();
     
     string apiEndpoint = $"https://reqres.in/api/users/{identifier}";
     
@@ -95,7 +95,7 @@ If you do not have a tenant yet, please follow the steps of the [Tenant Creation
 
     ```C#
       {% raw %}
-    var client = new System.Net.Http.HttpClient();
+    var client = new HttpClient();
     string apiEndpoint = $"https://reqres.in/api/users/{identifier}";
 
     var requestResult = client.GetAsync(apiEndpoint).GetAwaiter().GetResult();
@@ -119,7 +119,7 @@ If you do not have a tenant yet, please follow the steps of the [Tenant Creation
 
     ```C#
     {% raw %}
-    var client = new System.Net.Http.HttpClient();
+    var client = new HttpClient();
     string apiEndpoint = $"https://reqres.in/api/users?page={page}";
 
     var requestResult = client.GetAsync(apiEndpoint).GetAwaiter().GetResult();
@@ -150,7 +150,7 @@ If you do not have a tenant yet, please follow the steps of the [Tenant Creation
 
     ```C#
     {% raw %}
-    var client = new System.Net.Http.HttpClient();
+    var client = new HttpClient();
     string apiEndpoint = $"https://reqres.in/api/users/{dto._code}";
 
     var body = new
@@ -161,7 +161,7 @@ If you do not have a tenant yet, please follow the steps of the [Tenant Creation
     
     var jsonBody = JsonConvert.SerializeObject(body);
 
-    var httpContent = new System.Net.Http.StringContent(jsonBody, System.Text.Encoding.UTF8, "application/json");
+    var httpContent = new StringContent(jsonBody, System.Text.Encoding.UTF8, "application/json");
 
     var requestResult = client.PutAsync(apiEndpoint, httpContent).GetAwaiter().GetResult();
     string responseBody = requestResult.Content.ReadAsStringAsync().Result;
