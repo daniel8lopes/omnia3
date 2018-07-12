@@ -28,7 +28,7 @@ If you do not have a tenant yet, please follow the steps of the [Tenant Creation
 
 1. Start by selecting the tenant where you are going to model, and you will be redirected to the modeling area.
 
-    ![Homepage_Dashboard](http://funkyimg.com/i/2DVGv.png)
+    ![Homepage_Dashboard](/images/tutorials/beginner/Modeler-Homepage.PNG)
 
 2. Through the left side menu, create a new Data Source by accessing the option ***Data Sources / Create new*** on the top right side. Set its Name as "ExternalAPI", Behaviour Runtime as Internal and its Data Access Runtime as External. Leave it as not requiring a connector.
 
