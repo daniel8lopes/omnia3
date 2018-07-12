@@ -40,7 +40,7 @@ If you do not have a tenant yet, please follow the steps of the [Tenant Creation
 
 4. On Agent Employee, navigate to tab "Data Behaviours", and define a behaviour to be executed on "Create". This behaviour will be used to perform a POST request to the external Application when we create an instance of the Employee on the OMNIA platform. Copy and paste the following code:
 
-    ````
+    ```C#
     {% raw %}
     var client = new System.Net.Http.HttpClient();
     
@@ -69,7 +69,7 @@ If you do not have a tenant yet, please follow the steps of the [Tenant Creation
     employeeResponse._name = response["name"].ToString();
     return employeeResponse;
       {% endraw %}
-    ````
+    ```
 
 5. On "Data Behaviours" of Agent Employee, define a behaviour, to be executed on "Delete" (when a Employee is deleted on OMNIA). Copy and paste the following code:
 
