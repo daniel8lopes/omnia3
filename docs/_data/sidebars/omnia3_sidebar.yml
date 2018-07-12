@@ -50,6 +50,10 @@ entries:
       url: /omnia3_advancedtutorial.html
       output: web, pdf
       
+    - title: Application Behaviours Tutorial
+      url: /omnia3_applicationbehaviourstutorial.html
+      output: web, pdf
+      
     - title: Expenses Management Tutorial
       url: /omnia3_expensemanagementtutorial.html
       output: web, pdf
