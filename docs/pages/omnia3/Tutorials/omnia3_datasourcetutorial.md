@@ -30,11 +30,11 @@ If you do not have a tenant yet, please follow the steps of the [Tenant Creation
 
     ![Homepage_Dashboard](/images/tutorials/beginner/Modeler-Homepage.PNG)
 
-2. Through the left side menu, create a new Data Source by accessing the option ***Data Sources / Create new*** on the top right side. Set its Name as "ExternalAPI", Behaviour Runtime as Internal and its Data Access Runtime as External. Leave it as not requiring a connector.
+2. Through the left side menu, create a new Data Source by accessing the option ***Data Sources / Create new*** on the top right side. Set its *Name* as "ExternalAPI", Behaviour Runtime as Internal and its Data Access Runtime as External. Leave it as not requiring a connector.
 
     ![Modeler_Create_DataSource](https://raw.githubusercontent.com/numbersbelieve/omnia3/master/docs/tutorialPics/modelingTutorial/Modeler-Create-DataSource.PNG)
     
-3. Create a new Agent with name "Employee", and set it as using the external data source "ExternalAPI" that you created earlier.
+3. Create a new Agent with *Name* "Employee", and set it as using the external data source "ExternalAPI" that you created earlier.
 
     ![Modeler_Create_DataSource](https://raw.githubusercontent.com/numbersbelieve/omnia3/master/docs/tutorialPics/modelingTutorial/Modeler-Create-Agent-Employee.PNG)
     
@@ -198,11 +198,11 @@ If you do not have a tenant yet, please follow the steps of the [Tenant Creation
 
 1. Go to the modeling area.
 
-2. Create a new GenericEntity with name "Department".
+2. Create a new GenericEntity with *Name* "Department".
 
-3. Add a new attribute by clicking on button Add new. Set its Code as DataSource, Type as Data Sources / ExternalAPI.
+3. Add a new attribute by clicking on button Add new. Set its *Name* as DataSource, *Type* as Data Sources / ExternalAPI.
 
-4. Add another attribute that represents the Employee. Set its Code as Employee, Type as Agent / Employee, and ExternalAPI on Uses data source from attribute.
+4. Add another attribute that represents the Employee. Set its *Name* as Employee, *Type* as Agent / Employee, and ExternalAPI on Uses data source from attribute.
 
 5. Perform a new Build (by accessing the option ***Versioning / Builds / Create new***).
 
