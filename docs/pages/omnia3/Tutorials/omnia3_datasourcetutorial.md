@@ -37,8 +37,12 @@ If you do not have a tenant yet, please follow the steps of the [Tenant Creation
 3. Create a new Agent with name "Employee", and set it as using the external data source "ExternalAPI" that you created earlier.
 
     ![Modeler_Create_DataSource](https://raw.githubusercontent.com/numbersbelieve/omnia3/master/docs/tutorialPics/modelingTutorial/Modeler-Create-Agent-Employee.PNG)
+    
+4. Navigate to tab “Data References“, and define a reference for .NET assembly System.Net.Http
 
-4. On Agent Employee, navigate to tab "Data Behaviours", and define a behaviour to be executed on "Create". This behaviour will be used to perform a POST request to the external Application when we create an instance of the Employee on the OMNIA platform. Copy and paste the following code:
+    ![Modeler_Create_Reference](/images/tutorials/expensemanagement/Modeler-Create-Reference.PNG)
+
+5. Still on Agent Employee, navigate to tab "Data Behaviours", and define a behaviour to be executed on "Create". This behaviour will be used to perform a POST request to the external Application when we create an instance of the Employee on the OMNIA platform. Copy and paste the following code:
 
     ```C#
     {% raw %}
@@ -71,7 +75,7 @@ If you do not have a tenant yet, please follow the steps of the [Tenant Creation
       {% endraw %}
     ```
 
-5. On "Data Behaviours" of Agent Employee, define a behaviour, to be executed on "Delete" (when a Employee is deleted on OMNIA). Copy and paste the following code:
+6. On "Data Behaviours" of Agent Employee, define a behaviour, to be executed on "Delete" (when a Employee is deleted on OMNIA). Copy and paste the following code:
 
 
     ```C#
@@ -91,7 +95,7 @@ If you do not have a tenant yet, please follow the steps of the [Tenant Creation
     {% endraw %}
     ```
 
-6. Create a new Data Behaviour for the operation "Read", so that data is retrieved when a Employee is edited on OMNIA. Copy and paste the following code:
+7. Create a new Data Behaviour for the operation "Read", so that data is retrieved when a Employee is edited on OMNIA. Copy and paste the following code:
 
     ```C#
       {% raw %}
@@ -115,7 +119,7 @@ If you do not have a tenant yet, please follow the steps of the [Tenant Creation
     {% endraw %}
     ```
 
-7. Create a new Data Behaviour for the operation "ReadList", so that data is retrieved when a list of Employees is requested. Copy and paste the following code:
+8. Create a new Data Behaviour for the operation "ReadList", so that data is retrieved when a list of Employees is requested. Copy and paste the following code:
 
     ```C#
     {% raw %}
@@ -146,7 +150,7 @@ If you do not have a tenant yet, please follow the steps of the [Tenant Creation
 
 	NOTE: in this scenario, we are ignoring the query sent by the user when obtaining the list. In real world scenarios, you will want to change the query to the external system and/or the returned response, according to the parameters sent by the user.
 	
-8. Create a new Data Behaviour for the operation "Update", so that data is retrieved when an Employee is updated on OMNIA (i.e., edited and saved). Copy and paste the following code:
+9. Create a new Data Behaviour for the operation "Update", so that data is retrieved when an Employee is updated on OMNIA (i.e., edited and saved). Copy and paste the following code:
 
     ```C#
     {% raw %}
@@ -179,13 +183,13 @@ If you do not have a tenant yet, please follow the steps of the [Tenant Creation
     {% endraw %}
     ```
 
-9. Perform a new Build (by accessing the option ***Versioning / Builds / Create new***).
+10. Perform a new Build (by accessing the option ***Versioning / Builds / Create new***).
 
-10. On Application area, create a new instance of the ExternalAPI data source, with code "ReqRes".
+11. On Application area, create a new instance of the ExternalAPI data source, with code "ReqRes".
 
     ![Application-Create-DataSource](/images/tutorials/datasource/Create-DataSource-Instance.PNG)
     
-11. On left side menu, navigate to Configurations / Employee, and check that the list is filled with data retrieved from the external data source.
+12. On left side menu, navigate to Configurations / Employee, and check that the list is filled with data retrieved from the external data source.
 
     ![Application_List_DataSource](https://raw.githubusercontent.com/numbersbelieve/omnia3/master/docs/tutorialPics/modelingTutorial/Application-List-External-DataSource.PNG)
     
