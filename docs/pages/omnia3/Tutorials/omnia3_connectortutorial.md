@@ -44,21 +44,21 @@ This tutorial assumes that you have created a OMNIA tenant ([click here to see h
 
 2. Through the left side menu, create a new Data Source by accessing the option ***Data Sources / Add new*** on the top right side. Set its Name as "*CSVSource*", Behaviour Runtime and Data Access Runtime as *"External"*.
 
-    ![Modeler create DataSource](/images/tutorials/csvconnector/modeler-add-datasource.png)
+    ![Modeler create DataSource](/images/tutorials/connector/Modeler-Create-DataSource.PNG)
 
 3. Create a new Agent with name *"Contact"*, and set it as using the external data source *"CSVSource"* that you created earlier.
 
-    ![Modeler create Agent](/images/tutorials/csvconnector/modeler-add-agent-contact.png)
+    ![Modeler create Agent](/images/tutorials/connector/Modeler-Create-Agent.PNG)
 
 4. On Agent *"Contact"*, create the following attributes:
 
     - BirthDate (Primitive/Date)
 
-	![Modeler create BirthDate_attribute](/images/tutorials/csvconnector/modeler-add-contact-birthdate.png)
+	![Modeler create BirthDate_attribute](/images/tutorials/connector/Modeler-Create-Attribute-BirthDate.PNG)
 
     - PhoneNo (Primitive/Text)
 
-	![Modeler create PhoneNo_attribute](/images/tutorials/csvconnector/modeler-add-contact-phone.png)
+	![Modeler create PhoneNo_attribute](/images/tutorials/connector/Modeler-Create-Attribute-PhoneNo.PNG)
 
 5. Navigate to tab *"[Data Behaviours](https://docs.numbersbelieve.com/omnia3_modeler_datasources.html)"*, and define a behaviour to be executed on *"ReadList"*. This behaviour will be used for Query and List requests for this entity.
 
