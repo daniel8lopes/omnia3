@@ -40,6 +40,15 @@ There are currently five different execution moments for behaviours, which follo
 Other than these, there is a special entity behaviour that executes afterwards:
 - **After Save**: Executes after an entity is saved, asynchronously, by being put in an **outbox** and processed separately. 
 
+    After Save behaviours are _async_, and have a custom return type, which will be used like:
+    ```csharp
+    return new AfterSaveMessage("Integration was successful, but could not send email to all users. Please check if their emails are valid.", AfterSaveMessageType.Warning);
+    ```
+
+    There are two helpers in AfterSaveMessage, .Empty and .Default, which you should use when you aren't interested in the contents of the message. Empty shows no notification; default shows a success notification/operation.
+    
+    Valid AfterSaveMessageTypes are **Information**, **Success**, **Warning**, **Error** and **SuccessNoNotification**. Error will mark the after save as having failed, SuccessNoNotification sends no notification to the end-user, while the other three are used only to customize the look of the notification they send.
+    
     **Note**: After Save behaviours are not called immediately after saving, but go into a queue. More information [here](omnia3_application_notifications_and_operations.html). _**No changes to the status of the entity will be saved! If you want to change an entity on an After Save, you must do it via our API.**_
 
 ![The behaviour execution lifecycle](images\modeler\BehaviourLifecycle.png)

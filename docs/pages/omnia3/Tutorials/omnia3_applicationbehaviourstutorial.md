@@ -128,14 +128,16 @@ A connector and an access to [Primavera ERP](https://pt.primaverabss.com), on ve
     var response = await client.ExecuteAsync(connectorUsername, message);
     if (response.ContainsKey("isSuccess") && (bool)response["isSuccess"] == false)
         throw new Exception(response.ContainsKey("message") ? response["message"].ToString() : "An error has occurred");
+
+    return await Task.FromResult(new AfterSaveMessage("Integration with Primavera successful.", AfterSaveMessageType.Success));
     ```
 
-9. Build the model
+9. Build the model.
 
-7. Go to application area, and create new instance of Primavera. The Connector value is the code defined earlier when the connector was created
+10. Go to application area, and create new instance of Primavera. The Connector value is the code defined earlier when the connector was created
 
-10. Create a new Purchase Order.
+11. Create a new Purchase Order.
 
-11. After creating the purchase order, click on the first option of the top bar, and check the operation result is now visible.
+12. After creating the purchase order, click on the first option of the top bar, and check the operation result is now visible.
 
     ![Modeler view Notifications](/images/tutorials/applicationbehaviours/Application-NotificationCenter.PNG)
