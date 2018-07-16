@@ -33,7 +33,7 @@ If you do not have a tenant yet, please follow the steps of the [Tenant Creation
     
 3. After creating, select the new API Client on the list, and check that you have now access to a Client Id and Secret to consume Omnia API. Copy the Client Username to the clipboard
 
-    ![Management_Edit_ApiClient](https://raw.githubusercontent.com/numbersbelieve/omnia3/master/docs/tutorialPics/modelingTutorial/Manage-Edit-APIClient.PNG)
+    ![Management_Edit_ApiClient](/images/tutorials/apiclient/Management-Edit-ApiClient.PNG)
 
 4. Now its time to define the access privileges for the API Client. Through the left side menu, access option "Security > Roles". Locate the tenant Administration role (its name is a concatenation of "Administration" and the tenant code).
 
