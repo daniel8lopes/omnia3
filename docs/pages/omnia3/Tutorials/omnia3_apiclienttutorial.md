@@ -25,7 +25,7 @@ If you do not have a tenant yet, please follow the steps of the [Tenant Creation
 
 ## 3. Define an API Client
 
-1. Start by logging in with a user that has access to the manage area, and on left side menu, select option  "Go to > Management". You will be redirected to the Management area
+1. Start by logging in with a user that has access to the manage area, and right side of top navbar, select option  "Management". You will be redirected to the Management area
 
     ![Management_Homepage](https://github.com/numbersbelieve/omnia3/raw/master/docs/tutorialPics/modelingTutorial/Manage-Homepage.PNG)
 
