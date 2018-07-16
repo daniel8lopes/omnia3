@@ -187,7 +187,7 @@ If you do not have a tenant yet, please follow the steps of the [Tenant Creation
 
 11. On Application area, create a new instance of the ExternalAPI data source, with code "ReqRes".
 
-    ![Application-Create-DataSource](/images/tutorials/datasource/Create-DataSource-Instance.PNG)
+    ![Application-Create-DataSource](/images/tutorials/datasource/Application-Create-DataSource-Instance.PNG)
     
 12. On left side menu, navigate to Configurations / Employee, and check that the list is filled with data retrieved from the external data source.
 
