@@ -45,11 +45,11 @@ This tutorial also requires an access to [Primavera ERP](https://pt.primaverabss
 
 2. Through the left side menu, create a new Data Source by accessing the option ***Data Sources / Add new*** on the top right side. Set its Name as "*Primavera*", Behaviour Runtime and Data Access Runtime as *"External"*.
 
-    ![Modeler create DataSource](/images/tutorials/primaveraconnector/add-new-datasource.png)
+    ![Modeler create DataSource](/images/tutorials/primaveraconnector/Modeler-Create-DataSource.PNG)
 
 3. Create a new Agent with name *"Employee"*, and set it as using the external data source *"Primavera"* that you created earlier.
 
-    ![Modeler create Agent](/images/tutorials/primaveraconnector/add-new-agent.png)
+    ![Modeler create Agent](/images/tutorials/primaveraconnector/Modeler-Create-Agent.PNG)
 
 4. On Agent *"Employee"*, navigate to tab *"[Data References](https://docs.numbersbelieve.com/omnia3_modeler_references.html)"*, and define a reference for Primavera assemblies:
 
