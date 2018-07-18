@@ -369,7 +369,7 @@ This tutorial also requires an access to [Primavera ERP](https://pt.primaverabss
     
 2. On Commitment "*GoodsPurchaseRequest*", navigate to tab *Behaviour Namespaces*, and define a reference namespace System.Net.Http
 
-    ![Modeler Add_Namespace](/images/tutorials/advanced/Modeler-Add-Behaviour-Namespace.PNG)
+    ![Modeler Add_Namespace](/images/tutorials/multisystemconnector/Modeler-Add-Namespace.PNG)
 
 3. Navigate to tab *"[Entity Behaviours](https://docs.numbersbelieve.com/omnia3_modeler_datasources.html)"*, and define an *"Action"* behaviour to be executed when attribute _resource is changed. This behaviour will be used to retrieve from LastFM API a unique album identifier.
 
