@@ -213,5 +213,4 @@ If you do not have a tenant yet, please follow the steps of the [Tenant Creation
 6. On Application area, create a new instance of the Department, and check that, after identifying the data source, Employees from that data source are now available for selection.
 
 
-
 Now that you know how to use Data Sources, we recommend you to take a look at [this tutorial](omnia3_primaveraconnectortutorial.html) where you will learn how to expose an on-premise Data Source to OMNIA.
