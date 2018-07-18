@@ -53,11 +53,10 @@ This tutorial also requires an access to [Primavera ERP](https://pt.primaverabss
 
 4. On Agent *"Employee"*, navigate to tab *"[Data References](https://docs.numbersbelieve.com/omnia3_modeler_references.html)"*, and define a reference for Primavera assemblies:
 
-    1. Interop.StdPlatBS900.dll
-    2. Interop.StdBE900.dll
-    3. Interop.RhpBE900.dll
-    4. Interop.IRhpBS900.dll
-    5. Interop.ErpBS900.dll
+    1. Interop.StdBE900.dll
+    2. Interop.RhpBE900.dll
+    3. Interop.IRhpBS900.dll
+    4. Interop.ErpBS900.dll
 
     ![Modeler add reference](/images/tutorials/primaveraconnector/add-new-reference.png)
 
