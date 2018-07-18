@@ -20,7 +20,7 @@ There are two different kinds of references you can add to your model:
 - **Entity references**: Associated with Entity behaviours. 
 - **Data references**: Associated with Data behaviours. 
 
-In order to add them, you can access the modeler, edit a data source, and go to ***Behaviour Dependencies > Add new*** or ***Data references > Add new***. Here, you identify the reference you want:
+In order to add them, you can access the modeler, edit a data source, and go to ***Behaviour Dependencies > Add new***. Here, you identify the reference you want:
 - **Name:** A platform-side identifier for the reference;
 - **Description:** A human-readable description for the reference;
 - **Path:** The path to that reference. The following paths are valid:
