@@ -367,7 +367,7 @@ This tutorial also requires an access to [Primavera ERP](https://pt.primaverabss
 
     ![Modeler Add_Dependency](/images/tutorials/advanced/Modeler-Add-Behaviour-Dependency.PNG)
     
-2. On Commitment "*GoodsPurchaseRequest*", navigate to tab *Behaviour Namespaces*, and define a reference namespace System.Net.Http
+2. On Commitment "*GoodsPurchaseRequest*", navigate to tab *Behaviour Namespaces*, and define a reference to namespace System.Net.Http
 
     ![Modeler Add_Namespace](/images/tutorials/multisystemconnector/Modeler-Add-Namespace.PNG)
 
