@@ -75,12 +75,14 @@ This tutorial also requires an access to [Primavera ERP](https://pt.primaverabss
 
     ![Modeler create Agent_Supplier](/images/tutorials/multisystemconnector/Create-Agent-Supplier.png)
 
-9. On Agent *"Supplier"*, navigate to tab *"[Data References](https://docs.numbersbelieve.com/omnia3_modeler_references.html)"*, and define a reference for Primavera assemblies:
+9. On Agent *"Supplier"*, navigate to tab *Behaviour Namespaces*, and define a reference for the following namespaces:
 
     1. Interop.StdBE900.dll
     2. Interop.ErpBS900.dll
     3. Interop.IGcpBS900.dll
     4. Interop.GcpBE900.dll
+    
+    ![Modeler_Supplier_Add_Namespace](/images/tutorials/multisystemconnector/Modeler-Supplier-Add-ERP-Namespace.PNG)
 
 10. Navigate to tab *"[Data Behaviours](https://docs.numbersbelieve.com/omnia3_modeler_datasources.html)"*, and define a behaviour to be executed on *"ReadList"*. This behaviour will be used for Query and List requests for this entity.
 
