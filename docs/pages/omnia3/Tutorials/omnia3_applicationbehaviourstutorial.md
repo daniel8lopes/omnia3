@@ -48,7 +48,7 @@ A connector and an access to [Primavera ERP](https://pt.primaverabss.com), on ve
     
     ![Modeler add Namespace](/images/tutorials/applicationbehaviours/Modeler-Employee-Add-Namespace.PNG)
 
-5. Navigate to tab “Data Behaviours“, and define a behaviour to be executed on “ReadList”. This behaviour will be used for Query and List requests for this entity.
+6. Navigate to tab “Data Behaviours“, and define a behaviour to be executed on “ReadList”. This behaviour will be used for Query and List requests for this entity.
 
     Copy and paste the following code (Remember to change the "USER" and "PASS" fields to your actual username and password.):
 
@@ -77,12 +77,12 @@ A connector and an access to [Primavera ERP](https://pt.primaverabss.com), on ve
     return (numberOfRecords, employeesList);
     ```
 
-6. Through the left side menu, navigate to PurchaseOrder Document, by accessing the option ***Documents / PurchaseOrder***. Add the following attributes by clicking on button Add new. 
+7. Through the left side menu, navigate to PurchaseOrder Document, by accessing the option ***Documents / PurchaseOrder***. Add the following attributes by clicking on button Add new. 
 
     - Primavera (Type: Data source / Primavera)
     - Employee (Type: Agent / Employee; Data Source attribute: Primavera)
 
-7. Through the left side menu, create a new application behaviour by accessing the option ***Extensibility / Application Behaviours / Add new***. Set its *Name* as "IntegratePurchaseOrder", "Primavera" as *Data Source* and "External" as *Execution Location*.
+8. Through the left side menu, create a new application behaviour by accessing the option ***Extensibility / Application Behaviours / Add new***. Set its *Name* as "IntegratePurchaseOrder", "Primavera" as *Data Source* and "External" as *Execution Location*.
 
     Copy and paste the following code (Remember to change the "USER" and "PASS" fields to your actual username and password.):
 
@@ -116,7 +116,7 @@ A connector and an access to [Primavera ERP](https://pt.primaverabss.com), on ve
     return new Dictionary<string, object>();
     ```
 
-8. Edit Application Behaviour *IntegratePurchaseOrder* and click on button *Edit Namespaces* to add the following namespaces:
+9. Edit Application Behaviour *IntegratePurchaseOrder* and click on button *Edit Namespaces* to add the following namespaces:
 
     - Interop.ErpBS900
     - Interop.StdBE900
@@ -125,7 +125,7 @@ A connector and an access to [Primavera ERP](https://pt.primaverabss.com), on ve
 
     ![Modeler ApplicationBehaviour Add_Namespace](/images/tutorials/applicationbehaviours/Modeler-IntegratePurchaseOrder-Add-Namespace.PNG)
 
-9. Through the left side menu, navigate to PurchaseOrder Document, by accessing the option ***Documents / PurchaseOrder / Entity Behaviours***. Add a new entity behaviour by clicking on ***Add new / After Save***, setting its name as "IntegrateOnSave".
+10. Through the left side menu, navigate to PurchaseOrder Document, by accessing the option ***Documents / PurchaseOrder / Entity Behaviours***. Add a new entity behaviour by clicking on ***Add new / After Save***, setting its name as "IntegrateOnSave".
 
     Copy and paste the following code (Remember to change the "CONNECTORUSER" field to your actual connector user.):
 
@@ -148,12 +148,12 @@ A connector and an access to [Primavera ERP](https://pt.primaverabss.com), on ve
     return await Task.FromResult(new AfterSaveMessage("Integration with Primavera successful.", AfterSaveMessageType.Success));
     ```
 
-10. Build the model.
+11. Build the model.
 
-11. Go to application area, and create new instance of Primavera. The Connector value is the code defined earlier when the connector was created
+12. Go to application area, and create new instance of Primavera. The Connector value is the code defined earlier when the connector was created
 
-12. Create a new Purchase Order.
+13. Create a new Purchase Order.
 
-13. After creating the purchase order, click on the first option of the top bar, and check the operation result is now visible.
+14. After creating the purchase order, click on the first option of the top bar, and check the operation result is now visible.
 
     ![Modeler view Notifications](/images/tutorials/applicationbehaviours/Application-NotificationCenter.PNG)
