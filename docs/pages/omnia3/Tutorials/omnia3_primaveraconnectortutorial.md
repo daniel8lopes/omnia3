@@ -54,7 +54,7 @@ This tutorial also requires an access to [Primavera ERP](https://pt.primaverabss
     3. Interop.IRhpBS900.dll
     4. Interop.ErpBS900.dll
 
-    ![Modeler add reference](/images/tutorials/primaveraconnector/add-new-reference.PNG)
+    ![Modeler add reference](/images/tutorials/primaveraconnector/Modeler-Primavera-Add-Dependency.PNG)
     
 4. Create a new Agent with name *"Employee"*, and set it as using the external data source *"Primavera"* that you created earlier.
 
