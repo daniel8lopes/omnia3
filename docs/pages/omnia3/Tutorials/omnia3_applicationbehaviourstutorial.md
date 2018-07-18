@@ -41,6 +41,13 @@ A connector and an access to [Primavera ERP](https://pt.primaverabss.com), on ve
 
 4. Through the left side menu, create a new Agent by accessing the option ***Agents / Add new*** on the top right side. Set its Name as *Employee* and Data Source as *Primavera*.
 
+5. Navigate to tab **Behaviour Namespaces** and add the following namespaces:
+
+    - Interop.ErpBS900
+    - Interop.StdBE900
+    
+    ![Modeler add Namespace](/images/tutorials/applicationbehaviours/Modeler-Employee-Add-Namespace.PNG)
+
 5. Navigate to tab “Data Behaviours“, and define a behaviour to be executed on “ReadList”. This behaviour will be used for Query and List requests for this entity.
 
     Copy and paste the following code (Remember to change the "USER" and "PASS" fields to your actual username and password.):
