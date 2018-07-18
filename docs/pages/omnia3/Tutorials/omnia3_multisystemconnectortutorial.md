@@ -181,10 +181,10 @@ This tutorial also requires an access to [Primavera ERP](https://pt.primaverabss
 
     ![Modeler create Resource_Product](/images/tutorials/multisystemconnector/Create-Resource-Product.PNG)
 
-18. On Resource *"Product"*, navigate to tab *"[Data References](https://docs.numbersbelieve.com/omnia3_modeler_references.html)"*, and define a reference for Primavera assemblies:
+18. On Resource *"Product"*, navigate to tab *Behaviour Namespaces*, and define a reference the following namespaces (define *External* as Execution Location):
 
-    1. Interop.StdBE900.dll
-    2. Interop.ErpBS900.dll
+    1. Interop.StdBE900
+    2. Interop.ErpBS900
 
 19. Navigate to tab *"[Data Behaviours](https://docs.numbersbelieve.com/omnia3_modeler_datasources.html)"*, and define a behaviour to be executed on *"ReadList"*. This behaviour will be used for Query and List requests for this entity.
 
@@ -252,12 +252,12 @@ This tutorial also requires an access to [Primavera ERP](https://pt.primaverabss
     - Supplier (Type: Agent, Supplier. Uses attribute Primavera as data source)
     - OrderLines (Type: Commitment, GoodsPurchaseRequest)
 
-6. On Document "*PurchaseOrder*", navigate to tab *"[Data References](https://docs.numbersbelieve.com/omnia3_modeler_references.html)"*, and define a reference for Primavera assemblies:
+6. On Document "*PurchaseOrder*", navigate to tab *Behaviour Namespaces*, and define a reference for the following namespaces (define *External* as Execution Location):
 
-    1. Interop.StdBE900.dll
-    2. Interop.ErpBS900.dll
-    3. Interop.IGcpBS900.dll
-    4. Interop.GcpBE900.dll
+    1. Interop.StdBE900
+    2. Interop.ErpBS900
+    3. Interop.IGcpBS900
+    4. Interop.GcpBE900
 
 7. Navigate to tab *"[Data Behaviours](https://docs.numbersbelieve.com/omnia3_modeler_datasources.html)"*, and define a behaviour to be executed on *"ReadList"*. This behaviour will be used for Query and List requests for this entity.
 
