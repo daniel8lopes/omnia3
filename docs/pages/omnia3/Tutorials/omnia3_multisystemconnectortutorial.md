@@ -61,6 +61,15 @@ This tutorial also requires an access to [Primavera ERP](https://pt.primaverabss
 7. Go to modeling area, and through the left side menu, create a new Data Source by accessing the option ***Data Sources / Add new*** on the top right side. Set its Name as "*Primavera*", Behaviour Runtime as *"Internal"* and Data Access Runtime as *"External"*. Check the flag "Will be executed in a connector?"
 
     ![Modeler create DataSource_Primavera](/images/tutorials/multisystemconnector/Create-DataSource-Primavera.PNG)
+    
+8. Navigate to tab *Behaviour Dependencies*, and define a reference for the following Primavera assemblies:
+
+    1. Interop.StdBE900.dll
+    2. Interop.ErpBS900.dll
+    3. Interop.IGcpBS900.dll
+    4. Interop.GcpBE900.dll
+    
+    ![Modeler_Primavera_Add_Dependency](/images/tutorials/multisystemconnector/Modeler-Primavera-Add-Dependency.PNG)
 
 8. Create a new Agent with name *"Supplier"*, and set it as using the external data source *"Primavera"* that you created earlier.
 
