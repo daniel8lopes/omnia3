@@ -37,7 +37,7 @@ A connector and an access to [Primavera ERP](https://pt.primaverabss.com), on ve
     - Interop.GcpBE900.dll
     - Interop.IGcpBS900.dll
     
-    ![Modeler add Reference](/images/tutorials/applicationbehaviours/Modeler-Add-Reference.PNG)
+    ![Modeler add Reference](/images/tutorials/applicationbehaviours/Modeler-Primavera-Add-Dependency.PNG)
 
 4. Through the left side menu, create a new Agent by accessing the option ***Agents / Add new*** on the top right side. Set its Name as *Employee* and Data Source as *Primavera*.
 
