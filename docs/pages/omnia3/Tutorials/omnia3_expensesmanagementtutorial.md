@@ -76,11 +76,15 @@ This tutorial assumes that you have created a OMNIA tenant, and are logged in as
 
 18. Perform a new Build (by accessing the option ***Versioning / Builds / Create new***). Access the application and test the new creation of the document.
 
-19. Go back to modeling area (through the top bar option) and edit the  **Document / ExpenseReport**  document.
+19. Go back to modeling area (through the top bar option)
 
 20. (**Optional**) Navigate to **Data Source** *System*, and on tab “Behaviour References“ define a reference for .NET assembly System.Net.Http
 
     ![Modeler_Create_Reference](/images/tutorials/expensemanagement/Modeler-Add-Behaviour-Dependency.PNG)
+    
+    Navigate to **Document** *ExpenseReport* and navigate to tab *Behaviour Namespace* to add a reference to namespace System.Net.Http
+
+    ![Modeler_Add_Namespace](/images/tutorials/expensemanagement/Modeler-ExpenseReport-Add-Namespace.PNG)
     
     Add a new **Action Behaviour**, in order to return automatically your updated *Exchange Rate*, based on an external API . Set *GetRateData* as Code, and the attribute as *Currency*. Paste the following code:
 
