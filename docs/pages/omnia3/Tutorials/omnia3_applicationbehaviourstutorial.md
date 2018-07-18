@@ -29,10 +29,8 @@ A connector and an access to [Primavera ERP](https://pt.primaverabss.com), on ve
 2. Through the left side menu, create a new Data Source by accessing the option ***Data Sources / Add new*** on the top right side. Set its Name as "*Primavera*", Behaviour Runtime and Data Access Runtime as *"External"*.
 
     ![Modeler create DataSource](/images/tutorials/applicationbehaviours/Modeler-Create-DataSource.PNG)
-
-3. Through the left side menu, create a new Agent by accessing the option ***Agents / Add new*** on the top right side. Set its Name as *Employee* and Data Source as *Primavera*.
-
-4. On Agent *Employee*, navigate to tab **Data References**, and define a reference for Primavera assemblies
+    
+3. Still on Data Source *Primavera*, navigate to tab **Behaviour Dependencies**, and define a reference for Primavera assemblies
 
     - Interop.ErpBS900.dll
     - Interop.StdBE900.dll
@@ -40,6 +38,8 @@ A connector and an access to [Primavera ERP](https://pt.primaverabss.com), on ve
     - Interop.IGcpBS900.dll
     
     ![Modeler add Reference](/images/tutorials/applicationbehaviours/Modeler-Add-Reference.PNG)
+
+4. Through the left side menu, create a new Agent by accessing the option ***Agents / Add new*** on the top right side. Set its Name as *Employee* and Data Source as *Primavera*.
 
 5. Navigate to tab “Data Behaviours“, and define a behaviour to be executed on “ReadList”. This behaviour will be used for Query and List requests for this entity.
 
