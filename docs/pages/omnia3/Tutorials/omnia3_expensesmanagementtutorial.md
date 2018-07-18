@@ -82,7 +82,7 @@ This tutorial assumes that you have created a OMNIA tenant, and are logged in as
 
     ![Modeler_Create_Reference](/images/tutorials/expensemanagement/Modeler-Add-Behaviour-Dependency.PNG)
     
-    Navigate to **Document** *ExpenseReport* and navigate to tab *Behaviour Namespace* to add a reference to namespace System.Net.Http
+    Navigate to **Document** *ExpenseReport* and click on tab *Behaviour Namespace* to add a reference to namespace System.Net.Http
 
     ![Modeler_Add_Namespace](/images/tutorials/expensemanagement/Modeler-ExpenseReport-Add-Namespace.PNG)
     
