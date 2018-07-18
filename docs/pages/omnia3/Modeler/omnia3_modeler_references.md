@@ -33,6 +33,7 @@ In order to add them, you can access the modeler, edit a data source, and go to 
     - Other system (External): The assembly will be available to be used only on behaviours external to Omnia
     - OMNIA (Internal): The assembly will be available to be used only on behaviours executed on Omnia
     
+    
 After adding the assembly reference, they can be used on *Entities* and *Application Behaviours*, by referencing the namespaces to be used. The process to add namespaces is:
 
 - **Entities**: Edit the Entity, and go to **Behaviour Namespaces / Add new**
