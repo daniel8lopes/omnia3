@@ -29,53 +29,21 @@ A connector and an access to [Primavera ERP](https://pt.primaverabss.com), on ve
 2. Through the left side menu, create a new Data Source by accessing the option ***Data Sources / Add new*** on the top right side. Set its Name as "*Primavera*", Behaviour Runtime and Data Access Runtime as *"External"*.
 
     ![Modeler create DataSource](/images/tutorials/applicationbehaviours/Modeler-Create-DataSource.PNG)
-
-3. Through the left side menu, create a new Agent by accessing the option ***Agents / Add new*** on the top right side. Set its Name as *Employee* and Data Source as *Primavera*.
-
-4. On Agent *Employee*, navigate to tab **Data References**, and define a reference for Primavera assemblies
+    
+3. Still on Data Source *Primavera*, navigate to tab **Behaviour Dependencies**, and define a reference for Primavera assemblies
 
     - Interop.ErpBS900.dll
     - Interop.StdBE900.dll
     - Interop.GcpBE900.dll
     - Interop.IGcpBS900.dll
     
-    ![Modeler add Reference](/images/tutorials/applicationbehaviours/Modeler-Add-Reference.PNG)
+    ![Modeler add Reference](/images/tutorials/applicationbehaviours/Modeler-Primavera-Add-Dependency.PNG)
 
-5. Navigate to tab “Data Behaviours“, and define a behaviour to be executed on “ReadList”. This behaviour will be used for Query and List requests for this entity.
-
-    Copy and paste the following code (Remember to change the "USER" and "PASS" fields to your actual username and password.):
-
-    ```C#
-    List<IDictionary<string, object>> employeesList = new List<IDictionary<string, object>>();
-    ErpBS qbsERP = new ErpBS();
-    
-    qbsERP.AbreEmpresaTrabalho(EnumTipoPlataforma.tpEmpresarial, Context.Operation.DataSource, "USER", "PASS");
-    
-    StdBELista queryResults = qbsERP.Consulta($"SELECT Employees.EmployeesCount, Codigo, Nome FROM Funcionarios CROSS JOIN (SELECT Count(*) AS EmployeesCount FROM  Funcionarios) AS Employees ORDER BY Codigo OFFSET {(page - 1)*pageSize} ROWS FETCH NEXT {pageSize} ROWS ONLY");
-    
-    int numberOfRecords = Convert.ToInt32(queryResults.Valor("EmployeesCount").ToString());
-    while (!queryResults.NoFim())
-    {    
-        var employee = new Dictionary<string, object>() {
-            { "_code", queryResults.Valor("Codigo").ToString()},
-            { "_name", queryResults.Valor("Nome").ToString()}
-        };
-    
-        employeesList.Add(employee);
-        queryResults.Seguinte();
-    }
-    
-    qbsERP.FechaEmpresaTrabalho();
-    
-    return (numberOfRecords, employeesList);
-    ```
-
-6. Through the left side menu, navigate to PurchaseOrder Document, by accessing the option ***Documents / PurchaseOrder***. Add the following attributes by clicking on button Add new. 
+4. Through the left side menu, navigate to PurchaseOrder Document, by accessing the option ***Documents / PurchaseOrder***. Add the following attributes by clicking on button Add new. 
 
     - Primavera (Type: Data source / Primavera)
-    - Employee (Type: Agent / Employee; Data Source attribute: Primavera)
 
-7. Through the left side menu, create a new application behaviour by accessing the option ***Extensibility / Application Behaviours / Add new***. Set its *Name* as "IntegratePurchaseOrder", and "Primavera" as *Data Source*.
+5. Through the left side menu, create a new application behaviour by accessing the option ***Extensibility / Application Behaviours / Add new***. Set its *Name* as "IntegratePurchaseOrder", "Primavera" as *Data Source* and "External" as *Execution Location*.
 
     Copy and paste the following code (Remember to change the "USER" and "PASS" fields to your actual username and password.):
 
@@ -109,7 +77,16 @@ A connector and an access to [Primavera ERP](https://pt.primaverabss.com), on ve
     return new Dictionary<string, object>();
     ```
 
-8. Through the left side menu, navigate to PurchaseOrder Document, by accessing the option ***Documents / PurchaseOrder / Entity Behaviours***. Add a new entity behaviour by clicking on ***Add new / After Save***, setting its name as "IntegrateOnSave".
+6. Edit Application Behaviour *IntegratePurchaseOrder* and click on button *Edit Namespaces* to add the following namespaces:
+
+    - Interop.ErpBS900
+    - Interop.StdBE900
+    - Interop.GcpBE900
+    - Interop.IGcpBS900
+
+    ![Modeler ApplicationBehaviour Add_Namespace](/images/tutorials/applicationbehaviours/Modeler-IntegratePurchaseOrder-Add-Namespace.PNG)
+
+7. Through the left side menu, navigate to PurchaseOrder Document, by accessing the option ***Documents / PurchaseOrder / Entity Behaviours***. Add a new entity behaviour by clicking on ***Add new / After Save***, setting its name as "IntegrateOnSave".
 
     Copy and paste the following code (Remember to change the "CONNECTORUSER" field to your actual connector user.):
 
@@ -132,12 +109,12 @@ A connector and an access to [Primavera ERP](https://pt.primaverabss.com), on ve
     return await Task.FromResult(new AfterSaveMessage("Integration with Primavera successful.", AfterSaveMessageType.Success));
     ```
 
-9. Build the model.
+8. Build the model.
 
-10. Go to application area, and create new instance of Primavera. The Connector value is the code defined earlier when the connector was created
+9. Go to application area, and create new instance of Primavera. The Connector value is the code defined earlier when the connector was created
 
-11. Create a new Purchase Order.
+10. Create a new Purchase Order.
 
-12. After creating the purchase order, click on the first option of the top bar, and check the operation result is now visible.
+11. After creating the purchase order, click on the first option of the top bar, and check the operation result is now visible.
 
     ![Modeler view Notifications](/images/tutorials/applicationbehaviours/Application-NotificationCenter.PNG)

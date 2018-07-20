@@ -42,11 +42,15 @@ It is necessary to have completed the steps in the  [Beginner tutorial](http://d
 
 ### External API
 
-1. Go to the **Modeler** and edit the previously modeled resource *Product*. Create a new  **Attribute**  by clicking the button  **Add new**  on the top right side, and setting its  **Name** and **Type**  to  **Artist** and ***Primitive / Text***, respectively. Set the attribute as **Read Only**.
+1. Go to the **Modeler** and click on option **Data sources / System** to add references to this data source. Click on button **Add new** to add a new  **Behaviour Dependency**  for .NET assembly System.Net.Http
 
-2. Navigate to tab *"[Entity References](https://docs.numbersbelieve.com/omnia3_modeler_references.html)"*, and define a reference for .NET assembly System.Net.Http
+    ![Modeler Add_Dependency](/images/tutorials/advanced/Modeler-Add-Behaviour-Dependency.PNG)
 
-    ![Modeler goodsPurchaseRequest Add_Reference](/images/tutorials/advanced/Modeler-Create-Reference.PNG)
+2. Edit the previously modeled resource *Product*. Create a new  **Attribute**  by clicking the button  **Add new**  on the top right side, and setting its  **Name** and **Type**  to  **Artist** and ***Primitive / Text***, respectively. Set the attribute as **Read Only**.
+
+2. Navigate to tab **Behaviour Namespaces** and add namespace System.Net.Http
+
+    ![Modeler Add_Namespace](/images/tutorials/advanced/Modeler-Add-Behaviour-Namespace.PNG)
 
 3. Create a new **Action Behaviour**  to fill the new attribute (on the PurchaseOrder document, go to tab ***Entity Behaviours*** and click on ***Add new / Action***). Set ***GetRecordData*** as **Name**, ***_code*** as the attribute that triggers the behaviour, and paste the following code:
 

@@ -20,9 +20,7 @@ There are two different kinds of references you can add to your model:
 - **Entity references**: Associated with Entity behaviours. 
 - **Data references**: Associated with Data behaviours. 
 
-Whatever the type, the place they execute on depends on the associated data source's settings.
-
-In order to add them, you can access the modeler, edit an entity, and go to ***Entity references > Add new*** or ***Data references > Add new***. Here, you identify the reference you want:
+In order to add them, you can access the modeler, edit a data source, and go to ***Behaviour Dependencies > Add new***. Here, you identify the reference you want:
 - **Name:** A platform-side identifier for the reference;
 - **Description:** A human-readable description for the reference;
 - **Path:** The path to that reference. The following paths are valid:
@@ -30,7 +28,23 @@ In order to add them, you can access the modeler, edit an entity, and go to ***E
     - For non-System assemblies, a full path (including the file name) can be provided i.e. C:\Assemblies\MyAssembly.dll
     - Relative paths are also supported. The assumed start path is the folder where the application is running. i.e. If it is located on C:\Omnia, and your assembly is on C:\Assemblies, the path should be ..\Assemblies\MyAssembly.dll
 - **Assembly name:** The assembly name of the reference you are importing.
-- **Namespace:** The namespace used by the reference you are importing. Will be automatically added to all code for your convenience; i.e. importing ```ExampleCompany.SqlQuerier``` will allow you to use ```new ExampleQueryBuilder()``` instead of ```new ExampleCompany.SqlQuerier.ExampleQueryBuilder```, i.e, without having to fully qualify the name.
+- **Execution Location:** The location where the assembly is going to be used. Possible values:
+    - OMNIA and other systems (Both): The assembly will be available to be used on behaviours executed on Omnia externally
+    - Other system (External): The assembly will be available to be used only on behaviours external to Omnia
+    - OMNIA (Internal): The assembly will be available to be used only on behaviours executed on Omnia
+    
+    
+After adding the assembly reference, they can be used on *Entities* and *Application Behaviours*, by referencing the namespaces to be used. The process to add namespaces is:
+
+- **Entities**: Edit the Entity, and go to **Behaviour Namespaces / Add new**
+- **Application Behaviours**: Edit the behaviour, and go to **Edit Namespaces / Add new**
+
+Then, identify the following information:
+- **Name:** A platform-side identifier for the reference;
+- **Description:** A human-readable description for the reference;
+- **Fully Qualified Name:** The fully qualified name of the reference. Will be added as an "using" on C# code
+- **Execution Location:** Where in the data source the namespace will be available
+
 
 ## 3. Supported references
 

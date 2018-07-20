@@ -47,21 +47,29 @@ This tutorial also requires an access to [Primavera ERP](https://pt.primaverabss
 
     ![Modeler create DataSource](/images/tutorials/primaveraconnector/Modeler-Create-DataSource.PNG)
 
-3. Create a new Agent with name *"Employee"*, and set it as using the external data source *"Primavera"* that you created earlier.
+3. Navigate to tab *Behaviour Dependencies*, and define a reference for Primavera assemblies:
+
+    1. Interop.StdBE900.dll
+    2. Interop.RhpBE900.dll
+    3. Interop.IRhpBS900.dll
+    4. Interop.ErpBS900.dll
+
+    ![Modeler add reference](/images/tutorials/primaveraconnector/Modeler-Primavera-Add-Dependency.PNG)
+    
+4. Create a new Agent with name *"Employee"*, and set it as using the external data source *"Primavera"* that you created earlier.
 
     ![Modeler create Agent](/images/tutorials/primaveraconnector/Modeler-Create-Agent.PNG)
 
-4. On Agent *"Employee"*, navigate to tab *"[Data References](https://docs.numbersbelieve.com/omnia3_modeler_references.html)"*, and define a reference for Primavera assemblies:
+5. Navigate to tab *Behaviour Namespaces* and reference the following namespaces:
 
-    1. Interop.StdPlatBS900.dll
-    2. Interop.StdBE900.dll
-    3. Interop.RhpBE900.dll
-    4. Interop.IRhpBS900.dll
-    5. Interop.ErpBS900.dll
+    1. Interop.StdBE900.dll
+    2. Interop.RhpBE900.dll
+    3. Interop.IRhpBS900.dll
+    4. Interop.ErpBS900.dll
+    
+    ![Modeler Add Namespace](/images/tutorials/primaveraconnector/Modeler-Employee-Add-ERP-Namespace.PNG)
 
-    ![Modeler add reference](/images/tutorials/primaveraconnector/add-new-reference.png)
-
-5. Navigate to tab *"[Data Behaviours](https://docs.numbersbelieve.com/omnia3_modeler_datasources.html)"*, and define a behaviour to be executed on *"ReadList"*. This behaviour will be used for Query and List requests for this entity.
+6. Navigate to tab *"[Data Behaviours](https://docs.numbersbelieve.com/omnia3_modeler_datasources.html)"*, and define a behaviour to be executed on *"ReadList"*. This behaviour will be used for Query and List requests for this entity.
 
     Copy and paste the following code (*Remember to **change** the **```"USER"```** and **```"PASS"```** fields to your actual username and password.*):
 
@@ -91,7 +99,7 @@ This tutorial also requires an access to [Primavera ERP](https://pt.primaverabss
     return (numberOfRecords, employeesList);
     ```
 
-6. Create a new Data Behaviour for the operation *"Read"*, so that data is retrieved when an Employee is edited on OMNIA.
+7. Create a new Data Behaviour for the operation *"Read"*, so that data is retrieved when an Employee is edited on OMNIA.
 
     Copy and paste the following code (*Remember to **change** the **```"USER"```** and **```"PASS"```** fields to your actual username and password.*):
 
@@ -115,7 +123,7 @@ This tutorial also requires an access to [Primavera ERP](https://pt.primaverabss
     return dto;
     ```
 
-7. On *"Data Behaviours"* of Agent Employee, define a behaviour, to be executed on *"Update"* (when an Employee is updated on OMNIA).
+8. On *"Data Behaviours"* of Agent Employee, define a behaviour, to be executed on *"Update"* (when an Employee is updated on OMNIA).
 
     Copy and paste the following code (*Remember to **change** the **```"USER"```** and **```"PASS"```** fields to your actual username and password.*):
 
@@ -134,12 +142,12 @@ This tutorial also requires an access to [Primavera ERP](https://pt.primaverabss
     return dto;
     ```
 
-8. Perform a new Build (by accessing the option ***Versioning / Builds / Create new***).
+9. Perform a new Build (by accessing the option ***Versioning / Builds / Create new***).
 
-9. Go to the Application area.
+10. Go to the Application area.
 
-10. Create a new instance of the Primavera data source, with code *"DEMO"* and with the Code of the Connector that you have created.
+11. Create a new instance of the Primavera data source, with code *"DEMO"* and with the Code of the Connector that you have created.
 
-11. On left side menu, navigate to *Configurations / Employee*, identify the Primavera data source instance (DEMO) and check that the list is filled with data retrieved from Primavera.
+12. On left side menu, navigate to *Configurations / Employee*, identify the Primavera data source instance (DEMO) and check that the list is filled with data retrieved from Primavera.
 
-12. Now you can List and Update Employees directly on your on-premise system, providing your connector is correctly configured and running.
+13. Now you can List and Update Employees directly on your on-premise system, providing your connector is correctly configured and running.

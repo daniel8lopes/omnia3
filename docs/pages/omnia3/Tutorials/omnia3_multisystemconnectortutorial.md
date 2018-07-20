@@ -61,17 +61,28 @@ This tutorial also requires an access to [Primavera ERP](https://pt.primaverabss
 7. Go to modeling area, and through the left side menu, create a new Data Source by accessing the option ***Data Sources / Add new*** on the top right side. Set its Name as "*Primavera*", Behaviour Runtime as *"Internal"* and Data Access Runtime as *"External"*. Check the flag "Will be executed in a connector?"
 
     ![Modeler create DataSource_Primavera](/images/tutorials/multisystemconnector/Create-DataSource-Primavera.PNG)
-
-8. Create a new Agent with name *"Supplier"*, and set it as using the external data source *"Primavera"* that you created earlier.
-
-    ![Modeler create Agent_Supplier](/images/tutorials/multisystemconnector/Create-Agent-Supplier.png)
-
-9. On Agent *"Supplier"*, navigate to tab *"[Data References](https://docs.numbersbelieve.com/omnia3_modeler_references.html)"*, and define a reference for Primavera assemblies:
+    
+8. Navigate to tab *Behaviour Dependencies*, and define a reference for the following Primavera assemblies:
 
     1. Interop.StdBE900.dll
     2. Interop.ErpBS900.dll
     3. Interop.IGcpBS900.dll
     4. Interop.GcpBE900.dll
+    
+    ![Modeler_Primavera_Add_Dependency](/images/tutorials/multisystemconnector/Modeler-Primavera-Add-Dependency.PNG)
+
+8. Create a new Agent with name *"Supplier"*, and set it as using the external data source *"Primavera"* that you created earlier.
+
+    ![Modeler create Agent_Supplier](/images/tutorials/multisystemconnector/Create-Agent-Supplier.png)
+
+9. On Agent *"Supplier"*, navigate to tab *Behaviour Namespaces*, and define a reference for the following namespaces:
+
+    1. Interop.StdBE900.dll
+    2. Interop.ErpBS900.dll
+    3. Interop.IGcpBS900.dll
+    4. Interop.GcpBE900.dll
+    
+    ![Modeler_Supplier_Add_Namespace](/images/tutorials/multisystemconnector/Modeler-Supplier-Add-ERP-Namespace.PNG)
 
 10. Navigate to tab *"[Data Behaviours](https://docs.numbersbelieve.com/omnia3_modeler_datasources.html)"*, and define a behaviour to be executed on *"ReadList"*. This behaviour will be used for Query and List requests for this entity.
 
@@ -170,10 +181,10 @@ This tutorial also requires an access to [Primavera ERP](https://pt.primaverabss
 
     ![Modeler create Resource_Product](/images/tutorials/multisystemconnector/Create-Resource-Product.PNG)
 
-18. On Resource *"Product"*, navigate to tab *"[Data References](https://docs.numbersbelieve.com/omnia3_modeler_references.html)"*, and define a reference for Primavera assemblies:
+18. On Resource *"Product"*, navigate to tab *Behaviour Namespaces*, and define a reference the following namespaces (define *External* as Execution Location):
 
-    1. Interop.StdBE900.dll
-    2. Interop.ErpBS900.dll
+    1. Interop.StdBE900
+    2. Interop.ErpBS900
 
 19. Navigate to tab *"[Data Behaviours](https://docs.numbersbelieve.com/omnia3_modeler_datasources.html)"*, and define a behaviour to be executed on *"ReadList"*. This behaviour will be used for Query and List requests for this entity.
 
@@ -241,12 +252,12 @@ This tutorial also requires an access to [Primavera ERP](https://pt.primaverabss
     - Supplier (Type: Agent, Supplier. Uses attribute Primavera as data source)
     - OrderLines (Type: Commitment, GoodsPurchaseRequest)
 
-6. On Document "*PurchaseOrder*", navigate to tab *"[Data References](https://docs.numbersbelieve.com/omnia3_modeler_references.html)"*, and define a reference for Primavera assemblies:
+6. On Document "*PurchaseOrder*", navigate to tab *Behaviour Namespaces*, and define a reference for the following namespaces (define *External* as Execution Location):
 
-    1. Interop.StdBE900.dll
-    2. Interop.ErpBS900.dll
-    3. Interop.IGcpBS900.dll
-    4. Interop.GcpBE900.dll
+    1. Interop.StdBE900
+    2. Interop.ErpBS900
+    3. Interop.IGcpBS900
+    4. Interop.GcpBE900
 
 7. Navigate to tab *"[Data Behaviours](https://docs.numbersbelieve.com/omnia3_modeler_datasources.html)"*, and define a behaviour to be executed on *"ReadList"*. This behaviour will be used for Query and List requests for this entity.
 
@@ -352,11 +363,15 @@ This tutorial also requires an access to [Primavera ERP](https://pt.primaverabss
 
 ## 5. Communicate with an external API
 
-1. On Commitment "*GoodsPurchaseRequest*", navigate to tab *"[Entity References](https://docs.numbersbelieve.com/omnia3_modeler_references.html)"*, and define a reference for .NET assembly System.Net.Http
+1. Go to the **Modeler** and click on option **Data sources / System** to add references to this data source. Click on button **Add new** to add a new  **Behaviour Dependency**  for .NET assembly System.Net.Http
 
-    ![Modeler goodsPurchaseRequest Add_Reference](/images/tutorials/multisystemconnector/Add-GoodsPurchaseRequest-Reference.PNG)
+    ![Modeler Add_Dependency](/images/tutorials/advanced/Modeler-Add-Behaviour-Dependency.PNG)
+    
+2. On Commitment "*GoodsPurchaseRequest*", navigate to tab *Behaviour Namespaces*, and define a reference to namespace System.Net.Http
 
-2. Navigate to tab *"[Entity Behaviours](https://docs.numbersbelieve.com/omnia3_modeler_datasources.html)"*, and define an *"Action"* behaviour to be executed when attribute _resource is changed. This behaviour will be used to retrieve from LastFM API a unique album identifier.
+    ![Modeler Add_Namespace](/images/tutorials/multisystemconnector/Modeler-Add-Namespace.PNG)
+
+3. Navigate to tab *"[Entity Behaviours](https://docs.numbersbelieve.com/omnia3_modeler_datasources.html)"*, and define an *"Action"* behaviour to be executed when attribute _resource is changed. This behaviour will be used to retrieve from LastFM API a unique album identifier.
 
     Copy and paste the following code (*Remember to **change** the **```"API_KEY"```** field to your actual LastFM API Key.*):
 
@@ -376,6 +391,6 @@ This tutorial also requires an access to [Primavera ERP](https://pt.primaverabss
 	}
     ```
 
-3. Perform a new build
+4. Perform a new build
 
-4. Go to application area, and create a new Purchase Order. Check that, when Artist and Resource are identified and valid, attribute Album MBid is filled with the album unique identifier
+5. Go to application area, and create a new Purchase Order. Check that, when Artist and Resource are identified and valid, attribute Album MBid is filled with the album unique identifier

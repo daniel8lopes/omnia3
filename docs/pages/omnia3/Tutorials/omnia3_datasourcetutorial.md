@@ -33,20 +33,24 @@ If you do not have a tenant yet, please follow the steps of the [Tenant Creation
 2. Through the left side menu, create a new Data Source by accessing the option ***Data Sources / Create new*** on the top right side. Set its *Name* as "ExternalAPI", Behaviour Runtime as Internal and its Data Access Runtime as External. Leave it as not requiring a connector.
 
     ![Modeler_Create_DataSource](/images/tutorials/datasource/Modeler-Create-DataSource.PNG)
-    
-3. Create a new Agent with *Name* "Employee", and set it as using the external data source "ExternalAPI" that you created earlier.
+
+3. Navigate to tab **Behaviour Dependencies** and add a reference to .NET assembly System.Net.Http
+
+    ![Modeler_Add_Dependency](/images/tutorials/datasource/Modeler-ExternalAPI-Add-Dependency.PNG)
+
+4. Create a new Agent with *Name* "Employee", and set it as using the external data source "ExternalAPI" that you created earlier.
 
     ![Modeler_Create_Agent](/images/tutorials/datasource/Modeler-Create-Agent-Employee.PNG)
+
+5. Navigate to tab **Behaviour Namespaces** and add a reference to namespace System.Net.Http
+
+    ![Modeler_Add_Namespace](/images/tutorials/datasource/Modeler-Employee-Add-Namespace.PNG)
     
-4. Navigate to tab “Data References“, and define a reference for .NET assembly System.Net.Http
-
-    ![Modeler_Create_Reference](/images/tutorials/expensemanagement/Modeler-Create-Reference.PNG)
-
-5. Still on Agent Employee, navigate to tab "Data Behaviours", and define a behaviour to be executed on "Create". This behaviour will be used to perform a POST request to the external Application when we create an instance of the Employee on the OMNIA platform. Copy and paste the following code:
+6. Still on Agent Employee, navigate to tab "Data Behaviours", and define a behaviour to be executed on "Create". This behaviour will be used to perform a POST request to the external Application when we create an instance of the Employee on the OMNIA platform. Copy and paste the following code:
 
     ```C#
     {% raw %}
-    var client = new HttpClient();
+    var client = new System.Net.Http.HttpClient();
     
     string apiEndpoint = $"https://reqres.in/api/users/";
 
@@ -57,7 +61,7 @@ If you do not have a tenant yet, please follow the steps of the [Tenant Creation
     };
 
     var jsonBody = JsonConvert.SerializeObject(body);
-    var httpContent = new StringContent(jsonBody, System.Text.Encoding.UTF8, "application/json");
+    var httpContent = new System.Net.Http.StringContent(jsonBody, System.Text.Encoding.UTF8, "application/json");
 
     var requestResult = client.PostAsync(apiEndpoint, httpContent).GetAwaiter().GetResult();
 
@@ -75,12 +79,12 @@ If you do not have a tenant yet, please follow the steps of the [Tenant Creation
       {% endraw %}
     ```
 
-6. On "Data Behaviours" of Agent Employee, define a behaviour, to be executed on "Delete" (when a Employee is deleted on OMNIA). Copy and paste the following code:
+7. On "Data Behaviours" of Agent Employee, define a behaviour, to be executed on "Delete" (when a Employee is deleted on OMNIA). Copy and paste the following code:
 
 
     ```C#
     {% raw %}
-    var client = new HttpClient();
+    var client = new System.Net.Http.HttpClient();
     
     string apiEndpoint = $"https://reqres.in/api/users/{identifier}";
     
@@ -95,11 +99,11 @@ If you do not have a tenant yet, please follow the steps of the [Tenant Creation
     {% endraw %}
     ```
 
-7. Create a new Data Behaviour for the operation "Read", so that data is retrieved when a Employee is edited on OMNIA. Copy and paste the following code:
+8. Create a new Data Behaviour for the operation "Read", so that data is retrieved when a Employee is edited on OMNIA. Copy and paste the following code:
 
     ```C#
       {% raw %}
-    var client = new HttpClient();
+    var client = new System.Net.Http.HttpClient();
     string apiEndpoint = $"https://reqres.in/api/users/{identifier}";
 
     var requestResult = client.GetAsync(apiEndpoint).GetAwaiter().GetResult();
@@ -119,11 +123,11 @@ If you do not have a tenant yet, please follow the steps of the [Tenant Creation
     {% endraw %}
     ```
 
-8. Create a new Data Behaviour for the operation "ReadList", so that data is retrieved when a list of Employees is requested. Copy and paste the following code:
+9. Create a new Data Behaviour for the operation "ReadList", so that data is retrieved when a list of Employees is requested. Copy and paste the following code:
 
     ```C#
     {% raw %}
-    var client = new HttpClient();
+    var client = new System.Net.Http.HttpClient();
     string apiEndpoint = $"https://reqres.in/api/users?page={page}";
 
     var requestResult = client.GetAsync(apiEndpoint).GetAwaiter().GetResult();
@@ -150,11 +154,11 @@ If you do not have a tenant yet, please follow the steps of the [Tenant Creation
 
 	NOTE: in this scenario, we are ignoring the query sent by the user when obtaining the list. In real world scenarios, you will want to change the query to the external system and/or the returned response, according to the parameters sent by the user.
 	
-9. Create a new Data Behaviour for the operation "Update", so that data is retrieved when an Employee is updated on OMNIA (i.e., edited and saved). Copy and paste the following code:
+10. Create a new Data Behaviour for the operation "Update", so that data is retrieved when an Employee is updated on OMNIA (i.e., edited and saved). Copy and paste the following code:
 
     ```C#
     {% raw %}
-    var client = new HttpClient();
+    var client = new System.Net.Http.HttpClient();
     string apiEndpoint = $"https://reqres.in/api/users/{dto._code}";
 
     var body = new
@@ -165,7 +169,7 @@ If you do not have a tenant yet, please follow the steps of the [Tenant Creation
     
     var jsonBody = JsonConvert.SerializeObject(body);
 
-    var httpContent = new StringContent(jsonBody, System.Text.Encoding.UTF8, "application/json");
+    var httpContent = new System.Net.Http.StringContent(jsonBody, System.Text.Encoding.UTF8, "application/json");
 
     var requestResult = client.PutAsync(apiEndpoint, httpContent).GetAwaiter().GetResult();
     string responseBody = requestResult.Content.ReadAsStringAsync().Result;
@@ -183,13 +187,13 @@ If you do not have a tenant yet, please follow the steps of the [Tenant Creation
     {% endraw %}
     ```
 
-10. Perform a new Build (by accessing the option ***Versioning / Builds / Create new***).
+11. Perform a new Build (by accessing the option ***Versioning / Builds / Create new***).
 
-11. On Application area, create a new instance of the ExternalAPI data source, with code "ReqRes".
+12. On Application area, create a new instance of the ExternalAPI data source, with code "ReqRes".
 
     ![Application-Create-DataSource](/images/tutorials/datasource/Application-Create-DataSource-Instance.PNG)
     
-12. On left side menu, navigate to Configurations / Employee, and check that the list is filled with data retrieved from the external data source.
+13. On left side menu, navigate to Configurations / Employee, and check that the list is filled with data retrieved from the external data source.
 
     ![Application_List_DataSource](https://raw.githubusercontent.com/numbersbelieve/omnia3/master/docs/tutorialPics/modelingTutorial/Application-List-External-DataSource.PNG)
     
@@ -207,7 +211,6 @@ If you do not have a tenant yet, please follow the steps of the [Tenant Creation
 5. Perform a new Build (by accessing the option ***Versioning / Builds / Create new***).
 
 6. On Application area, create a new instance of the Department, and check that, after identifying the data source, Employees from that data source are now available for selection.
-
 
 
 Now that you know how to use Data Sources, we recommend you to take a look at [this tutorial](omnia3_primaveraconnectortutorial.html) where you will learn how to expose an on-premise Data Source to OMNIA.
