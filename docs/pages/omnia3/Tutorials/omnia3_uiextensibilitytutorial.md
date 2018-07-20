@@ -24,15 +24,16 @@ It is necessary to have completed the steps in the  [Beginner tutorial](http://d
 
 2. Through the left side menu, edit *PurchaseOrder* document by accessing the option ***Documents / PurchaseOrder***
 
-3. Add a new attribute by clicking on button **Add new**. Set its *Name* as **IsDelivered**, *Type* as ***Primitive / Boolean***
+3. Add the following attributes by clicking on button **Add new**: 
 
-    ![Modeler_Create_Attribute](/images/tutorials/beginner/Modeler-Create-Attribute.PNG)
+    - *Name*: **IsDelivered**, *Type*: ***Primitive / Boolean***
+    - *Name*: **Received**, *Type*: ***Primitive / Boolean***
+    - *Name*: **DeliveryAddress**, *Type*: ***Primitive / Text***
+    - *Name*: **PaymentTerm**, *Type*: ***Primitive / Integer***
     
-4. Add a new attribute by clicking on button **Add new**. Set its *Name* as **DeliveryAddress**, *Type* as ***Primitive / Text***
-
-    ![Modeler_Create_Attribute](/images/tutorials/beginner/Modeler-Create-Attribute.PNG)
+4. Build the model. Go to application and check the new attributes
     
-5. Navigate to tab **User Interface Behaviours** click on top left button *Add new* to add a new behaviour, that will control  *DeliveryAddress* attribute visibility and value, depending on *IsDelivered*. Set its *Name* as **IsDeliveredChange**, *Behaviour Type* as **On change**, element as **IsDelivered** and copy the following JavaScript code as the *Expression*
+5. Go back to modeling area. Navigate to tab **User Interface Behaviours** click on top left button *Add new* to add a new behaviour, that will control  *DeliveryAddress* attribute visibility and value, depending on *IsDelivered*. Set its *Name* as **IsDeliveredChange**, *Behaviour Type* as **On change**, element as **IsDelivered** and copy the following JavaScript code as the *Expression*
 
     ```JavaScript
         if(this.isDelivered === true){
@@ -69,5 +70,9 @@ It is necessary to have completed the steps in the  [Beginner tutorial](http://d
 
     ```JavaScript
         if(this.orderLines.length ==0)
-            alert("Warning: The document will be saved without lines. You can add them by editing it.");
+            alert("Warning: The document will be saved without lines. Don't worry, you can add them later.");
     ```
+
+9. Build the model
+
+10. Go to application and validate the new behaviours, by making the following tests
