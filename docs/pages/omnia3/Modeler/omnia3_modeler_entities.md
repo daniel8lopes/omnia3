@@ -98,9 +98,9 @@ Click [here](omnia3_modeler_behaviours.html), to know more about user interface 
 
 In this sample, base element *_code* is set as hidden:
 
-    ````
+    ```JavaScript
     this._metadata.elements._code.isHidden = true;
-    ````
+    ```
 
 ### How to change the size of an element?
 
