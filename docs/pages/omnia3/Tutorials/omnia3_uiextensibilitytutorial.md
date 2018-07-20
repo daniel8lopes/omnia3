@@ -34,14 +34,14 @@ It is necessary to have completed the steps in the  [Beginner tutorial](http://d
     
 5. Navigate to tab **User Interface Behaviours** click on top left button *Add new* to add a new behaviour, that will control  *DeliveryAddress* attribute visibility and value, depending on *IsDelivered*. Set its *Name* as **IsDeliveredChange**, *Behaviour Type* as **On change**, element as **IsDelivered** and copy the following JavaScript code as the *Expression*
 
-```JavaScript
-    if(this.isDelivered === true){
-        this._metadata.elements.deliveryAddress.isHidden = false;
-    }else{
-        this._metadata.elements.deliveryAddress.isHidden = true;
-        this.deliveryAddress = "";    
-    }    
-```
+    ```JavaScript
+        if(this.isDelivered === true){
+            this._metadata.elements.deliveryAddress.isHidden = false;
+        }else{
+            this._metadata.elements.deliveryAddress.isHidden = true;
+            this.deliveryAddress = "";    
+        }    
+    ```
 
 6. Navigate to tab **User Interface Behaviours** click on top left button *Add new* to add a new behaviour, that will control  *DeliveryAddress* attribute availability and size, depending on *Received*. Set its *Name* as **ReceivedChange**, *Behaviour Type* as **On change**, *Element* as **Received** and copy the following JavaScript code as the *Expression*
 
