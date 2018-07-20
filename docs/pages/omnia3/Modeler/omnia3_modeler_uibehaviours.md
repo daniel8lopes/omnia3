@@ -87,7 +87,7 @@ An element has the following properties:
 
 Property | Explanation|
 ---------|----------|
- **attributes** | A series of properties which govern the way the element displayed on the form: {::no-markdown }<ul><li>{:/}**isReadOnly**: set it to ```"true"``` to have the field be read only, to ```"false"``` otherwise.{::no-markdown }</li></ul>{:/}
+ **attributes** | A series of properties which govern the way the element displayed on the form: {::no-markdown}<ul><li>{:/}**isReadOnly**: set it to ```"true"``` to have the field be read only, to ```"false"``` otherwise.{::no-markdown}</li></ul>{:/}
  **column**, **row**, and **size** | Control the size and position of the element in the form.
  **isHidden** | Set to false to show the field, and to true to hide it.
  **messages** | An array of messages (error or otherwise) to display under the field. See the [FAQ](omnia3_modeler_entities.html#5-user-interface-behaviours) for usage examples.
