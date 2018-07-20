@@ -47,7 +47,7 @@ It is necessary to have completed the steps in the  [Beginner tutorial](http://d
         }    
     ```
 
-6. Navigate to tab **User Interface Behaviours** click on top left button *Add new* to add a new behaviour, that will control  *DeliveryAddress* attribute availability and size, depending on *Received*. Set its *Name* as **ReceivedChange**, *Behaviour Type* as **On change**, *Element* as **Received** and copy the following JavaScript code as the *Expression*
+6. Add another **User Interface Behaviour** by clicking on top right button *Add new*. This behaviour will control *DeliveryAddress* attribute availability and size, depending on *Received* value. Set its *Name* as **ReceivedChange**, *Behaviour Type* as **On change**, *Element* as **Received** and copy the following JavaScript code as the *Expression*
 
     ```JavaScript
         if(this.received === true){
@@ -59,7 +59,7 @@ It is necessary to have completed the steps in the  [Beginner tutorial](http://d
         }    
     ```
 
-7. Navigate to tab **User Interface Behaviours** click on top left button *Add new* to add a new behaviour, that will validate if   *PaymentTerm* attribute value is bigger than zero. Set its *Name* as **PaymentTermChange**, *Behaviour Type* as **On change**, *Element* as **PaymentTerm** and copy the following JavaScript code as the *Expression*
+7. Add a **User Interface Behaviour** that will validate if *PaymentTerm* attribute value is bigger than zero. Set its *Name* as **PaymentTermChange**, *Behaviour Type* as **On change**, *Element* as **PaymentTerm** and copy the following JavaScript code as the *Expression*
 
     ```JavaScript
         this._metadata.elements.paymentTerm.removeMessage('validation');
@@ -69,7 +69,7 @@ It is necessary to have completed the steps in the  [Beginner tutorial](http://d
             this._metadata.elements.paymentTerm.addMessage('Payment term is valid','success',  'validation');    
     ```
 
-8. Navigate to tab **User Interface Behaviours** click on top left button *Add new* to add a new behaviour, that will validate if   *PaymentTerm* attribute value is bigger than zero. Set its *Name* as **LineCountWarning**, *Behaviour Type* as **Before save** and copy the following JavaScript code as the *Expression*
+8. At last, add a **User Interface Behaviour** that will validate if *OrderLines* attribute length is bigger than zero. Set its *Name* as **LineCountWarning**, *Behaviour Type* as **Before save** and copy the following JavaScript code as the *Expression*
 
     ```JavaScript
         if(this.orderLines.length ==0)
