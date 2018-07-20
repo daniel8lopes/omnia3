@@ -48,7 +48,7 @@ The JavaScript class is organized in the following way:
 
 An excerpt of a sample class, for an entity with no lists, would be:
 ```javascript
-class Agt001Form {
+class EmployeeForm {
 	
 	constructor(metadata) {
 		this._metadata = metadata;
@@ -60,7 +60,7 @@ class Agt001Form {
 	}
 	
 	initialize(){
-		console.log("hello init");
+		console.log("Started work on an Employee entity");
 	}
 	
 	onChange__code(newValue){
@@ -74,7 +74,7 @@ class Agt001Form {
 	}
 }
 
-Agt001Form;
+EmployeeForm;
 ```
 
 The metadata object is the primary way of interacting with the form. If you want to set values of the fields, you can do it directly, i.e. ```this._description = "This is a Description!"```. However, for anything more complicated, you will need to use the metadata.
@@ -87,7 +87,7 @@ An element has the following properties:
 
 Property | Explanation|
 ---------|----------|
- **attributes** | A series of properties which govern the way the element displayed on the form: <ul><li>**isReadOnly**: set it to ```"true"``` to have the field be read only, to ```"false"``` otherwise.</li></ul>
+ **attributes** | A series of properties which govern the way the element displayed on the form: </br> **isReadOnly**: set it to ```"true"``` to have the field be read only, to ```"false"``` otherwise.
  **column**, **row**, and **size** | Control the size and position of the element in the form.
  **isHidden** | Set to false to show the field, and to true to hide it.
  **messages** | An array of messages (error or otherwise) to display under the field. See the [FAQ](omnia3_modeler_entities.html#5-user-interface-behaviours) for usage examples.
