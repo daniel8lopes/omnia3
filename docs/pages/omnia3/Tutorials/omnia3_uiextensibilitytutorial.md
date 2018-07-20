@@ -45,29 +45,29 @@ It is necessary to have completed the steps in the  [Beginner tutorial](http://d
 
 6. Navigate to tab **User Interface Behaviours** click on top left button *Add new* to add a new behaviour, that will control  *DeliveryAddress* attribute availability and size, depending on *Received*. Set its *Name* as **ReceivedChange**, *Behaviour Type* as **On change**, *Element* as **Received** and copy the following JavaScript code as the *Expression*
 
-```JavaScript
-    if(this.received === true){
-        this._metadata.elements.deliveryAddress.attributes.isReadOnly = true;
-        this._metadata.elements.deliveryAddress.size = 4;
-    }else{
-        this._metadata.elements.deliveryAddress.attributes.isReadOnly = false;
-        this._metadata.elements.deliveryAddress.size = 6;
-    }    
-```
+    ```JavaScript
+        if(this.received === true){
+            this._metadata.elements.deliveryAddress.attributes.isReadOnly = true;
+            this._metadata.elements.deliveryAddress.size = 4;
+        }else{
+            this._metadata.elements.deliveryAddress.attributes.isReadOnly = false;
+            this._metadata.elements.deliveryAddress.size = 6;
+        }    
+    ```
 
 7. Navigate to tab **User Interface Behaviours** click on top left button *Add new* to add a new behaviour, that will validate if   *PaymentTerm* attribute value is bigger than zero. Set its *Name* as **PaymentTermChange**, *Behaviour Type* as **On change**, *Element* as **PaymentTerm** and copy the following JavaScript code as the *Expression*
 
-```JavaScript
-    this._metadata.elements.paymentTerm.removeMessage('validation');
-    if(this.paymentTerm <0)
-        this._metadata.elements.paymentTerm.addMessage('Value must be bigger than zero','error',  'validation');
-    else
-        this._metadata.elements.paymentTerm.addMessage('Payment term is valid','success',  'validation');    
-```
+    ```JavaScript
+        this._metadata.elements.paymentTerm.removeMessage('validation');
+        if(this.paymentTerm <0)
+            this._metadata.elements.paymentTerm.addMessage('Value must be bigger than zero','error',  'validation');
+        else
+            this._metadata.elements.paymentTerm.addMessage('Payment term is valid','success',  'validation');    
+    ```
 
 8. Navigate to tab **User Interface Behaviours** click on top left button *Add new* to add a new behaviour, that will validate if   *PaymentTerm* attribute value is bigger than zero. Set its *Name* as **LineCountWarning**, *Behaviour Type* as **Before save** and copy the following JavaScript code as the *Expression*
 
-```JavaScript
-    if(this.orderLines.length ==0)
-        alert("Warning: The document will be saved without lines. You can add them by editing it.");
-```
+    ```JavaScript
+        if(this.orderLines.length ==0)
+            alert("Warning: The document will be saved without lines. You can add them by editing it.");
+    ```
