@@ -14,7 +14,12 @@ In the **OMNIA Platform**, the primary way to customize the way the application 
 
 Behaviours are code that allow you to **extend** the way the application processes user input.
 
-There are three kinds of behaviours that are applied at an API level (i.e. whether you use the OMNIA platform directly via its API or via our web app), all written in C#: **entity behaviours**, which extend the behaviour of the instances of that entity (for example, default values or specific validations); **data behaviours**, which only exist for entities with an external data source, and replace the platform's create/read/update/delete (CRUD) code with user-written code to perform those operations on the external data source; and **application behaviours**, which are used in the other behaviours. This document explains the Entity behaviours (here normally mentioned as 'behaviours' only) and application behaviours; for more information on data behaviours please see [this page](omnia3_modeler_datasources.html).
+There are three kinds of business logic behaviours, that are applied at an API level (i.e. whether you use the OMNIA platform directly via its API or via our web app), all written in C#: 
+- **entity behaviours**, which extend the behaviour of the instances of that entity (for example, default values or specific validations); 
+- **data behaviours**, which only exist for entities with an external data source, and replace the platform's create/read/update/delete (CRUD) code with user-written code to perform those operations on the external data source;
+- **application behaviours**, which are similar to methods in object-oriented programming, and are used in the other behaviours. 
+
+This document explains the Entity behaviours (here normally mentioned as 'behaviours' only) and application behaviours; for more information on data behaviours please see [this page](omnia3_modeler_datasources.html).
 
 There are also user interface-specific behaviours, which have a similar logic to C# behaviours. They are written in JavaScript, and are described in [this page](omnia3_modeler_uibehaviours.html).
 

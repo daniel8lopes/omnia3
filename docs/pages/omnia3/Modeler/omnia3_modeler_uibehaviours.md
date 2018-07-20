@@ -15,7 +15,7 @@ Behaviours are code that allow you to **extend** the way the application process
 
 User interface-specific behaviours, written in JavaScript, allow you to customize the way the web application of the platform works. This means extending the way a modeled Form behaves - hiding fields, making them read-only, increasing their size, etc.
 
-The API-side behaviours are described on [this page](omnia3_modeler_behaviours.html).
+The API-side behaviours are described on [this page](omnia3_modeler_behaviours.html). Any behaviour that is related to the business logic should be created using those behaviours, as they are the only ones that always run!
 
  A behaviour is defined by (see [UIML](omnia3_languages_uiml.html) for detailed definition):
 - its **type**, or the moment in which it will execute;
