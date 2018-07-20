@@ -32,7 +32,7 @@ It is necessary to have completed the steps in the  [Beginner tutorial](http://d
 
     ![Modeler_Create_Attribute](/images/tutorials/beginner/Modeler-Create-Attribute.PNG)
     
-5. Navigate to tab **User Interface Behaviours** click on top left button *Add new* to add a new behaviour, that will control  *DeliveryAddress* attribute visibility and value, depending on *IsDelivered*. Set its *Name* as **IsDeliveredChange**, *Behaviour Type* as **On change** and copy the following JavaScript code as the *Expression*
+5. Navigate to tab **User Interface Behaviours** click on top left button *Add new* to add a new behaviour, that will control  *DeliveryAddress* attribute visibility and value, depending on *IsDelivered*. Set its *Name* as **IsDeliveredChange**, *Behaviour Type* as **On change**, element as **IsDelivered** and copy the following JavaScript code as the *Expression*
 
 ```JavaScript
     if(this.isDelivered === true){
@@ -40,5 +40,17 @@ It is necessary to have completed the steps in the  [Beginner tutorial](http://d
     }else{
         this._metadata.elements.deliveryAddress.isHidden = true;
         this.deliveryAddress = "";    
+    }    
+```
+
+6. Navigate to tab **User Interface Behaviours** click on top left button *Add new* to add a new behaviour, that will control  *DeliveryAddress* attribute availability and size, depending on *Received*. Set its *Name* as **ReceivedChange**, *Behaviour Type* as **On change**, *Element* as **Received** and copy the following JavaScript code as the *Expression*
+
+```JavaScript
+    if(this.received === true){
+        this._metadata.elements.deliveryAddress.attributes.isReadOnly = true;
+        this._metadata.elements.deliveryAddress.size = 4;
+    }else{
+        this._metadata.elements.deliveryAddress.attributes.isReadOnly = false;
+        this._metadata.elements.deliveryAddress.size = 6;
     }    
 ```
