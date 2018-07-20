@@ -96,12 +96,32 @@ Click [here](omnia3_modeler_behaviours.html), to know more about user interface 
 
 ### How to hide an element?
 
-### How to change the size of an element?
+In this sample, base element *_code* is set as hidden:
 
+```JavaScript
+    this._metadata.elements._code.isHidden = true;
+```
 
 ### How make an element read-only?
 
+In this sample, base element *_code* is set as read only:
+
+```JavaScript
+    this._metadata.elements._code.attributes.isReadOnly = true;
+```
+
+### How to change the size of an element?
+
+In this sample, custom element *supplier* size is changed:
+
+```JavaScript
+    this._metadata.elements.supplier.size = 1;
+```
 
 ### How to set an element value?
 
+In this sample, custom element *supplier* value is changed:
 
+```JavaScript
+    this.supplier = "S001";
+```
