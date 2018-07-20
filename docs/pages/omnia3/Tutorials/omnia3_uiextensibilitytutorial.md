@@ -64,3 +64,10 @@ It is necessary to have completed the steps in the  [Beginner tutorial](http://d
     else
         this._metadata.elements.paymentTerm.addMessage('Payment term is valid','success',  'validation');    
 ```
+
+8. Navigate to tab **User Interface Behaviours** click on top left button *Add new* to add a new behaviour, that will validate if   *PaymentTerm* attribute value is bigger than zero. Set its *Name* as **LineCountWarning**, *Behaviour Type* as **Before save** and copy the following JavaScript code as the *Expression*
+
+```JavaScript
+    if(this.orderLines.length ==0)
+        alert("Warning: The document will be saved without lines. You can add them by editing it.");
+```
