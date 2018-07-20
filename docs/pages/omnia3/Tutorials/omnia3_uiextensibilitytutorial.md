@@ -37,10 +37,13 @@ It is necessary to have completed the steps in the  [Beginner tutorial](http://d
 
     ```JavaScript
         if(this.isDelivered === true){
+            this._metadata.elements.received.isHidden = false;
             this._metadata.elements.deliveryAddress.isHidden = false;
         }else{
+            this._metadata.elements.received.isHidden = true;
             this._metadata.elements.deliveryAddress.isHidden = true;
-            this.deliveryAddress = "";    
+            this.deliveryAddress = "";
+            this.received = false;
         }    
     ```
 
@@ -76,3 +79,8 @@ It is necessary to have completed the steps in the  [Beginner tutorial](http://d
 9. Build the model
 
 10. Go to application and validate the new behaviours, by making the following tests
+
+    - Check attribute *IsDelivered*. Attribute *DeliveryAddress* should now be visible
+    - Check attribute *Received*. Attribute *DeliveryAddress* must now be read-only and with a different size
+    - Fill attribute *PaymentTerm* with a negative or positive value. A different validation message must be shown for each scenario
+    - Save a document without any lines. Check that a warning alert is shown.
