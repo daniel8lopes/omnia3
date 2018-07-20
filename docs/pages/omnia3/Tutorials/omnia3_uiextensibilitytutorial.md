@@ -33,7 +33,7 @@ It is necessary to have completed the steps in the  [Beginner tutorial](http://d
     
 4. Build the model. Go to application and check the new attributes
     
-5. Go back to modeling area. Navigate to tab **User Interface Behaviours** click on top left button *Add new* to add a new behaviour, that will control  *DeliveryAddress* attribute visibility and value, depending on *IsDelivered*. Set its *Name* as **IsDeliveredChange**, *Behaviour Type* as **On change**, element as **IsDelivered** and copy the following JavaScript code as the *Expression*
+5. Go back to modeling area. Navigate to option **Documents / PurchaseOrder / User Interface Behaviours**  and click on top right button *Add new* to add a new behaviour. This behaviour will control *DeliveryAddress* and *Received* attributes visibility and value, depending on *IsDelivered* value. Set its *Name* as **IsDeliveredChange**, *Behaviour Type* as **On change**, element as **IsDelivered** and copy the following JavaScript code as the *Expression*
 
     ```JavaScript
         if(this.isDelivered === true){
