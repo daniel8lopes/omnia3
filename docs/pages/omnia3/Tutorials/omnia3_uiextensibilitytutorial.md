@@ -39,8 +39,6 @@ It is necessary to have completed the steps in the  [Beginner tutorial](http://d
         this._metadata.elements.deliveryAddress.isHidden = false;
     }else{
         this._metadata.elements.deliveryAddress.isHidden = true;
-        this.deliveryAddress = "";
-    
-    }
-    
+        this.deliveryAddress = "";    
+    }    
 ```
