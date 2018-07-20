@@ -39,7 +39,27 @@ There are many possible usage scenarios for these behaviours, as JavaScript codi
 
 ## 4. Structure of the class
 
-TODO
+The JavaScript class is organized in the following way:
+- a class object, containing:
+    - a constructor, which sets the **metadata** object, and initializes all of the elements in the form.
+    - a method for each of the behaviours described above, with any code that the user may have modeled.
+    - if the form has any lists (for example, lists of commitments in a document's form), the code to add and remove lines from those lists
+- if the form has any lists, another class object for each of those lists, with the same structure.
+
+The metadata object is the primary way of interacting with the form. If you want to set values of the fields, you can do it directly, i.e. ```this._description = "This is a Description!"```. However, for anything more complicated, you will need to use the metadata.
+
+Its structure can be seen by checking the API (Metadata controller, in the Application area), but the part we want to manipulate, in these behaviours, is the **elements** object.
+
+The elements object contains a list of all the elements in the form. For example, you can access the Code element by ```this._metadata.elements._code``` and manipulate its properties.
+
+An element has the following properties:
+- **attributes**: A series of properties which govern the way the element displayed on the form:
+    - **isReadOnly**: set it to ```"true"``` to have the field be read only, to ```"false"``` otherwise.
+- **column**, **row**, and **size**: Control the size and position of the element in the form.
+- **isHidden**: Set to false to show the field, and to true to hide it.
+- **messages**: An array of messages (error or otherwise) to display under the field. See the FAQ for usage examples.
+- **label**: The label of the field. 
+- **helpText**: The Help Text of the field. Can be set, if none exists, and it will show up.
 
 ## 5. Developing and testing UI behaviours
 
