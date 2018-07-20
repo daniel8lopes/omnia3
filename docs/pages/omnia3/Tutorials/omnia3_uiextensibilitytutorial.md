@@ -54,3 +54,13 @@ It is necessary to have completed the steps in the  [Beginner tutorial](http://d
         this._metadata.elements.deliveryAddress.size = 6;
     }    
 ```
+
+7. Navigate to tab **User Interface Behaviours** click on top left button *Add new* to add a new behaviour, that will validate if   *PaymentTerm* attribute value is bigger than zero. Set its *Name* as **PaymentTermChange**, *Behaviour Type* as **On change**, *Element* as **PaymentTerm** and copy the following JavaScript code as the *Expression*
+
+```JavaScript
+    this._metadata.elements.paymentTerm.removeMessage('validation');
+    if(this.paymentTerm <0)
+        this._metadata.elements.paymentTerm.addMessage('Value must be bigger than zero','error',  'validation');
+    else
+        this._metadata.elements.paymentTerm.addMessage('Payment term is valid','success',  'validation');    
+```
