@@ -70,10 +70,10 @@ sudo systemctl enable omnia omnia-*
 ### 5.1. Configure OMNIA
 
 - Edit /home/omnia/config/omnia.json, using `nano` or a similar tool, and fill in the following parameters:
-    - ConnectionStrings > PostgreSQL: insert your database connection string, by filling in the parameters that are in ALLCAPS with your own information;
+    - ConnectionStrings > PostgreSQL: insert your database connection string, by replacing the parameters that are in ALLCAPS with your own information;
         _NOTE: If you are using an Azure database, remember to input your user in a compatible format, i.e. myusername@myservername_.
     - Hostname: Platform hostname, i.e. omnia.example.com;
-    - IdentityServiceUrl: Platform hostname, prefixed with HTTP or HTTPS depending on what you are running, i.e. http://omnia.example.com/;
+    - IdentityServiceUrl: Platform hostname, prefixed with HTTP or HTTPS depending on what you are running, i.e. http://omnia.example.com/. See [this section](omnia3_deploymenttutorial.html#53-configure-https) for information on configuring HTTPS;
     - SMTP: A valid SMTP server configuration. **Essential** for the execution of Step 7;
     
 
@@ -111,3 +111,5 @@ On a web browser, access the site with the defined url (i.e. omnia.example.com).
 You will be asked for a platform administrator email. Insert a valid email address and a message will be sent with the instructions for the first login.
 
 The site's configurations **must** contain a valid SMTP configuration, so that emails are sent.
+
+When you receive the email, and perform a first login successfully, the platform is ready to use!
