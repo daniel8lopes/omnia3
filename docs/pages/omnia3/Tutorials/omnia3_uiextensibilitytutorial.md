@@ -31,7 +31,7 @@ It is necessary to have completed the steps in the  [Beginner tutorial](http://d
     - *Name*: **Received**, *Type*: ***Primitive / Boolean***
     - *Name*: **DeliveryAddress**, *Type*: ***Primitive / Text***
     
-These attributes allow the user to identify, when inserting a new *PurchaseOrder*, the *Payment Term* agreed with the Supplier, and if the goods are going to be delivered to a Company Address. At last, the *Received* attribute allows the user to control the reception of the requested goods.
+    These attributes allow the user to identify, when inserting a new *PurchaseOrder*, the *Payment Term* agreed with the Supplier, and if the goods are going to be delivered to a Company Address. At last, the *Received* attribute allows the user to control the reception of the requested goods.
     
 4. Navigate to tab **User Interface**, and set attribute *DeliveryAddress* as *Hidden*
     
