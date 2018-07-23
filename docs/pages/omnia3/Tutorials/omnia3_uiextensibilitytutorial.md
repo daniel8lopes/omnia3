@@ -26,14 +26,17 @@ It is necessary to have completed the steps in the  [Beginner tutorial](http://d
 
 3. Add the following attributes by clicking on button **Add new**: 
 
+    - *Name*: **PaymentTerm**, *Type*: ***Primitive / Integer***
     - *Name*: **IsDelivered**, *Type*: ***Primitive / Boolean***
     - *Name*: **Received**, *Type*: ***Primitive / Boolean***
     - *Name*: **DeliveryAddress**, *Type*: ***Primitive / Text***
-    - *Name*: **PaymentTerm**, *Type*: ***Primitive / Integer***
     
-4. Build the model. Go to application and check the new attributes
     
-5. Go back to modeling area. Navigate to option **Documents / PurchaseOrder / User Interface Behaviours**  and click on top right button *Add new* to add a new behaviour. This behaviour will control *DeliveryAddress* and *Received* attributes visibility and value, depending on *IsDelivered* value. Set its *Name* as **IsDeliveredChange**, *Behaviour Type* as **On change**, element as **IsDelivered** and copy the following JavaScript code as the *Expression*
+4. Navigate to tab **User Interface**, and set attribute *DeliveryAddress* as *Hidden*
+    
+5. Build the model. Go to application and check the new attributes
+    
+6. Go back to modeling area. Navigate to option **Documents / PurchaseOrder / User Interface Behaviours**  and click on top right button *Add new* to add a new behaviour. This behaviour will control *DeliveryAddress* and *Received* attributes visibility and value, depending on *IsDelivered* value. Set its *Name* as **IsDeliveredChange**, *Behaviour Type* as **On change**, element as **IsDelivered** and copy the following JavaScript code as the *Expression*
 
     ```JavaScript
         if(this.isDelivered === true){
@@ -47,7 +50,7 @@ It is necessary to have completed the steps in the  [Beginner tutorial](http://d
         }    
     ```
 
-6. Add another **User Interface Behaviour** by clicking on top right button *Add new*. This behaviour will control *DeliveryAddress* attribute availability and size, depending on *Received* value. Set its *Name* as **ReceivedChange**, *Behaviour Type* as **On change**, *Element* as **Received** and copy the following JavaScript code as the *Expression*
+7. Add another **User Interface Behaviour** by clicking on top right button *Add new*. This behaviour will control *DeliveryAddress* attribute availability and size, depending on *Received* value. Set its *Name* as **ReceivedChange**, *Behaviour Type* as **On change**, *Element* as **Received** and copy the following JavaScript code as the *Expression*
 
     ```JavaScript
         if(this.received === true){
@@ -59,7 +62,7 @@ It is necessary to have completed the steps in the  [Beginner tutorial](http://d
         }    
     ```
 
-7. Add a **User Interface Behaviour** that will validate if *PaymentTerm* attribute value is bigger than zero. Set its *Name* as **PaymentTermChange**, *Behaviour Type* as **On change**, *Element* as **PaymentTerm** and copy the following JavaScript code as the *Expression*
+8. Add a **User Interface Behaviour** that will validate if *PaymentTerm* attribute value is bigger than zero. Set its *Name* as **PaymentTermChange**, *Behaviour Type* as **On change**, *Element* as **PaymentTerm** and copy the following JavaScript code as the *Expression*
 
     ```JavaScript
         this._metadata.elements.paymentTerm.removeMessage('validation');
@@ -69,16 +72,16 @@ It is necessary to have completed the steps in the  [Beginner tutorial](http://d
             this._metadata.elements.paymentTerm.addMessage('Payment term is valid','success',  'validation');    
     ```
 
-8. At last, add a **User Interface Behaviour** that will validate if *OrderLines* attribute length is bigger than zero. Set its *Name* as **LineCountWarning**, *Behaviour Type* as **Before save** and copy the following JavaScript code as the *Expression*
+9. At last, add a **User Interface Behaviour** that will validate if *OrderLines* attribute length is bigger than zero. Set its *Name* as **LineCountWarning**, *Behaviour Type* as **Before save** and copy the following JavaScript code as the *Expression*
 
     ```JavaScript
         if(this.orderLines.length ==0)
             alert("Warning: The document will be saved without lines. Don't worry, you can add them later.");
     ```
 
-9. Build the model
+10. Build the model
 
-10. Go to application and validate the new behaviours, by making the following tests
+11. Go to application and validate the new behaviours, by making the following tests
 
     - Check attribute *IsDelivered*. Attribute *DeliveryAddress* should now be visible
     - Check attribute *Received*. Attribute *DeliveryAddress* must now be read-only and with a different size
