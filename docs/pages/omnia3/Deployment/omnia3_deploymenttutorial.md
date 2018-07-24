@@ -75,6 +75,7 @@ sudo systemctl enable omnia omnia-*
     - Hostname: Platform hostname, i.e. omnia.example.com;
     - IdentityServiceUrl: Platform hostname, prefixed with HTTP or HTTPS depending on what you are running, i.e. http://omnia.example.com/. See [this section](omnia3_deploymenttutorial.html#53-configure-https) for information on configuring HTTPS;
     - SMTP: A valid SMTP server configuration. **Essential** for the execution of Step 7;
+    - (Optional) RedisConnectionString: A valid Redis connection string. In a format like `"redis-server.example.com:12345,password=abcdef"`. See [this section](omnia3_deploymenttutorial.html#54-configure-redis) for more information.
     
 
 ### 5.2. Configure NGINX
@@ -99,6 +100,12 @@ If you don't have a certificate, you can choose one of these alternatives:
 Running the platform without an SSL certificate in production is **not supported,** as well not GDPR-compliant.
 
 Remember to update the configuration in omnia.json! **IdentityServiceUrl** will need to point to the HTTPS version of the site.
+
+### 5.4. Configure Redis
+
+The platform has support for Redis, which is a necessity when deploying **multiple instances**. In order to use it, you only need to provide a connection string in the configuration file, as explained above.
+
+To propertly support scaling out, ASP.NET Core SignalR **requires** the usage of **sticky sessions** in your load balancer. 
 
 ## 6. Starting the site
 - Execute `sudo systemctl start omnia`, which will launch the OMNIA services. To obtain logs, you can check the logs folder `/var/log/omnia/`, or use `journalctl`.
