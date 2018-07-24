@@ -85,6 +85,10 @@ entries:
       url: /omnia3_apiclienttutorial.html
       output: web, pdf
       
+    - title: UI Extensibility Tutorial
+      url: /omnia3_uiextensibilitytutorial.html
+      output: web, pdf
+      
   - title: Management
     output: web, pdf
     folderitems:
