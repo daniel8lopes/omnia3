@@ -7,8 +7,6 @@ permalink: omnia3_deploymentfaq.html
 folder: omnia3
 ---
 
-## 1. FAQ
-
 ### How do I know if the platform is running, and how much memory it is using?
 
 As all of the parts of the platform are hosted as services, you can use `systemctl` to see their status, i.e. `systemctl status omnia omnia-*`.
