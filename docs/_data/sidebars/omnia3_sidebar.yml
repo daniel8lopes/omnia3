@@ -26,13 +26,20 @@ entries:
     - title: Welcome to OMNIA 3.0
       url: /omnia3_welcometoomnia.html
       output: web, pdf
-      
-    - title: Deploying the Platform
-      url: /omnia3_deploymenttutorial.html
-      output: web, pdf
 
     - title: Web App Requirements
       url: /omnia3_webapprequirements.html
+      output: web, pdf
+  
+  - title: Deployment
+    output: web, pdf
+    folderitems:
+    - title: Deploying the Platform
+      url: /omnia3_deploymenttutorial.html
+      output: web, pdf
+      
+    - title: Deployment FAQ
+      url: /omnia3_deploymentfaq.html
       output: web, pdf
   
   - title: Tutorials
