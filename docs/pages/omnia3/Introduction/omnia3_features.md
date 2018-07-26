@@ -57,5 +57,8 @@ It is possible to manage the following types of behaviours:
 
 #### Queries
 
+## Application
+
+
 
 
