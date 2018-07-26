@@ -7,9 +7,9 @@ permalink: omnia3_authorizationmanagement.html
 folder: omnia3
 ---
 
-## 1. Authorization management in the **OMNIA Platform**
+## 1. Introduction
 
-The authorization management is divided in two main areas, the platform authorization and the [tenant](omnia3_management_introduction.html) authorization.
+On OMNIA Platform, authorization is managed on two distinct areas, one for the Platform and another for the tenant.
 
 ### 1.1 Platform
 
