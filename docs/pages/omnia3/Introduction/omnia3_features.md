@@ -7,10 +7,26 @@ permalink: omnia3_features.html
 folder: omnia3
 ---
 
-The OMNIA Platform is a fully browser-based application, so in order to use it you will need to have a browser and internet access.
+List of features available on OMNIA Platform 3.0:
 
-## 1. Browser support
-The following browsers are supported:
-* Chrome 67 or higher
-* Firefox 59 or higher
-* Microsoft Edge 42 or higher
+## Modeler
+
+### Entities
+
+The following types of entities can be modeled:
+
+    - Agents
+    - Resources
+    - Generic Entities
+    - Commitments
+    - Events
+    - Documents
+    - Series
+    - Data Sources
+    
+Within entities modeling, it is possible to make the following operations:
+
+    - Manage Attributes
+    - Manage Behaviours
+    - Review User Interface
+
