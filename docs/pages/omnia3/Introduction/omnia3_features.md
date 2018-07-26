@@ -27,6 +27,18 @@ The following types of entities can be modeled:
 Within entities modeling, it is possible to make the following operations:
 
 - Manage Attributes
+
+    Supported attribute types:
+    
+    - Reference to other entities
+    - Boolean
+    - Date
+    - Decimal
+    - Integer
+    - Text
+    - Uuid
+
 - Manage Behaviours
 - Review User Interface
+
 
