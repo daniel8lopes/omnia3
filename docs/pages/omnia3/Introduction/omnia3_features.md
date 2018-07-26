@@ -13,22 +13,25 @@ List of features available on OMNIA Platform 3.0:
 
 ### Entities
 
-The following types of entities can be modeled:
+- Model entities of the following types:
 
-- Agents
-- Resources
-- Generic Entities
-- Commitments
-- Events
-- Documents
-- Series
-- Data Sources
-    
-Within entities modeling, it is possible to make the following operations:
+    - Agents
+    - Resources
+    - Generic Entities
+    - Commitments
+    - Events
+    - Documents
+    - Series
+    - Data Sources
 
+- Define entity datasources
 - Manage Attributes
+- Manage Behaviours
+- Review User Interface
 
-    Supported attribute types:
+### Attributes
+
+- Supported attribute types:
     
     - Reference to other entities
     - Boolean
@@ -37,10 +40,7 @@ Within entities modeling, it is possible to make the following operations:
     - Integer
     - Text
     - Uuid
-
-- Manage Behaviours
-- Review User Interface
-
+    
 ### Behaviours
 
 It is possible to manage the following types of behaviours:
@@ -72,7 +72,8 @@ It is possible to manage the following types of behaviours:
 
 ## Connector
 
-
+- Installed and managed as a Windows service
+- Execute modeled behaviours
 
 
 
