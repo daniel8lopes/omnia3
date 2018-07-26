@@ -47,7 +47,7 @@ It is possible to manage the following types of behaviours:
 
 - Application Behaviours
 - Entity Behaviours
-- Data Behaviours
+- Entity Data Behaviours
 
 ### Data Analytics
 
@@ -58,6 +58,11 @@ It is possible to manage the following types of behaviours:
 #### Queries
 
 ## Management
+
+- Manage tenants
+- Manage Api Clients
+- Manage Connectors
+- Manage Security: Roles, Policies and users
 
 ## Application
 
