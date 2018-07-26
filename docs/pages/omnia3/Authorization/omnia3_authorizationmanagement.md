@@ -3,7 +3,7 @@ title: Authorization Management
 keywords: omnia3
 summary: "Authorization"
 sidebar: omnia3_sidebar
-permalink: omnia3_authorization.html
+permalink: omnia3_authorizationmanagement.html
 folder: omnia3
 ---
 
