@@ -12,7 +12,7 @@ OMNIA 3.0 addresses all the answers to your customers’ pains, when thriving in
 Whether you need to develop a business application from ground zero, or deliver it in a fast manner, OMNIA gives you the right tool for minimizing the time between the analysis of your customers’ requirements, 
 and the delivery of the solution to their challenges.
 
-<h1 id="building-a-business-management-app-has-never-been-this-easier-nor-simple">Building a Business Management App has never been this easier. Nor simple.</h1></p>
+<h1 id="building-a-business-management-app-has-never-been-this-easier-nor-simple">Building a Business Management App has never been this easier. Nor simple.</h1>
 
 
 <p><strong> Developed with one simple purpose: taking your Business Data further to perfection!</strong></p> 
