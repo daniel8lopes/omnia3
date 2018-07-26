@@ -43,6 +43,19 @@ Within entities modeling, it is possible to make the following operations:
 
 ### Behaviours
 
+It is possible to manage the following types of behaviours:
+
+- Application Behaviours
+- Entity Behaviours
+- Data Behaviours
+
 ### Data Analytics
+
+#### Dashboards
+
+#### Lists
+
+#### Queries
+
 
 
