@@ -57,7 +57,13 @@ It is possible to manage the following types of behaviours:
 
 #### Queries
 
+## Management
+
 ## Application
+
+## Connector
+
+
 
 
 
