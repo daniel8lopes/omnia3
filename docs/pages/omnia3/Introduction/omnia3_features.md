@@ -39,16 +39,25 @@ List of features available on OMNIA Platform 3.0:
     - Decimal
     - Integer
     - Text
-    - Uuid
+    - Uuid (Universally unique identifier)
     
 ### Behaviours
 
 It is possible to manage the following types of behaviours:
 
 - (C#) Application
+    Behaviours that can be used multiple times through the model
 - (C#) Entity
+    Behaviours associated to the entity that can manipulate its data
 - (C#) Entity Data
+    Behaviours that assure entity CRUD when it it based on a non-System Datasource
 - (JavaScript) User Interface Behaviours
+    Behaviours that allow the user to extend the user interface, by:
+        - Conditionally hiding elements
+        - Conditionally disabling elements (read-only)
+        - Change the size and position
+        - Set element values
+        - Show custom messages to the end user
 
 ### Data Analytics
 
