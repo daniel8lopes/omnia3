@@ -7,10 +7,11 @@ permalink: omnia3_platformchangelog.html
 folder: omnia3
 ---
 
-The OMNIA Platform is a fully browser-based application, so in order to use it you will need to have a browser and internet access.
+## [1.0.103](#10103)
+Release Date: 2018-07-26
 
-## 1. Browser support
-The following browsers are supported:
-* Chrome 67 or higher
-* Firefox 59 or higher
-* Microsoft Edge 42 or higher
+## [1.0.97](#1097)
+Release Date: 2018-07-24
+
+
+
