@@ -66,6 +66,10 @@ It is possible to manage the following types of behaviours:
 
 ## Application
 
+- Work on multiple tenants
+- Manage tenant security: Roles, Policies and Users
+- Create, Read, Update and Delete instances of the model entities
+
 ## Connector
 
 
