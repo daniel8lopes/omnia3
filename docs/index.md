@@ -2,7 +2,7 @@
 title: "NumbersBelieve documentation"
 keywords: omnia3
 tags: [omnia3]
-sidebar: home_sidebar
+sidebar: omnia3_sidebar
 permalink: index.html
 summary: Index
 ---
