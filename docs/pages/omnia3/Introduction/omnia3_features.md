@@ -45,9 +45,10 @@ Within entities modeling, it is possible to make the following operations:
 
 It is possible to manage the following types of behaviours:
 
-- Application Behaviours
-- Entity Behaviours
-- Entity Data Behaviours
+- (C#) Application
+- (C#) Entity
+- (C#) Entity Data
+- (JavaScript) User Interface Behaviours
 
 ### Data Analytics
 
