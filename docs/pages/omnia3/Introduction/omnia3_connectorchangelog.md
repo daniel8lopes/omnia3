@@ -7,9 +7,7 @@ permalink: omnia3_connectorchangelog.html
 folder: omnia3
 ---
 
-## [1.0.58](#1058)
-Release Date: 2018-07-25
+## [3.0.0](#300)
+Release Date: 2018
 
-
-## [1.0.57](#1057)
-Release Date: 2018-07-24
+...
