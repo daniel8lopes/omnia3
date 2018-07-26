@@ -24,7 +24,7 @@ List of features available on OMNIA Platform 3.0:
     - Series
     - Data Sources
 
-- Define entity datasources
+- Define entity datasource
 - Manage Attributes
 - Manage Behaviours
 - Review User Interface
