@@ -7,11 +7,10 @@ permalink: omnia3_platformchangelog.html
 folder: omnia3
 ---
 
-## [1.0.103](#10103)
-Release Date: 2018-07-26
+## [3.0](#30)
+Release Date: 2018
 
-## [1.0.97](#1097)
-Release Date: 2018-07-24
+...
 
 
 
