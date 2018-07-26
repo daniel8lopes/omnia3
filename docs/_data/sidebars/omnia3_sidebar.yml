@@ -30,6 +30,14 @@ entries:
     - title: Web App Requirements
       url: /omnia3_webapprequirements.html
       output: web, pdf
+      
+    - title: Platform Changelog
+      url: /omnia3_platformchangelog.html
+      output: web, pdf
+      
+    - title: Connector Changelog
+      url: /omnia3_connectorchangelog.html
+      output: web, pdf
   
   - title: Deployment
     output: web, pdf
