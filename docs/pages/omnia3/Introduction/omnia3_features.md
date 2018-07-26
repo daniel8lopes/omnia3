@@ -41,4 +41,8 @@ Within entities modeling, it is possible to make the following operations:
 - Manage Behaviours
 - Review User Interface
 
+### Behaviours
+
+### Data Analytics
+
 
