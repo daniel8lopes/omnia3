@@ -52,11 +52,10 @@ It is possible to manage the following types of behaviours:
 
 ### Data Analytics
 
-#### Dashboards
-
-#### Lists
-
-#### Queries
+- Manage Queries
+- Generate Lists from Queries
+- Manage Lists
+- Manage Dashboards
 
 ## Management
 
