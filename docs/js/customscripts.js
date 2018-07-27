@@ -65,6 +65,12 @@ function httpGetFeedAsync()
             var versionElements = xmlDoc.getElementsByTagName("Version");
             if(versionElements && versionElements.length >0){
                 var packageURL = $(versionElements).attr('Package');
+                var linkElement = document.createElement('a');
+                var linkText = document.createTextNode("my title text");
+                linkElement.appendChild(linkText);
+                linkElement.title = "Download latest connector version";
+                linkElement.href = packageURL;
+                document.body.appendChild(linkElement);
             }
         }
     }
