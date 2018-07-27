@@ -160,6 +160,10 @@ entries:
     - title: Introduction
       url: /omnia3_authorization.html
       output: web, pdf
+      
+    - title: Manage Authorization
+      url: /omnia3_authorizationmanagement.html
+      output: web, pdf
         
   - title: Connector
     output: web, pdf
