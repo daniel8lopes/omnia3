@@ -17,7 +17,7 @@ All Omnia packages are made available as .zip package files.
 
 ## How to consume the feed?
 
-###Platform
+### Platform
 
 The platform feed is available on [this](https://mymiswebdeploy.blob.core.windows.net/omnia3/platform/updateFeed.xml) page, and its structure is the following:
 
@@ -27,7 +27,7 @@ The platform feed is available on [this](https://mymiswebdeploy.blob.core.window
         - PackageFull: Url to access the full Omnia package. To be downloaded on new installations
         - PackageBinaries: Url to access the smaller Omnia package, that only contains the binaries to be replaced
 
-###Connector
+### Connector
 
 The platform feed is available on [this](https://mymiswebdeploy.blob.core.windows.net/omnia3/connector/updateFeed.xml) page, and its structure is the following:
 
