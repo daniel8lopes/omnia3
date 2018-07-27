@@ -61,7 +61,7 @@ function httpGetFeedAsync()
     var xmlHttp = new XMLHttpRequest();
     xmlHttp.onreadystatechange = function() { 
         if (xmlHttp.readyState == 4 && xmlHttp.status == 200){
-            var xmlDoc = xmlhttp.responseXML;
+            var xmlDoc = xmlHttp.responseXML;
             var versionElements = xmlDoc.getElementsByTagName("Version");
         }
     }
