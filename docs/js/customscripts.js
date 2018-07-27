@@ -68,9 +68,10 @@ function httpGetFeedAsync(feedUrl, elementText, xmlElement, parentElement)
             var versionElements = xmlDoc.getElementsByTagName("Version");
             if(versionElements && versionElements.length >0){
                 var tocDiv = document.getElementById(parentElement);
+                var versionNumber = $(versionElements).attr("Number");
                 var packageURL = $(versionElements).attr(xmlElement);
                 var linkElement = document.createElement('a');
-                var linkText = document.createTextNode(elementText);
+                var linkText = document.createTextNode(elementText + " ("+ versionNumber+")");
                 linkElement.appendChild(linkText);
                 linkElement.title = elementText;
                 linkElement.href = packageURL;
