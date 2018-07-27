@@ -21,8 +21,8 @@ By default, Omnia Platform has one role, named *Administration*. This role canno
 
 Additionally, when a tenant is created, two new roles are automatically added:
 
-- Administration[TenantCode]
-- Users[TenantCode]
+- Administration[TenantCode]: administration role for the tenant. The user responsible for the tenant addition is automatically added to this role.
+- Users[TenantCode]: general users role for the tenant. Other tenant users should be added to this role, so that they have access to the tenant.
 
 If needed, new Roles can be created to grant a set of policies to a group of users
 
