@@ -27,7 +27,7 @@ The organization of the menu is:
 Every application modeled will have its own usage flow and criteria. However, the general logic will be:
 
 - **Agents, Resources and Generic Entities** must be created first, as they can depend on each other, but cannot depend on Commitments, Events or Resources.
-- Every Entity instance of a specific type must have a unique *Code*. On most Entities, the *Code* is inserted manually by the user, and it can be suggested with behaviours. However, **Documents** *Code* is automatically composed by concatenating its *Serie* and *Number* .
+- Every Entity instance of a specific type must have a unique *Code*. On most Entities, the *Code* is inserted manually by the user, and it can be suggested with behaviours. **Documents** *Code* is an exception, since it is automatically composed by concatenating its *Serie* and *Number* .
 - Every Document has a **Serie** associated. This means that you must configure that document's serie before being able to create documents.
 - **Commitments** and **Events** cannot be created separately, and only exist in the context of documents.
 - After having all this information, you can create **Documents**. Commitments and/or Events are displayed as "lines" in the form, if using the application via the OMNIA UI.
