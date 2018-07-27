@@ -17,7 +17,7 @@ In the platform authorization area (option **Management / Security**) you can ma
 
 #### Roles
 
-By default, Omnia Platform suggests one role, named *Administration*. This role has, by default, associated the user identified on platform setup as the *Platform Administrator* and it cannot be removed. Other users can be added to this *Role*.
+By default, Omnia Platform has one role, named *Administration*. This role has, by default, associated the user identified on platform setup as the *Platform Administrator* and it cannot be removed. Other users can be added to this *Role*.
 
 Additionally, when a tenant is created, two new roles are automatically added:
 
@@ -28,7 +28,19 @@ If needed, new Roles can be created to grant a set of policies to a group of use
 
 #### Policies
 
-Aside from the policies for each tenant a polic with code PlatformPolicy is created. This policy let you manage the permissions for the platform management.
+By default, Omnia Platform has one policy, named *PlatformSecurity*, that controls the access to the following security permissions:
+
+- Tenants
+- Users
+- Roles
+- Privileges
+
+*Administration* role has access granted to all this permissions.
+
+When a new tenant is created, a new policy is created, whose name is the tenant code with the Tenant suffix (e.g. TenantAnalogSound). These policies only have one possible permission (ALL- grants access to the tenant), and multiple roles can be added to it.
+
+Since policies and permissions are limited and managed by the platform, they cannot be created manually or removed.
+
 
 ### 1.2 Tenant
 
