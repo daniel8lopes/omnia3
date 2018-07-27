@@ -10,9 +10,9 @@ folder: omnia3
 ## 1. Introduction
 In the third release of the OMNIA Platform, the API and its usage were two of our main concerns. This version provides a clear API that has all of the functionality and doesn't require the clients to implement logic.
 
-The OMNIA API was implemented together respecting the OpenAPI specification. This means that, with the use of [Swagger](swagger.io), it is possible to:
+The OMNIA API was implemented together respecting the [OpenAPI Specification](https://swagger.io/specification/). This means that, with the use of OpenAPI file generated with [Swagger](https://swagger.io/docs/specification/about/) , it is possible to:
 - Generate API clients for whichever languages users want to use to develop software that requires our API;
-- Generate documentation automatically, using Swagger UI.
+- Generate interactive documentation automatically, using Swagger UI.
 
 ## 2. Using Swagger UI
 
@@ -30,6 +30,8 @@ Usage guidelines:
 ## 3. Consuming the API with an API Client
 It's possible to use whatever language you want to access the OMNIA API, allowing you to use the API the way you need to.
 
-To do that, first you need to register an API client in the platform ([see here how](omnia3_management_introduction.html#4-api-clients)).
+Our API requires authorization, so the first you need to do is register an API client in the platform ([see here how](omnia3_management_introduction.html#4-api-clients)).
 
-After the register, using the generated _Client ID_ and _Client Secret_, you are able to authenticate on the platform, through an OAuth 2.0 [Client Credentials](https://tools.ietf.org/html/rfc6749#section-1.3.4) flow, and to start using the API.
+We choose [OAuth 2.0](https://www.oauth.com/) as our authorization protocol. OAuth 2.0 is the industry-standard protocol for authorization and securing access to APIs with focus on client developer simplicity.
+
+After the register, using the generated _Client ID_ and _Client Secret_, you are able to request an [access token](https://www.oauth.com/oauth2-servers/access-tokens/) to gain access to the API, through the OAuth 2.0 [Client Credentials](https://tools.ietf.org/html/rfc6749#section-1.3.4) flow, and start using the API.
