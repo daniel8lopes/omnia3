@@ -59,6 +59,8 @@ In order to use the queries, we will need a place to show them. **Lists** are on
 
 A list is little more than a way to see a query displayed in the web app: you select a query, (part or all of) its columns, and how to display those columns.
 
+A list is automatically generated when a new entity is created. It is based on the automatically generated query.
+
 ### How to create a list?
 
 Select the option _Add new_ when in the list of Lists, and fill in the following information:
