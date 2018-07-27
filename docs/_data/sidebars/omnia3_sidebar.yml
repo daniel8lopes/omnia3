@@ -221,3 +221,6 @@ entries:
     - title: Downloads List
       url: /omnia3_downloads.html
       output: web, pdf
+    - title: Download Feed
+      url: /omnia3_feed.html
+      output: web, pdf
