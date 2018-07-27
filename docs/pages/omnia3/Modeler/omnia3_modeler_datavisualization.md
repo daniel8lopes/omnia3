@@ -83,6 +83,8 @@ __*Data Analytics / Dashboards*__
 
 A dashboard is a collection of data analysis elements organized in a particular order.
 
+When a new entity is created, a dashboard is automatically created. This dashboard is shown when user lists the entities, and contains only one element, the automatically generated list.
+
 ### How to create a dashboard?
 
 Select the option _Add new_ when in the list of Dashboards, and fill in the following information:
