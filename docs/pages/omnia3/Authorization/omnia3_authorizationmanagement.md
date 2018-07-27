@@ -13,9 +13,20 @@ On OMNIA Platform, authorization is managed on two distinct areas, one for the P
 
 ### 1.1 Platform
 
-In the platform authorization area you can manage the automatically created policies and roles besides the policies and roles created by you for the platform global security.
+In the platform authorization area (option **Management / Security**) you can manage all *Policies* and *Roles*. 
 
-For each tenant in the platform a policy with code Administration[TenantCode] was created. Each policy contains at least the automatically create role with the code Administration.
+- Roles
+
+By default, Omnia Platform suggests one role, named *Administration*. This role has, by default, associated the user identified on platform setup as the *Platform Administrator* and it cannot be removed. Other users can be added to this *Role*.
+
+Additionally, when a tenant is created, two new roles are automatically added:
+
+- Administration[TenantCode]
+- Users[TenantCode]
+
+If needed, new Roles can be created to grant a set of policies to a group of users
+
+- Policies
 
 Aside from the policies for each tenant a polic with code PlatformPolicy is created. This policy let you manage the permissions for the platform management.
 
