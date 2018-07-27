@@ -75,7 +75,7 @@ function httpGetFeedAsync(feedUrl, elementText, xmlElement, parentElement)
                 linkElement.appendChild(linkText);
                 linkElement.title = elementText;
                 linkElement.href = packageURL;
-                tocDiv.appendChild(linkElement);
+                tocDiv.parentNode.insertBefore(linkElement, tocDiv.nextSibling);
             }
         }
     }
