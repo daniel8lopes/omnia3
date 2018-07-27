@@ -63,6 +63,9 @@ function httpGetFeedAsync()
         if (xmlHttp.readyState == 4 && xmlHttp.status == 200){
             var xmlDoc = xmlHttp.responseXML;
             var versionElements = xmlDoc.getElementsByTagName("Version");
+            if(versionElements && versionElements.length >0){
+                var packageURL = $(versionElements).attr('Package');
+            }
         }
     }
     xmlHttp.open("GET", "https://mymiswebdeploy.blob.core.windows.net/omnia3/connector/updateFeed.xml", true); // true for asynchronous 
