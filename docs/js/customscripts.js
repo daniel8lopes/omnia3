@@ -4,8 +4,8 @@ $('#mysidebar').height($(".nav").height());
 $( document ).ready(function() {
 
 if(document.baseURI.includes("/omnia3_downloads.html")){
-    httpGetFeedAsync("https://mymiswebdeploy.blob.core.windows.net/omnia3/platform/updateFeed.xml", "Download latest platform version", "PackageFull", "connector");
-    httpGetFeedAsync("https://mymiswebdeploy.blob.core.windows.net/omnia3/connector/updateFeed.xml", "Download latest connector version", "Package", "platform");
+    httpGetFeedAsync("https://mymiswebdeploy.blob.core.windows.net/omnia3/platform/updateFeed.xml", "Download latest platform version", "PackageFull", "platform");
+    httpGetFeedAsync("https://mymiswebdeploy.blob.core.windows.net/omnia3/connector/updateFeed.xml", "Download latest connector version", "Package", "connector");
 }
     
 
