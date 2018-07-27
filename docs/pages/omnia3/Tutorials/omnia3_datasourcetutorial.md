@@ -28,19 +28,27 @@ If you do not have a tenant yet, please follow the steps of the [Tenant Creation
 
 1. Start by selecting the tenant where you are going to model, and you will be redirected to the modeling area.
 
-    ![Homepage_Dashboard](http://funkyimg.com/i/2DVGv.png)
+    ![Homepage_Dashboard](/images/tutorials/beginner/Modeler-Homepage.PNG)
 
-2. Through the left side menu, create a new Data Source by accessing the option ***Data Sources / Create new*** on the top right side. Set its Name as "ExternalAPI", Behaviour Runtime as Internal and its Data Access Runtime as External.
+2. Through the left side menu, create a new Data Source by accessing the option ***Data Sources / Create new*** on the top right side. Set its *Name* as "ExternalAPI", Behaviour Runtime as Internal and its Data Access Runtime as External. Leave it as not requiring a connector.
 
-    ![Modeler_Create_DataSource](https://raw.githubusercontent.com/numbersbelieve/omnia3/master/docs/tutorialPics/modelingTutorial/Modeler-Create-DataSource.PNG)
+    ![Modeler_Create_DataSource](/images/tutorials/datasource/Modeler-Create-DataSource.PNG)
+
+3. Navigate to tab **Behaviour Dependencies** and add a reference to .NET assembly System.Net.Http
+
+    ![Modeler_Add_Dependency](/images/tutorials/datasource/Modeler-ExternalAPI-Add-Dependency.PNG)
+
+4. Create a new Agent with *Name* "Employee", and set it as using the external data source "ExternalAPI" that you created earlier.
+
+    ![Modeler_Create_Agent](/images/tutorials/datasource/Modeler-Create-Agent-Employee.PNG)
+
+5. Navigate to tab **Behaviour Namespaces** and add a reference to namespace System.Net.Http
+
+    ![Modeler_Add_Namespace](/images/tutorials/datasource/Modeler-Employee-Add-Namespace.PNG)
     
-3. Create a new Agent with name "Employee", and set it as using the external data source "ExternalAPI" that you created earlier.
+6. Still on Agent Employee, navigate to tab "Data Behaviours", and define a behaviour to be executed on "Create". This behaviour will be used to perform a POST request to the external Application when we create an instance of the Employee on the OMNIA platform. Copy and paste the following code:
 
-    ![Modeler_Create_DataSource](https://raw.githubusercontent.com/numbersbelieve/omnia3/master/docs/tutorialPics/modelingTutorial/Modeler-Create-Agent-Employee.PNG)
-
-4. On Agent Employee, navigate to tab "Data Behaviours", and define a behaviour to be executed on "Create". This behaviour will be used to perform a POST request to the external Application when we create an instance of the Employee on the OMNIA platform. Copy and paste the following code:
-
-    ````
+    ```C#
     {% raw %}
     var client = new System.Net.Http.HttpClient();
     
@@ -69,32 +77,32 @@ If you do not have a tenant yet, please follow the steps of the [Tenant Creation
     employeeResponse._name = response["name"].ToString();
     return employeeResponse;
       {% endraw %}
-    ````
+    ```
 
-5. On "Data Behaviours" of Agent Employee, define a behaviour, to be executed on "Delete" (when a Employee is deleted on OMNIA). Copy and paste the following code:
+7. On "Data Behaviours" of Agent Employee, define a behaviour, to be executed on "Delete" (when a Employee is deleted on OMNIA). Copy and paste the following code:
 
 
-    ````
+    ```C#
     {% raw %}
     var client = new System.Net.Http.HttpClient();
     
     string apiEndpoint = $"https://reqres.in/api/users/{identifier}";
-
+    
     var requestResult = client.DeleteAsync(apiEndpoint).GetAwaiter().GetResult();
-
+    
     string responseBody = requestResult.Content.ReadAsStringAsync().Result;
-
+    
     if (!requestResult.IsSuccessStatusCode)
       throw new Exception("Error on removing Employee: " + responseBody);
-
+    
     return true;
     {% endraw %}
-    ````
+    ```
 
-6. Create a new Data Behaviour for the operation "Read", so that data is retrieved when a Employee is edited on OMNIA. Copy and paste the following code:
+8. Create a new Data Behaviour for the operation "Read", so that data is retrieved when a Employee is edited on OMNIA. Copy and paste the following code:
 
-    ````
-   {% raw %}
+    ```C#
+      {% raw %}
     var client = new System.Net.Http.HttpClient();
     string apiEndpoint = $"https://reqres.in/api/users/{identifier}";
 
@@ -113,12 +121,12 @@ If you do not have a tenant yet, please follow the steps of the [Tenant Creation
 
     return employeeResponse;
     {% endraw %}
-    ````
+    ```
 
-7. Create a new Data Behaviour for the operation "ReadList", so that data is retrieved when a list of Employees is requested. Copy and paste the following code:
+9. Create a new Data Behaviour for the operation "ReadList", so that data is retrieved when a list of Employees is requested. Copy and paste the following code:
 
-    ````
-  {% raw %}
+    ```C#
+    {% raw %}
     var client = new System.Net.Http.HttpClient();
     string apiEndpoint = $"https://reqres.in/api/users?page={page}";
 
@@ -141,14 +149,14 @@ If you do not have a tenant yet, please follow the steps of the [Tenant Creation
     }
 
     return (responseData.Count, employeesList);
-  {% endraw %}
-    ````
+    {% endraw %}
+    ```
 
 	NOTE: in this scenario, we are ignoring the query sent by the user when obtaining the list. In real world scenarios, you will want to change the query to the external system and/or the returned response, according to the parameters sent by the user.
 	
-8. Create a new Data Behaviour for the operation "Update", so that data is retrieved when an Employee is updated on OMNIA (i.e., edited and saved). Copy and paste the following code:
+10. Create a new Data Behaviour for the operation "Update", so that data is retrieved when an Employee is updated on OMNIA (i.e., edited and saved). Copy and paste the following code:
 
-    ````
+    ```C#
     {% raw %}
     var client = new System.Net.Http.HttpClient();
     string apiEndpoint = $"https://reqres.in/api/users/{dto._code}";
@@ -177,15 +185,15 @@ If you do not have a tenant yet, please follow the steps of the [Tenant Creation
 
     return employeeResponse;
     {% endraw %}
-    ````
+    ```
 
-9. Perform a new Build (by accessing the option ***Versioning / Builds / Create new***).
+11. Perform a new Build (by accessing the option ***Versioning / Builds / Create new***).
 
-10. On Application area, create a new instance of the ExternalAPI data source, with code "ReqRes".
+12. On Application area, create a new instance of the ExternalAPI data source, with code "ReqRes".
 
-    ![Application-Create-DataSource](https://raw.githubusercontent.com/numbersbelieve/omnia3/master/docs/tutorialPics/modelingTutorial/Application-Create-DataSource.PNG)
+    ![Application-Create-DataSource](/images/tutorials/datasource/Application-Create-DataSource-Instance.PNG)
     
-11. On left side menu, navigate to Configurations / Employee, and check that the list is filled with data retrieved from the external data source.
+13. On left side menu, navigate to Configurations / Employee, and check that the list is filled with data retrieved from the external data source.
 
     ![Application_List_DataSource](https://raw.githubusercontent.com/numbersbelieve/omnia3/master/docs/tutorialPics/modelingTutorial/Application-List-External-DataSource.PNG)
     
@@ -194,12 +202,15 @@ If you do not have a tenant yet, please follow the steps of the [Tenant Creation
 
 1. Go to the modeling area.
 
-2. Create a new GenericEntity with name "Department".
+2. Create a new GenericEntity with *Name* "Department".
 
-3. Add a new attribute by clicking on button Add new. Set its Code as DataSource, Type as Data Sources / ExternalAPI.
+3. Add a new attribute by clicking on button Add new. Set its *Name* as DataSource, *Type* as Data Sources / ExternalAPI.
 
-4. Add another attribute that represents the Employee. Set its Code as Employee, Type as Agent / Employee, and ExternalAPI on Uses data source from attribute.
+4. Add another attribute that represents the Employee. Set its *Name* as Employee, *Type* as Agent / Employee, and ExternalAPI on Uses data source from attribute.
 
 5. Perform a new Build (by accessing the option ***Versioning / Builds / Create new***).
 
 6. On Application area, create a new instance of the Department, and check that, after identifying the data source, Employees from that data source are now available for selection.
+
+
+Now that you know how to use Data Sources, we recommend you to take a look at [this tutorial](omnia3_primaveraconnectortutorial.html) where you will learn how to expose an on-premise Data Source to OMNIA.

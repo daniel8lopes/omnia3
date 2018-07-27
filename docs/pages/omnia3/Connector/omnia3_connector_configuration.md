@@ -26,6 +26,6 @@ Before executing operations in the connector, it is required to configure to whi
 
 Accessing the application, in the menu, select the Data Source you previously created and **Add new** record.
 
-Fill the form with the required information, and in the **Connector** field, write the code of the Connector you want to commicate to.
+Fill the form with the required information, and in the **Connector** field, write the code of the Connector you want to communicate with.
 
 From now on, as explained above, any entities configured to use this Data Source will send the requests to that connector.

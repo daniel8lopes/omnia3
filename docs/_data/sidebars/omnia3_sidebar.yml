@@ -24,11 +24,30 @@ entries:
     output: web, pdf
     folderitems:
     - title: Welcome to OMNIA 3.0
-      url: /omnia3_welcometoomnia.html
+      url: /index.html
+      output: web, pdf
+
+    - title: Web App Requirements
+      url: /omnia3_webapprequirements.html
       output: web, pdf
       
+    - title: Platform Changelog
+      url: /omnia3_platformchangelog.html
+      output: web, pdf
+      
+    - title: Connector Changelog
+      url: /omnia3_connectorchangelog.html
+      output: web, pdf
+  
+  - title: Deployment
+    output: web, pdf
+    folderitems:
     - title: Deploying the Platform
       url: /omnia3_deploymenttutorial.html
+      output: web, pdf
+      
+    - title: Deployment FAQ
+      url: /omnia3_deploymentfaq.html
       output: web, pdf
   
   - title: Tutorials
@@ -46,6 +65,10 @@ entries:
       url: /omnia3_advancedtutorial.html
       output: web, pdf
       
+    - title: Application Behaviours Tutorial
+      url: /omnia3_applicationbehaviourstutorial.html
+      output: web, pdf
+      
     - title: Expenses Management Tutorial
       url: /omnia3_expensemanagementtutorial.html
       output: web, pdf
@@ -54,8 +77,24 @@ entries:
       url: /omnia3_datasourcetutorial.html
       output: web, pdf
       
+    - title: Connector Tutorial
+      url: /omnia3_connectortutorial.html
+      output: web, pdf
+
+    - title: PRIMAVERA Connector Tutorial
+      url: /omnia3_primaveraconnectortutorial.html
+      output: web, pdf
+      
+    - title: Advanced Connector Tutorial
+      url: /omnia3_multisystemconnectortutorial.html
+      output: web, pdf
+      
     - title: API Clients Tutorial
       url: /omnia3_apiclienttutorial.html
+      output: web, pdf
+      
+    - title: UI Extensibility Tutorial
+      url: /omnia3_uiextensibilitytutorial.html
       output: web, pdf
       
   - title: Management
@@ -84,7 +123,7 @@ entries:
       url: /omnia3_modeler_behaviours.html
       output: web, pdf
         
-    - title: Data Sources
+    - title: Data Sources and Data Behaviours
       url: /omnia3_modeler_datasources.html
       output: web, pdf
 
@@ -94,6 +133,10 @@ entries:
 
     - title: References in Behaviours
       url: /omnia3_modeler_references.html
+      output: web, pdf
+
+    - title: User Interface Behaviours
+      url: /omnia3_modeler_uibehaviours.html
       output: web, pdf
 
     - title: Data Visualization
@@ -106,6 +149,9 @@ entries:
     folderitems:
     - title: Introduction
       url: /omnia3_application_introduction.html
+      output: web, pdf
+    - title: Notifications & Operations
+      url: /omnia3_application_notifications_and_operations.html
       output: web, pdf
         
   - title: Authorization
@@ -134,28 +180,32 @@ entries:
       url: /omnia3_connector_logs.html
       output: web, pdf
 
-  - title: Languages
-    output: web, pdf
-    folderitems:
-    - title: Introduction and MEF
-      url: /omnia3_languages_introduction.html
+    - title: Client
+      url: /omnia3_connector_client.html
       output: web, pdf
+      
+  #- title: Languages
+  #  output: web, pdf
+  #  folderitems:
+  #  - title: Introduction and MEF
+  #    url: /omnia3_languages_introduction.html
+  #    output: web, pdf
         
-    - title: BML
-      url: /omnia3_languages_bml.html
-      output: web, pdf
+  #  - title: BML
+  #    url: /omnia3_languages_bml.html
+  #    output: web, pdf
         
-    - title: QML
-      url: /omnia3_languages_qml.html
-      output: web, pdf
+  #  - title: QML
+  #    url: /omnia3_languages_qml.html
+  #    output: web, pdf
         
-    - title: SML
-      url: /omnia3_languages_sml.html
-      output: web, pdf
+  #  - title: SML
+  #    url: /omnia3_languages_sml.html
+  #    output: web, pdf
         
-    - title: UIML
-      url: /omnia3_languages_uiml.html
-      output: web, pdf
+  #  - title: UIML
+  #    url: /omnia3_languages_uiml.html
+  #    output: web, pdf
         
         
   - title: API
@@ -170,4 +220,7 @@ entries:
     folderitems:
     - title: Downloads List
       url: /omnia3_downloads.html
+      output: web, pdf
+    - title: Download Feed
+      url: /omnia3_feed.html
       output: web, pdf

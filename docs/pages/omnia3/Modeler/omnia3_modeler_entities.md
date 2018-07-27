@@ -86,3 +86,42 @@ In the User Interface tab, select the element you want to change and, in the _Si
 
 ### How to remove an element?
 Picking the element you want to remove, select the option _Delete_ and confirm your option in the confirmation window.
+
+## 5. User Interface Behaviours
+__*Entity / User Interface Behaviours*__
+
+In order to extend your application user interface you can add new behaviours to your entities' user interface.
+
+Click [here](omnia3_modeler_behaviours.html), to know more about user interface behaviours.
+
+### How to hide an element?
+
+In this sample, base element *_code* is set as hidden:
+
+```JavaScript
+    this._metadata.elements._code.isHidden = true;
+```
+
+### How make an element read-only?
+
+In this sample, base element *_code* is set as read only:
+
+```JavaScript
+    this._metadata.elements._code.attributes.isReadOnly = true;
+```
+
+### How to change the size of an element?
+
+In this sample, custom element *supplier* size is changed:
+
+```JavaScript
+    this._metadata.elements.supplier.size = 1;
+```
+
+### How to set an element value?
+
+In this sample, custom element *supplier* value is changed:
+
+```JavaScript
+    this.supplier = "S001";
+```

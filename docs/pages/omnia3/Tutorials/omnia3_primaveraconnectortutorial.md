@@ -11,20 +11,15 @@ folder: omnia3
 
 Based on a simple Employee management scenario, this tutorial shows a real scenario of how easily OMNIA can use information from an external data source, using the Omnia connector to access data located on-premises. 
 
-This tutorial is an advanced implementation of the [data sources tutorial](omnia3_datasourcetutorial.html) In order to understand how data sources work, please read [this section of the documentation](omnia3_modeler_datasources.html).
+This tutorial is an advanced implementation of the [data sources tutorial](omnia3_datasourcetutorial.html) in order to understand how data sources work, please read [this section of the documentation](omnia3_modeler_datasources.html).
 
-On the first tutorial area (CRUD Operations), we are going to evaluate how to interact with an external data source, by reading and manipulating its data. On the second area (External data sources data on OMNIA), we are going to focus on the use of data source information on OMNIA's entities. 
+On the CRUD Operations tutorial area, we are going to evaluate how to interact with an external data source, by reading and manipulating its data.
 
-As our custom data source, we are going to use a free API named [ReqRes](https://reqres.in/), that simulates real time CRUD operations, based on a user management scenario.
-
-Please notice that, since this is only a simulation, no actual data is manipulated (written, updated or removed) on REQRES's system. However, the code shown will be easily convertable to real-world scenarios. 
-
+As our custom data source, we are going to use the [PRIMAVERA ERP V9](https://pt.primaverabss.com).
 
 ## 2. Prerequisites
 
-This tutorial assumes that you have created a OMNIA tenant, and are logged in as a user with modeling privileges to this tenant. You must also have access to the management area to manage the connectors.
-
-If you do not have a tenant yet, please follow the steps of the [Tenant Creation tutorial](http://docs.numbersbelieve.com/omnia3_tenantcreation.html).
+This tutorial assumes that you have created a OMNIA tenant ([click here to see how](omnia3_tenantcreation.html)), and are logged in as a user with modeling privileges to this tenant. You must also have access to the management area to manage the connectors.
 
 This tutorial also requires an access to [Primavera ERP](https://pt.primaverabss.com), on version 9. 
 
@@ -32,209 +27,127 @@ This tutorial also requires an access to [Primavera ERP](https://pt.primaverabss
 
 1. Start by accessing the management area, by clicking the option "Go to Tenants management".
 
-2. Through the left side menu, create a new connector by accessing the option ***Connectors / Create new***. Set its Code and Name as "TutorialConnector"
+2. Through the left side menu, create a new connector by accessing the option ***Connectors / Add new***. Set its Code and Name as "TutorialConnector"
 
 3. Select the connector, and a modal with connector data should be shown.
 
 4. Now we are going to grant the connector access privileges for the tenant. Access the option ***Security / Roles***, and select Administration role for the tenant (the tenant code with prefix "Administration")
 
-5. Click on button ***Add new*** to grant the connector user access to tenant. User can be retrieved on step 3, property "Client Email"
+5. Click the button ***Add new*** to grant the connector user access to the tenant. The user can be retrieved on step 3, property "Client Username"
 
-## 3. CRUD operations
+6. Now use these configurations to configure a connector in the machine with the Primavera ERP, following the [installation guide](omnia3_connector_install.html) and [configuration guide](omnia3_connector_configuration.html).
+
+7. Start the configured connector.
+
+## 4. CRUD operations
 
 1. Access Omnia homepage, select the tenant where you are going to model and you will be redirected to the modeling area.
 
-    ![Homepage_Dashboard](http://funkyimg.com/i/2DVGv.png)
+2. Through the left side menu, create a new Data Source by accessing the option ***Data Sources / Add new*** on the top right side. Set its Name as "*Primavera*", Behaviour Runtime and Data Access Runtime as *"External"*.
 
-2. Through the left side menu, create a new Data Source by accessing the option ***Data Sources / Create new*** on the top right side. Set its Name as "Primavera", Behaviour Runtime and Data Access Runtime as External.
+    ![Modeler create DataSource](/images/tutorials/primaveraconnector/Modeler-Create-DataSource.PNG)
 
-    ![Modeler_Create_DataSource](https://raw.githubusercontent.com/numbersbelieve/omnia3/master/docs/tutorialPics/modelingTutorial/Modeler-Create-DataSource.PNG)
+3. Navigate to tab *Behaviour Dependencies*, and define a reference for Primavera assemblies:
+
+    1. Interop.StdBE900.dll
+    2. Interop.RhpBE900.dll
+    3. Interop.IRhpBS900.dll
+    4. Interop.ErpBS900.dll
+
+    ![Modeler add reference](/images/tutorials/primaveraconnector/Modeler-Primavera-Add-Dependency.PNG)
     
-3. Create a new Agent with name "Employee", and set it as using the external data source "Primavera" that you created earlier.
+4. Create a new Agent with name *"Employee"*, and set it as using the external data source *"Primavera"* that you created earlier.
 
-    ![Modeler_Create_DataSource](https://raw.githubusercontent.com/numbersbelieve/omnia3/master/docs/tutorialPics/modelingTutorial/Modeler-Create-Agent-Employee.PNG)
+    ![Modeler create Agent](/images/tutorials/primaveraconnector/Modeler-Create-Agent.PNG)
 
-4. On Agent Employee, navigate to tab "Data References", and define a reference for Primavera assemblies "Interop.StdPlatBS900.dll" and "Interop.StdBE900.dll"
+5. Navigate to tab *Behaviour Namespaces* and reference the following namespaces:
 
-5. Navigate to tab "Data Behaviours", and define a behaviour to be executed on "Create". This behaviour will be used to perform a POST request to the external Application when we create an instance of the Employee on the OMNIA platform. Copy and paste the following code:
-
-    ````
-    {% raw %}
-    var client = new System.Net.Http.HttpClient();
+    1. Interop.StdBE900.dll
+    2. Interop.RhpBE900.dll
+    3. Interop.IRhpBS900.dll
+    4. Interop.ErpBS900.dll
     
-    string apiEndpoint = $"https://reqres.in/api/users/";
+    ![Modeler Add Namespace](/images/tutorials/primaveraconnector/Modeler-Employee-Add-ERP-Namespace.PNG)
 
-    var body = new
+6. Navigate to tab *"[Data Behaviours](https://docs.numbersbelieve.com/omnia3_modeler_datasources.html)"*, and define a behaviour to be executed on *"ReadList"*. This behaviour will be used for Query and List requests for this entity.
+
+    Copy and paste the following code (*Remember to **change** the **```"USER"```** and **```"PASS"```** fields to your actual username and password.*):
+
+    ```C#
+    List<IDictionary<string, object>> employeesList = new List<IDictionary<string, object>>();
+    ErpBS qbsERP = new ErpBS();
+    
+    qbsERP.AbreEmpresaTrabalho(EnumTipoPlataforma.tpEmpresarial, "DEMO", "USER", "PASS");
+    
+    StdBELista queryResults = qbsERP.Consulta($"SELECT Employees.EmployeesCount, Codigo, Nome FROM Funcionarios CROSS JOIN (SELECT Count(*) AS EmployeesCount FROM  Funcionarios) AS Employees ORDER BY Codigo OFFSET {(page - 1)*pageSize} ROWS FETCH NEXT {pageSize} ROWS ONLY");
+    
+    int numberOfRecords = Convert.ToInt32(queryResults.Valor("EmployeesCount").ToString());
+    while (!queryResults.NoFim())
     {
-      code = dto._code,
-      name = dto._name
-    };
-
-    var jsonBody = JsonConvert.SerializeObject(body);
-    var httpContent = new System.Net.Http.StringContent(jsonBody, System.Text.Encoding.UTF8, "application/json");
-
-    var requestResult = client.PostAsync(apiEndpoint, httpContent).GetAwaiter().GetResult();
-
-    string responseBody = requestResult.Content.ReadAsStringAsync().Result;
-
-    if (!requestResult.IsSuccessStatusCode)
-      throw new Exception("Error on creating contact: " + responseBody);
-
-    var response = JsonConvert.DeserializeObject<Dictionary<string, object>>(responseBody);
-
-    EmployeeDto employeeResponse = new EmployeeDto();
-    employeeResponse._code = response["code"].ToString();
-    employeeResponse._name = response["name"].ToString();
-    return employeeResponse;
-      {% endraw %}
-    ````
-
-6. On "Data Behaviours" of Agent Employee, define a behaviour, to be executed on "Delete" (when a Employee is deleted on OMNIA). Copy and paste the following code:
-
-
-    ````
-    {% raw %}
-    var client = new System.Net.Http.HttpClient();
     
-    string apiEndpoint = $"https://reqres.in/api/users/{identifier}";
+        var employee = new Dictionary<string, object>() {
+            { "_code", queryResults.Valor("Codigo").ToString()},
+            { "_name", queryResults.Valor("Nome").ToString()}
+        };
+    
+        employeesList.Add(employee);
+        queryResults.Seguinte();
+    }
+    
+    qbsERP.FechaEmpresaTrabalho();
+    
+    return (numberOfRecords, employeesList);
+    ```
 
-    var requestResult = client.DeleteAsync(apiEndpoint).GetAwaiter().GetResult();
+7. Create a new Data Behaviour for the operation *"Read"*, so that data is retrieved when an Employee is edited on OMNIA.
 
-    string responseBody = requestResult.Content.ReadAsStringAsync().Result;
+    Copy and paste the following code (*Remember to **change** the **```"USER"```** and **```"PASS"```** fields to your actual username and password.*):
 
-    if (!requestResult.IsSuccessStatusCode)
-      throw new Exception("Error on removing Employee: " + responseBody);
-
-    return true;
-    {% endraw %}
-    ````
-
-7. Create a new Data Behaviour for the operation "Read", so that data is retrieved when a Employee is edited on OMNIA. Copy and paste the following code:
-
-    ````
-   {% raw %}
-            EmployeeDto dto = new EmployeeDto();
-            StdBSConfApl platConfig = new StdBSConfApl();
-
-            platConfig.AbvtApl = "ERP";
-            platConfig.Instancia = "default";
-            platConfig.Utilizador = "[PrimaveraUSER]";
-            platConfig.PwdUtilizador = "[PrimaveraPWD]";
-            platConfig.LicVersaoMinima = "09.00";
-
-            Interop.StdPlatBS900.StdPlatBS bsPlat = new Interop.StdPlatBS900.StdPlatBS();
-
-            Interop.StdBE900.StdBETransaccao trans = null;
-            bsPlat.AbrePlataformaEmpresa("[PrimaveraCOMPANY]", trans, platConfig, Interop.StdBE900.EnumTipoPlataforma.tpEmpresarial, string.Empty);
-
-            Interop.StdBE900.StdBELista queryResults = bsPlat.Registos.Consulta($"SELECT Codigo, Nome, Email, Telefone FROM Funcionarios WHERE Codigo = '{identifier}'");
-
-            if (!queryResults.Vazia())
-            {
-                dto._code = queryResults.Valor("Codigo").ToString();
-                dto._name = queryResults.Valor("Nome").ToString();
-
-            }
-            else {
-                throw new Exception($"Could not retrieve Employee with code {identifier}");
-            }
-
-            bsPlat.FechaPlataformaEmpresa();
-
-            return dto;
-    {% endraw %}
-    ````
-
-8. Create a new Data Behaviour for the operation "ReadList", so that data is retrieved when a list of Employees is requested. Copy and paste the following code:
-
-    ````
-  {% raw %}
-            try
-            {
-                List<IDictionary<string, object>> employeesList = new List<IDictionary<string, object>>();
-
-                StdBSConfApl platConfig = new StdBSConfApl();
-
-                platConfig.AbvtApl = "ERP";
-                platConfig.Instancia = "default";
-                platConfig.Utilizador = "[PrimaveraUSER]";
-                platConfig.PwdUtilizador = "[PrimaveraPWD]";
-                platConfig.LicVersaoMinima = "09.00";
-
-                Interop.StdPlatBS900.StdPlatBS bsPlat = new Interop.StdPlatBS900.StdPlatBS();
-
-                Interop.StdBE900.StdBETransaccao trans = null;
-                bsPlat.AbrePlataformaEmpresa("[PrimaveraCOMPANY]", trans, platConfig, Interop.StdBE900.EnumTipoPlataforma.tpEmpresarial, string.Empty);
-
-                Interop.StdBE900.StdBELista queryResults = bsPlat.Registos.Consulta($"SELECT Employees.EmployeesCount, Codigo, Nome FROM Funcionarios CROSS JOIN (SELECT Count(*) AS EmployeesCount FROM Funcionarios) AS Employees ORDER BY Codigo OFFSET {(page - 1)*pageSize} ROWS FETCH NEXT {pageSize} ROWS ONLY");
-
-                int numberOfRecords = Convert.ToInt32(queryResults.Valor("EmployeesCount").ToString());
-                while (!queryResults.NoFim())
-                {
-
-                    var employee = new Dictionary<string, object>() {
-                        { "_code", queryResults.Valor("Codigo").ToString()},
-                        { "_name", queryResults.Valor("Nome").ToString()}
-                    };
-
-                    employeesList.Add(employee);
-                    queryResults.Seguinte();
-                }
-                
-                bsPlat.FechaPlataformaEmpresa();
-                return (numberOfRecords, employeesList);
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine(e.Message);
-                throw;
-            }
-  {% endraw %}
-    ````
-
-	NOTE: in this scenario, we are ignoring the query sent by the user when obtaining the list. In real world scenarios, you will want to change the query to the external system and/or the returned response, according to the parameters sent by the user.
-	
-9. Create a new Data Behaviour for the operation "Update", so that data is retrieved when an Employee is updated on OMNIA (i.e., edited and saved). Copy and paste the following code:
-
-    ````
-    {% raw %}
-    var client = new System.Net.Http.HttpClient();
-    string apiEndpoint = $"https://reqres.in/api/users/{dto._code}";
-
-    var body = new
+    ```C#
+    EmployeeDto dto = new EmployeeDto();
+    ErpBS qbsERP = new ErpBS();
+    
+    qbsERP.AbreEmpresaTrabalho(EnumTipoPlataforma.tpEmpresarial, "DEMO", "USER", "PASS");
+    StdBELista queryResults = qbsERP.Consulta($"SELECT Codigo, Nome, Email, Telefone FROM Funcionarios WHERE Codigo = '{identifier}'");
+    
+    if (!queryResults.Vazia())
     {
-      code = dto._code,
-      name = dto._name
-    };
+        dto._code = queryResults.Valor("Codigo").ToString();
+        dto._name = queryResults.Valor("Nome").ToString()
+    }
+    else
+    {
+        throw new Exception($"Could not retrieve Employee with code '{identifier}'");
+    }
+    qbsERP.FechaEmpresaTrabalho();
+    return dto;
+    ```
+
+8. On *"Data Behaviours"* of Agent Employee, define a behaviour, to be executed on *"Update"* (when an Employee is updated on OMNIA).
+
+    Copy and paste the following code (*Remember to **change** the **```"USER"```** and **```"PASS"```** fields to your actual username and password.*):
+
+    ```C#
+    ErpBS bsERP = new ErpBS();
+    bsERP.AbreEmpresaTrabalho(EnumTipoPlataforma.tpEmpresarial, "DEMO", "USER", "PASS");
     
-    var jsonBody = JsonConvert.SerializeObject(body);
-
-    var httpContent = new System.Net.Http.StringContent(jsonBody, System.Text.Encoding.UTF8, "application/json");
-
-    var requestResult = client.PutAsync(apiEndpoint, httpContent).GetAwaiter().GetResult();
-    string responseBody = requestResult.Content.ReadAsStringAsync().Result;
+    RhpBEFuncionario funcionario = bsERP.RecursosHumanos.Funcionarios.Edita(dto._code);
     
-    if (!requestResult.IsSuccessStatusCode)
-      throw new Exception("Error on creating contact: " + responseBody);
-
-    var response = JsonConvert.DeserializeObject<Dictionary<string, object>>(responseBody);
-
-    EmployeeDto employeeResponse = new EmployeeDto();
-    employeeResponse._code = response["code"].ToString();
-    employeeResponse._name = response["name"].ToString();
-
-    return employeeResponse;
-    {% endraw %}
-    ````
- 
-
-10. Perform a new Build (by accessing the option ***Versioning / Builds / Create new***).
-
-11. On Application area, create a new instance of the Primavera data source, with code "DEMO".
-
-    ![Application-Create-DataSource](https://raw.githubusercontent.com/numbersbelieve/omnia3/master/docs/tutorialPics/modelingTutorial/Application-Create-DataSource.PNG)
+    funcionario.set_Nome(dto._name);
     
-12. On left side menu, navigate to Configurations / Employee, identify the Primavera data source instance (DEMO) and check that the list is filled with data retrieved from Primavera.
-
-    ![Application_List_DataSource](https://raw.githubusercontent.com/numbersbelieve/omnia3/master/docs/tutorialPics/modelingTutorial/Application-List-External-DataSource.PNG)
+    bsERP.RecursosHumanos.Funcionarios.Actualiza(funcionario);
     
+    bsERP.FechaEmpresaTrabalho();
+    
+    return dto;
+    ```
+
+9. Perform a new Build (by accessing the option ***Versioning / Builds / Create new***).
+
+10. Go to the Application area.
+
+11. Create a new instance of the Primavera data source, with code *"DEMO"* and with the Code of the Connector that you have created.
+
+12. On left side menu, navigate to *Configurations / Employee*, identify the Primavera data source instance (DEMO) and check that the list is filled with data retrieved from Primavera.
+
+13. Now you can List and Update Employees directly on your on-premise system, providing your connector is correctly configured and running.

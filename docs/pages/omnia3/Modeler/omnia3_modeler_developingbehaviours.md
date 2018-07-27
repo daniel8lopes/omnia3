@@ -15,6 +15,8 @@ When developing behaviours in the OMNIA platform, writing C# with no context dir
 
 In order to simplify the debugging explained in this section, we have created a [Visual Studio 2017 solution](https://github.com/numbersbelieve/omnia3-behaviours) that contains a pre-baked example of how to test a sample Purchase Order model such as the one described in the [Beginners Tutorial](omnia3_beginnertutorial.html).
 
+If you want to develop your own VS Solution, you will need to manually add a series of NuGet package references.
+
 ## 3. Obtaining the model
 
 - Access the modeling area for the tenant and environment you want to develop in.
@@ -30,11 +32,12 @@ Upon extracting the zip file, you will see a series of folders.
 - **System** contains the structural code for any entities that do not have a custom Data Source.
     - The **Entity** folder contains all the _[EntityName].Operations.cs_ classes that are where your custom behaviours will be. **This will be the only place you need to edit when testing entity behaviours**.
     - The **Entity/Domain** folder contains the Domain representations of the entities, _[EntityName].cs_. 
+    - The **Application** folder, if it exists, contains all the **Application** behaviours, one per file.
 
 If there are any custom data sources, you will also see other folders:
 
 - **[DataSourceCode]** folders contain, for each data source other than System, the classes for every entity that is associated with that Data Source.
-    - The Entity folder is the same as above.
+    - The Entity folder is the same as above, so is the Application folder.
     - If there are any Data behaviours (i.e. the **Data Access** runtime of this entity is External), there will also be a **Data** folder, which contains the Data Access Object (DAO) classes _[EntityName]Dao.cs_, where all the Data Behaviours exist. **This will be the only place you need to edit when testing data behaviours**.
 
 This folder division is what allows for the connector to only compile what it needs to run the external data sources, as well as for the platform to only compile what it needs to run its internal data sources.
