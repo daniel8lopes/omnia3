@@ -4,7 +4,7 @@ $('#mysidebar').height($(".nav").height());
 $( document ).ready(function() {
 
 if(document.baseURI.includes("/omnia3_platformchangelog.html")){
-alert("Hello");
+    httpGetFeedAsync();
 }
     //this script says, if the height of the viewport is greater than 800px, then insert affix class, which makes the nav bar float in a fixed
     // position as your scroll. if you have a lot of nav items, this height may not work for you.
@@ -55,3 +55,14 @@ $(function() {
         }
     });
 });
+
+function httpGetFeedAsync()
+{
+    var xmlHttp = new XMLHttpRequest();
+    xmlHttp.onreadystatechange = function() { 
+        if (xmlHttp.readyState == 4 && xmlHttp.status == 200)
+            alert(xmlHttp.responseText);
+    }
+    xmlHttp.open("GET", "https://mymiswebdeploy.blob.core.windows.net/omnia3/connector/updateFeed.xml", true); // true for asynchronous 
+    xmlHttp.send(null);
+}
