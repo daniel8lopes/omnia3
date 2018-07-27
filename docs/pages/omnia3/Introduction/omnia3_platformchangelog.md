@@ -7,7 +7,7 @@ permalink: omnia3_platformchangelog.html
 folder: omnia3
 ---
 
-Go to our [Downloads](/omnia3_downloads.html#platform) page to get the latest version
+Visit our [Downloads](/omnia3_downloads.html#platform) page to get the latest version.
 
 ## [3.0.0](#300)
 Release Date: 2018
