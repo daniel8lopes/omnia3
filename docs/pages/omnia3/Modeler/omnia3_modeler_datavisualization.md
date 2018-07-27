@@ -42,6 +42,7 @@ Joins, like in SQL, allow us to obtain information from more than one entity.
 To add a join, edit a query, go to the **Joins** separator, and press _Add new_. You will need to fill the following information:
 * _Join with_: The modeled type of the entity to perform the Join with;
 * _Will not join with initial definition?_: Whether or not set A of the join is the entity targeted by the query;
+* _Type_: only visible if not joining with initial definition. The modeled type to target;
 * _Join type_: Uses the same concept as SQL's joins:
     - _Inner_: All records that meet the join condition;
     - _Left (Left Outer)_: All records from set A, along with the records from set B that meet the join condition;
