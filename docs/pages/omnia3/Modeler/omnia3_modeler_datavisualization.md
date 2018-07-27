@@ -25,14 +25,14 @@ A query is automatically created when an entity is created. This automatic query
 
 ### How to create a new query?
 Selecting the option _Add new_ in the list of queries, you need to fill the following information:
-* _Code_: The code of the query (needs to be unique);
+* _Name_: The name of the query (needs to be unique);
 * _Description_: The textual explanation of the query's purpose (can be used as development documentation);
 * _Type_: The type of the entity this query targets;
 
 ### How to add properties to a query?
 Selecting the option _Add new_ when editing a query, you need to fill the following information:
 * _Alias_: The Alias of the property, i.e. the name you want to see it show up with;
-* _Path_: The Path to that property. This has its own syntax:
+* _Path_: The Path to that property. If the attribute belongs to the entity, it can be selected. Else:
     - If you want to get properties from a collection inside the entity, use '>', i.e. ```OrderLines>_amount```;
     - If you want to get properties from a reference inside the entity, use '.', i.e. ```VATSummary._amount```;
 
@@ -63,8 +63,12 @@ A list is automatically generated when a new entity is created. It is based on t
 
 ### How to create a list?
 
-Select the option _Add new_ when in the list of Lists, and fill in the following information:
-* _Code_: the code of the list (needs to be unique);
+A list can be created automatically, based on a query, or manually.
+
+To automatically create a new list based on a query, you must edit the query, and on top right *More Options* button, click on *Generate List*. A list will be automatically generated and can be edited later.
+
+To create a list manually, select the option _Add new_ when in the list of Lists, and fill in the following information:
+* _Name_: the name of the list (needs to be unique);
 * _Description_: the textual explanation of the list's purpose (can be used as development documentation);
 * _Query_: select a previously created query to use;
 * _Label_: what label should be displayed for the list;
@@ -72,7 +76,7 @@ Select the option _Add new_ when in the list of Lists, and fill in the following
 
 ### How to edit the columns in a list?
 
-After the list is created, it will be empty, and you must select which columns from the query you want to show.
+When the list is created manually, after its creation it will be empty, and you must select which columns from the query you want to show.
 
 By editing a list in the menu, and selecting the option _Add new_, you can add the following information:
 * _Query property_: The property of the query this column will represent;
@@ -83,14 +87,14 @@ By editing a list in the menu, and selecting the option _Add new_, you can add t
 ## 4. Dashboards
 __*Data Analytics / Dashboards*__
 
-A dashboard is a collection of data analysis elements organized in a particular order.
+A dashboard is a collection of lists organized in a particular order.
 
-When a new entity is created, a dashboard is automatically created. This dashboard is shown when user lists the entities, and contains only one element, the automatically generated list.
+When a new entity is created, a dashboard is automatically generated. This dashboard is shown when user lists the entities, and contains only one element, the automatically generated list.
 
 ### How to create a dashboard?
 
 Select the option _Add new_ when in the list of Dashboards, and fill in the following information:
-* _Code_: the code of the dashboard (needs to be unique);
+* _Name_: the name of the dashboard (needs to be unique);
 * _Description_: the textual explanation of the dashboard's purpose (can be used as development documentation);
 * _Label_: what label should be displayed for the dashboard;
 * _Help Text_: Auxiliary texts that explain the dashboard's purpose to the users.
@@ -100,7 +104,7 @@ Select the option _Add new_ when in the list of Dashboards, and fill in the foll
 ### How to edit elements in a dashboard?
 
 Select the option _Add new_ when editing a dashboard, and fill in the following information:
-* _Code_: the code of the element (needs to be unique);
+* _Name_: the name of the element (needs to be unique);
 * _Description_: the textual explanation of the element's purpose (can be used as development documentation);
 * _List_: which list should be displayed in this dashboard element;
 * _Label_: what label should be displayed for the element;
