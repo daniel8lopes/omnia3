@@ -3,7 +3,7 @@ $('#mysidebar').height($(".nav").height());
 
 $( document ).ready(function() {
 
-if(document.baseURI.contains("omnia3_platformchangelog.html")){
+if(document.baseURI.includes("/omnia3_platformchangelog.html")){
 alert("Hello");
 }
     //this script says, if the height of the viewport is greater than 800px, then insert affix class, which makes the nav bar float in a fixed
