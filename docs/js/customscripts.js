@@ -64,13 +64,14 @@ function httpGetFeedAsync()
             var xmlDoc = xmlHttp.responseXML;
             var versionElements = xmlDoc.getElementsByTagName("Version");
             if(versionElements && versionElements.length >0){
+                var tocDiv = document.getElementById('toc');
                 var packageURL = $(versionElements).attr('Package');
                 var linkElement = document.createElement('a');
-                var linkText = document.createTextNode("my title text");
+                var linkText = document.createTextNode("Download latest connector version");
                 linkElement.appendChild(linkText);
                 linkElement.title = "Download latest connector version";
                 linkElement.href = packageURL;
-                document.body.appendChild(linkElement);
+                tocDiv.appendChild(linkElement);
             }
         }
     }
