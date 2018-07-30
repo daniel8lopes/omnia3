@@ -19,9 +19,9 @@ In the platform authorization area (option **Management / Security**) you can ma
 
 By default, Omnia Platform has one role, named *Administration*. This role cannot be removed and it has, by default, associated the user identified on platform setup as the *Platform Administrator*. Other users can be added to this *Role*.
 
-Additionally, when a tenant is created, two new roles are automatically added:
+Additionally, when a tenant is created, two new roles are automatically created:
 
-- Administration[TenantCode]: administration role for the tenant. The user responsible for the tenant addition is automatically added to this role.
+- Administration[TenantCode]: administration role for the tenant. The user responsible for the tenant creation is automatically added to this role.
 - Users[TenantCode]: general users role for the tenant. Other tenant users should be added to this role, so that they have access to the tenant.
 
 If needed, new Roles can be created to grant a set of policies to a group of users
@@ -48,7 +48,7 @@ In the tenant authorization area (option **Security** on right side of top navba
 
 #### Roles
 
-By default, every tenant has only one Role, named *Administration*. This role has cannot be removed and it has, by default, associated the user responsible for the tenant creation. Other users can be added to this *Role*.
+By default, every tenant has only one Role, named *Administration*. This role cannot be removed and it has, by default, associated the user responsible for the tenant creation. Other users can be added to this *Role*.
 
 
 If needed, new Roles can be created to grant a set of policies to a group of users
