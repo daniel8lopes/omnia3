@@ -36,11 +36,11 @@ We choose [OAuth 2.0](https://www.oauth.com/) as our authorization protocol. OAu
 
 After the register, using the generated _Client ID_ and _Client Secret_, you are able to request an [access token](https://www.oauth.com/oauth2-servers/access-tokens/) to gain access to the API, through the OAuth 2.0 [Client Credentials](https://tools.ietf.org/html/rfc6749#section-1.3.4) flow, and start using the API.
 
-### 3.1 Request an access token using C#
+### 3.1 Request an access token using C\#
 
 Requesting an access token can be easy using [IdentityModel](https://www.nuget.org/packages/identitymodel/) an OpenID Connect & OAuth 2.0 client library.
 
-```c#
+```C#
 using IdentityModel.Client;
 
 string accessToken = null;
