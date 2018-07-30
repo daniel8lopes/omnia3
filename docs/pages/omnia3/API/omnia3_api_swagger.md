@@ -28,10 +28,54 @@ Usage guidelines:
   In order to calculate the patch between the current state and the state you want it to be in, there are a number of tools, such as [JSON Patch Builder Online](https://json-patch-builder-online.github.io/).
 
 ## 3. Consuming the API with an API Client
-It's possible to use whatever language you want to access the OMNIA API, allowing you to use the API the way you need to.
+ It's possible to use whatever language you want to access the OMNIA API, allowing you to use the API the way you need to.
 
 Our API requires authorization, so the first you need to do is register an API client in the platform ([see here how](omnia3_management_introduction.html#4-api-clients)).
 
 We choose [OAuth 2.0](https://www.oauth.com/) as our authorization protocol. OAuth 2.0 is the industry-standard protocol for authorization and securing access to APIs with focus on client developer simplicity.
 
 After the register, using the generated _Client ID_ and _Client Secret_, you are able to request an [access token](https://www.oauth.com/oauth2-servers/access-tokens/) to gain access to the API, through the OAuth 2.0 [Client Credentials](https://tools.ietf.org/html/rfc6749#section-1.3.4) flow, and start using the API.
+
+### 3.1 Request an access token using C#
+
+Requesting an access token can be easy using [IdentityModel](https://www.nuget.org/packages/identitymodel/) an OpenID Connect & OAuth 2.0 client library.
+
+```c#
+using IdentityModel.Client;
+
+string accessToken = null;
+
+// discover endpoints from metadata
+var discoEndpoint = await DiscoveryClient.GetAsync("[IdentityServer Endpoint]");
+if (!discoEndpoint.IsError)
+{
+    //request token
+    var tokenClient = new TokenClient(disco.TokenEndpoint, userId, "[Your secret]");
+    var tokenResponse = await tokenClient.RequestClientCredentialsAsync("[Required scopes]");
+
+    if (!tokenResponse.IsError)
+    {
+        accessToken = tokenResponse.AccessToken;
+    }
+}
+```
+
+### 3.2 Using HttpClient to send request to the API
+
+Using the built-in .NET HttpClient, you can use the requested token to perform requests to our API.
+
+```C#
+using System.Collections.Generic;
+using System.Net.Http;
+
+var authHeaderValue = new AuthenticationHeaderValue("Bearer", "[Access Token]");
+var client = new HttpClient() { DefaultRequestHeaders = { Authorization = authHeaderValue } };
+
+var requestResponse = await client.GetAsync("[API Endpoint]}");
+if (requestResponse.IsSuccessStatusCode)
+{
+    var responseBody = await requestResponse.Content.ReadAsStringAsync();
+	var response = JsonConvert.DeserializeObject<Dictionary<string, object>>(responseBody);
+}
+```
+
