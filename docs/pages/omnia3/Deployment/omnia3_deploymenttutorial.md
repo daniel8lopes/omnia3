@@ -56,14 +56,7 @@ cd /etc/systemd/system/
 sudo systemctl enable omnia omnia-*
 ```
 
-- The services are configured to be launched in the following ports:
-
-    49900: web api
-    49901: tenant
-    49902: identity
-    49999-50***: behaviours
-
-- You will not need to expose any of these ports, as all communication with the exterior will go through NGINX.
+- The services will now be configured for launch.
 
 ## 5. Configuring the services
 
