@@ -20,10 +20,16 @@ __*Entity / Attributes*__
 The attributes allow you to define the structure of your entity. Each one will represent a property in the data you can read or write.
 
 ### How to add a new attribute?
-Selecting the option _Add new_ you need to fill the following information:
+When clicking the option _Add new_ you will need to select the base *Type* from the following:
+
+* _Primitive_: a basic data type, like *Text*, *Date* or *Numeric*
+* _Reference_: an attribute that is a reference to another modeled entity
+* _Collection_: an attribute that is a collection of modeled entities
+
+After selecting the base *Type*, you will need to fill the following information:
 * _Code_: the code of the attribute (needs to be unique inside the entity);
 * _Description_: the textual explanation of the attribute's purpose (can be used as development documentation);
-* _Type_: the attribute's data type (can be a _Primitive_ value or a _Reference_ to another entity);
+* _Type_: the attribute's data type, given the previous attribute base type selection;
 * _Is required?_: indicates if the attribute is required or not (not applicable to _Commitments_ or _Events_);
 * _Is read only?_: indicates if the attribute's value can be changed by the user's input (not applicable to _Commitments_ or _Events_);
 * _Minimum number of records_: the minumum number of records to the collection (only applicable to _Commitments_ or _Events_);
