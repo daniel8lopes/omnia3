@@ -27,6 +27,10 @@ entries:
       url: /index.html
       output: web, pdf
 
+    - title: Features of OMNIA 3.0
+      url: /omnia3_features.html
+      output: web, pdf
+      
     - title: Web App Requirements
       url: /omnia3_webapprequirements.html
       output: web, pdf
