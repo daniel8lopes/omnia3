@@ -35,10 +35,11 @@ In order to run the platform, SSL is the only **supported** mode - it is possibl
 To do so, we suggest using a tool such as Let's Encrypt.
 
 Internally, each of the services runs on a fixed port:
-    49900: web api
-    49901: tenant
-    49902: identity
-    49999-50***: behaviours (49999 for the manager, the others used for any servers necessary)
+
+- 49900: Web API
+- 49901: Tenant API
+- 49902: Identity Server
+- 49999-50***: Behaviours (49999 for the manager, the others used for any servers necessary)
 
 However, none of these ports need to be exposed to the exterior, as NGINX will handle reverse proxying duties.
 
