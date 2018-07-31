@@ -38,6 +38,10 @@ entries:
     - title: Connector Changelog
       url: /omnia3_connectorchangelog.html
       output: web, pdf
+      
+    - title: Version Control
+      url: /omnia3_versioncontrol.html
+      output: web, pdf      
   
   - title: Deployment
     output: web, pdf
