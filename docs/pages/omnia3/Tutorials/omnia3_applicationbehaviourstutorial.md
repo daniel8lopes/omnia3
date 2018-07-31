@@ -39,7 +39,7 @@ A connector and an access to [Primavera ERP](https://pt.primaverabss.com), on ve
     
     ![Modeler add Reference](/images/tutorials/applicationbehaviours/Modeler-Primavera-Add-Dependency.PNG)
 
-4. Through the left side menu, navigate to PurchaseOrder Document, by accessing the option ***Documents / PurchaseOrder***. Add a new attribute by clicking on option **Add new / Reference** and setting its *Name* and *Type* as Primavera and DataSource / Primavera, respectively.
+4. Through the left side menu, navigate to PurchaseOrder Document, by accessing the option ***Documents / PurchaseOrder***. Add a new attribute by clicking on option **Add new / Reference** and setting its *Name* and *Type* as *Primavera* and *Data Source / Primavera*, respectively.
 
 5. Through the left side menu, create a new application behaviour by accessing the option ***Extensibility / Application Behaviours / Add new***. Set its *Name* as "IntegratePurchaseOrder", "Primavera" as *Data Source* and "External" as *Execution Location*.
 
