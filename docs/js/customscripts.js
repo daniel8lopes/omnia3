@@ -3,6 +3,12 @@ $('#mysidebar').height($(".nav").height());
 
 $( document ).ready(function() {
 
+if(document.baseURI.includes("/omnia3_downloads.html")){
+    httpGetFeedAsync("https://mymiswebdeploy.blob.core.windows.net/omnia3/platform/updateFeed.xml", "Download latest platform version", "PackageFull", "platform");
+    httpGetFeedAsync("https://mymiswebdeploy.blob.core.windows.net/omnia3/connector/updateFeed.xml", "Download latest connector version", "Package", "connector");
+}
+    
+
     //this script says, if the height of the viewport is greater than 800px, then insert affix class, which makes the nav bar float in a fixed
     // position as your scroll. if you have a lot of nav items, this height may not work for you.
     var h = $(window).height();
@@ -52,3 +58,27 @@ $(function() {
         }
     });
 });
+
+function httpGetFeedAsync(feedUrl, elementText, xmlElement, parentElement)
+{
+    var xmlHttp = new XMLHttpRequest();
+    xmlHttp.onreadystatechange = function() { 
+        if (xmlHttp.readyState == 4 && xmlHttp.status == 200){
+            var xmlDoc = xmlHttp.responseXML;
+            var versionElements = xmlDoc.getElementsByTagName("Version");
+            if(versionElements && versionElements.length >0){
+                var tocDiv = document.getElementById(parentElement);
+                var versionNumber = $(versionElements).attr("Number");
+                var packageURL = $(versionElements).attr(xmlElement);
+                var linkElement = document.createElement('a');
+                var linkText = document.createTextNode(elementText + " ("+ versionNumber+")");
+                linkElement.appendChild(linkText);
+                linkElement.title = elementText;
+                linkElement.href = packageURL;
+                tocDiv.parentNode.insertBefore(linkElement, tocDiv.nextSibling);
+            }
+        }
+    }
+    xmlHttp.open("GET", feedUrl, true); // true for asynchronous 
+    xmlHttp.send(null);
+}

@@ -3,14 +3,14 @@
 topnav:
 - title: Topnav
   items:
-    - title: News
-      url: /news
+#    - title: News
+#      url: /news
 
 #Topnav dropdowns
-topnav_dropdowns:
-- title: Topnav dropdowns
-  folders:
-    - title: Products
-      folderitems:
-        - title: OMNIA 3
-          url: /omnia3_welcometoomnia.html
+#topnav_dropdowns:
+#- title: Topnav dropdowns
+#  folders:
+#    - title: Products
+#      folderitems:
+#        - title: OMNIA 3
+#          url: /omnia3_welcometoomnia.html

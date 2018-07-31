@@ -7,9 +7,9 @@ permalink: omnia3_downloads.html
 folder: omnia3
 ---
 
-## Connector
+## Platform
 
-- [1.0.57](https://mymiswebdeploy.blob.core.windows.net/omnia3/connector/Omnia.Connector.Windows.1.0.57.zip)
+## Connector
 
 ## Behaviours Development solution
 

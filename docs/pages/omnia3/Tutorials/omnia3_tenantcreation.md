@@ -23,7 +23,7 @@ If you do not have a deployment yet, please view the instructions for [Deploying
 
 1. Start by going to omnia.numbersbelieve.com and ***sign in*** to your account, with your registration email and password, respectively.
 
-    ![OMNIA Sign in](https://raw.githubusercontent.com/numbersbelieve/omnia3/master/docs/tutorialPics/modelingTutorial/OMNIA%20-%20Sign%20In%20Account.PNG)
+    ![OMNIA Sign in](/images/tutorials/tenantcreation/Application-Login.PNG)
 
 2. Select the option ***Go to Tenants management*** on the inferior section of the menu.
 
