@@ -50,6 +50,10 @@ entries:
       url: /omnia3_deploymenttutorial.html
       output: web, pdf
       
+    - title: Infrastructure
+      url: /omnia3_deploymentrequirements.html
+      output: web, pdf
+      
     - title: Deployment FAQ
       url: /omnia3_deploymentfaq.html
       output: web, pdf
