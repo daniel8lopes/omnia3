@@ -11,7 +11,7 @@ folder: omnia3
 
 OMNIA Platform has a version control system, that not only controls the versions of platform releases, but also the version of the developed models.
 
-The version can be consulted through OMNIA API.
+The version can be consulted through the OMNIA API.
 
 ## 2. How to view current version through API?
 
@@ -23,7 +23,7 @@ The Platform version is incremented in new releases, and it can be retrieved by 
 /api/v1/system
 ```
 
-The response will be a Json with the following structure:
+The response will be a JSON object with the following structure:
 
 ```
 {
@@ -39,7 +39,7 @@ Model version is incremented in each build, and can be retrieved by making an HT
 /Model/builds?filter=Active&page=1&pageSize=1
 ```
 
-The response will be a Json with the following structure:
+The response will be a JSON object with the following structure:
 
 ```
 [
