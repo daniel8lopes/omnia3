@@ -1,7 +1,7 @@
 ---
-title: Version Control
+title: Versioning
 keywords: omnia3
-summary: "OMNIA Platform Version Control"
+summary: "OMNIA Platform Versioning"
 sidebar: omnia3_sidebar
 permalink: omnia3_applicationversion.html
 folder: omnia3
