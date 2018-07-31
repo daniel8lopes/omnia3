@@ -36,3 +36,32 @@ The response will be a Json with the following structure:
   "version": "1.0.96"
 }
 ```
+
+## 2. Model Version
+
+The model version is incremented on each new build, and it can be checked on both API and User Interface:
+
+### User Interface
+
+Model version is available, on Modeling and Application areas, by clicking on top navbar middle button option *About*. The Tenant version will be shown along with the Platform version.
+
+### API
+
+Latest model version can be retrieved, by making an HTTP GET request to the following service:
+
+```
+/Model/builds?filter=Active&page=1&pageSize=1
+```
+
+The response will be a Json with the following structure:
+
+```
+[
+  {
+    "date": "2018-07-01T14:00:01.9814483Z",
+    "buildVersion": "1.0.8",
+    "code": "1.0.8",
+    "state": "Successful"
+  }
+]
+```
