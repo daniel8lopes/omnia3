@@ -13,13 +13,11 @@ folder: omnia3
 The **OMNIA Connector** is the software that the OMNIA Platform uses to communicate with the customer's servers in order to execute external behaviours. 
 
 ## 2. How it works
-The **OMNIA Connector** shares the same behaviours engine as the **OMNIA Platform**. When the connector starts it'll launch a **Behaviours Manager** process. The manager is responsible for locate and launch the required **Behaviours Servers**. The server aside from the execution of the desired behaviours is also responsible for their compilation.
+The **OMNIA Connector** shares the same behaviours engine as the **OMNIA Platform**. When the connector starts it'll launch a **Behaviours Manager** process. The manager is responsible for locating and launching the required **Behaviours Servers**. The server, aside from the execution of the desired behaviours, is also responsible for their compilation.
 
 ![Connector architecture](images\connector_arch.jpg){: .image-center}
 
-
-
-The manager will launch a new server process when configurable maximal number of builds is reached. This new process will co-exists with the other server processes in the connector.
+The manager will launch a new server process when configurable maximal number of builds is reached. This new process will co-exist with the other server processes in the connector.
 
 ## 3. Requirements
 
@@ -35,7 +33,7 @@ By default, the behaviours the connector executes will be downloaded to the temp
 Following the instructions on [this page]( omnia3_modeler_developingbehaviours.html), you will be able to develop and/or test any behaviours that are meant to run connector-side. Our recommendation is to, if possible, install Visual Studio on the same machine that is running the connector, so you can reference all the same DLLs and local files that are being used in the behaviours.
 
 ## 5. Connectivity
-Once the connector is running, the connection between it and the server will be kept active without the user having to do anything special. 
+Once the connector is running, the connection between it and the server will be kept active without the user having to do anything. 
 
 However, there are scenarios where it is necessary to perform manual maintenance on the installation, namely, when disconnections occur, or the connector is failing to start its behaviour executing components.
 
@@ -52,5 +50,6 @@ If after **22 attempts** (approximately 2 hours and 20 minutes total), we assume
 This will lead to manual intervention being necessary.
 
 ### 5.3 Single connection per Connector
-With OMNIA you can just have one connector running using the same pair of configurations (client and secret). For this reason, if you start a new connector with the same configuration, the platform will request the previously active connector to shut down. 
+Only one connector can be connected using the same pair of configurations (client and secret). For this reason, if you start a new connector with the same configuration, the platform will request the previously active connector to shut down. 
+
 In this case, you will see a warning in the new connector saying *"Another connector or connection has been disconnected."*. This message can also mean that the connector for some reason (network instability for example) needed to start a new connection with the server.

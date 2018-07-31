@@ -22,7 +22,7 @@ If the Data Source is created with *Data Access runtime* or *Behaviour runtime* 
 To allow that, an attribute with name **_connector** is automatically added to the Data Source, which will determine whether or not that data source instance's operations will execute on a connector.
 
 ### 2.2. How to configure the application data
-Before executing operations in the connector, it is required to configure to which connector the requests will be made.
+Before executing operations in the connector, it is required to configure to _which_ connector the requests will be made.
 
 Accessing the application, in the menu, select the Data Source you previously created and **Add new** record.
 
