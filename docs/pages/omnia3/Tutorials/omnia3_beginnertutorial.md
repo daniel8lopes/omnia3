@@ -75,7 +75,7 @@ If you do not have a tenant yet, please follow the steps of the [Tenant Creation
 
 18. Go back to modeling area (by accessing top bar menu option ***Modeler***) and edit the **PurchaseOrder** document to simplify its interface. Add a new attribute by clicking on button **Add new**. Set its *Name* as **Company**, *Type* as ***Agent / Company***, and as required by checking option *Is required?*.
 
-19. Add ***Attribute / Add new***. Set its *Name* as **Supplier**, *Type* as ***Agent / Supplier***, and as required by checking option *Is required?*. 
+19. Add ***Attribute / Add new / Reference***. Set its *Name* as **Supplier**, *Type* as ***Agent / Supplier***, and as required by checking option *Is required?*. 
 
 20. Navigate to tab *Entity Behaviours* and click the button ***Add new / After Change*** to add a new **After Change** Behaviour to fill **_provider** and **_receiver** attributes. Define ***SetCommitmentAgents*** as Name and paste the following code:
 
