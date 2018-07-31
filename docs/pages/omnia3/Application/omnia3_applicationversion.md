@@ -11,7 +11,7 @@ folder: omnia3
 
 OMNIA Platform has a version control system, that not only controls the versions of platform releases, but also the version of the developed models.
 
-The version can be consulted through OMNIA API and User Interface.
+The version can be consulted through OMNIA User Interface.
 
 ## 2. How to view the version on application?
 
