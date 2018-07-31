@@ -17,7 +17,7 @@ The version can be consulted through OMNIA API.
 
 ### Platform Version
 
-Platform version can be retrieved, by making an HTTP GET request to the following service:
+The Platform version is incremented in new releases, and it can be retrieved by making an HTTP GET request to the following service:
 
 ```
 /api/v1/system
