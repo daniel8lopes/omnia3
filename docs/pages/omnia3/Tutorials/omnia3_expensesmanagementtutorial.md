@@ -42,7 +42,7 @@ This tutorial assumes that you have created a OMNIA tenant, and are logged in as
   
     ![Modeler_Create_Commitment](/images/tutorials/expensemanagement/Modeler-Add-Commitment.PNG)
  
-9. Still on Commitment ***ExpenseRefundRequest***, create a new **Attribute**, by clicking the button  **Add new**  on the top right side, and setting its  *Name*  to  **ExpenseAmount**, *Type* as ***Primitive / Decimal***, and as required by checking option *Is required?*. Additionally, set *_amount* attribute as read-only.
+9. Still on Commitment ***ExpenseRefundRequest***, create a new **Attribute**, by clicking the button  **Add new / Primitive**  on the top right side, and setting its  *Name*  to  **ExpenseAmount**, *Type* as ***Decimal***, and as required by checking option *Is required?*. Additionally, set *_amount* attribute as read-only.
     
 10. Add a new document (by accessing the option ***Documents / Add new*** button) and set its *Name* as **ExpenseReport**. 
    
