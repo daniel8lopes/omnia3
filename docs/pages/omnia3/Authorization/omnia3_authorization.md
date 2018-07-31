@@ -14,14 +14,14 @@ The **OMNIA Platform** authorization uses a policy-based model. This policy-base
 
 ## 2. Policies, permissions and roles
 
-- A policy is composed by one or more permissions
-- A permission is a function/area to protect and has a collection of roles used to evaluate users permissions
-- A role is an easy way to group users of an application based on what they can or cannot do
+- A policy is composed by one or more permissions.
+- A permission is a function/area to protect and has a collection of roles used to evaluate users permissions.
+- A role is an easy way to group users of an application based on what they can or cannot do.
 
 ![The authorization policy-based model](images\authz_model.jpg)
 
 ## 3. Authorization management in the **OMNIA Platform**
 
-Authorization management is explained on the [Authorization Management](https://docs.numbersbelieve.com/omnia3_authorizationmanagement.html) article
+Authorization management is explained on the [Authorization Management](https://docs.numbersbelieve.com/omnia3_authorizationmanagement.html) article.
 
 
