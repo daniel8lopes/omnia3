@@ -157,7 +157,7 @@ entries:
     - title: Notifications & Operations
       url: /omnia3_application_notifications_and_operations.html
       output: web, pdf
-    - title: How to check version?
+    - title: How to check version
       url: /omnia3_applicationversion.html
       output: web, pdf     
       
@@ -225,6 +225,9 @@ entries:
     - title: How to use the API
       url: /omnia3_api_swagger.html
       output: web, pdf
+    - title: How to check version
+      url: /omnia3_apiversion.html
+      output: web, pdf      
       
   - title: Downloads
     output: web, pdf
