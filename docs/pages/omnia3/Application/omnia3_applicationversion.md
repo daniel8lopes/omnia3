@@ -19,8 +19,7 @@ The version can be consulted through OMNIA User Interface.
 
 The platform version is incremented on each new release, and it can be checked after logging in, on top navbar middle button option *About*.
 
-
 ### Model Version
 
-The model version is incremented on each new build, and it can be checked on Modeling and Application areas, by clicking on top navbar middle button option *About*. The Tenant version will be shown along with the Platform version.
+The model's version is incremented on each new build, and it can be checked on the Modeling and Application areas, by clicking on top navbar middle button option *About*. The Tenant version will be shown, along with the Platform version.
 

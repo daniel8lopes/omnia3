@@ -10,7 +10,7 @@ folder: omnia3
 ## 1. Introduction
 In the third release of the OMNIA Platform, the API and its usage were two of our main concerns. This version provides a clear API that has all of the functionality and doesn't require the clients to implement logic.
 
-The OMNIA API was implemented together respecting the [OpenAPI Specification](https://swagger.io/specification/). This means that, with the use of OpenAPI file generated with [Swagger](https://swagger.io/docs/specification/about/) , it is possible to:
+The OMNIA API was implemented together respecting the [OpenAPI Specification](https://swagger.io/specification/). This means that, with the use of OpenAPI file generated with [Swagger](https://swagger.io/docs/specification/about/), it is possible to:
 - Generate API clients for whichever languages users want to use to develop software that requires our API;
 - Generate interactive documentation automatically, using Swagger UI.
 
@@ -22,7 +22,7 @@ We are actively working on enriching this API documentation with more and  bette
 
 Usage guidelines:
 - Authorization is required to access almost every method in our API. Swagger UI provides an Authorize button that allows you to perform an authorization operation.
-- To use a method, after selecting it / seeing the documentation, you can click the **Try it out** button and Swagger will open a series of fields you can type your information into, and an **Execute** button.
+- To use a method, after selecting it and seeing the documentation, you can click the **Try it out** button and Swagger will open a series of fields you can type your information into, and an **Execute** button.
 - All updates to existing resources use the HTTP PATCH method and implement the [JSONPatch](http://jsonpatch.com/) standard.
 
   In order to calculate the patch between the current state and the state you want it to be in, there are a number of tools, such as [JSON Patch Builder Online](https://json-patch-builder-online.github.io/).
