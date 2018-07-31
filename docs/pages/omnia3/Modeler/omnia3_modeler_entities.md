@@ -20,14 +20,21 @@ __*Entity / Attributes*__
 The attributes allow you to define the structure of your entity. Each one will represent a property in the data you can read or write.
 
 ### How to add a new attribute?
-Selecting the option _Add new_ you need to fill the following information:
-* _Code_: the code of the attribute (needs to be unique inside the entity);
+Selecting the option _Add new_ you need to first select one of three types of attribute:
+* _Primitive_: A primitive type such as a text field or an integer;
+* _Reference_: A reference to another entity on the platform;
+* _Collection_: Another entity that will act as a 'sub-entity' of this one. Must be of a compatible type: Events or Commitments in a Document, and Generic Entities (only those marked as non-root) in any entity type.
+
+Afterwards, you must fill the following information (not all the fields apply to all attribute types):
+* _Name_: the name of the attribute (needs to be unique inside the entity);
 * _Description_: the textual explanation of the attribute's purpose (can be used as development documentation);
-* _Type_: the attribute's data type (can be a _Primitive_ value or a _Reference_ to another entity);
+* _Type_: the attribute's data type. Possible values depend on whether we are in a Primitive, a Reference or a Collection;
 * _Is required?_: indicates if the attribute is required or not (not applicable to _Commitments_ or _Events_);
 * _Is read only?_: indicates if the attribute's value can be changed by the user's input (not applicable to _Commitments_ or _Events_);
-* _Minimum number of records_: the minumum number of records to the collection (only applicable to _Commitments_ or _Events_);
-* _Maximum number of records_: the maximum number of records to the collection (only applicable to _Commitments_ or _Events_);
+* _Is a list of records?_: indicates whether or not this attribute will receive multiple values at once.
+* _Minimum number of records_: the minimum number of records to the collection;
+* _Maximum number of records_: the maximum number of records to the collection;
+* _Uses data source from attribute_: in Reference fields, indicates the field used to identify what data source instance to look for the Reference in (optional).
 
 ### How to set an attribute as required?
 In the attributes list, select the attribute you want to change and check the _Is required?_ property.
