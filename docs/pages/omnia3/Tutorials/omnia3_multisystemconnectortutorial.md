@@ -232,34 +232,36 @@ This tutorial also requires an access to [Primavera ERP](https://pt.primaverabss
 
     ![Modeler create Commitment_GoodsPurchaseRequest](/images/tutorials/multisystemconnector/Create-Commitment-GoodsPurchaseRequest.PNG)
 
-2. Edit the commitment "*GoodsPurchaseRequest*", and create the following attributes:
+2. Edit the commitment "*GoodsPurchaseRequest*", and create the following **Reference** attributes:
 
     - Artist (Type: Generic entity, Artist)
     - Primavera (Type: Data source, Primavera)
-    - AlbumMBid (Type: Primitive, Text)
+   
+3. Create a new **Primitive** attribute with *AlbumMBid* as *Name* and *Text* as Type
 
-3. Still on commitment "*GoodsPurchaseRequest*", edit attributes *"_resource"* and *"_provider"* and set attribute Primavera as the Data Source
+4. Still on commitment "*GoodsPurchaseRequest*", edit attributes *"_resource"* and *"_provider"* and set attribute Primavera as the Data Source
 
     ![Modeler edit Attribute_Resource](/images/tutorials/multisystemconnector/Edit-Attribute-Resource.PNG)
 
-4. Through the left side menu, create a new Document by accessing the option ***Documents / Add new***. Set its Name as "*PurchaseOrder*". Before saving, check option *"Uses a custom data source?"*, and select *"Primavera"* as Data Source.
+5. Through the left side menu, create a new Document by accessing the option ***Documents / Add new***. Set its Name as "*PurchaseOrder*". Before saving, check option *"Uses a custom data source?"*, and select *"Primavera"* as Data Source.
 
     ![Modeler create Document_PurchaseOrder](/images/tutorials/multisystemconnector/Create-Document-PurchaseOrder.PNG)
 
-5. On Document "*PurchaseOrder*", add the following attributes:
+6. On Document "*PurchaseOrder*", add the following **Reference** attributes:
 
     - Primavera (Type: Data source, Primavera)
     - Supplier (Type: Agent, Supplier. Uses attribute Primavera as data source)
-    - OrderLines (Type: Commitment, GoodsPurchaseRequest)
 
-6. On Document "*PurchaseOrder*", navigate to tab *Behaviour Namespaces*, and define a reference for the following namespaces (define *External* as Execution Location):
+7. Create a new **Collection** attribute with *OrderLines* as *Name* and *Commitment / GoodsPurchaseRequest* as Type
+
+8. On Document "*PurchaseOrder*", navigate to tab *Behaviour Namespaces*, and define a reference for the following namespaces (define *External* as Execution Location):
 
     1. Interop.StdBE900
     2. Interop.ErpBS900
     3. Interop.IGcpBS900
     4. Interop.GcpBE900
 
-7. Navigate to tab *"[Data Behaviours](https://docs.numbersbelieve.com/omnia3_modeler_datasources.html)"*, and define a behaviour to be executed on *"ReadList"*. This behaviour will be used for Query and List requests for this entity.
+9. Navigate to tab *"[Data Behaviours](https://docs.numbersbelieve.com/omnia3_modeler_datasources.html)"*, and define a behaviour to be executed on *"ReadList"*. This behaviour will be used for Query and List requests for this entity.
 
     Copy and paste the following code (*Remember to **change** the **```"USER"```** and **```"PASS"```** fields to your actual username and password.*):
 
@@ -297,7 +299,7 @@ This tutorial also requires an access to [Primavera ERP](https://pt.primaverabss
 		throw;
 	}
     ```
-8. Navigate to tab *"[Data Behaviours](https://docs.numbersbelieve.com/omnia3_modeler_datasources.html)"*, and define a behaviour to be executed on *"Create"*. This behaviour will be used to create new instances on ERP everytime a new PurchaseOrder is created on Omnia.
+10. Navigate to tab *"[Data Behaviours](https://docs.numbersbelieve.com/omnia3_modeler_datasources.html)"*, and define a behaviour to be executed on *"Create"*. This behaviour will be used to create new instances on ERP everytime a new PurchaseOrder is created on Omnia.
 
     Copy and paste the following code (*Remember to **change** the **```"USER"```** and **```"PASS"```** fields to your actual username and password.*):
 
@@ -330,11 +332,11 @@ This tutorial also requires an access to [Primavera ERP](https://pt.primaverabss
     return dto;
     ```
 
-9. Perform a new Build
+11. Perform a new Build
 
-10. Go to the Application area, and validate that ERP Purchase Orders can now be listed.
+12. Go to the Application area, and validate that ERP Purchase Orders can now be listed.
 
-11. On Modeling area, navigate to *"PurchaseOrder"* tab *"[Entity Behaviours](https://docs.numbersbelieve.com/omnia3_modeler_datasources.html)"*, and define a behaviour to be executed *"After Change"*. This behaviour will be used to set default values on Commitment instances.
+13. On Modeling area, navigate to *"PurchaseOrder"* tab *"[Entity Behaviours](https://docs.numbersbelieve.com/omnia3_modeler_datasources.html)"*, and define a behaviour to be executed *"After Change"*. This behaviour will be used to set default values on Commitment instances.
 
     Copy and paste the following code:
 
@@ -346,7 +348,7 @@ This tutorial also requires an access to [Primavera ERP](https://pt.primaverabss
 	});
     ```
 
-12. On *"PurchaseOrder"* navigate to tab User Interface to reorganize UI, with the following inputs:
+14. On *"PurchaseOrder"* navigate to tab User Interface to reorganize UI, with the following inputs:
 
     - On document header, remove Code attribute and reorganize remaining attributes
     - On OrderLines attributes, hide attributes Provider, Receiver, Code and Primavera
@@ -355,11 +357,11 @@ This tutorial also requires an access to [Primavera ERP](https://pt.primaverabss
     
     ![Modeler purchaseOrder UI_Result](/images/tutorials/multisystemconnector/PurchaseOrder-UI-Result.PNG)
 
-13. Perform a new Build
+15. Perform a new Build
 
-14. Go to application area. Access the option ***Series / PurchaseOrderSerie / Add new***, and create a new number serie for document PurchaseOrder
+16. Go to application area. Access the option ***Series / PurchaseOrderSerie / Add new***, and create a new number serie for document PurchaseOrder
 
-15. Access the option ***Documents / PurchaseOrder / Add new***, and create a new Purchase Order. After saving, the Order should be integrated on ERP Primavera
+17. Access the option ***Documents / PurchaseOrder / Add new***, and create a new Purchase Order. After saving, the Order should be integrated on ERP Primavera
 
 ## 5. Communicate with an external API
 

@@ -50,13 +50,13 @@ This tutorial assumes that you have created a OMNIA tenant ([click here to see h
 
     ![Modeler create Agent](/images/tutorials/connector/Modeler-Create-Agent.PNG)
 
-4. On Agent *"Contact"*, create the following attributes:
+4. On Agent *"Contact"*, create the following **Primitive** attributes:
 
-    - BirthDate (Primitive/Date)
+    - BirthDate (Type: Date)
 
 	![Modeler create BirthDate_attribute](/images/tutorials/connector/Modeler-Create-Attribute-BirthDate.PNG)
 
-    - PhoneNo (Primitive/Text)
+    - PhoneNo (Type: Text)
 
 	![Modeler create PhoneNo_attribute](/images/tutorials/connector/Modeler-Create-Attribute-PhoneNo.PNG)
 

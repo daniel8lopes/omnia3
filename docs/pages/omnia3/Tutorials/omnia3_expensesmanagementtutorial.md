@@ -42,7 +42,7 @@ This tutorial assumes that you have created a OMNIA tenant, and are logged in as
   
     ![Modeler_Create_Commitment](/images/tutorials/expensemanagement/Modeler-Add-Commitment.PNG)
  
-9. Still on Commitment ***ExpenseRefundRequest***, create a new **Attribute**, by clicking the button  **Add new**  on the top right side, and setting its  *Name*  to  **ExpenseAmount**, *Type* as ***Primitive / Decimal***, and as required by checking option *Is required?*. Additionally, set *_amount* attribute as read-only.
+9. Still on Commitment ***ExpenseRefundRequest***, create a new **Attribute**, by clicking the button  **Add new / Primitive**  on the top right side, and setting its  *Name*  to  **ExpenseAmount**, *Type* as ***Decimal***, and as required by checking option *Is required?*. Additionally, set *_amount* attribute as read-only.
     
 10. Add a new document (by accessing the option ***Documents / Add new*** button) and set its *Name* as **ExpenseReport**. 
    
@@ -58,21 +58,21 @@ This tutorial assumes that you have created a OMNIA tenant, and are logged in as
 
 15. Open ***Documents / Expense Report*** and create a document. As you can see, the interface usability can be improved. We will now proceed to simplify it, and add more information.
 
-16. Go back to modeling area (through the top bar option) and edit the **Document / ExpenseReport**  document to simplify its interface. Add a new attribute by clicking on button  ***Add new***. Set its *Name* as **Company**, its *Type*  as  ***Agent / Company***, and as required by checking option *Is required?*.
+16. Go back to modeling area (through the top bar option) and edit the **Document / ExpenseReport**  document to simplify its interface. Add a new attribute by clicking on button  ***Add new / Reference***. Set its *Name* as **Company**, its *Type*  as  ***Agent / Company***, and as required by checking option *Is required?*.
 
-17. Click on button **Add new** to add an **Attribute** to your **Document**. Set its *Name* as **ExpenseLines**, *Type* as ***Commitment / ExpenseRefundRequest***.
+17. Click on button **Add new / Collection** to add an **Attribute** to your **Document**. Set its *Name* as **ExpenseLines**, *Type* as ***Commitment / ExpenseRefundRequest***.
 
     ![Modeler_Add_Commitment_Attribute](/images/tutorials/expensemanagement/Modeler-Add-ExpenseReport-ExpenseRefundRequest.PNG)
 
-    - Add a new Attribute to your **Document**. Set its *Name* as **Currency**, *Type* as ***Generic Entity / Currency***, and as required by checking option *Is required?*.
+    - Add a new **Reference** attribute to your **Document**. Set its *Name* as **Currency**, *Type* as ***Generic Entity / Currency***, and as required by checking option *Is required?*.
 
-    - Add a new Attribute to your **Document**. Set its *Name* as **Employee**, *Type* as ***Agent / Employee***, and as required by checking option *Is required?*.
+    - Add a new **Reference** attribute to your **Document**. Set its *Name* as **Employee**, *Type* as ***Agent / Employee***, and as required by checking option *Is required?*.
 
-    - Add a new Attribute to your **Document**. Set its *Name* as **ExchangeRate**, *Type* as ***Primitive / Decimal***, and as required by checking option *Is required?*.
+    - Add a new  **Primitive** attribute to your **Document**. Set its *Name* as **ExchangeRate**, *Type* as ***Decimal***, and as required by checking option *Is required?*.
 
-    - Add a new Attribute to your **Document**. Set its *Name* as **TotalAmount**, *Type* as ***Primitive / Decimal***, as read only by checking option *Is read only* and as required by checking option *Is required?*.
+    - Add a new  **Primitive** attribute to your **Document**. Set its *Name* as **TotalAmount**, *Type* as ***Decimal***, as read only by checking option *Is read only* and as required by checking option *Is required?*.
     
-    - Add a new Attribute to your **Document**. Set its *Name* as **ExpenseDate**, *Type* as ***Primitive / Date***, and as required by checking option *Is required?*.
+    - Add a new **Primitive** attribute to your **Document**. Set its *Name* as **ExpenseDate**, *Type* as ***Date***, and as required by checking option *Is required?*.
 
 18. Perform a new Build (by accessing the option ***Versioning / Builds / Create new***). Access the application and test the new creation of the document.
 

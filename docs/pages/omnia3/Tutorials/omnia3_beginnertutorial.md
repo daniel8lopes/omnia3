@@ -53,7 +53,7 @@ If you do not have a tenant yet, please follow the steps of the [Tenant Creation
 
     ![Modeler_Create_Commitment](/images/tutorials/beginner/Modeler-Create-Commitment.PNG)
 
-10. Add a new attribute by clicking on button **Add new**. Set its *Name* as **UnitPrice**, *Type* as ***Primitive / Decimal***, and as required by checking option *Is required?*.
+10. Add a new attribute by clicking on button **Add new / Primitive**. Set its *Name* as **UnitPrice**, *Type* as ***Decimal***, and as required by checking option *Is required?*.
 
     ![Modeler_Create_Attribute](/images/tutorials/beginner/Modeler-Create-Attribute.PNG)
 
@@ -63,7 +63,7 @@ If you do not have a tenant yet, please follow the steps of the [Tenant Creation
 
 13. Add a new document by selecting option ***Documents / Add new***. Set **PurchaseOrder** as the document's *Name*;
 
-14. Click on ***Attribute / Add new*** in **Document**. Set its *Name* as *OrderLines*, *Type* as **Commitment > GoodsPurchaseRequest**.
+14. Click on ***Attribute / Add new / Collection*** in **Document**. Set its *Name* as *OrderLines*, *Type* as **Commitment > GoodsPurchaseRequest**.
 
     ![Modeler_Create_Composite_Attribute](/images/tutorials/beginner/Modeler-Create-OrderLines-Attribute.PNG)
 
@@ -75,7 +75,7 @@ If you do not have a tenant yet, please follow the steps of the [Tenant Creation
 
 18. Go back to modeling area (by accessing top bar menu option ***Modeler***) and edit the **PurchaseOrder** document to simplify its interface. Add a new attribute by clicking on button **Add new**. Set its *Name* as **Company**, *Type* as ***Agent / Company***, and as required by checking option *Is required?*.
 
-19. Add ***Attribute / Add new***. Set its *Name* as **Supplier**, *Type* as ***Agent / Supplier***, and as required by checking option *Is required?*. 
+19. Add ***Attribute / Add new / Reference***. Set its *Name* as **Supplier**, *Type* as ***Agent / Supplier***, and as required by checking option *Is required?*. 
 
 20. Navigate to tab *Entity Behaviours* and click the button ***Add new / After Change*** to add a new **After Change** Behaviour to fill **_provider** and **_receiver** attributes. Define ***SetCommitmentAgents*** as Name and paste the following code:
 

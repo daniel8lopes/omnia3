@@ -25,7 +25,7 @@ It is necessary to have completed the steps in the  [Beginner tutorial](http://d
 
 ### Native API
  
-1. Go to the **Modeler** and edit the previously modeled document *PurchaseOrder*. Create a new  **Attribute**  by clicking the button  ***Add new***  on the top right side, and setting its  **Name** and **Type**  to  **SupplierName** and ***Primitive / Text***, respectively. Set the attribute as **Read Only**.
+1. Go to the **Modeler** and edit the previously modeled document *PurchaseOrder*. Create a new  **Attribute**  by clicking the button  ***Add new / Primitive***  on the top right side, and setting its  **Name** and **Type**  to  **SupplierName** and ***Text***, respectively. Set the attribute as **Read Only**.
 
     ![Modeler_Create_Document_Attribute](/images/tutorials/advanced/Modeler-Create-Attribute-SupplierName.PNG)
 
@@ -46,13 +46,13 @@ It is necessary to have completed the steps in the  [Beginner tutorial](http://d
 
     ![Modeler Add_Dependency](/images/tutorials/advanced/Modeler-Add-Behaviour-Dependency.PNG)
 
-2. Edit the previously modeled resource *Product*. Create a new  **Attribute**  by clicking the button  **Add new**  on the top right side, and setting its  **Name** and **Type**  to  **Artist** and ***Primitive / Text***, respectively. Set the attribute as **Read Only**.
+2. Edit the previously modeled resource *Product*. Create a new  **Attribute**  by clicking the button  **Add new / Primitive**  on the top right side, and setting its  **Name** and **Type**  to  **Artist** and ***Text***, respectively. Set the attribute as **Read Only**.
 
-2. Navigate to tab **Behaviour Namespaces** and add namespace System.Net.Http
+3. Navigate to tab **Behaviour Namespaces** and add namespace System.Net.Http
 
     ![Modeler Add_Namespace](/images/tutorials/advanced/Modeler-Add-Behaviour-Namespace.PNG)
 
-3. Create a new **Action Behaviour**  to fill the new attribute (on the PurchaseOrder document, go to tab ***Entity Behaviours*** and click on ***Add new / Action***). Set ***GetRecordData*** as **Name**, ***_code*** as the attribute that triggers the behaviour, and paste the following code:
+4. Create a new **Action Behaviour**  to fill the new attribute (on the PurchaseOrder document, go to tab ***Entity Behaviours*** and click on ***Add new / Action***). Set ***GetRecordData*** as **Name**, ***_code*** as the attribute that triggers the behaviour, and paste the following code:
 
     ```C#
     var client = new HttpClient() {DefaultRequestHeaders = {}};
@@ -79,9 +79,9 @@ It is necessary to have completed the steps in the  [Beginner tutorial](http://d
     }
     ```
 
-4. Build the model.
+5. Build the model.
 
-5. Go to **Application** area, and create a new **Product** resource. Observe that, when **Code** is identified (e.g. try with value 8540), the **Name** and **Artist** is automatically retrieved.
+6. Go to **Application** area, and create a new **Product** resource. Observe that, when **Code** is identified (e.g. try with value 8540), the **Name** and **Artist** is automatically retrieved.
 
     ![Application_Create_Resource](/images/tutorials/advanced/Application-Create-Product.PNG)
 
