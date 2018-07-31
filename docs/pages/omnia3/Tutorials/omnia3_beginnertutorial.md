@@ -53,7 +53,7 @@ If you do not have a tenant yet, please follow the steps of the [Tenant Creation
 
     ![Modeler_Create_Commitment](/images/tutorials/beginner/Modeler-Create-Commitment.PNG)
 
-10. Add a new attribute by clicking on button **Add new**. Set its *Name* as **UnitPrice**, *Type* as ***Primitive / Decimal***, and as required by checking option *Is required?*.
+10. Add a new attribute by clicking on button **Add new / Primitive**. Set its *Name* as **UnitPrice**, *Type* as ***Decimal***, and as required by checking option *Is required?*.
 
     ![Modeler_Create_Attribute](/images/tutorials/beginner/Modeler-Create-Attribute.PNG)
 
