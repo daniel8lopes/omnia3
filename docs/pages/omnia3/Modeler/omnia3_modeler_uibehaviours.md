@@ -17,7 +17,7 @@ User interface-specific behaviours, written in JavaScript, allow you to customiz
 
 The API-side behaviours are described on [this page](omnia3_modeler_behaviours.html). Any behaviour that is related to the business logic should be created using those behaviours, as they are the only ones that always run!
 
- A UI behaviour is defined by (see [UIML](omnia3_languages_uiml.html) for detailed definition):
+ A UI behaviour is defined by:
 - its **type**, or the moment in which it will execute;
 - (optionally) its **element**, or which element of the form it is dependent on;
 - its **expression**, the aforementioned JavaScript code.

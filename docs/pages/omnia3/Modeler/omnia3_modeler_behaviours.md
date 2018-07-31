@@ -23,7 +23,7 @@ This document explains the Entity behaviours (here normally mentioned as 'behavi
 
 There are also user interface-specific behaviours, which have a similar logic to C# behaviours. They are written in JavaScript, and are described in [this page](omnia3_modeler_uibehaviours.html).
 
- A behaviour is defined by (see [BML](omnia3_languages_bml.html) for detailed definition):
+ A behaviour is defined by:
 - its **type**, or the moment in which it will execute;
 - (optionally) its **attribute**, or which attribute of the model it is dependent on;
 - its **expression**, the aforementioned C# code.
