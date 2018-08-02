@@ -20,9 +20,9 @@ All entities are modeled on a base concept, from the following: __Agents, Commit
 
 The base type adds some specifications to the modeled entity, such as:
 
-- Commitments/Events: entities that act as sub-entities of another entity. Cannot be created individually
-- Generic Entities: can act as *non-root*. These entities will act as sub-entities of another entity, and cannot be managed individually
-- Series: act as numerators for documents. Series are generated automatically when a new document is created
+* _Commitments/Events_: entities that act as sub-entities of another entity. Cannot be created individually
+* _Generic Entities_: can act as *non-root*. These entities will act as sub-entities of another entity, and cannot be managed individually
+* _Series_: act as numerators for documents. Series are generated automatically when a new document is created
 
 ### How to add a new entity?
 
