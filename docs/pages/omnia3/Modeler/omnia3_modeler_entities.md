@@ -43,7 +43,7 @@ On Generic Entities, the following property is available:
 * _Is a root entity?_: indicates if the entity acts only as a sub-entity;
 
 
-## 2. Attributes
+## 3. Attributes
 __*Entity / Attributes*__
 
 The attributes allow you to define the structure of your entity. Each one will represent a property in the data you can read or write.
@@ -74,7 +74,7 @@ In the attributes list, select the attribute you want to change and check the _I
 ### How to remove an attribute?
 Picking the attribute you want to remove, select the option _Delete_ and confirm your option in the confirmation window.
 
-## 3. Behaviours
+## 4. Behaviours
 __*Entity / Behaviours*__
 
 In order to extend your application you can add new behaviours to your entities.
@@ -95,7 +95,7 @@ In the behaviours list, select the behaviour you want to change and, in the code
 ### How to remove a behaviour?
 Picking the behaviour you want to remove, select the option _Delete_ and confirm your option in the confirmation window.
 
-## 4. User Interface
+## 5. User Interface
 __*Entity / User Interface*__
 
 In _OMNIA Platform_ you can customize how the fields are shown in the form to create or edit of your entity.
@@ -123,7 +123,7 @@ In the User Interface tab, select the element you want to change and, in the _Si
 ### How to remove an element?
 Picking the element you want to remove, select the option _Delete_ and confirm your option in the confirmation window.
 
-## 5. User Interface Behaviours
+## 6. User Interface Behaviours
 __*Entity / User Interface Behaviours*__
 
 In order to extend your application user interface you can add new behaviours to your entities' user interface.
