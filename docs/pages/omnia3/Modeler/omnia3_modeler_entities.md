@@ -10,9 +10,38 @@ folder: omnia3
 
 ## 1. Introduction
 
-In _OMNIA Platform_ you can add your own entities, each representing one of the following concepts: __Agents, Commitments, Documents, Events, Generic entities, Resources or Series__.
+In _OMNIA Platform_ you can add your own entities, and each one is based on a OMNIA concept.
 
 In each entity, it's possible to define the attributes, the behaviours and the user interface,
+
+## 2. Model Entities
+
+All entities are modeled on a base concept, from the following: __Agents, Commitments, Documents, Events, Generic entities, Resources or Series__.
+
+The base type adds some specifications to the modeled entity, such as:
+
+- Commitments/Events: entities that act as sub-entities of another entity. Cannot be created individually
+- Generic Entities: can act as *non-root*. These entities will act as sub-entities of another entity, and cannot be managed individually
+- Series: act as numerators for documents. Series are generated automatically when a new document is created
+
+### How to add a new entity?
+
+First, the base concept must be selected on the modeling area menu. Then, select the option _Add new_ and define the following properties:
+
+* _Name_: the name of the entity (needs to be unique within the model);
+* _Description_: the textual explanation of the entities' purpose (can be used as development documentation);
+* _Uses a custom data source?_: indicates if the attribute is entirely managed on OMNIA, or resides on an external data source;
+
+On Commitments or Events, the following properties are required:
+
+* _You want to exchange the resource_: the __resource__ to be used as the transaction resource;
+* _It will be provided by the agent_: the __agent__ to be used as the transaction provider agent;
+* _And received by the agent_: the __agent__ to be used as the transaction receiver agent;
+
+On Generic Entities, the following property is available:
+
+* _Is a root entity?_: indicates if the entity acts only as a sub-entity;
+
 
 ## 2. Attributes
 __*Entity / Attributes*__
