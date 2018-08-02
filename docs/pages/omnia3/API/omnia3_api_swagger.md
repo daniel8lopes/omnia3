@@ -60,6 +60,8 @@ if (!discoEndpoint.IsError)
 }
 ```
 
+As you can see in the previous example, when a token is requested, the scope must be sent. Currently, OMNIA platform supports only one scope, named *api*. This is the scope required to access OMNIA API.
+
 ### 3.2 Using HttpClient to send request to the API
 
 Using the built-in .NET HttpClient, you can use the requested token to perform requests to our API.
