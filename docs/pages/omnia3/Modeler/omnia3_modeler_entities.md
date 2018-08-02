@@ -10,7 +10,7 @@ folder: omnia3
 
 ## 1. Introduction
 
-In _OMNIA Platform_ you can add your own entities, each one represeting one of the following concepts: __Agents, Commitments, Documents, Events, Generic entities, Resources or Series__.
+In _OMNIA Platform_ you can add your own entities, each representing one of the following concepts: __Agents, Commitments, Documents, Events, Generic entities, Resources or Series__.
 
 In each entity, it's possible to define the attributes, the behaviours and the user interface,
 
