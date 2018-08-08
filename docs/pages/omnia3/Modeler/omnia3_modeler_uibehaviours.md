@@ -33,6 +33,13 @@ There are currently three different execution moments for UI behaviours, which f
 
 ![The behaviour execution lifecycle](images\modeler\UIBehaviourLifecycle.png)
 
+**Important** 
+
+The *On Change* behaviours are only executed when the user changes directly the input. 
+
+If the value of an element is setted using other behaviour (User Interface or not), the *On Change* code will not be executed.
+
+
 ## 3. Usage
 
 There are many possible usage scenarios for these behaviours, as JavaScript coding will allow you to execute whatever you want. Usage examples are described in our [FAQ](omnia3_modeler_entities.html#5-user-interface-behaviours).
