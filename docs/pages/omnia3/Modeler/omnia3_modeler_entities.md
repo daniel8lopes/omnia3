@@ -173,3 +173,20 @@ In this sample, is removed and added (based on a condition) a message to the bas
     else
         this._metadata.elements._code.addMessage('My success message', 'success', 'validation');
 ```
+
+### How to manage the state of the add and remove options in an editable list?
+
+In this sample, the options to remove or add records of custom element *collection* are changed based on a condition:
+
+```JavaScript
+    if(this._code === ''){
+        // Disable the add option and hides the remove options
+        this._metadata.elements.collection.attributes.addEntry = "disabled";
+        this._metadata.elements.collection.attributes.removeEntry = "hidden";
+    }
+    else{
+        // Turns add and remove options enabled
+        this._metadata.elements.collection.attributes.addEntry = "enabled";
+        this._metadata.elements.collection.attributes.removeEntry = "enabled";
+    }
+```
