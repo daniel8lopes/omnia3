@@ -161,3 +161,15 @@ In this sample, custom element *supplier* value is changed:
 ```JavaScript
     this.supplier = "S001";
 ```
+
+### How to add or remove a message?
+
+In this sample, is removed and added (based on a condition) a message to the base element *_code*:
+
+```JavaScript
+    this._metadata.elements._code.removeMessage('validation');
+    if(this._code === '')
+        this._metadata.elements._code.addMessage('My error message', 'error', 'validation');
+    else
+        this._metadata.elements._code.addMessage('My success message', 'success', 'validation');
+```
