@@ -62,6 +62,7 @@ Behaviours that allow the user to extend the user interface, by:
 ### Data Analytics
 
 - Manage Queries
+- Create Advanced Queries using pgSQL
 - Generate Lists from Queries
 - Manage Lists
 - Manage Dashboards
