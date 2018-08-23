@@ -54,16 +54,19 @@ To add a join, edit a query, go to the **Joins** separator, and press _Add new_.
     - _Outer path_: Condition of the join for the outer path;
 
 ### How to create an advanced query?
-The platform allows you to write your own query using SQL.
+The platform allows you to write your own query using SQL. This feature enables you to execute your own SQL in over the database.
 
-To do that, edit a query and, in **More options**, select **Show advanced editor** and you will see a textbox to write in your SQL statement.
+*The SQL will be used to generate a View in the PostgreSQL database, so the query needs to be compliant with the pgSQL Views syntax.
+Note: The query will be executed with Read Only privileges.*
+
+To do that, edit a query and, in **More options**, select **Show advanced editor** and you will see a text box to write in your SQL statement.
 
 _**Naming conventions**_
 
 Each entity you add to the model have a SQL view to allow you to easily access the data. Also, each attribute whose *Maximum number of records* is more than 1, will have a different SQL view.
 
 So, the name of the SQL views respects the following rules:
-* SQL views of entities: **vw_MyEntityName**
+* SQL views of entities (the name of the entity with the *vw_* prefix): **vw_MyEntityName**
 * SQL views of attributes with *Maximum number of records* > 1: **vw_MyEntityName_MyAttributeName**
 
 Each SQL view will be composed with as many columns as attributes of the entity. The column name is the same as the attribute name.
