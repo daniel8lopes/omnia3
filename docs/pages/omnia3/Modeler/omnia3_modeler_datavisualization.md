@@ -53,6 +53,43 @@ To add a join, edit a query, go to the **Joins** separator, and press _Add new_.
     - _Inner path_: Condition of the join for the inner path;
     - _Outer path_: Condition of the join for the outer path;
 
+### How to create an advanced query?
+The platform allows you to write your own query using SQL.
+
+To do that, edit a query and, in **More options**, select **Show advanced editor** and you will see a textbox to write in your SQL statement.
+
+**Naming conventions**
+
+Each entity you add to the model have a SQL view to allow you to easily access the data. Also, each attribute whose *Maximum number of records* is more than 1, will have a different SQL view.
+
+So, the name of the SQL views respects the following rules:
+* SQL views of entities: **vw_MyEntityName**
+* SQL views of attributes with *Maximum number of records* > 1: **vw_MyEntityName_MyAttributeName**
+
+Each SQL view will be composed with as many columns as attributes of the entity. The column name is the same as the attribute name.
+
+**Examples**
+
+*Get the records from an entity*
+```SQL
+    SELECT document._code, document._date, document.Customer FROM vw_MyDocument document
+```
+
+*Get the records from a collection attribute*
+```SQL
+    SELECT document._code, lines._resource, lines._amount 
+    FROM vw_MyDocument document
+    JOIN vw_MyDocument_Lines lines on lines.identifier = document.identifier
+```
+
+*Get a sum of the value of an attribute*
+```SQL
+    SELECT document._code, lines._resource, SUM(lines._amount) as total 
+    FROM vw_MyDocument document
+    JOIN vw_MyDocument_Lines lines on lines.identifier = document.identifier
+    GROUP BY document._code, lines._resource
+```
+
 ## 3. Lists
 __*Data Analytics / Lists*__
 
