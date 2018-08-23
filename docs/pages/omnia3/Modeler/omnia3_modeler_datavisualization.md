@@ -56,8 +56,9 @@ To add a join, edit a query, go to the **Joins** separator, and press _Add new_.
 ### How to create an advanced query?
 The platform allows you to write your own query using SQL. This feature enables you to execute your own SQL in over the database.
 
-*The SQL will be used to generate a View in the PostgreSQL database, so the query needs to be compliant with the pgSQL Views syntax.
-Note: The query will be executed with Read Only privileges.*
+*The SQL will be used to generate a View in the PostgreSQL database, so the query needs to be compliant with the pgSQL Views syntax.*
+
+*Note: The query will be executed with Read Only privileges over the application data of that Tenant.*
 
 To do that, edit a query and, in **More options**, select **Show advanced editor** and you will see a text box to write in your SQL statement.
 
