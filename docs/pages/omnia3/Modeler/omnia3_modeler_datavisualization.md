@@ -58,7 +58,7 @@ The platform allows you to write your own query using SQL.
 
 To do that, edit a query and, in **More options**, select **Show advanced editor** and you will see a textbox to write in your SQL statement.
 
-**Naming conventions**
+_**Naming conventions**_
 
 Each entity you add to the model have a SQL view to allow you to easily access the data. Also, each attribute whose *Maximum number of records* is more than 1, will have a different SQL view.
 
@@ -68,7 +68,7 @@ So, the name of the SQL views respects the following rules:
 
 Each SQL view will be composed with as many columns as attributes of the entity. The column name is the same as the attribute name.
 
-**Examples**
+_**Examples**_
 
 *Get the records from an entity*
 ```SQL
