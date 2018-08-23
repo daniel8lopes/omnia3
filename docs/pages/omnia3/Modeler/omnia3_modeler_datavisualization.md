@@ -120,7 +120,7 @@ To create a list manually, select the option _Add new_ when in the list of Lists
 When the list is created manually, after its creation it will be empty, and you must select which columns from the query you want to show.
 
 By editing a list in the menu, and selecting the option _Add new_, you can add the following information:
-* _Query property_: The property of the query this column will represent;
+* _Query property_: The property of the query this column will represent. In case of advanced queries you will define the column alias;
 * _Label_: What the label of the column will say;
 * _Help Text_: Auxiliary text that explains this column to users;
 * _Format as_: Which formatting strategy should this column have. Similar to spreadsheet applications, i.e. a result of "5" can be shown normally, or formatted as a decimal.
