@@ -94,6 +94,7 @@ Property | Explanation|
 
 
  __*Tenant Context*__
+
  Property | Explanation|
 ----------|----------|
  **code** | The code of the current tenant.
@@ -102,12 +103,14 @@ Property | Explanation|
 
 
  __*Operation Context*__
+
  Property | Explanation|
 ----------|----------|
  **dataSource** | The code of the data source used in the current operation.
 
 
  __*Authentication Context*__
+
  Property | Explanation|
 ----------|----------|
  **username** | The user name of the current user.
@@ -132,6 +135,7 @@ apiClient
 ```
 
 ### 5.1 Available operations
+
 | Operation | |
 |-----------|-|
 |doGet(address, preferHeader) | GET request |
