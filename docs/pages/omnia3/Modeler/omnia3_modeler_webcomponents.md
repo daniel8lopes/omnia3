@@ -132,15 +132,12 @@ apiClient
 ```
 
 ### 5.1 Available operations
- Operation | |
----------|----------|
-doGet(address, preferHeader) | GET request
-doPost(address, requestBody, etag, preferHeader) | POST request
-doDelete(addressm etag) | DELETE request
-doPatch(address, requestBody, etag, preferHeader) | PATCH request
+| Operation | |
+|---------|----------|
+|doGet(address, preferHeader) | GET request |
+|doPost(address, requestBody, etag, preferHeader) | POST request |
+|doDelete(address, etag) | DELETE request |
+|doPatch(address, requestBody, etag, preferHeader) | PATCH request |
 
-
-## 6. Developing and testing Web Components
-
-
-## 7. Samples
+## 6. Samples
+Click [here]() to access to our collection of Web Components and find a set of components ready to use in your applications.
