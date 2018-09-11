@@ -95,8 +95,8 @@ Property | Explanation|
 
  __*Tenant Context*__
 
- Property | Explanation|
-----------|----------|
+Property | Explanation|
+---------|------------|
  **code** | The code of the current tenant.
  **enviornmentCode** | The code of the current environment.
  **version** | The current version of the application.
@@ -104,15 +104,15 @@ Property | Explanation|
 
  __*Operation Context*__
 
- Property | Explanation|
-----------|----------|
+Property | Explanation|
+---------|------------|
  **dataSource** | The code of the data source used in the current operation.
 
 
  __*Authentication Context*__
 
- Property | Explanation|
-----------|----------|
+Property | Explanation|
+---------|------------|
  **username** | The user name of the current user.
 
 
@@ -136,12 +136,12 @@ apiClient
 
 ### 5.1 Available operations
 
-| Operation | |
-|-----------|-|
-|doGet(address, preferHeader) | GET request |
-|doPost(address, requestBody, etag, preferHeader) | POST request |
-|doDelete(address, etag) | DELETE request |
-|doPatch(address, requestBody, etag, preferHeader) | PATCH request |
+Operation | Explanation|
+---------|------------|
+doGet(address, preferHeader) | GET request
+doPost(address, requestBody, etag, preferHeader) | POST request
+doDelete(address, etag) | DELETE request
+doPatch(address, requestBody, etag, preferHeader) | PATCH request 
 
 ## 6. Samples
 Click [here]() to access to our collection of Web Components and find a set of components ready to use in your applications.
