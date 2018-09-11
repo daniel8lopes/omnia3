@@ -151,6 +151,10 @@ entries:
       url: /omnia3_modeler_datavisualization.html
       output: web, pdf
 
+    - title: Web Components
+      url: /omnia3_modeler_webcomponents.html
+      output: web, pdf
+
         
   - title: Application
     output: web, pdf

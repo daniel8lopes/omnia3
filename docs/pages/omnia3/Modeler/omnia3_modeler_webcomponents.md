@@ -1,0 +1,146 @@
+---
+title: Web Components
+keywords: omnia3
+summary: "Web Components"
+sidebar: omnia3_sidebar
+permalink: omnia3_modeler_webcomponents.html
+folder: omnia3
+---
+
+## 1. Introduction
+In the **OMNIA Platform**, in addition to being possible to customize how the application works (using the Behaviours), it's possible to define how it looks like.
+
+Using [**Web Components**](https://developer.mozilla.org/en-US/docs/Web/Web_Components), written in Javascript, you can extend the default layout, adding your own elements.
+
+You can add Web Components to a **Form** or to a **Dashboard**.
+In both scenarios, you can have two different approachs:
+* Standalone Web Component: has all the logic to retrieve and processing the data;
+* Mapped Web Component: has the logic to process the data, which is passed as parameters based on the modeled mapping.
+
+A Web Component is defined by:
+* its **custom element name**, or the name of the element that will be created to be attached to the page's DOM;
+* its expression, the aforementioned JavaScript code.
+
+## 2. Structure of the Web Component
+To create a new Web Component it's necessary to create a [Javascript class](https://developer.mozilla.org/pt-PT/docs/Web/JavaScript/Reference/Classes) that extends [HTMLElement](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement) and adds to the DOM's custom elements the Web Component.
+
+An excerpt of a Web Component with the minimum configurations, would be:
+
+```javascript
+class MyComponent extends HTMLElement {  
+  constructor() {
+   super();
+   
+   // Using regular Javascript, create the content of the Web Component
+   this.wrapper = document.createElement('div');
+   this.wrapper.innerHTML = 'My first Web Component in OMNIA Platform!';
+   
+   // Append the elements to the Web Component
+   this.appendChild(this.wrapper);
+  }
+}
+
+// Add to DOM custom elements you Web Component
+// The 1st parameter represents the custom element name (must be the same you write when you add the Web Component to the model)
+// The 2nd parameter is the class that will be used to represent your component (the class created in this code block)
+customElements.define('omnia-component', MyComponent);
+```
+
+## 3. Mappings
+If it's necessary to use the data of another element (for example, a textarea to display the value of an attribute or a chart to display the data of a list) you need to model the mappings between the element that owns the data and the Web Component.
+
+To do that, when you are adding the Web Component to the page you need:
+* If the page is a **Form**, set the mapping with the attribute of the entity;
+* If the page is a **Dashboard**, set the mapping with the list that have the required data.
+
+After the mapping is configured, the Web Component will receive the data as a parameter. To know how to use it, check the [_Available parameters_](#4-available-parameters) section.
+
+## 4. Available parameters
+Each component can receive up to three parameters, depending on the mapping coniguration:
+* **context**: the current session information (the structure is represented [below](#context-structure));
+* **state**: all the data of the current Form or Dashboard, in the same structure of the [User Interface Behaviours](omnia3_modeler_uibehaviours.html#4-structure-of-the-class);
+* **value**: if the mapping is configured, has the value of the mapped element.
+
+### 4.1. Using the parameters
+To use the parameters, it's necessary to know when they have his value changed.
+
+The approach we recommend is to use the [setters](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/set) of the class to catch the updates.
+
+Check the next code block to see how you can do it.
+
+```javascript
+class MyComponent extends HTMLElement {  
+  constructor() {
+   super();
+   ...
+  }
+  
+  set value(newValue){
+    // When the property value changes, update the Web Component content
+    this.wrapper.innerHTML = newValue;
+  }
+}
+
+...
+```
+
+### Context structure
+
+Property | Explanation|
+---------|----------|
+ **tenant** | Information about the tenant the user is working on, using the _TenantContext_ structure.
+ **operation** | Information about the operation the user is working on, using the _OperationContext_ structure.
+ **authentication** | Information about the operation the user is working on, using the _AuthenticationContext_ structure.
+
+
+ __*Tenant Context*__
+ Property | Explanation|
+---------|----------|
+ **code** | The code of the current tenant.
+ **enviornmentCode** | The code of the current environment.
+ **version** | The current version of the application.
+
+
+ __*Operation Context*__
+ Property | Explanation|
+---------|----------|
+ **dataSource** | The code of the data source used in the current operation.
+
+
+ __*Authentication Context*__
+ Property | Explanation|
+---------|----------|
+ **username** | The user name of the current user.
+
+
+## 5. Communicate with OMNIA API
+If the Web Component needs data from the OMNIA API, you can use a HTTP Client that is already setted.
+
+Check the sample below to know how to do it.
+```javascript
+...
+// Get the API Client
+const apiClient = context.createApiHttpClient();
+// Execute a Query, using the context data to compose the request address
+apiClient
+    .doPost(`/api/v1/${context.tenant.code}/${context.tenant.enviornmentCode}/application/Queries/MyQuery/Default`, {})
+    .then(response => {
+        const value = response.data[0].value;
+        this.wrapper.innerHTML = value;
+    });
+...
+```
+
+### 5.1 Available operations
+ Operation | |
+---------|----------|
+doGet(address, preferHeader) | GET request
+doPost(address, requestBody, etag, preferHeader) | POST request
+doDelete(addressm etag) | DELETE request
+doPatch(address, requestBody, etag, preferHeader) | PATCH request
+
+
+## 6. Developing and testing Web Components
+
+
+## 7. Samples
