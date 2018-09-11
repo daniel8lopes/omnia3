@@ -87,7 +87,7 @@ class MyComponent extends HTMLElement {
 ### Context structure
 
 Property | Explanation|
----------|----------|
+---------|------------|
  **tenant** | Information about the tenant the user is working on, using the _TenantContext_ structure.
  **operation** | Information about the operation the user is working on, using the _OperationContext_ structure.
  **authentication** | Information about the operation the user is working on, using the _AuthenticationContext_ structure.
@@ -95,7 +95,7 @@ Property | Explanation|
 
  __*Tenant Context*__
  Property | Explanation|
----------|----------|
+----------|----------|
  **code** | The code of the current tenant.
  **enviornmentCode** | The code of the current environment.
  **version** | The current version of the application.
@@ -103,13 +103,13 @@ Property | Explanation|
 
  __*Operation Context*__
  Property | Explanation|
----------|----------|
+----------|----------|
  **dataSource** | The code of the data source used in the current operation.
 
 
  __*Authentication Context*__
  Property | Explanation|
----------|----------|
+----------|----------|
  **username** | The user name of the current user.
 
 
@@ -133,7 +133,7 @@ apiClient
 
 ### 5.1 Available operations
 | Operation | |
-|---------|----------|
+|-----------|-|
 |doGet(address, preferHeader) | GET request |
 |doPost(address, requestBody, etag, preferHeader) | POST request |
 |doDelete(address, etag) | DELETE request |
