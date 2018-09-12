@@ -118,7 +118,7 @@ Property | Explanation|
 Property | Explanation|
 ---------|------------|
  **code** | The code of the current tenant.
- **enviornmentCode** | The code of the current environment.
+ **environmentCode** | The code of the current environment.
  **version** | The current version of the application.
 
 
@@ -146,7 +146,7 @@ Check the sample below to know how to do it.
 const apiClient = context.createApiHttpClient();
 // Execute a Query, using the context data to compose the request address
 apiClient
-    .doPost(`/api/v1/${context.tenant.code}/${context.tenant.enviornmentCode}/application/Queries/MyQuery/Default`, {})
+    .doPost(`/api/v1/${context.tenant.code}/${context.tenant.environmentCode}/application/Queries/MyQuery/Default`, {})
     .then(response => {
         const value = response.data[0].value;
         this.wrapper.innerHTML = value;
