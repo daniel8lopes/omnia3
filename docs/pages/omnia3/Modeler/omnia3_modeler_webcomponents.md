@@ -13,8 +13,8 @@ In the **OMNIA Platform**, in addition to being possible to customize how the ap
 Using [**Web Components**](https://developer.mozilla.org/en-US/docs/Web/Web_Components), written in Javascript, you can extend the default layout, adding your own elements.
 
 You can add Web Components to a **Form** or to a **Dashboard**.
-In both scenarios, you can have two different approachs:
-* Standalone Web Component: has all the logic to retrieve and processing the data;
+In both scenarios, you can have two different approaches:
+* Standalone Web Component: has all the logic to retrieve and process data;
 * Mapped Web Component: has the logic to process the data, which is passed as parameters based on the modeled mapping.
 
 A Web Component is defined by:
@@ -24,7 +24,7 @@ A Web Component is defined by:
 ## 2. Structure of the Web Component
 To create a new Web Component it's necessary to create a [Javascript class](https://developer.mozilla.org/pt-PT/docs/Web/JavaScript/Reference/Classes) that extends [HTMLElement](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement) and adds to the DOM's custom elements the Web Component.
 
-An excerpt of a Web Component with the minimum configurations, would be:
+An excerpt of a Web Component with the minimum configurations would be:
 
 ```javascript
 class MyComponent extends HTMLElement {  
@@ -51,12 +51,12 @@ If it's necessary to use the data of another element (for example, a textarea to
 
 To do that, when you are adding the Web Component to the page you need:
 * If the page is a **Form**, set the mapping with the attribute of the entity;
-* If the page is a **Dashboard**, set the mapping with the list that have the required data.
+* If the page is a **Dashboard**, set the mapping with the list that has the required data.
 
 After the mapping is configured, the Web Component will receive the data as a parameter. To know how to use it, check the [_Available parameters_](#4-available-parameters) section.
 
 ## 4. Available parameters
-Each component can receive up to three parameters, depending on the mapping coniguration:
+Each component can receive up to three parameters, depending on the mapping configuration:
 * **context**: the current session information (the structure is represented [below](#context-structure));
 * **state**: all the data of the current Form or Dashboard, in the same structure of the [User Interface Behaviours](omnia3_modeler_uibehaviours.html#4-structure-of-the-class);
 * **value**: if the mapping is configured, has the value of the mapped element.
@@ -117,7 +117,7 @@ Property | Explanation|
 
 
 ## 5. Communicate with OMNIA API
-If the Web Component needs data from the OMNIA API, you can use a HTTP Client that is already setted.
+If the Web Component needs data from the OMNIA API, you can use a HTTP Client that is already set.
 
 Check the sample below to know how to do it.
 ```javascript
