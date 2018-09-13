@@ -57,31 +57,13 @@ To do that, when you are adding the Web Component to the page you need:
 
 After the mapping is configured, the Web Component will receive the data as a parameter. To know how to use it, check the [_Available parameters_](#5-available-parameters) section.
 
-## 4. Exchanging data with Web Components
-
-To send data in and out from web components you can use different techniques.
-To send data in you can use [parameters](#5-available-parameters).
-To send data out and update a given attribute in a form, you need to use a [custom event](https://developer.mozilla.org/en-US/docs/Web/Guide/Events/Creating_and_triggering_events).
-OMNIA is watching for a 'value-updated' event where you can provide a new value to a given attribute.
-
-Example to update the attribute "message" with the value "Hello World":
-```
-this.dispatchEvent(new CustomEvent('value-updated',
-      {
-        detail: {
-          name: 'message',
-          value: 'Hello World'
-        }
-      }));
-```
-
-## 5. Available parameters
+## 4. Available parameters
 Each component can receive up to three parameters, depending on the mapping configuration:
 * **context**: the current session information (the structure is represented [below](#context-structure));
 * **state**: all the data of the current Form or Dashboard, in the same structure of the [User Interface Behaviours](omnia3_modeler_uibehaviours.html#4-structure-of-the-class);
 * **value**: if the mapping is configured, has the value of the mapped element.
 
-### 5.1. Using the parameters
+### 4.1. Using the parameters
 To use the parameters, it's necessary to know when they have his value changed.
 
 The approach we recommend is to use the [setters](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/set) of the class to catch the updates.
@@ -134,6 +116,25 @@ Property | Explanation|
 Property | Explanation|
 ---------|------------|
  **username** | The user name of the current user.
+
+
+## 5. Exchanging data with Web Components
+
+To send data in and out from web components you can use different techniques.
+To send data in you can use [parameters](#4-available-parameters).
+To send data out and update a given attribute in a form, you need to use a [custom event](https://developer.mozilla.org/en-US/docs/Web/Guide/Events/Creating_and_triggering_events).
+OMNIA is watching for a 'value-updated' event where you can provide a new value to a given attribute.
+
+Example to update the attribute "message" with the value "Hello World":
+```
+this.dispatchEvent(new CustomEvent('value-updated',
+      {
+        detail: {
+          name: 'message',
+          value: 'Hello World'
+        }
+      }));
+```
 
 
 ## 6. Communicate with OMNIA API
