@@ -69,7 +69,33 @@ sudo systemctl enable omnia omnia-*
     - IdentityServiceUrl: Platform hostname, prefixed with HTTP or HTTPS depending on what you are running, i.e. http://omnia.example.com/. See [this section](omnia3_deploymenttutorial.html#53-configure-https) for information on configuring HTTPS;
     - SMTP: A valid SMTP server configuration. **Essential** for the execution of Step 7;
     - (Optional) RedisConnectionString: A valid Redis connection string. In a format like `"redis-server.example.com:12345,password=abcdef"`. See [this section](omnia3_deploymenttutorial.html#54-configure-redis) for more information.
-    
+
+### 5.1.1 File storage
+
+By default the platform uses the local file system as the file storage. In case you want to use the Azure Blob Storage or AWS S3, the platform can be configured to do that, just add one of the following statements to the config file.
+
+**Azure Blob Storage:**
+```
+"FileStorage":{,
+	"Name": "AzureBlobStorage",
+	"Arguments":{
+		"ConnectionString":"AZURE_BLOB_CONNECTIONSTRING"
+	}
+  }
+```
+
+**AWS S3:**
+```
+"FileStorage":{
+	"Name": "AWSS3",
+	"Arguments":{
+		"AccessKey":"KEY",
+		"SecretKey":"SECRET KEY",
+		"Region":"REGION",
+		"BucketName":"BUCKET"
+	}
+  }
+```
 
 ### 5.2. Configure NGINX
 - Perform the following command to replace NGINX's default configurations with the ones we provide.
