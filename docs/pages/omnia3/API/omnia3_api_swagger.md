@@ -48,7 +48,7 @@ string accessToken = null;
 // discover endpoints from metadata
 var discoveryClient = new DiscoveryClient("[Identity Endpoint]") 
 { 
-	//Policy = { RequireHttps = false } //uncomment the Policy parameter if you use a insecure connection
+	//Policy = { RequireHttps = false } //uncomment the Policy property if you use a insecure connection
 };
 var discoEndpoint = await discoveryClient.GetAsync();
 if (!discoEndpoint.IsError)
