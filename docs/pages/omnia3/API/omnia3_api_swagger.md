@@ -46,11 +46,13 @@ using IdentityModel.Client;
 string accessToken = null;
 
 // discover endpoints from metadata
-var discoEndpoint = await DiscoveryClient.GetAsync("[IdentityServer Endpoint]");
+//uncomment the Policy parameter if you use a insecure connection
+var discoveryClient = new DiscoveryClient("http://172.22.15.121/identity/") { //Policy = { RequireHttps = false } };
+var discoEndpoint = await discoveryClient.GetAsync();
 if (!discoEndpoint.IsError)
 {
     //request token
-    var tokenClient = new TokenClient(disco.TokenEndpoint, userId, "[Your secret]");
+    var tokenClient = new TokenClient(discoEndpoint.TokenEndpoint, userId, "[Your secret]");
     var tokenResponse = await tokenClient.RequestClientCredentialsAsync("[Required scopes]");
 
     if (!tokenResponse.IsError)
