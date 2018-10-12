@@ -30,8 +30,8 @@ You will also need to build a **ConnectorMessage** object, to determine what we 
 An example of filling in these parameters would be, in a scenario where you want to, on a BeforeSave entity behaviour, execute an application behaviour called GetTheWeather on an external data source of type WeatherServer with the identifier Server1:
 
 ```csharp
-var context = new ConnectorContext(Context.Tenant.Code, Context.Tenant.EnvironmentCode,
-    Context.Tenant.Version, Context.Authentication.AccessToken, Context.Tenant.BaseEndpoint);
+var context = new ConnectorContext(_Context.Tenant.Code, _Context.Tenant.EnvironmentCode,
+    _Context.Tenant.Version, _Context.Authentication.AccessToken, _Context.Tenant.BaseEndpoint);
 var client = new ConnectorClient(context);
 var message = new ConnectorMessage(MessageType.Application, "GetTheWeather", OperationType.Execute);
 message.Data = new Dictionary<string,object>(){
