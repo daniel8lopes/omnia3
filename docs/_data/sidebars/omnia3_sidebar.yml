@@ -76,10 +76,6 @@ entries:
     - title: Application Behaviours Tutorial
       url: /omnia3_applicationbehaviourstutorial.html
       output: web, pdf
-      
-    - title: Expenses Management Tutorial
-      url: /omnia3_expensemanagementtutorial.html
-      output: web, pdf
            
     - title: Data Sources Tutorial
       url: /omnia3_datasourcetutorial.html
