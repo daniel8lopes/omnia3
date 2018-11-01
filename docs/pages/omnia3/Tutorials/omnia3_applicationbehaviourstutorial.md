@@ -89,7 +89,7 @@ A connector and an access to [Primavera ERP](https://pt.primaverabss.com), on ve
     Copy and paste the following code (Remember to change the "CONNECTORUSER" field to your actual connector user.):
 
     ```C#   
-    var context = new ConnectorContext(Context.Tenant.Code, Context.Tenant.EnvironmentCode, Context.Tenant.Version, Context.Authentication.AccessToken, Context.Tenant.BaseEndpoint);
+    var context = new ConnectorContext(_Context.Tenant.Code, _Context.Tenant.EnvironmentCode, _Context.Tenant.Version, _Context.Authentication.AccessToken, _Context.Tenant.BaseEndpoint);
     
     var client = new ConnectorClient(context);
     

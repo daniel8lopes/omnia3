@@ -144,10 +144,10 @@ Check the sample below to know how to do it.
 ```javascript
 ...
 // Get the API Client
-const apiClient = context.createApiHttpClient();
+const apiClient = _Context.createApiHttpClient();
 // Execute a Query, using the context data to compose the request address
 apiClient
-    .doPost(`/api/v1/${context.tenant.code}/${context.tenant.environmentCode}/application/Queries/MyQuery/Default`, {})
+    .doPost(`/api/v1/${_Context.tenant.code}/${_Context.tenant.environmentCode}/application/Queries/MyQuery/Default`, {})
     .then(response => {
         const value = response.data[0].value;
         this.wrapper.innerHTML = value;
