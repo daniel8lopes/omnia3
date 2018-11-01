@@ -32,8 +32,11 @@ It is necessary to have completed the steps in the  [Beginner tutorial](http://d
 2. Create a new ***Action Behaviour***  to fill the new attribute (on the *PurchaseOrder* document, go to tab **Entity Behaviours** and click on ***Add new / Action***). Set **GetSupplierName** as **Name**, **Supplier** as the attribute that triggers the behaviour, and paste the following code:
 
     ```C#
-    var supplier = ApiClient.Get(this.Context, "Supplier", newValue);
-    SupplierName = supplier["_name"].ToString();
+    var httpClient = _Context.CreateApplicationHttpClient();
+    
+    var result = httpClient.GetAsync<SupplierDto>($"Supplier/default/{newValue}").Result;
+    SupplierName = result._name;
+    
     ```
 
 3. Build the model.
