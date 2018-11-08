@@ -15,10 +15,14 @@ Release Date: 2018-11-08
 ### Implemented enhancements:
 
  - Support visibility based on screen sizes
-        - Mobile
-        - Tablet
-        - Desktop
-        - Widescreen
+  
+   - Mobile
+   - Tablet
+   - Desktop
+   - Widescreen
+ 
  - Add context to menu when a folder is open
  - Horizontal Scrollable lists
+ 
+ 
 
