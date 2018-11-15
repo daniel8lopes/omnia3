@@ -25,7 +25,7 @@ The manager will launch a new server process when configurable maximal number of
 * .NET Framework 4.7.2
 * Compatible Windows version:
     - Windows Server 2012 or higher
-    - Windows 7 SP1, 8.1 or 10 (Anniversary Update and beyond).
+    - Windows 8.1+ or 10 (Anniversary Update and beyond).
 
 ## 4. Debugging behaviours on the connector
 By default, the behaviours the connector executes will be downloaded to the temporary folder of your system, under an "omnia" folder, i.e., `%temp%/omnia` on Windows, and organized inside that folder by their tenant/environment codes.
