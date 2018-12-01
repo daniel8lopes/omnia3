@@ -24,5 +24,19 @@ Release Date: 2018-11-08
  - Add context to menu when a folder is open
  - Horizontal Scrollable lists
  
+ ## [3.0.85](#3.0.85)
+Release Date: 2018-11-30
+
+### Implemented enhancements:
+
+ - Calendar element
+ - UI Behaviours - Support async behaviours
+ - Access to translations in UI behaviours
+ 
+### Bugs:
+ 
+ - Don't allow to write in the readonly numeric fields
+ - Review list columns to don't break when the text is too big
+ 
  
 
