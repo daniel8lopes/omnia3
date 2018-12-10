@@ -52,4 +52,11 @@ Release Date: 2018-12-10
  - Exceptions throwed at Before Save in UI Behaviours aren't visible
  - Review list columns to don't break when the text is too big
  
+## [3.0.90](#3.0.90)
+Release Date: 2018-12-10
+
+### Bugs:
+ 
+ - 403 Error when using the lookup in a Calendar modal
+ 
 
