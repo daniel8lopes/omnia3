@@ -38,5 +38,18 @@ Release Date: 2018-11-30
  - Don't allow to write in the readonly numeric fields
  - Review list columns to don't break when the text is too big
  
+## [3.0.89](#3.0.89)
+Release Date: 2018-12-10
+
+### Implemented enhancements:
+
+ - Calendar: Add "See all" option when there are too many entries in one day
+ - Send list filters & sort conditions to external data sources data behaviours
+ 
+### Bugs:
+ 
+ - Translate column names in List filters
+ - Exceptions throwed at Before Save in UI Behaviours aren't visible
+ - Review list columns to don't break when the text is too big
  
 
