@@ -59,7 +59,7 @@ Release Date: 2018-12-10
  
  - 403 Error when using the lookup in a Calendar modal
  
-## [3.0.92](#3.0.92)
+## [3.0.93](#3.0.93)
 Release Date: 2018-12-12
 
 ### Bugs:
