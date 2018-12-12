@@ -59,4 +59,15 @@ Release Date: 2018-12-10
  
  - 403 Error when using the lookup in a Calendar modal
  
+## [3.0.92](#3.0.92)
+Release Date: 2018-12-12
 
+### Bugs:
+ 
+ - Trigger C# On Change behaviours on edit
+ 
+### Implemented enhancements:
+
+ - Allow to control the state of form footer options (using UI extensibility)
+ - Allow to pass list and list parameters to queries in UI Shared Reference attributes
+ - Date elements: Add a button to clear the value in optional fields
