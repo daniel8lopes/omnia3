@@ -76,7 +76,7 @@ By default the platform uses the local file system as the file storage. In case 
 
 **Azure Blob Storage:**
 ```
-"FileStorage":{,
+"FileStorage":{
 	"Name": "AzureBlobStorage",
 	"Arguments":{
 		"ConnectionString":"AZURE_BLOB_CONNECTIONSTRING"
