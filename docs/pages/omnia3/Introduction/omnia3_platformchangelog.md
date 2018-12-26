@@ -71,3 +71,19 @@ Release Date: 2018-12-12
  - Allow to control the state of form footer options (using UI extensibility)
  - Allow to pass list and list parameters to queries in UI Shared Reference attributes
  - Date elements: Add a button to clear the value in optional fields
+
+## [3.0.113](#3.0.113)
+Release Date: 2018-12-26
+
+### Bugs:
+ 
+ - Fix sidebar translations in top entries
+ - Allow to select the WebComponent mapping when the list is inside a container
+ - Don't block save button while the temporary is being updated
+ 
+### Implemented enhancements:
+
+ - Allow to redirect to application address using JS extensibility
+ - Allow to control the List "Add new" button state
+ - Allow to call a function when the calendar form opens
+ - Render Calendars in Dashboards
