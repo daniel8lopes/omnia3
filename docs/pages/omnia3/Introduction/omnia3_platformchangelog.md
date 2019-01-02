@@ -87,3 +87,13 @@ Release Date: 2018-12-26
  - Allow to control the List "Add new" button state
  - Allow to call a function when the calendar form opens
  - Render Calendars in Dashboards
+
+## [3.0.119](#3.0.119)
+Release Date: 2019-01-02
+ 
+### Implemented enhancements:
+
+ - Display cell text in a list cell on mouse over
+ - Preserve user session when the application reboot
+ - Apply a default filter in lists to only return active entities, when the inactive column exists in the query result
+ - Auto-select the role when there is only one
