@@ -97,3 +97,25 @@ Release Date: 2019-01-02
  - Preserve user session when the application reboot
  - Apply a default filter in lists to only return active entities, when the inactive column exists in the query result
  - Auto-select the role when there is only one
+ 
+ 
+## [3.0.153](#3.0.153)
+Release Date: 2019-01-29
+
+### Bugs:
+ - UI Reference Selector - use camel case getting selected data
+ - Limit the User's access to all areas based on permissions
+ - WebComponents in Lists: set the width property in the list header
+ - Review grid column's size calculation to fix multi-browser issues
+
+### Implemented enhancements:
+
+ - Commulative Roles
+ - Add JSON editor to ApplicationMenu
+ - Users with only 1 tenant: Don't show the tenant selection page
+ - Allow to define sensitive data attributes
+ - WebApp: Allow to export list data as CSV in application area
+ - Access to user language in Behaviours
+ - Grids: Show full text on mouse over (only to text fields)
+ - Remove version from behaviours Namespace
+ - Generate a .csproj per data source and allow to download it
