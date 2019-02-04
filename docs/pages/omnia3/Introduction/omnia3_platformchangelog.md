@@ -119,3 +119,24 @@ Release Date: 2019-01-29
  - Grids: Show full text on mouse over (only to text fields)
  - Remove version from behaviours Namespace
  - Generate a .csproj per data source and allow to download it
+
+ 
+## [3.0.170](#3.0.170)
+Release Date: 2019-02-04
+
+### Bugs:
+ - Review grid column's size calculation to fix multi-browser issues
+ - Validation: Ignore non-required attributes without value
+ - Users removal from Authorization Roles
+ - Queries - Filter non-text columns
+
+### Implemented enhancements:
+
+ - Generate a .csproj per data source and allow to download it
+ - Move behaviour compilation output to bin folder
+ - Lists: Allow to use ranges to filter numeric and date columns
+ - TopBar: Restrict the available space to show the tenant name
+ - Scheduler: block days that are out of the start and finish dates
+ - Call onDataRangeChange event when the date range or the view is changed
+ - Add Week calendar
+ - 
