@@ -139,4 +139,20 @@ Release Date: 2019-02-04
  - Scheduler: block days that are out of the start and finish dates
  - Call onDataRangeChange event when the date range or the view is changed
  - Add Week calendar
+
+
+## [3.0.174](#3.0.174)
+Release Date: 2019-02-06
+
+### Bugs:
+ - Can't control calendar form metadata: Review calendar form opening to wait for all components to load
+ - Date selectors aren't opening near to the inputs
+ - Allow to set details WebComponts as read-only
  - 
+ 
+
+### Implemented enhancements:
+
+ - Support a Data Sources with multiple runtimes (Breaking change - Required to update connector and re-build model.)
+ - Behaviours - Add to the namespace the name of the Data Source and of the runtime location
+ - Access to the user language in queries: @\_userLanguage parameter
