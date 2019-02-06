@@ -148,11 +148,10 @@ Release Date: 2019-02-06
  - Can't control calendar form metadata: Review calendar form opening to wait for all components to load
  - Date selectors aren't opening near to the inputs
  - Allow to set details WebComponts as read-only
- - 
  
 
 ### Implemented enhancements:
 
- - Support a Data Sources with multiple runtimes (Breaking change - Required to update connector and re-build model.)
+ - Support a Data Sources with multiple runtimes (Breaking change - Required to update connector to 1.0.108 or higher and re-build model)
  - Behaviours - Add to the namespace the name of the Data Source and of the runtime location
  - Access to the user language in queries: @\_userLanguage parameter
