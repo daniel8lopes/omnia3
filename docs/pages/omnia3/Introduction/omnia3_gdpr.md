@@ -37,4 +37,4 @@ Access to these documents requires an enquiry to the system's administrator.
 
 ## Production Environment
 
-instalation production environemtn of the platform we recomend the configuration of Secure Sockets Layer (SSL) and Hyper Text Transfer Protocol Secure (HTTPS).
+We recomend the configuration of Secure Sockets Layer (SSL) and Hyper Text Transfer Protocol Secure (HTTPS) at the moment of instalation of OMNIA's production environment.
