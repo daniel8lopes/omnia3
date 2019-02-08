@@ -198,7 +198,16 @@ entries:
     - title: Client
       url: /omnia3_connector_client.html
       output: web, pdf
-      
+    
+
+  - title: GDPR
+    output: web, pdf
+    folderitems:
+    - title: Introduction
+      url: /omnia3_gdpr.html
+      output: web, pdf
+
+    
   #- title: Languages
   #  output: web, pdf
   #  folderitems:
