@@ -17,8 +17,8 @@ OMNIA allows for attribute data classification as "sensitive", allowing the orga
 
 Defining an attribute as "sensitive" requires 2 steps:
 
-	 - Access the "Modeler" dashboard;
-	 - Find and access the attribute you need and activate the "Is sensitive?" option;
+ - Access the "Modeler" dashboard;
+ - Find and access the attribute you need and activate the "Is sensitive?" option;
  
 The role of DPO has unique access to the "Destroy Sensitive Data" option, that's located at the bottom left corner of every document, under the menu "More Options". Using this feature guarantees the immediate destruction of the document's sensitive data, immediately and irreversibly.
  
@@ -26,8 +26,8 @@ The role of DPO has unique access to the "Destroy Sensitive Data" option, that's
 
 Data encryption is mandatory for GDPR compliance and, to that effect, two elements need to be encrypted from the start:
 
-	- Database;
-	- Attachments Storage;
+- Database;
+- Attachments Storage;
 
 By ensuring the encription of these elements you are ensuring GDPR compliance. 
 
