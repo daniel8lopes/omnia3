@@ -18,7 +18,7 @@ Defining an attribute with Personal Identifiable Information (PII) as "sensitive
  - Access the "Modeler" dashboard;
  - Find and access the attribute you need and activate the "Is sensitive?" option;
  
-The role in question should has unique access to the "Destroy Sensitive Data" option, that's located at the bottom left corner of every document, under the menu "More Options". Using this feature guarantees the immediate destruction of the document's sensitive data, immediately and irreversibly.
+The role in question should have unique access to the "Destroy Sensitive Data" option, that's located at the bottom left corner of every document, under the menu "More Options". Using this feature guarantees the immediate destruction of the document's sensitive data, immediately and irreversibly.
  
 ## Encryption
 
