@@ -24,7 +24,7 @@ The role in question should has unique access to the "Destroy Sensitive Data" op
 
 Data encryption is recommended for GDPR compliance and, to that effect, two elements should to be encrypted from the start:
 
-- Database;
+- Database(s);
 - Attachments Storage;
 
 By ensuring the encription of these elements you are ensuring GDPR compliance. 
