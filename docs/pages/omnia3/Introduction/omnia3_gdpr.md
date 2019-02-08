@@ -11,9 +11,9 @@ GDPR compliance has been a priority for OMNIA since it's release and below is th
 
 ## Sensitive Data
 
-OMNIA allows for attribute data classification as "sensitive" that, when combined with the correctly configured user role, will allow the designated role to destroy it when/if necessary.
+OMNIA allows for attribute data classification as "sensitive" that, when combined with the correctly configured user role, will allow the designated role to destroy it when/if necessary. The destroy operation will replace the sensitive attribute values by meaningless data. All the history will also be destroyed.
 
-Defining an attribute as "sensitive" requires 2 steps:
+Defining an attribute with Personal Identifiable Information (PII) as "sensitive" requires 2 steps:
 
  - Access the "Modeler" dashboard;
  - Find and access the attribute you need and activate the "Is sensitive?" option;
@@ -22,10 +22,10 @@ The role in question should has unique access to the "Destroy Sensitive Data" op
  
 ## Encryption
 
-Data encryption is recommended for GDPR compliance and, to that effect, two elements should to be encrypted from the start:
+Data encryption is recommended for GDPR compliance and, to that effect, two elements should to be configured to be encrypted from the start:
 
 - Database(s);
-- Attachments Storage;
+- Attachments Storage (File Storage, AWS S3 or Azure Blob Storage);
 
 By ensuring the encription of these elements you are ensuring GDPR compliance. 
 
@@ -34,7 +34,9 @@ By ensuring the encription of these elements you are ensuring GDPR compliance.
 OMNIA logs every single API request and every single login attempt in its log files.
 
 Access to these documents requires an enquiry to the system's administrator.
+Logs can be accessed under _/var/logs/omnia_.
 
 ## Production Environment
 
-We recomend the configuration of Secure Sockets Layer (SSL) and Hyper Text Transfer Protocol Secure (HTTPS) at the moment of instalation of OMNIA's production environment.
+It's recomended the configuration of Secure Sockets Layer (SSL) and Hyper Text Transfer Protocol Secure (HTTPS) at the moment of instalation of OMNIA's production environment.
+It's also recommended to use [SSL Mode](https://www.npgsql.org/doc/connection-string-parameters.html) in PostgreSQL Database connection string.
