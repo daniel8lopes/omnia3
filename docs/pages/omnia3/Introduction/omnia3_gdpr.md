@@ -11,7 +11,7 @@ GDPR compliance has been a priority for OMNIA since it's release and below is th
 
 ## Sensitive Data
 
-OMNIA allows for attribute data classification as "sensitive" that, when combined with the correctly configured user role, will allow the designated role to destroy it when/if necessary. The destroy operation will replace the sensitive attribute values by meaningless data. All the history will also be destroyed.
+OMNIA allows for attribute data classification as "sensitive" that, when combined with the correctly configured user role, will allow the designated role to destroy it when/if necessary. This operation will replace the sensitive attribute values with meaningless data and destroy all its history.
 
 Defining an attribute with Personal Identifiable Information (PII) as "sensitive" requires 2 steps:
 
@@ -34,9 +34,9 @@ By ensuring the encription of these elements you are ensuring GDPR compliance.
 OMNIA logs every single API request and every single login attempt in its log files.
 
 Access to these documents requires an enquiry to the system's administrator.
+
 Logs can be accessed under _/var/logs/omnia_.
 
 ## Production Environment
 
-It's recomended the configuration of Secure Sockets Layer (SSL) and Hyper Text Transfer Protocol Secure (HTTPS) at the moment of instalation of OMNIA's production environment.
-It's also recommended to use [SSL Mode](https://www.npgsql.org/doc/connection-string-parameters.html) in PostgreSQL Database connection string.
+It's recomended the configuration of Secure Sockets Layer (SSL) and Hyper Text Transfer Protocol Secure (HTTPS) at the moment of instalation of OMNIA's production environment. Also recommended is the use of [SSL Mode](https://www.npgsql.org/doc/connection-string-parameters.html) in PostgreSQL Database connection string.
