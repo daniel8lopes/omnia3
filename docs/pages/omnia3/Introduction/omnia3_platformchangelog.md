@@ -9,7 +9,15 @@ folder: omnia3
 
 Visit our [Downloads](/omnia3_downloads.html#platform) page to get the latest version.
 
+## [3.0.179](#3.0.174)
+Release Date: 2019-02-19
 
+### Bugs:
+ - Can't export CSV from a list of an external Data Source that uses the Connector
+
+### Implemented enhancements:
+
+ - Auto select the data source when there is one available
 
 ## [3.0.174](#3.0.174)
 Release Date: 2019-02-06
