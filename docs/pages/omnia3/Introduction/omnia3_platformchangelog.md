@@ -9,6 +9,15 @@ folder: omnia3
 
 Visit our [Downloads](/omnia3_downloads.html#platform) page to get the latest version.
 
+## [3.0.181](#3.0.181)
+Release Date: 2019-02-20
+
+### Implemented enhancements:
+
+ - Enable case insensitive filters in the Application area
+ - Load System references without requiring the modeler to define them in the Data Source (Breaking change - Is required to remove System dependencies from the System Data Source)
+  
+
 ## [3.0.179](#3.0.179)
 Release Date: 2019-02-19
 
