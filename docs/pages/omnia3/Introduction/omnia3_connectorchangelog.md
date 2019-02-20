@@ -9,6 +9,13 @@ folder: omnia3
 
 Visit our [Downloads](/omnia3_downloads.html#connector) page to get the latest version.
 
+## [1.0.120](#1.0.120)
+Release Date: 2019-02-20
+
+### Implemented enhancements:
+
+  - Load .net System references without requiring the modeler to define them in the Data Source (Breaking change - Is required to remove .net System dependencies from the Data Source that is executing in the connector)
+
 ## [1.0.115](#1.0.115)
 Release Date: 2019-02-19
 
