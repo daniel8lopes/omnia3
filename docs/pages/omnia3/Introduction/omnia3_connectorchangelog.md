@@ -9,6 +9,13 @@ folder: omnia3
 
 Visit our [Downloads](/omnia3_downloads.html#connector) page to get the latest version.
 
+## [1.0.135](#1.0.135)
+Release Date: 2019-02-25
+
+### Implemented enhancements:
+
+- Enable Debugging experience through the Behaviour Server
+
 ## [1.0.120](#1.0.120)
 Release Date: 2019-02-20
 
