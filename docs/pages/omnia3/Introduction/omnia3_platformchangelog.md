@@ -9,6 +9,14 @@ folder: omnia3
 
 Visit our [Downloads](/omnia3_downloads.html#platform) page to get the latest version.
 
+## [3.0.185](#3.0.185)
+Release Date: 2019-02-25
+
+### Implemented enhancements:
+
+ - Enable Debugging experience through the Behaviour Server
+ - WebApp Menu: Allow to have nested folders
+
 ## [3.0.181](#3.0.181)
 Release Date: 2019-02-20
 
