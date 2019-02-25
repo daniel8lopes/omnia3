@@ -16,6 +16,7 @@ Release Date: 2019-02-25
 
  - Enable Debugging experience through the Behaviour Server
  - WebApp Menu: Allow to have nested folders
+ - Allow to model the same dependency for internal and external runtimes 
 
 ## [3.0.181](#3.0.181)
 Release Date: 2019-02-20
