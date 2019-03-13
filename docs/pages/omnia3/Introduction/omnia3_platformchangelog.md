@@ -9,6 +9,14 @@ folder: omnia3
 
 Visit our [Downloads](/omnia3_downloads.html#platform) page to get the latest version.
 
+## [3.0.187](#3.0.187)
+Release Date: 2019-03-13
+
+### Implemented enhancements:
+
+ - C# Behaviours: Collect all .net System dependencies without required definition
+ - Allow anonymous access to the System Version
+
 ## [3.0.185](#3.0.185)
 Release Date: 2019-02-25
 
