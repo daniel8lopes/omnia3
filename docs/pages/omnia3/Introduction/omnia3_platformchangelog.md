@@ -9,6 +9,17 @@ folder: omnia3
 
 Visit our [Downloads](/omnia3_downloads.html#platform) page to get the latest version.
 
+## [3.0.192](#3.0.192)
+Release Date: 2019-03-22
+
+### Bugs: 
+ - Month Calendar: Fix error where the same day was rendered multiple times
+
+### Implemented enhancements:
+
+ - Database connection management improvements
+ - Incremental builds
+
 ## [3.0.187](#3.0.187)
 Release Date: 2019-03-13
 
