@@ -9,6 +9,13 @@ folder: omnia3
 
 Visit our [Downloads](/omnia3_downloads.html#connector) page to get the latest version.
 
+## [1.0.146](#1.0.146)
+Release Date: 2019-03-28
+
+### Implemented enhancements:
+
+- Compile behaviours to .net 4.7.2 framework
+
 ## [1.0.135](#1.0.135)
 Release Date: 2019-02-25
 
