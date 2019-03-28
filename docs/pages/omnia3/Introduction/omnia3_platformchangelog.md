@@ -9,6 +9,19 @@ folder: omnia3
 
 Visit our [Downloads](/omnia3_downloads.html#platform) page to get the latest version.
 
+## [3.0.199](#3.0.199)
+Release Date: 2019-03-28
+
+### Bugs: 
+ - Error creating Application Behaviours in DataSource "System" - Missing Runtime Location
+
+### Implemented enhancements:
+
+ - Roles based privilege management for Tenant Application Policy
+ - Modeler: Allow to export and import templates
+ - Create security permissions on Build instead of when the entity is created
+ - Behaviours Accelerator - C# Get Entity behaviours
+
 ## [3.0.192](#3.0.192)
 Release Date: 2019-03-22
 
