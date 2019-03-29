@@ -36,22 +36,6 @@ Selecting the option _Add new_ when editing a query, you need to fill the follow
     - If you want to get properties from a collection inside the entity, use '>', i.e. ```OrderLines>_amount```;
     - If you want to get properties from a reference inside the entity, use '.', i.e. ```VATSummary._amount```;
 
-### How to add joins to a query?
-Joins, like in SQL, allow us to obtain information from more than one entity. 
-
-To add a join, edit a query, go to the **Joins** separator, and press _Add new_. You will need to fill the following information:
-* _Join with_: The modeled type of the entity to perform the Join with;
-* _Will not join with initial definition?_: Whether or not set A of the join is the entity targeted by the query;
-* _Type_: only visible if not joining with initial definition. The modeled type to target;
-* _Join type_: Uses the same concept as SQL's joins:
-    - _Inner_: All records that meet the join condition;
-    - _Left (Left Outer)_: All records from set A, along with the records from set B that meet the join condition;
-    - _Right (Right Outer)_: All records from the set B, along with the records from set A that meet the join condition;
-    - _Full (Full Outer)_: All records from both sets;
-    - _Cross_: multiplies the entries of set A by set B;
-* _Expression_:
-    - _Inner path_: Condition of the join for the inner path;
-    - _Outer path_: Condition of the join for the outer path;
 
 ### How to create an advanced query?
 The platform allows you to write your own query using SQL. This feature enables you to execute your own SQL in over the database.
@@ -69,6 +53,7 @@ Each entity you add to the model have a SQL view to allow you to easily access t
 So, the name of the SQL views respects the following rules:
 * SQL views of entities (the name of the entity with the *vw_* prefix): **vw_MyEntityName**
 * SQL views of attributes with *Maximum number of records* > 1: **vw_MyEntityName_MyAttributeName**
+    - To join this views with the parent entity, you can use the column _identifier_ from both views.
 
 Each SQL view will be composed with as many columns as attributes of the entity. The column name is the same as the attribute name.
 
@@ -93,6 +78,31 @@ _**Examples**_
     JOIN vw_MyDocument_Lines lines on lines.identifier = document.identifier
     GROUP BY document._code, lines._resource
 ```
+
+### Filtering data with the current user
+
+You can access a SQL parameter (**@_username**) with the current username. You can use that to filter data.
+
+```SQL
+    SELECT document._code, document._date, document.Customer FROM vw_MyDocument document
+    WHERE document.authorUsername = @_username
+```
+
+### Filtering data with the user roles
+
+You can access a SQL parameter (**@_userRoles**) with the roles of the current user.
+The parameter has the multiple roles comma separated. 
+If you want to validate if the user has one specific role, you can use the *user_is_in_role* function.
+
+```SQL
+    SELECT document._code, document._date, document.Customer FROM vw_MyDocument document
+    WHERE user_is_in_role(@_userRoles, 'Approver')
+```
+
+### Filtering data with the user language
+
+You can access a SQL parameter (**@_userLanguage**) with the active language of the current user.
+
 
 ## 3. Lists
 __*Data Analytics / Lists*__
