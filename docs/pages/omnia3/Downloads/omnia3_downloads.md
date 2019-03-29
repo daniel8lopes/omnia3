@@ -13,4 +13,4 @@ folder: omnia3
 
 ## Behaviours Development solution
 
-Visit our [GitHub page for this project](https://github.com/numbersbelieve/omnia3-behaviours) for the latest updates.
+Visit our [GitHub page for this project](https://github.com/omnialowcode/omnia3-behaviours) for the latest updates.

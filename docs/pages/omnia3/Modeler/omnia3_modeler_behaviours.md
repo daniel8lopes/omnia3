@@ -146,7 +146,23 @@ Setting the value of a Domain entity attribute will be ignored in case the User/
 
 In case you want to force an attribute to change, you can do it in the **Before Save** moment.
 
-## 7. .NET Versions
+## 7. Invoking the OMNIA API 
+
+To facilitate an API invocation, you have some methods in the context to setup the [HTTP Client](https://docs.microsoft.com/en-us/dotnet/api/system.net.http.httpclient?redirectedfrom=MSDN&view=netframework-4.7.2) with the required Headers and Tokens.
+
+Methods:
+    
+- **CreateApplicationHttpClient:** Create an HttpClient to invoke the API for the Application area of the current Tenant.
+- **CreateModelHttpClient:** Create an HttpClient to invoke the API for the Model area of the current Tenant.
+- **CreateSecurityHttpClient:** Create an HttpClient to invoke the API for the Tenant Security area of the current Tenant.
+- **CreateManagementHttpClient:** Create an HttpClient to invoke the API for the platform management area.
+
+```C#
+var httpClient = this._Context.CreateApplicationHttpClient();
+```
+
+
+## 8. .NET Versions
 
 The compiled C# code, targets the following platforms:
 
