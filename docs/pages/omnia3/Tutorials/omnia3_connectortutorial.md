@@ -1,7 +1,7 @@
 ---
-title: OMNIA Connector Tutorial
+title: Connector Tutorial
 keywords: omnia3
-summary: "OMNIA Platform 3.0 CSV File as Data Source"
+summary: "OMNIA Low-Code Development Platform - CSV File as Data Source"
 sidebar: omnia3_sidebar
 permalink: omnia3_connectortutorial.html
 folder: omnia3
@@ -60,7 +60,7 @@ This tutorial assumes that you have created a OMNIA tenant ([click here to see h
 
 	![Modeler create PhoneNo_attribute](/images/tutorials/connector/Modeler-Create-Attribute-PhoneNo.PNG)
 
-5. Navigate to tab *"[Data Behaviours](https://docs.numbersbelieve.com/omnia3_modeler_datasources.html)"*, and define a behaviour to be executed on *"ReadList"*. This behaviour will be used for Query and List requests for this entity.
+5. Navigate to tab *"[Data Behaviours](omnia3_modeler_datasources.html)"*, and define a behaviour to be executed on *"ReadList"*. This behaviour will be used for Query and List requests for this entity.
 
     Remember to **change** the variable **```filePath```** and **```csvSplitChar```** with your csv file full path and the character configured as the CSV column delimiter.
 
@@ -212,7 +212,7 @@ This tutorial assumes that you have created a OMNIA tenant ([click here to see h
     return true;
     ```
 
-10. Perform a new Build (by accessing the option ***Versioning / Builds / Create new***).
+10. Build & Deploy model
 
 11. Go to the Application area.
 
