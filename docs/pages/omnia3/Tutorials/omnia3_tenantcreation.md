@@ -17,7 +17,7 @@ OMNIA features a Multi-Tenant component, offering you infinite development and i
 
 This tutorial assumes that you have been granted access to a deployment of OMNIA Platform.
 
-If you do not have a deployment yet, please view the instructions for [Deploying the platform](http://docs.numbersbelieve.com/omnia3_deploymenttutorial.html).
+If you do not have a deployment yet, please view the instructions for [Deploying the platform](https://docs.omnialowcode.com/omnia3_deploymenttutorial.html).
 
 ## 3. Creating a Tenant
 
@@ -33,6 +33,6 @@ If you do not have a deployment yet, please view the instructions for [Deploying
 
     ![OMNIA Tenant Code](/images/tutorials/tenantcreation/Management-Create-Tenant.PNG)
     
-    **Everything's ready** for your **first glimpse** into **OMNIA Platform**, with [**OMNIA's Beginner Tutorial**](http://docs.numbersbelieve.com/omnia3_beginnertutorial.html).
+    **Everything's ready** for your **first glimpse** into **OMNIA Platform**, with [**OMNIA's Beginner Tutorial**](https://docs.omnialowcode.com/omnia3_beginnertutorial.html).
 
 
