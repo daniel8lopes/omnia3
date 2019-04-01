@@ -1,7 +1,7 @@
 ---
-title: OMNIA Advanced Tutorial
+title: Advanced Tutorial
 keywords: omnia3
-summary: "Advanced Tutorial"
+summary: "OMNIA Low-Code Development Platform Advanced Tutorial"
 sidebar: omnia3_sidebar
 permalink: omnia3_advancedtutorial.html
 folder: omnia3
@@ -19,7 +19,7 @@ In *data analysis*, we will explore how to model new lists and how to create das
 
 This tutorial assumes that you have created a OMNIA tenant and are logged in as a user with modeling privileges to this tenant.
 
-It is necessary to have completed the steps in the  [Beginner tutorial](http://docs.numbersbelieve.com/omnia3_beginnertutorial.html), as this tutorial builds upon it.
+It is necessary to have completed the steps in the  [Beginner tutorial](omnia3_beginnertutorial.html), as this tutorial builds upon it.
 
 ## 3. Advanced Behaviours
 
@@ -82,7 +82,7 @@ It is necessary to have completed the steps in the  [Beginner tutorial](http://d
     }
     ```
 
-5. Build the model.
+5. Build & Deploy.
 
 6. Go to **Application** area, and create a new **Product** resource. Observe that, when **Code** is identified (e.g. try with value 8540), the **Name** and **Artist** is automatically retrieved.
 
@@ -115,6 +115,6 @@ It is necessary to have completed the steps in the  [Beginner tutorial](http://d
 
     ![Modeler_Add_List_Dashboard](/images/tutorials/advanced/Modeler-Add-List-Dashboard.PNG)
 
-3. **Build** the model.
+3. **Build & Deploy** the model.
 
 4. Go to the application and check the homepage dashboard. Data for the products you have created will be visible.
