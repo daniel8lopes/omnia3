@@ -1,7 +1,7 @@
 ---
-title: OMNIA Data Source Tutorial
+title: Data Source Tutorial
 keywords: omnia3
-summary: "OMNIA Platform 3.0 data source management"
+summary: "OMNIA Low-Code Development Platform - Data Source Management"
 sidebar: omnia3_sidebar
 permalink: omnia3_datasourcetutorial.html
 folder: omnia3
@@ -22,7 +22,7 @@ Please notice that, since this is only a simulation, no actual data is manipulat
 
 This tutorial assumes that you have created a OMNIA tenant, and are logged in as a user with modeling privileges to this tenant.
 
-If you do not have a tenant yet, please follow the steps of the [Tenant Creation tutorial](http://docs.numbersbelieve.com/omnia3_tenantcreation.html).
+If you do not have a tenant yet, please follow the steps of the [Tenant Creation tutorial](omnia3_tenantcreation.html).
 
 ## 3. CRUD operations
 
@@ -187,7 +187,7 @@ If you do not have a tenant yet, please follow the steps of the [Tenant Creation
     {% endraw %}
     ```
 
-11. Perform a new Build (by accessing the option ***Versioning / Builds / Create new***).
+11. Build & Deploy model
 
 12. On Application area, create a new instance of the ExternalAPI data source, with code "ReqRes".
 
@@ -208,7 +208,7 @@ If you do not have a tenant yet, please follow the steps of the [Tenant Creation
 
 4. Add another attribute that represents the Employee. Set its *Name* as Employee, *Type* as Agent / Employee, and ExternalAPI on Uses data source from attribute.
 
-5. Perform a new Build (by accessing the option ***Versioning / Builds / Create new***).
+5. Build & Deploy model
 
 6. On Application area, create a new instance of the Department, and check that, after identifying the data source, Employees from that data source are now available for selection.
 
