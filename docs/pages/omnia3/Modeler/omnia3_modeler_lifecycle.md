@@ -1,7 +1,7 @@
 ---
 title: Model Lifecycle
 keywords: omnia3
-summary: "Model Lifecycle"
+summary: "OMNIA Low-Code Development Platform - Model Lifecycle"
 sidebar: omnia3_sidebar
 permalink: omnia3_modeler_lifecycle.html
 folder: omnia3
@@ -33,7 +33,7 @@ When you create a new build, all the _C#_ code added in the behaviours will be c
 
 
 ### How to create a new build?
-In the _Builds_ page, selecting the option _Create new_ and confirm your intent in the confirmation window.
+In the Modeler environment, simply use the "Build & Deploy" button at the top right corner and wait a few moments until it's finished.
 
 ## 4. Download the behaviours code
 __*Versioning / Builds*__
