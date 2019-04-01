@@ -1,7 +1,7 @@
 ---
 title: Authorization
 keywords: omnia3
-summary: "Authorization"
+summary: "OMNIA Low-Code Development Platform - Authorization"
 sidebar: omnia3_sidebar
 permalink: omnia3_authorization.html
 folder: omnia3
@@ -22,6 +22,4 @@ The **OMNIA Platform** authorization uses a policy-based model. This policy-base
 
 ## 3. Authorization management in the **OMNIA Platform**
 
-Authorization management is explained on the [Authorization Management](https://docs.numbersbelieve.com/omnia3_authorizationmanagement.html) article.
-
-
+Authorization management is explained on the [Authorization Management](https://docs.omnialowcode.com/omnia3_authorizationmanagement.html) article.
