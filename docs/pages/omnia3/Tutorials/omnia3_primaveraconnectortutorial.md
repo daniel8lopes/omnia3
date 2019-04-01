@@ -1,7 +1,7 @@
 ---
-title: OMNIA Primavera Connector Tutorial
+title: Primavera (ERP) Connector Tutorial
 keywords: omnia3
-summary: "OMNIA Platform 3.0 ERP Primavera as Data Source"
+summary: "OMNIA Low-Code Development Platform - ERP (Primavera) as Data Source"
 sidebar: omnia3_sidebar
 permalink: omnia3_primaveraconnectortutorial.html
 folder: omnia3
@@ -15,13 +15,13 @@ This tutorial is an advanced implementation of the [data sources tutorial](omnia
 
 On the CRUD Operations tutorial area, we are going to evaluate how to interact with an external data source, by reading and manipulating its data.
 
-As our custom data source, we are going to use the [PRIMAVERA ERP V9](https://pt.primaverabss.com).
+As our custom data source, we are going to use the [PRIMAVERA ERP V10](https://pt.primaverabss.com).
 
 ## 2. Prerequisites
 
 This tutorial assumes that you have created a OMNIA tenant ([click here to see how](omnia3_tenantcreation.html)), and are logged in as a user with modeling privileges to this tenant. You must also have access to the management area to manage the connectors.
 
-This tutorial also requires an access to [Primavera ERP](https://pt.primaverabss.com), on version 9. 
+This tutorial also requires an access to [Primavera ERP](https://pt.primaverabss.com), on version 10. 
 
 ## 3. Create a new connector
 
@@ -69,7 +69,7 @@ This tutorial also requires an access to [Primavera ERP](https://pt.primaverabss
     
     ![Modeler Add Namespace](/images/tutorials/primaveraconnector/Modeler-Employee-Add-ERP-Namespace.PNG)
 
-6. Navigate to tab *"[Data Behaviours](https://docs.numbersbelieve.com/omnia3_modeler_datasources.html)"*, and define a behaviour to be executed on *"ReadList"*. This behaviour will be used for Query and List requests for this entity.
+6. Navigate to tab *"[Data Behaviours](omnia3_modeler_datasources.html)"*, and define a behaviour to be executed on *"ReadList"*. This behaviour will be used for Query and List requests for this entity.
 
     Copy and paste the following code (*Remember to **change** the **```"USER"```** and **```"PASS"```** fields to your actual username and password.*):
 
@@ -142,7 +142,7 @@ This tutorial also requires an access to [Primavera ERP](https://pt.primaverabss
     return dto;
     ```
 
-9. Perform a new Build (by accessing the option ***Versioning / Builds / Create new***).
+9. Build & Deploy model
 
 10. Go to the Application area.
 
