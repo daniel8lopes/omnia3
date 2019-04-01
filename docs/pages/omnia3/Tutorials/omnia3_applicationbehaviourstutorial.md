@@ -1,7 +1,7 @@
 ---
 title: OMNIA Application Behaviours Tutorial
 keywords: omnia3
-summary: "Application Behaviours on OMNIA Platform 3.0"
+summary: "Application Behaviours on OMNIA Low-Code Platform"
 sidebar: omnia3_sidebar
 permalink: omnia3_applicationbehaviourstutorial.html
 folder: omnia3
@@ -9,7 +9,7 @@ folder: omnia3
 
 ## 1. Introduction
 
-After you have completed the [Beginner Tutorial](https://docs.numbersbelieve.com/omnia3_beginnertutorial.html), whose result is a functional order management application, OMNIA Application Behaviours Tutorial focus on the execution of behaviours on external data sources.
+After you have completed the [Beginner Tutorial](https://docs.omnialowcode.com/omnia3_beginnertutorial.html), whose result is a functional order management application, OMNIA Application Behaviours Tutorial focus on the execution of behaviours on external data sources.
 
 As our custom data source, we are going to use the [PRIMAVERA ERP V9](https://pt.primaverabss.com).
 
@@ -18,9 +18,9 @@ As our custom data source, we are going to use the [PRIMAVERA ERP V9](https://pt
 
 This tutorial assumes that you have created a OMNIA tenant, and are logged in as a user with modeling privileges to this tenant.
 
-It is necessary to have completed the steps in the  [Beginner tutorial](http://docs.numbersbelieve.com/omnia3_beginnertutorial.html), as this tutorial builds upon it.
+It is necessary to have completed the steps in the  [Beginner tutorial](https://docs.omnialowcode.com/omnia3_beginnertutorial.html), as this tutorial builds upon it.
 
-A connector and an access to [Primavera ERP](https://pt.primaverabss.com), on version 9 are also required to complete this tutorial.
+A connector and an access to [Primavera ERP](https://pt.primaverabss.com), on version 10 are also required to complete this tutorial.
 
 ## 3. Application Behaviours
 
@@ -46,23 +46,34 @@ A connector and an access to [Primavera ERP](https://pt.primaverabss.com), on ve
     Copy and paste the following code (Remember to change the "USER" and "PASS" fields to your actual username and password.):
 
     ```C#
-    PurchaseOrderDto dto = JsonConvert.DeserializeObject<PurchaseOrderDto>(JsonConvert.SerializeObject(args));
-    Interop.ErpBS900.ErpBS bsERP = new Interop.ErpBS900.ErpBS();
+    PurchaseOrderDto dto = JsonConvert.DeserializeObject<PurchaseOrderDto>(JsonConvert.SerializeObject(args["purchaseOrder"]));
 
-    bsERP.AbreEmpresaTrabalho(Interop.StdBE900.EnumTipoPlataforma.tpEmpresarial, dto.Primavera, "USER", "PASS");
+    ErpBS bsERP = new ErpBS();
 
-    Interop.GcpBE900.GcpBEDocumentoCompra purchaseOrder = new Interop.GcpBE900.GcpBEDocumentoCompra();
+    Dictionary<string, object> arguments = new Dictionary<string, object>();
+    arguments.Add("Company", dto.Primavera);
+
+    IDictionary<string, object> erpBs = PrimaveraApplicationBehaviours.Primavera_OpenCompany(arguments, context);
+
+    if (!erpBs.ContainsKey("ErpBS"))
+	    throw new Exception("Can't open the ERP company");
+
+    bsERP = (ErpBS)erpBs["ErpBS"];
+
+    GcpBEDocumentoCompra purchaseOrder = new GcpBEDocumentoCompra();
 
     purchaseOrder.set_Tipodoc("ECF");
     purchaseOrder.set_Serie("A");
     purchaseOrder.set_TipoEntidade("F");
     purchaseOrder.set_Entidade(dto.Supplier);
+
     purchaseOrder.set_NumDocExterno("0");
     purchaseOrder.set_Observacoes($"Documento gerado no portal OMNIA: Pedido de Encomenda {dto._serie} / {dto._number}");
     purchaseOrder.set_DataCarga(DateTime.Now.ToShortDateString());
     purchaseOrder.set_DataDescarga(DateTime.Now.ToShortDateString());
 
     bsERP.Comercial.Compras.PreencheDadosRelacionados(purchaseOrder);
+
     foreach (var line in dto.OrderLines)
     {
         bsERP.Comercial.Compras.AdicionaLinha(purchaseOrder, line._resource, Convert.ToDouble(line._quantity));
@@ -70,9 +81,12 @@ A connector and an access to [Primavera ERP](https://pt.primaverabss.com), on ve
 
     bsERP.Comercial.Compras.Actualiza(purchaseOrder);
 
+    string integrationMessage = $"Integrado documento {purchaseOrder.get_Tipodoc()} {purchaseOrder.get_Serie()}/{purchaseOrder.get_NumDoc()}";
+
     bsERP.FechaEmpresaTrabalho();
 
-    return new Dictionary<string, object>();
+    return new Dictionary<string, object>() { { "Message", integrationMessage } };
+
     ```
 
 6. Edit Application Behaviour *IntegratePurchaseOrder* and click on button *Edit Namespaces* to add the following namespaces:
@@ -89,25 +103,47 @@ A connector and an access to [Primavera ERP](https://pt.primaverabss.com), on ve
     Copy and paste the following code (Remember to change the "CONNECTORUSER" field to your actual connector user.):
 
     ```C#   
-    var context = new ConnectorContext(_Context.Tenant.Code, _Context.Tenant.EnvironmentCode, _Context.Tenant.Version, _Context.Authentication.AccessToken, _Context.Tenant.BaseEndpoint);
+    if (_Context.Operation.Action != Action.EntityCreate)
+    return await Task.FromResult(AfterSaveMessage.Empty);
     
+    var context = new ConnectorContext(this._Context);
     var client = new ConnectorClient(context);
-    
+
+    Dictionary<string, object> requestData = new Dictionary<string, object>();
+    requestData.Add("purchaseOrder", this.ToDto());
+
     var message = new ConnectorMessage(MessageType.Application, "IntegratePurchaseOrder", OperationType.Execute);
     message.Data = new Dictionary<string, object>(){
-        {"dataSource", _dto.Primavera}, {"dataSourceType", "Primavera"}, {"data", _dto}
+    {"dataSource", this.Primavera}, {"dataSourceType", "Primavera"}, {"data", requestData}
     };
-    
-    var connectorUsername = "CONNECTORUSER";
-    
-    var response = await client.ExecuteAsync(connectorUsername, message);
-    if (response.ContainsKey("isSuccess") && (bool)response["isSuccess"] == false)
-        throw new Exception(response.ContainsKey("message") ? response["message"].ToString() : "An error has occurred");
 
-    return await Task.FromResult(new AfterSaveMessage("Integration with Primavera successful.", AfterSaveMessageType.Success));
+    var httpClient = this._Context.CreateApplicationHttpClient();
+    var primaveraResult = httpClient.GetAsync($"Primavera/Default/{this.Primavera}").Result;
+
+    if (!primaveraResult.IsSuccessStatusCode)
+	    throw new Exception($"Could not retrieve Primavera '{this.Primavera}' data");
+
+    PrimaveraDto primavera = primaveraResult.Content.ReadAsAsync<PrimaveraDto>().Result;
+    var connectorUsername = primavera.ConnectorUsername;
+
+    if (string.IsNullOrEmpty(connectorUsername))
+        throw new Exception("Before accessing the connector, please define it's username (email) on the After Save behaviour.");
+
+    var response = await client.ExecuteRequestAsync(connectorUsername, message);
+
+    if (!response.IsSuccess)
+        throw new Exception(response.Message);
+
+    var responseData = JsonConvert.DeserializeObject<Dictionary<string, object>>(JsonConvert.SerializeObject(response.Data["data"]));
+
+    string returnMessage = string.Empty;
+    if(responseData.ContainsKey("message"))
+        returnMessage = responseData["message"].ToString();
+
+    return await Task.FromResult(new AfterSaveMessage(returnMessage, AfterSaveMessageType.Success));
     ```
 
-8. Build the model.
+8. Build & Deploy the model.
 
 9. Go to application area, and create new instance of Primavera. The Connector value is the code defined earlier when the connector was created
 
