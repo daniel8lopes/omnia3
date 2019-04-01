@@ -1,7 +1,7 @@
 ---
-title: OMNIA Application Behaviours Tutorial
+title: Application Behaviours Tutorial
 keywords: omnia3
-summary: "Application Behaviours on OMNIA Platform 3.0"
+summary: "OMNIA Low-Code Development Platform - Application Behaviours"
 sidebar: omnia3_sidebar
 permalink: omnia3_applicationbehaviourstutorial.html
 folder: omnia3
@@ -9,18 +9,18 @@ folder: omnia3
 
 ## 1. Introduction
 
-After you have completed the [Beginner Tutorial](https://docs.numbersbelieve.com/omnia3_beginnertutorial.html), whose result is a functional order management application, OMNIA Application Behaviours Tutorial focus on the execution of behaviours on external data sources.
+After you have completed the [Beginner Tutorial](omnia3_beginnertutorial.html), whose result is a functional order management application, OMNIA Application Behaviours Tutorial focus on the execution of behaviours on external data sources.
 
-As our custom data source, we are going to use the [PRIMAVERA ERP V9](https://pt.primaverabss.com).
+As our custom data source, we are going to use the [PRIMAVERA ERP V10](https://pt.primaverabss.com).
 
 
 ## 2. Prerequisites
 
 This tutorial assumes that you have created a OMNIA tenant, and are logged in as a user with modeling privileges to this tenant.
 
-It is necessary to have completed the steps in the  [Beginner tutorial](http://docs.numbersbelieve.com/omnia3_beginnertutorial.html), as this tutorial builds upon it.
+It is necessary to have completed the steps in the  [Beginner tutorial](omnia3_beginnertutorial.html), as this tutorial builds upon it.
 
-A connector and an access to [Primavera ERP](https://pt.primaverabss.com), on version 9 are also required to complete this tutorial.
+A connector and an access to [Primavera ERP](https://pt.primaverabss.com), on version 10 are also required to complete this tutorial.
 
 ## 3. Application Behaviours
 
@@ -107,7 +107,7 @@ A connector and an access to [Primavera ERP](https://pt.primaverabss.com), on ve
     return await Task.FromResult(new AfterSaveMessage("Integration with Primavera successful.", AfterSaveMessageType.Success));
     ```
 
-8. Build the model.
+8. Build & Deploy model.
 
 9. Go to application area, and create new instance of Primavera. The Connector value is the code defined earlier when the connector was created
 
