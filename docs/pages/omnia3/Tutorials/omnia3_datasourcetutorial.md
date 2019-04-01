@@ -1,7 +1,7 @@
 ---
 title: OMNIA Data Source Tutorial
 keywords: omnia3
-summary: "OMNIA Platform 3.0 data source management"
+summary: "OMNIA Low-Code Development Platform - Data Source Management"
 sidebar: omnia3_sidebar
 permalink: omnia3_datasourcetutorial.html
 folder: omnia3
@@ -20,9 +20,9 @@ Please notice that, since this is only a simulation, no actual data is manipulat
 
 ## 2. Prerequisites
 
-This tutorial assumes that you have created a OMNIA tenant, and are logged in as a user with modeling privileges to this tenant.
+This tutorial assumes that you have created an OMNIA tenant and that are logged in as a user with modeling privileges to this tenant.
 
-If you do not have a tenant yet, please follow the steps of the [Tenant Creation tutorial](http://docs.numbersbelieve.com/omnia3_tenantcreation.html).
+If you do not have a tenant yet, please follow the steps of the [Tenant Creation tutorial](https://docs.omnialowcode.com/omnia3_tenantcreation.html).
 
 ## 3. CRUD operations
 
