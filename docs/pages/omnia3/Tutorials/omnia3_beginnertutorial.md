@@ -1,7 +1,7 @@
 ---
 title: OMNIA Beginner Tutorial
 keywords: omnia3
-summary: "First Steps on OMNIA Platform 3.0"
+summary: "First Steps on OMNIA Low-Code Development Platform"
 sidebar: omnia3_sidebar
 permalink: omnia3_beginnertutorial.html
 folder: omnia3
@@ -9,19 +9,19 @@ folder: omnia3
 
 ## 1. Introduction
 
-OMNIA 3.0, a truly **Agile Development** and operation of **Management Information Systems**' platform, welcomes you aboard to its continuous development process: the User Experience.
+OMNIA 3.0, a truly **Agile Low-Code Development** and operation of **Management Information Systems**' platform, welcomes you aboard to its continuous development process: the User Experience.
 
 We do understand all your difficulties on how to build a **business management application** from ground zero. That's why **OMNIA** takes the pledge to **leverage and accelerate** the entire development process, providing a **simple**, **fast** and **responsive-by-default** platform.
 
 It's now time to judge our premises. To that end, we've just created a simple and intuitive tutorial based on an Order Management's example, guiding you throughout the **short-time period** of deploying all your inputs into a **business application**.
 
-**Start your 20-minute exercise on OMNIA Platform V.3.0!**
+**Start your 20-minute exercise on OMNIA Low-Code Development Platform!**
 
 ## 2. Prerequisites
 
 This tutorial assumes that you have created a OMNIA tenant, and are logged in as a user with modeling privileges to this tenant.
 
-If you do not have a tenant yet, please follow the steps of the [Tenant Creation tutorial](http://docs.numbersbelieve.com/omnia3_tenantcreation.html).
+If you do not have a tenant yet, please follow the steps of the [Tenant Creation tutorial](https://docs.omnialowcode.com/omnia3_tenantcreation.html).
 
 ## 3. Modeling an application
 
@@ -67,7 +67,7 @@ If you do not have a tenant yet, please follow the steps of the [Tenant Creation
 
     ![Modeler_Create_Composite_Attribute](/images/tutorials/beginner/Modeler-Create-OrderLines-Attribute.PNG)
 
-15. Perform a new Build (by accessing the option **Versioning / Builds** and clicking on button **Create new**).
+15. Perform a new Build (by accessing the button **Build & Deploy** on the top right corner of your modeling area).
 
 16. Navigate to ***Application*** through the top bar menu, and create a **Serie** for the document you just created, by selecting the option **Series / PurchaseOrderSeries**.
 
@@ -100,4 +100,4 @@ If you do not have a tenant yet, please follow the steps of the [Tenant Creation
     ![Application_Final_Interface](/images/tutorials/beginner/Application-View-PurchaseOrder.PNG)
 
 
-    **Congratulations** on your very **first insight** into OMNIA Platform's true **development agility**! Now, it's time to **move** to our next challenge: [**OMNIA's Platform Advanced Tutorial**](http://docs.numbersbelieve.com/omnia3_advancedtutorial.html). 
+    **Congratulations** on your very **first insight** into OMNIA Platform's true **development agility**! Now, it's time to **move** to our next challenge: [**OMNIA's Platform Advanced Tutorial**](https://docs.omnialowcode.com/omnia3_advancedtutorial.html). 
