@@ -1,7 +1,7 @@
 ---
 title: OMNIA Connector Tutorial
 keywords: omnia3
-summary: "OMNIA Platform 3.0 CSV File as Data Source"
+summary: "OMNIA Low-Code Development Platform - CSV File as Data Source"
 sidebar: omnia3_sidebar
 permalink: omnia3_connectortutorial.html
 folder: omnia3
@@ -60,9 +60,9 @@ This tutorial assumes that you have created a OMNIA tenant ([click here to see h
 
 	![Modeler create PhoneNo_attribute](/images/tutorials/connector/Modeler-Create-Attribute-PhoneNo.PNG)
 
-5. Navigate to tab *"[Data Behaviours](https://docs.numbersbelieve.com/omnia3_modeler_datasources.html)"*, and define a behaviour to be executed on *"ReadList"*. This behaviour will be used for Query and List requests for this entity.
+5. Navigate to tab *"[Data Behaviours](https://docs.omnialowcode.com/omnia3_modeler_datasources.html)"*, and define a behaviour to be executed on *"ReadList"*. This behaviour will be used for Query and List requests for this entity.
 
-    Remember to **change** the variable **```filePath```** and **```csvSplitChar```** with your csv file full path and the character configured as the CSV column delimiter.
+    Remember to **change** the variable **```filePath```** and **```csvSplitChar```** with your CSV file full path and the character configured as the CSV column delimiter.
 
     Copy and paste the following code:
     ```C#
@@ -94,7 +94,7 @@ This tutorial assumes that you have created a OMNIA tenant ([click here to see h
 
 6. Create a new Data Behaviour for the operation *"Read"*, so that data is retrieved when a Contact is edited on OMNIA.
 
-    Remember to **change** the variable **```filePath```** and **```csvSplitChar```**  with your csv file full path and the character configured as the CSV column delimiter.
+    Remember to **change** the variable **```filePath```** and **```csvSplitChar```**  with your CSV file full path and the character configured as the CSV column delimiter.
 
     Copy and paste the following code:
 
@@ -132,7 +132,7 @@ This tutorial assumes that you have created a OMNIA tenant ([click here to see h
 
 7. On *"Data Behaviours"* of Agent Contact, define a behaviour, to be executed on *"Update"* (when a Contact is updated on OMNIA). 
 
-    Remember to **change** the variable **```filePath```** and **```csvSplitChar```**  with your csv file full path and the character configured as the CSV column delimiter.
+    Remember to **change** the variable **```filePath```** and **```csvSplitChar```**  with your CSV file full path and the character configured as the CSV column delimiter.
 
     Copy and paste the following code:
 
@@ -165,7 +165,7 @@ This tutorial assumes that you have created a OMNIA tenant ([click here to see h
 
 8. On *"Data Behaviours"* of Agent Contact, define a behaviour, to be executed on *"Create"* (when a Contact is updated on OMNIA). 
 
-    Remember to **change** the variable **```filePath```** and **```csvSplitChar```**  with your csv file full path and the character configured as the CSV column delimiter.
+    Remember to **change** the variable **```filePath```** and **```csvSplitChar```**  with your CSV file full path and the character configured as the CSV column delimiter.
 
     Copy and paste the following code:
 
@@ -184,7 +184,7 @@ This tutorial assumes that you have created a OMNIA tenant ([click here to see h
     
 9. On *"Data Behaviours"* of Agent Contact, define a behaviour, to be executed on *"Delete"* (when a Contact is deleted on OMNIA). 
 
-    Remember to **change** the variable **```filePath```** and **```csvSplitChar```**  with your csv file full path and the character configured as the CSV column delimiter.
+    Remember to **change** the variable **```filePath```** and **```csvSplitChar```**  with your CSV file full path and the character configured as the CSV column delimiter.
 
     Copy and paste the following code:
 
