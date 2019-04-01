@@ -33,6 +33,6 @@ If you do not have a deployment yet, please view the instructions for [Deploying
 
     ![OMNIA Tenant Code](/images/tutorials/tenantcreation/Management-Create-Tenant.PNG)
     
-    **Everything's ready** for your **first glimpse** into **OMNIA Platform**, with [**OMNIA's Beginner Tutorial**](http://docs.numbersbelieve.com/omnia3_beginnertutorial.html).
+    **Everything's ready** for your **first glimpse** into our **Low-Code Development Platform**. Let's start with [**OMNIA's Beginner Tutorial**](http://docs.numbersbelieve.com/omnia3_beginnertutorial.html).
 
 
