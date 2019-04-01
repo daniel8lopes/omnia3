@@ -1,7 +1,7 @@
 ---
-title: OMNIA Multi System Connector Tutorial
+title: Multi System Connector Tutorial
 keywords: omnia3
-summary: "OMNIA Platform 3.0 Multi System Connector Tutorial"
+summary: "OMNIA Low-Code Development Platform - Multi System Connector Tutorial"
 sidebar: omnia3_sidebar
 permalink: omnia3_multisystemconnectortutorial.html
 folder: omnia3
@@ -9,20 +9,20 @@ folder: omnia3
 
 ## 1. Introduction
 
-Based on a Purchase Orders management scenario, this tutorial shows a real scenario of how easily OMNIA can combine information from multiple external data sources, using the Omnia connector to access data located on-premises. 
+Based on a Purchase Orders management scenario, this tutorial shows a real scenario of how easily OMNIA can combine information from multiple external data sources, using the OMNIA connector to access data located on-premises. 
 
 This tutorial is an advanced implementation of the [data sources tutorial](omnia3_datasourcetutorial.html) in order to understand how data sources work, please read [this section of the documentation](omnia3_modeler_datasources.html).
 
 The tutorial is divided in 4 different areas. On the first area, Create a new connector, we are going to check how a new connector is created and associated to a tenant. Next, on Modeling entities area, we are going to evaluate how to model the core entities for this solution from scratch.
 On the third area, we are going to focus on Purchase Order modeling, combining all previously modeled entities and integrating information on ERP Primavera. To end, we will evaluate how to communicate with an external API. 
 
-As our custom data source, we are going to use the [PRIMAVERA ERP V9](https://pt.primaverabss.com). The chosen external API is [Last FM](https://www.last.fm/api), which provides data related to music.
+As our custom data source, we are going to use the [PRIMAVERA ERP V10](https://pt.primaverabss.com). The chosen external API is [Last FM](https://www.last.fm/api), which provides data related to music.
 
 ## 2. Prerequisites
 
 This tutorial assumes that you have created a OMNIA tenant ([click here to see how](omnia3_tenantcreation.html)), and are logged in as a user with modeling privileges to this tenant. You must also have access to the management area to manage the connectors.
 
-This tutorial also requires an access to [Primavera ERP](https://pt.primaverabss.com), on version 9. 
+This tutorial also requires an access to [Primavera ERP](https://pt.primaverabss.com), on version 10. 
 
 ## 3. Create a new connector
 
@@ -42,7 +42,7 @@ This tutorial also requires an access to [Primavera ERP](https://pt.primaverabss
 
 ## 4. Modeling Entities
 
-1. Access Omnia homepage, select the tenant where you are going to model and you will be redirected to the modeling area.
+1. Access OMNIA homepage, select the tenant where you are going to model and you will be redirected to the modeling area.
 
 2. Through the left side menu, create a new Agent by accessing the option ***Agents / Add new*** on the top right side. Set *"Company"* as its with name.
 
@@ -52,7 +52,7 @@ This tutorial also requires an access to [Primavera ERP](https://pt.primaverabss
 
     ![Modeler create GenericEntity_Artist](/images/tutorials/multisystemconnector/Create-GenericEntity-Artist.PNG)
 
-4. Perform a new Build (by accessing the option ***Versioning / Builds / Create new***).
+4. Build & Deploy model
 
 5. Go to application area and create a new Company (by accessing the option ***Configurations / Company / Create new***)
 
@@ -84,7 +84,7 @@ This tutorial also requires an access to [Primavera ERP](https://pt.primaverabss
     
     ![Modeler_Supplier_Add_Namespace](/images/tutorials/multisystemconnector/Modeler-Supplier-Add-ERP-Namespace.PNG)
 
-10. Navigate to tab *"[Data Behaviours](https://docs.numbersbelieve.com/omnia3_modeler_datasources.html)"*, and define a behaviour to be executed on *"ReadList"*. This behaviour will be used for Query and List requests for this entity.
+10. Navigate to tab *"[Data Behaviours](omnia3_modeler_datasources.html)"*, and define a behaviour to be executed on *"ReadList"*. This behaviour will be used for Query and List requests for this entity.
 
     Copy and paste the following code (*Remember to **change** the **```"USER"```** and **```"PASS"```** fields to your actual username and password.*):
 
@@ -167,7 +167,7 @@ This tutorial also requires an access to [Primavera ERP](https://pt.primaverabss
 	return dto;
     ```
   
-13. Perform a new build
+13. Build & Deploy model
 
 14. Go to application area, and create new instance of Primavera. The Connector value is the code defined earlier when the connector was created
 
@@ -186,7 +186,7 @@ This tutorial also requires an access to [Primavera ERP](https://pt.primaverabss
     1. Interop.StdBE900
     2. Interop.ErpBS900
 
-19. Navigate to tab *"[Data Behaviours](https://docs.numbersbelieve.com/omnia3_modeler_datasources.html)"*, and define a behaviour to be executed on *"ReadList"*. This behaviour will be used for Query and List requests for this entity.
+19. Navigate to tab *"[Data Behaviours](omnia3_modeler_datasources.html)"*, and define a behaviour to be executed on *"ReadList"*. This behaviour will be used for Query and List requests for this entity.
 
     Copy and paste the following code (*Remember to **change** the **```"USER"```** and **```"PASS"```** fields to your actual username and password.*):
 
@@ -220,9 +220,9 @@ This tutorial also requires an access to [Primavera ERP](https://pt.primaverabss
 	}
     ```
 
-20. Perform a new build
+20. Build & Deploy model
 
-21. Go to application area, and check that ERP Products can now be listed on Omnia
+21. Go to application area, and check that ERP Products can now be listed on OMNIA
 
 ## 5. Modeling Purchase Order
 
@@ -261,7 +261,7 @@ This tutorial also requires an access to [Primavera ERP](https://pt.primaverabss
     3. Interop.IGcpBS900
     4. Interop.GcpBE900
 
-9. Navigate to tab *"[Data Behaviours](https://docs.numbersbelieve.com/omnia3_modeler_datasources.html)"*, and define a behaviour to be executed on *"ReadList"*. This behaviour will be used for Query and List requests for this entity.
+9. Navigate to tab *"[Data Behaviours](omnia3_modeler_datasources.html)"*, and define a behaviour to be executed on *"ReadList"*. This behaviour will be used for Query and List requests for this entity.
 
     Copy and paste the following code (*Remember to **change** the **```"USER"```** and **```"PASS"```** fields to your actual username and password.*):
 
@@ -299,7 +299,7 @@ This tutorial also requires an access to [Primavera ERP](https://pt.primaverabss
 		throw;
 	}
     ```
-10. Navigate to tab *"[Data Behaviours](https://docs.numbersbelieve.com/omnia3_modeler_datasources.html)"*, and define a behaviour to be executed on *"Create"*. This behaviour will be used to create new instances on ERP everytime a new PurchaseOrder is created on Omnia.
+10. Navigate to tab *"[Data Behaviours](omnia3_modeler_datasources.html)"*, and define a behaviour to be executed on *"Create"*. This behaviour will be used to create new instances on ERP everytime a new PurchaseOrder is created on Omnia.
 
     Copy and paste the following code (*Remember to **change** the **```"USER"```** and **```"PASS"```** fields to your actual username and password.*):
 
@@ -332,11 +332,11 @@ This tutorial also requires an access to [Primavera ERP](https://pt.primaverabss
     return dto;
     ```
 
-11. Perform a new Build
+11. Build & Deploy model
 
 12. Go to the Application area, and validate that ERP Purchase Orders can now be listed.
 
-13. On Modeling area, navigate to *"PurchaseOrder"* tab *"[Entity Behaviours](https://docs.numbersbelieve.com/omnia3_modeler_datasources.html)"*, and define a behaviour to be executed *"After Change"*. This behaviour will be used to set default values on Commitment instances.
+13. On Modeling area, navigate to *"PurchaseOrder"* tab *"[Entity Behaviours](omnia3_modeler_datasources.html)"*, and define a behaviour to be executed *"After Change"*. This behaviour will be used to set default values on Commitment instances.
 
     Copy and paste the following code:
 
@@ -357,7 +357,7 @@ This tutorial also requires an access to [Primavera ERP](https://pt.primaverabss
     
     ![Modeler purchaseOrder UI_Result](/images/tutorials/multisystemconnector/PurchaseOrder-UI-Result.PNG)
 
-15. Perform a new Build
+15. Build & Deploy model
 
 16. Go to application area. Access the option ***Series / PurchaseOrderSerie / Add new***, and create a new number serie for document PurchaseOrder
 
@@ -373,7 +373,7 @@ This tutorial also requires an access to [Primavera ERP](https://pt.primaverabss
 
     ![Modeler Add_Namespace](/images/tutorials/multisystemconnector/Modeler-Add-Namespace.PNG)
 
-3. Navigate to tab *"[Entity Behaviours](https://docs.numbersbelieve.com/omnia3_modeler_datasources.html)"*, and define an *"Action"* behaviour to be executed when attribute _resource is changed. This behaviour will be used to retrieve from LastFM API a unique album identifier.
+3. Navigate to tab *"[Entity Behaviours](omnia3_modeler_datasources.html)"*, and define an *"Action"* behaviour to be executed when attribute _resource is changed. This behaviour will be used to retrieve from LastFM API a unique album identifier.
 
     Copy and paste the following code (*Remember to **change** the **```"API_KEY"```** field to your actual LastFM API Key.*):
 
@@ -393,6 +393,6 @@ This tutorial also requires an access to [Primavera ERP](https://pt.primaverabss
 	}
     ```
 
-4. Perform a new build
+4. Build & Deploy model
 
 5. Go to application area, and create a new Purchase Order. Check that, when Artist and Resource are identified and valid, attribute Album MBid is filled with the album unique identifier
