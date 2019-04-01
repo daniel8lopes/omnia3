@@ -9,6 +9,12 @@ folder: omnia3
 
 Visit our [Downloads](/omnia3_downloads.html#platform) page to get the latest version.
 
+## [3.0.200](#3.0.200)
+Release Date: 2019-04-01
+
+### Bugs: 
+ - Error Building a model after removing an entity
+
 ## [3.0.199](#3.0.199)
 Release Date: 2019-03-28
 
